@@ -1,0 +1,11 @@
+##
+# backup_db_sap_stor
+##
+
+DATABASE_HOST=`cat ../doc/DATABASE_HOST`
+
+
+echo col_stor      ;pg_dump sap -h $DATABASE_HOST -x -t col_stor      | gzip -c > col_stor.dump.gz
+echo ord_stor      ;pg_dump sap -h $DATABASE_HOST -x -t ord_stor      | gzip -c > ord_stor.dump.gz
+echo ric_stor      ;pg_dump sap -h $DATABASE_HOST -x -t ric_stor      | gzip -c > ric_stor.dump.gz
+echo rig_stor      ;pg_dump sap -h $DATABASE_HOST -x -t rig_stor      | gzip -c > rig_stor.dump.gz

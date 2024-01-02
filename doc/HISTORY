@@ -1,0 +1,128 @@
+04-01-2000 : Start of project
+
+2010-04-13 - RM WELLA 6.0.1b
+	Collaudo operativo - modifiche varie - messaggi PLC
+
+2010-05-15 - RM WELLA-picking 1.0.0
+	Fork di wella in wella-picking e wella peso
+	Nuova gestione errori operatore
+	Nuovo plc
+	.....
+2011-02-15 - RM WELLA-picking 1.0.1
+	Gestione Pallettizzatore - nuovo barcode reader - marcatura colli da console
+
+2011-04-05 - RM+LG WELLA-picking 1.0.2
+	Nuova gestione codici prodotti pericolosi
+
+2012-10-29 - RM+LG WELLA-picking 1.1.0
+	Nuova gestione lancio ordine completo oltre al precedente con ultimo collo bloccante.
+
+2012-11-26 - LG WELLA-picking 1.1.1
+	Possibilita' di forzatura ordine senza PDF per la modalita' di lancio con ordine completo
+
+2013-05-10 - RM WELLA-picking 1.1.2
+	Versione definitiva nuovi displays LCD
+
+2013-07-12 - RM WELLA-picking 1.1.4
+	CORRETTO ERRORE IN GESTIONE PRODOTTI IN PIEDI
+
+2014-03-04 - RM WELLA-picking 1.1.6
+	CORRETTO ERRORE IN CERCA PRODOTTO
+	GESTIONE TASTIERINO IN LINEA
+
+2015-09-23 - LG WELLA-picking 1.2.1
+	Provate Letture BRI in Wella
+	Disabilitato il passaggio luce da tastiera con Enter, valido solo con Enter da tastierino numerico
+	Manca gestione interfaccia
+2015-12-23 - RM-LG 1.3.4-BRI-alf
+	Gestione Barcode ID rivisitata
+	Gestione Imballi Speciali
+
+2016-01-04 - RM-LG 1.3.6-BRI-cli
+	Modifiche a display
+
+2016-04-05 - RM-LG 1.3.7-BRI-cli
+	Correzioni a IOS per errori in SetVarValue
+	Modifiche a display
+2016-06-29 RM+LG 1.4.0-BRI-cli
+  nuova macchina Centos 7 32
+	plc su can-usb (libbci.so)
+	vari aggiornamenti
+2016-09-23 LG+LS 1.4.1-cli
+  tracciata la ricerca dei pdf per capire perche colora di rosso le righe ricevute
+	spostata la riga 5 del primo settore di isola 1 su riga 24 per problemi di correnti strane
+	cambiato prese con pezzi in glade di lista distribuzioni
+2017-06-23 LG 1.4.3
+  backup sicurezza
+2017-06-30 LG 1.5.0
+  COTY!!!
+	Cambiati tutti gli IP. I printserver sono finiti in sottorete ael
+	Le stampe del pdf sono portrait e in mainproc.c devo usare ghostshell per sistemare il margine che nel report di coty
+	   e' troppo grande.
+	In printfun.c la stampa del pdf deve essere creata con PDF e non con pdf!
+2017-10-10 LG 1.5.1
+	Coty ha dei prodotti di 11 caratteri quindi la packing list e' stata cambiata. E' bastato cambiare il nome dei campi
+	in cni.cfg.
+	La gestione e l'update dei pdf e' stato riporatato all' originale, vedi mainproc.c
+
+2019-06-17 RM 1.5.2
+	Gestione Amazon/Bertello con stampa etichetta amazon
+	Aggiunti campi in ricezione testata
+	aggiunti nuovi flussi in ricezione : ordini/colli/righe bertello
+	aggiunto flusso in trasmissione : dettaglio colli dett_colli.txt
+
+2019-11-04 RM 1.5.4
+	Gestione Pacchetti in volum
+	Gestione Amazon/Bertello con stampa etichetta amazon
+
+2019-16-11 RM 1.5.5 presso cliente
+	Gestione pacchetti volum/main (edit prodotto)
+	Gestione badge operatore
+	
+2019-16-11 RM 1.5.6 presso cliente
+	Da finire gestione badge - implementata la ricezione messaggio ed evento BADGE_ID in settori/settfun.c
+	Sistemare display con visualizzazione dati operatore
+2019-30-11 RM 1.5.7 presso cliente
+2019-30-11 RM 1.5.8 presso cliente
+2019-30-11 RM 1.5.9 presso cliente
+
+2019-14-12 RM 1.5.10 presso cliente - gestione badge
+	gestione tabella  badge_registry
+
+	create table badge_registry 
+	(
+		id serial,
+		read_time timestamp default now(),
+		badge_id text,
+		operatore_id text default '',
+		terminal_id integer,
+		isola_id integer,
+		settore_id integer,
+		stato_lettura text default ''
+	);
+
+2020-02-29 RM 1.5.11 presso cliente - gestione badge / statistiche 
+	correzione in set stato ordini (SPEDITI_HOST)
+	aggiunte alcune statistiche (accessi operatore / excel)
+	corrette statistiche in errori_mensile.php
+
+2020-06-16 RM 1.5.12 presso cliente
+
+2020-06-16 RM 1.5.13 presso cliente - corretto tracciato record colli_bertello e eliminata la stampa
+                     dei colli bertello dopo ricezione
+2020-07-17 RM 1.5.14 presso cliente - corretto errore in calcolo SSCC check digit colli amazon
+                                    - gestione ordini amazon incompleti - richiesta operatore su lancio ordine
+2021-05-29 RM 1.5.15 presso cliente - stampa packing list su laser con openrpt
+
+2021-06-12 RM 1.5.16 presso cliente - stampa packing list su laser con openrpt
+                                      perc. riempimento differenziata per isola
+																			stampa packing list da isola (autotask)
+
+2021-12-23 RM 1.5.20 presso cliente - new isola2 e script test settori
+                                      perc. riempimento differenziata per isola
+																			stampa packing list da isola (autotask)
+2022-07-02 RM 1.5.21 presso cliente - inserita cancellazione ordini bertello in storicizzazione 
+                                      il problema era che quando veniva rispedito bertello non veniva accettato a causa della presenza
+																			in archivio dei precedenti ordini bertello e quindi non si riusciva mai piu' a
+																			stampare i colli bertello ...
+2023-10-14 RM 1.5.22 presso cliente - backup

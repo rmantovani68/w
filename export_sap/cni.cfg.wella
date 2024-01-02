@@ -1,0 +1,489 @@
+# +-------------------------------------------------------+
+# | CNI.CFG                                               |
+# | File di configurazione CNI                            |
+# | progetto Easy Picking 3.0                             |
+# | Autori : Roberto Mantovani - Stefano Tarroni          |
+# +-------------------------------------------------------+
+# | questo file e' diviso in paragrafi (delimitati da []) |
+# | e valori contenuti nei paragrafi (assegnati a items)  |
+# | NB: Il sistema e' case sensitive.                     |
+# +-------------------------------------------------------+
+
+[General Settings]
+DebugVersion=1
+SAP=1
+
+# Numero massimo di colli per ordine (WELLA Version)
+MaxColliOrdine=6
+
+# servizio tcp-ip per comunicazione via rete
+ServicePort=8050
+
+#
+# Gestione particolare di stampa etichette collo (WELLA)
+# Il collo viene prelevato da una ubicazione (con pressione tasto di conferma)
+# L'etichetta viene stampata dopo la conferma del prelievo imballo
+# (vedi settfun.c)
+ImballiUbicati=1
+
+#
+# Gestione chiusura collo (0:no 1:si)
+#
+ChiusuraCollo=1
+
+# Gestione Fine ordine (0:no - prosegue con passaggio a settori successivi (tipo Wella) 1:si - rulliera di scarico)
+#
+FineOrdine=0
+
+# ----------------------------------------------------
+# Gestione stampa RAC
+#	0: tutte dopo il lancio (DOPO_IL_LANCIO)
+# 1: all'inizio del prelievo (INIZIO_PRELIEVO)
+# ----------------------------------------------------
+StampaRAC=1
+
+# ----------------------------------------------------
+# Path relativo ai dati di configurazione e di lavoro
+# Gli archivi utilizzati sono nel sottodirettorio 'db'
+# ----------------------------------------------------
+PathData=../data_sap
+
+# ----------------------------------------------------
+# Path relativo ai processi eseguibili
+# ----------------------------------------------------
+PathExe=../exe
+
+# ----------------------------------------------------
+# path relativo ai dati di scambio con l'HOST Computer
+# ----------------------------------------------------
+PathExport=../export_sap
+
+# ----------------------------------------------------
+# File di Import Ordini 
+# ----------------------------------------------------
+ImpOrdiniFile=Ordini.txt
+
+# ----------------------------------------------------
+# File di Import Righe 
+# ----------------------------------------------------
+ImpRigheFile=Ordini.txt
+
+# ----------------------------------------------------
+# File di Import Articoli
+# ----------------------------------------------------
+ImpArticoliFile=Articoli.txt
+
+# ----------------------------------------------------
+# File di Import Ubicazioni
+# ----------------------------------------------------
+ImpUbicazioniFile=Mappa.txt
+
+# ----------------------------------------------------
+# File di Export Ordini
+# ----------------------------------------------------
+ExpOrdiniFile=Ordcni.txt
+
+# ----------------------------------------------------
+# File di Export Colli 
+# ----------------------------------------------------
+ExpColliFile=Colli.txt
+
+# ----------------------------------------------------
+# Stampanti generiche
+# ----------------------------------------------------
+PrinterConsole=lp
+PrinterIsola1=lps2_isola1
+PrinterIsola2=lps2_isola2
+PrinterBilancia=lps2_bilancia
+
+# ----------------------------------------------------
+# Stampanti di etichette
+# ----------------------------------------------------
+LabelPrinterConsole=label_printer_console
+LabelPrinterIsola1=lp_isola1
+LabelPrinterIsola2=lp_isola2
+LabelPrinterBilancia=lp_bilancia
+
+# ---------------------------------------------
+# Shared Memory Key per dati comuni ai processi
+# ---------------------------------------------
+ShmKey=256
+
+# ---------------------------------------------
+# Shared Memory Key per stato settori
+# ---------------------------------------------
+SettoriShmKey=257
+
+[DataBase Settings]
+#PGHost=wella1
+PGHost=database
+PGPort=5432
+PGDataBase=sap
+
+[main]
+Delay=100
+SaveStateDelay=60000
+Anno=2008
+ProgressivoLancio=7619
+
+
+[printlabel]
+Anno=2001
+LabelBaseName=label_base.txt
+
+[Printers]
+
+Printer_00=lp_isola1, Stampante di Etichette Isola 1
+Printer_01=lp_isola2, Stampante di Etichette Isola 2
+Printer_02=lp_bilancia, Stampante di Etichette Bilancia
+Printer_03=lps2_isola1, Stampante di Picking List Isola 1
+Printer_04=lps2_isola2, Stampante di Picking List Isola 2
+Printer_05=lps2_bilancia, Stampante di Picking List Bilancia
+Printer_06=lp, Stampante di Sistema
+Printer_07=file, Stampante su file
+
+[Etichetta]
+
+Field_00=<IDR1DEST>  ,ID_DB_FIELD, ric_ord,  RODSCLI
+Field_01=<IDINDDEST> ,ID_DB_FIELD, ric_ord,  ROINCLI
+Field_02=<IDCAPD>    ,ID_DB_FIELD, ric_ord,  ROCPCLI
+Field_03=<IDLOCD>    ,ID_DB_FIELD, ric_ord,  ROLOCLI
+Field_04=<IDPRVD>    ,ID_DB_FIELD, ric_ord,  ROPRCLI
+Field_05=<IDTSP>     ,ID_DB_FIELD, ric_ord,  ROTRNSP
+Field_06=<IDTR>      ,ID_DB_FIELD, ric_ord,  ROTRATT
+Field_07=<IDCS>      ,ID_DB_FIELD, ric_ord,  RONELAB
+Field_08=<IDORD>     ,ID_DB_FIELD, ric_ord,  ORDPROG
+Field_09=<IDISL>     ,ID_DB_FIELD, ord_prod, OPCDISL
+Field_10=<IDSC>      ,ID_DB_FIELD, col_prod, CPPRGCL
+Field_11=<IDPSCL>    ,ID_DB_FIELD, col_prod, CPPSPRE
+Field_12=<IDNC>      ,ID_DB_FIELD, col_prod, CPNMCOL
+Field_13=<IDTC>      ,ID_DB_FIELD, ord_prod, OPNMCLL
+Field_14=<IDCP>      ,ID_DB_FIELD, col_prod, CPNMCPE
+Field_15=<BFP>       ,ID_DB_FIELD, ric_ord,  ROFLPAR
+Field_16=<BDESFP>    ,ID_DB_FIELD, ric_ord,  RODSPAR
+Field_17=<SER>       ,ID_DB_FIELD, ric_ord,  RONRSER
+Field_18=<IDSC>      ,ID_DB_FIELD, col_prod, CPPRGCL
+Field_19=<BTA>       ,ID_DB_FIELD, ric_ord,  ROTRMAR
+Field_20=<Z>         ,ID_DB_FIELD, ric_ord,  ROZNCON
+Field_21=<BFA>       ,ID_DB_FIELD, ric_ord,  ROFLARR
+Field_22=<BDESFA>    ,ID_DB_FIELD, ric_ord,  RODSARR
+Field_23=<IDFC>      ,ID_DB_FIELD, col_prod, CPTPFOR
+Field_24=<IDPSORD>   ,ID_DB_FIELD, ord_prod, OPPSPRE
+Field_25=<IDBARCODE> ,ID_DB_FIELD, col_prod, CPBRCDE
+Field_26=<IDBCVET>   ,ID_DB_FIELD, col_prod, CPBCVET
+Field_27=<IDSTO>     ,ID_DB_FIELD, ord_prod, OPCDSTO
+Field_28=<IDPER>     ,ID_DB_FIELD, col_prod, CPPERIC
+
+[peso]
+LabelPrinterName=lp
+PrinterName=lps2
+Delay=100
+BilanciaTimeout=100
+DebugVersion=1
+#
+# PLC Presente : 1
+#
+PLC=1
+PLCHost=wella1
+PLCService=8039
+# Nome dell'host destinatario di comunicazioni via sockets
+SocksHost=wella1
+
+# ----------------------------------------------------
+# Gestione controllo peso su:
+#	- un intero ordine di produzione (PESATURA_ORDINE)
+# - un singolo collo di produzione (PESATURA_COLLO)
+# ----------------------------------------------------
+GestionePesatura=0
+
+# ----------------------------------------------------
+# Tolleranze peso bancali :
+# Tolleranza=0 -> attiva la tolleranza assoluta (grammi)
+# Tolleranza=1 -> attiva la tolleranza percentuale  
+# Tolleranza=2 -> attiva la tolleranza percentuale 
+#	                con soglia massima  
+# ----------------------------------------------------
+Tolleranza=2
+TolleranzaPercentuale=5
+TolleranzaAssoluta=100
+SogliaMassima=110
+
+# ----------------------------------------------------
+# FlagSogliMassima relativo alla tolleranza percentuale
+# =1 attiva limita la tolleranza percentuale al valore
+#    massimo fissato dal campo SogliaMassima (in grammi)
+# ----------------------------------------------------
+#FlagSogliaMassima=1
+
+[bilancia]
+#
+# porta utilizzata
+#
+CommDevice=/dev/ttyS0
+#
+# Parametri di comunicazione
+#
+CommParams=9600,n,8,1
+
+[barcode]
+#
+# porta utilizzata
+#
+CommDevice=/dev/ttyS1
+#
+# Parametri di comunicazione
+#
+CommParams=9600,n,8,1
+
+[bilsim]
+#
+# porta utilizzata
+#
+CommDevice=/dev/ttyS1
+#
+# Parametri di comunicazione
+#
+CommParams=9600,n,8,1
+
+[Variables]
+VAR_00=CPB,Collo in Bilancia
+VAR_01=CB,Collo Pesato
+VAR_02=CS,Peso Ordine Errato
+VAR_03=FO,Peso Ordine OK
+VAR_04=CICCIA,Ciccia
+
+[procinfo]
+# -----------------------------------------------------------------------------------------------
+# PROCESSI COMPONENTI IL PROGETTO
+# -----------------------------------------------------------------------------------------------
+# Proc_xx=[Process Nome],[QKey],[Execute Process]
+# [Process Name]    : Nome del processo (da usare anche per leggere le configurazioni specifiche)
+# [QKey]            : Chiave della coda messaggi del processo
+# [Priority Offset] : Offset di priorita' del processo 
+# [Execute Process] : Flag di esecuzione (1 -> esegui)
+# -----------------------------------------------------------------------------------------------
+Proc_00=main,      256,  0,1
+Proc_01=settori,   257,  0,1
+Proc_02=ios,       258,  0,1
+Proc_03=volum,     259,  0,1
+Proc_04=printlabel,260,  0,1
+Proc_05=peso,      261,  0,1
+Proc_06=barcode,   262,  0,0
+Proc_07=bilancia,  263,  0,0
+Proc_08=bilsim,    264,  0,0
+Proc_09=sock,      265,  0,1
+Proc_10=isola,     266,  0,1
+
+# --------------------------------------------------------------
+# PARAGRAFI RELATIVI AI VARI PROCESSI CHE COMPONGONO IL PROGETTO
+# --------------------------------------------------------------
+
+
+[settori]
+
+# -----------------------------------------------------------------------------------------------
+# Delay della applicazione in millisecondi 
+# -----------------------------------------------------------------------------------------------
+Delay=100
+# -----------------------------------------------------------------------------------------------
+# Delay della GetOrdine in millisecondi
+# -----------------------------------------------------------------------------------------------
+GetOrderDelay=1000
+
+# -----------------------------------------------------------------------------------------------
+# Numero Settori di Magazzino
+# -----------------------------------------------------------------------------------------------
+NumeroSettori=16
+
+# -----------------------------------------------------------------------------------------------
+# Numero Isole di Magazzino
+# -----------------------------------------------------------------------------------------------
+NumeroIsole=2
+
+# -----------------------------------------------------------------------------------------------
+# Isola,Numero Settore,Flag di abilitazione settore ,Tipo Settore (0:start,1:intermedio)
+# -----------------------------------------------------------------------------------------------
+Settore_00=1,1,1,0
+Settore_01=1,2,1,1
+Settore_02=1,3,1,1
+Settore_03=1,4,1,1
+Settore_04=1,5,1,1
+Settore_05=1,6,1,1
+Settore_06=1,7,1,1
+Settore_07=1,8,1,2
+
+Settore_08=2,1,1,0
+Settore_09=2,2,1,1
+Settore_10=2,3,1,1
+Settore_11=2,4,1,1
+Settore_12=2,5,1,1
+Settore_13=2,6,1,1
+Settore_14=2,7,1,1
+Settore_15=2,8,1,2
+
+# -----------------------------------------------------------------------------------------------
+# Dati di indirizzamento displays (IOS,CPU,MODULO,ISOLA,SETTORE)
+# -----------------------------------------------------------------------------------------------
+#NumeroDisplays=19
+NumeroDisplays=22
+
+# Displays di isola 1 (i primi 4 settori sono bi-fronte)
+
+#
+# !!!! SISTEMARE I DISPLAYS !!!!
+# (cambiare il settore a tutti a parte il primo ...)
+#
+
+
+Display_00=0,0,16,1,1
+Display_01=0,0,15,1,1
+Display_02=0,0,04,1,2
+Display_03=0,0,08,1,2
+Display_04=0,0,06,1,3
+Display_05=0,0,03,1,3
+Display_06=0,0,07,1,4
+Display_07=0,0,01,1,4
+Display_08=0,0,17,1,5
+Display_09=0,0,11,1,6
+Display_10=0,0,12,1,7
+Display_11=0,0,18,1,8
+
+# Displays di isola 2
+
+# rimettere a posto ...
+Display_12=0,1,13,2,2
+Display_13=0,1,09,2,3
+Display_14=0,1,05,2,4
+
+
+Display_15=0,1,00,2,5
+Display_16=0,1,10,2,6
+Display_17=0,1,02,2,7
+Display_18=0,1,14,2,8
+
+# provo i 3 nuovi displays ...
+Display_19=0,1,25,2,1
+Display_20=0,1,24,2,3
+Display_21=0,1,26,2,4
+
+# -----------------------------------------------------------------------------------------------
+# Massimo numero di tentativi prima di decidere che la luce e' rotta
+# -----------------------------------------------------------------------------------------------
+MaxDamages=5
+
+[ios]
+# -----------------------------------------------------------------------------------------------
+# Delay della applicazione in millisecondi 
+# -----------------------------------------------------------------------------------------------
+Delay=5
+# -----------------------------------------------------------------------------------------------
+# Simulazione IOS
+# -----------------------------------------------------------------------------------------------
+Simulazione=0
+# -----------------------------------------------------------------------------------------------
+# Delay in millisecondi per la simulazione pressione tasto
+# -----------------------------------------------------------------------------------------------
+DelaySimulazione=500
+
+# -----------------------------------------------------------------------------------------------
+# numero di schede ios connesse
+# -----------------------------------------------------------------------------------------------
+IOSNumber=1
+#IOSNumber=0
+
+# -----------------------------------------------------------------------------------------------
+# numero schede PKL presenti
+# -----------------------------------------------------------------------------------------------
+PKLNumber=2
+#PKLNumber=0
+
+# -----------------------------------------------------------------------------------------------
+# Dati di indirizzamento schede PKL (IOS,CPU,Modulo)
+# -----------------------------------------------------------------------------------------------
+PKL_00=0,0,19
+PKL_01=0,1,15
+
+
+
+
+
+# -----------------------------------------------------------------------------------------------
+# Fine definizione dati relativi ai processi componenti la linea
+# -----------------------------------------------------------------------------------------------
+
+[Tabella Ordini]
+#
+# indice del campo chiave
+#
+OrdiniKeyField=3
+OrdiniStatusField=0
+
+SELECT_CMD=select ric_ord.rostato as "S", ric_ord.roprgln as "PRG.LANCIO", ric_ord.ronelab as "ELAB. ", ric_ord.ordprog as "CODICE", ric_ord.rodscli as "RAGIONE SOCIALE", ric_ord.rocpcli as "CAP", ric_ord.roprcli as "PRV", ric_ord.ronmcll as "COLLI", ric_ord.ronmprs as "PRESE",ric_ord.ronmrgh as "RIGHE", ric_ord.ronmcpe as "COPIE", ric_ord.ropspre::float4/1000 as "PESO PRE(Kg)", ric_ord.ropsrea::float/1000 as "PESO REA(Kg)" from ric_ord order by ric_ord.ronelab,ric_ord.ordprog;
+UPDATE_CMD=select ric_ord.rostato as "S", ric_ord.roprgln as "PRG.LANCIO", ric_ord.ronelab as "ELAB. ", ric_ord.ordprog as "CODICE", ric_ord.rodscli as "RAGIONE SOCIALE", ric_ord.rocpcli as "CAP", ric_ord.roprcli as "PRV", ric_ord.ronmcll as "COLLI", ric_ord.ronmprs as "PRESE",ric_ord.ronmrgh as "RIGHE", ric_ord.ronmcpe as "COPIE", ric_ord.ropspre::float4/1000 as "PESO PRE(Kg)", ric_ord.ropsrea::float4/1000 as "PESO REA(Kg)" from ric_ord where ordprog='%KEY%';
+SELECT_CMD_SPEDIZIONE=select ric_ord.rostato as "S", ric_ord.roprgln as "PRG.LANCIO", ric_ord.ronelab as "ELAB. ", ric_ord.ordprog as "CODICE", ric_ord.rodscli as "RAGIONE SOCIALE", ric_ord.rocpcli as "CAP", ric_ord.roprcli as "PRV", ric_ord.ronmcll as "COLLI", ric_ord.ronmprs as "PRESE",ric_ord.ronmrgh as "RIGHE", ric_ord.ronmcpe as "COPIE", ric_ord.ropspre::float4/1000 as "PESO PRE(Kg)", ric_ord.ropsrea::float4/1000 as "PESO REA(Kg)" from ric_ord order by ric_ord.ronelab,ric_ord.ordprog;
+SELECT_CMD_INSTRADAMENTO=select ric_ord.rostato as "S", ric_ord.roprgln as "PRG.LANCIO", ric_ord.ronelab as "ELAB. ", ric_ord.ordprog as "CODICE", ric_ord.rodscli as "RAGIONE SOCIALE", ric_ord.rocpcli as "CAP", ric_ord.roprcli as "PRV", ric_ord.ronmcll as "COLLI", ric_ord.ronmprs as "PRESE",ric_ord.ronmrgh as "RIGHE", ric_ord.ronmcpe as "COPIE", ric_ord.ropspre::float4/1000 as "PESO PRE(Kg)", ric_ord.ropsrea::float4/1000 as "PESO REA(Kg)" from ric_ord order by ric_ord.ronelab,ric_ord.ordprog;
+SELECT_CMD_NO_HOST=select ric_ord.rostato as "S", ric_ord.roprgln as "PRG.LANCIO", ric_ord.ronelab as "ELAB. ", ric_ord.ordprog as "CODICE", ric_ord.rodscli as "RAGIONE SOCIALE", ric_ord.rocpcli as "CAP", ric_ord.roprcli as "PRV", ric_ord.ronmcll as "COLLI", ric_ord.ronmprs as "PRESE",ric_ord.ronmrgh as "RIGHE", ric_ord.ronmcpe as "COPIE", ric_ord.ropspre::float4/1000 as "PESO PRE(Kg)", ric_ord.ropsrea::float/1000 as "PESO REA(Kg)" from ric_ord where (rostato!='H' or rostato=NULL) order by ric_ord.ronelab,ric_ord.ordprog;
+
+[Edit Colli Ordine]
+# ATTENZIONE : ORDINE e NUMCOLLO devono essere rispettivamente la posizione 0 e 2 
+# della lista colli.  (vedi EditCollo in mainfun.c)
+SELECT_CMD=select col_prod.ordkey as "ORDINE", col_prod.cpstato as "S", col_prod.cpnmcol as "NUM.COLLO", col_prod.cptpfor as "FORMATO", col_prod.cpswlin as "L", col_prod.cpprgcl as "SEGNAC.", col_prod.cpnmrgh as "RIGHE", col_prod.cpnmcpe as "COPIE", col_prod.cppspre::float4/1000 as "PESO D(Kg)", col_prod.cppsrea::float4/1000 as "PESO R(Kg)",col_prod.cpdteva as "D.EVA.", col_prod.cptmeva as "O.EVA", col_prod.cpswfps as "FP"  from col_prod where col_prod.ordprog='%ORDPROG%' order by col_prod.ordkey,col_prod.cpnmcol;
+SELECT_CMD_STOR=select col_stor.ordkey as "ORDINE", col_stor.cpstato as "S", col_stor.cpnmcol as "NUM.COLLO", col_stor.cptpfor as "FORMATO", col_stor.cpswlin as "L", col_stor.cpprgcl as "SEGNAC.", col_stor.cpnmrgh as "RIGHE", col_stor.cpnmcpe as "COPIE", col_stor.cppspre::float4/1000 as "PESO D(Kg)", col_stor.cppsrea::float4/1000 as "PESO R(Kg)",col_stor.cpdteva as "D.EVA.", col_stor.cptmeva as "O.EVA", col_stor.cpswfps as "FP"  from col_stor where col_stor.ordprog='%ORDPROG%' order by col_stor.ordkey,col_stor.cpnmcol;
+
+[Edit Righe Ordine]
+SELECT_CMD=select ric_art.racdpro as "CODICE" ,articoli.prdescr as "TITOLO", ric_art.raqtord as "COPIE", articoli.prpesgr as "PESO U.", ubicazioni.ubicazione as "UBICAZIONE" from ric_art,articoli,ubicazioni where ric_art.racdpro=articoli.prcdpro AND ric_art.racdpro=ubicazioni.codprod AND ric_art.ordprog='%ORDPROG%' order by ric_art.racdpro;
+
+[Edit Righe Collo]
+# ATTENZIONE : ORDPROG in questo caso e' ORDKEY (vedi EditCollo in mainfun.c)
+SELECT_CMD=select rig_prod.rpcdpro as "CODICE" ,articoli.prdescr as "DESCRIZIONE PRODOTTO", rig_prod.rpqtspe as "QUANTITA'", rig_prod.rpcdubi as "UBICAZIONE" from rig_prod,articoli where rig_prod.rpcdpro=articoli.prcdpro AND rig_prod.ordkey='%ORDPROG%' AND rig_prod.rpnmcol=%NUMCOLLO% order by rig_prod.rpcdubi;
+SELECT_CMD_STOR=select rig_stor.rpcdpro as "CODICE" ,articoli.prdescr as "DESCRIZIONE PRODOTTO", rig_stor.rpqtspe as "QUANTITA'", rig_stor.rpcdubi as "UBICAZIONE" from rig_stor,articoli where rig_stor.rpcdpro=articoli.prcdpro  AND rig_stor.ordkey='%ORDPROG%' AND rig_stor.rpnmcol=%NUMCOLLO% order by rig_stor.rpcdubi;
+
+[Lista Distribuzione]
+SELECT_CMD=select ric_ord.ronelab as "ELABORAZIONE",count(ric_ord.ronelab) as "ORDINI",sum(ric_ord.ronmcpe) as "COPIE",sum(ric_ord.ronmrgh) as "RIGHE",sum(ric_ord.ronmcll) as "COLLI",(sum(ric_ord.ropspre)::float/1000) as "PESO (KG.)" from ric_ord  group by ric_ord.ronelab order by ric_ord.ronelab;
+
+[Distribuzione Settori]
+SELECT_CMD=select ubicazioni.settore as "SETTORE",sum(ric_art.raqtord) as "TOT. COPIE" from ric_art,ubicazioni where ubicazioni.codprod=ric_art.racdpro group by settore order by settore;
+
+[Carico Settori]
+SELECT_CMD=select ric_ord.ronelab as "ELABORAZIONE",count(ric_ord.ronelab) as "ORDINI" from ric_ord  group by ric_ord.ronelab order by ric_ord.ronelab;
+
+[Fine Linea]
+ColloKeyField=2
+ColloNumField=4
+
+SELECT_CMD=select col_prod.cpstato as "S", col_prod.cpnelab as "ELAB. ", col_prod.ordkey as "ORDINE", ric_ord.rodscli as "RAGIONE SOCIALE", col_prod.cpnmcol as "NUM.COLLO",  col_prod.cppspre::float4/1000 as "PESO D.", col_prod.cppsrea::float4/1000 as "PESO R." from col_prod,ric_ord where ric_ord.ordprog=col_prod.ordprog and col_prod.cpstato='E' order by col_prod.ordkey,col_prod.cpnmcol;
+UPDATE_CMD=select col_prod.cpstato as "S", col_prod.cpnelab as "ELAB. ", col_prod.ordkey as "ORDINE", ric_ord.rodscli as "RAGIONE SOCIALE", col_prod.cpnmcol as "NUM.COLLO",  col_prod.cppspre::float4/1000 as "PESO D.", col_prod.cppsrea::float4/1000 as "PESO R." from col_prod,ric_ord where ric_ord.ordprog=col_prod.ordprog and col_prod.ordkey='%ORDKEY%' and col_prod.cpnmcol=%NUMCOLLO%;
+
+[isola]
+Isola=1
+LabelPrinterName=lp
+PrinterName=lps2
+Delay=100
+RefreshDelay=60000
+OrdineKeyField=2
+
+SELECT_CMD=select ord_prod.opstato as "S", ord_prod.opnelab as "ELAB. ", ord_prod.ordkey as "ORDINE     ", ric_ord.rodscli as "RAGIONE SOCIALE", ord_prod.opnmcll as "NUM.COLLI",  ord_prod.oppspre::float4/1000 as "PESO D.", ord_prod.oppsrea::float4/1000 as "PESO R." from ord_prod as "op",ric_ord as "ro" where ric_ord.ordprog=ord_prod.ordprog and (ord_prod.opstato='A' or ord_prod.opstato='P' or ord_prod.opstato='T') and ord_prod.opcdisl=%ISOLA%  order by ord_prod.opprgln DESC;
+UPDATE_CMD=select ord_prod.opstato as "S", ord_prod.opnelab as "ELAB. ", ord_prod.ordkey as "ORDINE     ", ric_ord.rodscli as "RAGIONE SOCIALE", ord_prod.opnmcll as "NUM.COLLI",  ord_prod.oppspre::float4/1000 as "PESO D.", ord_prod.oppsrea::float4/1000 as "PESO R." from ord_prod as "op",ric_ord as "ro" where ric_ord.ordprog=ord_prod.ordprog and ord_prod.ordkey='%ORDKEY%';
+
+[Isola Edit Colli Ordine]
+# ATTENZIONE : ORDINE e NUMCOLLO devono essere rispettivamente la posizione 0 e 2 
+# ATTENZIONE : ORDPROG in questo caso e' ORDKEY (vedi EditOrdine in isola/mainfun.c)
+# della lista colli.  (vedi EditCollo in mainfun.c)
+SELECT_CMD=select col_prod.ordkey as "ORDINE", col_prod.cpstato as "S", col_prod.cpnmcol as "NUM.COLLO", col_prod.cptpfor as "FORMATO", col_prod.cpswlin as "L", col_prod.cpprgcl as "SEGNAC.", col_prod.cpnmrgh as "RIGHE", col_prod.cpnmcpe as "COPIE", col_prod.cppspre::float4/1000 as "PESO D(Kg)", col_prod.cppsrea::float4/1000 as "PESO R(Kg)",col_prod.cpdteva as "D.EVA.", col_prod.cptmeva as "O.EVA", col_prod.cpswfps as "FP"  from col_prod,ord_prod where col_prod.ordkey='%ORDPROG%' order by col_prod.ordkey,col_prod.cpnmcol;
+
+[Isola Edit Righe Collo]
+# ATTENZIONE : ORDPROG in questo caso e' ORDKEY (vedi EditCollo in isola/mainfun.c)
+SELECT_CMD=select rig_prod.rpcdpro as "CODICE" ,articoli.prdescr as "DESCRIZIONE PRODOTTO", rig_prod.rpqtspe as "QUANTITA'", rig_prod.rpcdubi as "UBICAZIONE" from rig_prod,articoli,ubicazioni where rig_prod.rpcdpro=articoli.prcdpro AND rig_prod.ordkey='%ORDPROG%' AND rig_prod.rpnmcol=%NUMCOLLO% order by rig_prod.rpcdubi;
+
+[Stampa Packing List Ordine]
+SELECT_CMD=select r.rpcdpro as "CODICE  ",substr(a.prdescr,1,40) as "DESCRIZIONE PRODOTTO                    ",sum(r.rpqtspe) as "Q.TA",u.settore as "SET",r.rpqtpes/r.rpqtspe as "PESO UN.",r.rpnmcol as "C." from rig_prod as "r",articoli as "a",ubicazioni as "u"  where u.ubicazione=r.rpcdubi and a.prcdpro=r.rpcdpro and r.ordkey='%ORDPROG%' group by r.rpcdpro,a.prdescr,r.rpnmcol,u.settore,r.rpqtpes/r.rpqtspe,u.priorita order by r.rpnmcol,u.priorita;
+SEPARATOR_FIELD=5
+SELECT_CMD_STOR=select r.rpcdpro as "CODICE  ",substr(a.prdescr,1,40) as "DESCRIZIONE PRODOTTO                    ",sum(r.rpqtspe) as "Q.TA",u.settore as "SET",r.rpqtpes/r.rpqtspe as "PESO UN.",r.rpnmcol as "C." from rig_stor as "r",articoli as "a",ubicazioni as "u"  where u.ubicazione=r.rpcdubi and a.prcdpro=r.rpcdpro and r.ordkey='%ORDPROG%' group by r.rpcdpro,a.prdescr,r.rpnmcol,u.settore,r.rpqtpes/r.rpqtspe,u.priorita order by r.rpnmcol,u.priorita;
+SEPARATOR_FIELD_STOR=5
+
+[Stampa Packing List Collo]
+SELECT_CMD=select rig_prod.rpnmcol as "COLLO",rig_prod.rpcdpro as "CODICE  " ,articoli.prdescr as "DESCRIZIONE PRODOTTO", rig_prod.rpqtspe as "QUANTITA'", rig_prod.rpcdubi as "UBICAZ." from rig_prod,articoli,ubicazioni where rig_prod.rpcdpro=articoli.prcdpro AND rig_prod.ordkey='%ORDPROG%' and rig_prod.rpnmcol=%NUMCOLLO% order by rig_prod.rpnmcol,rig_prod.rpcdubi;
+;
+
+
+

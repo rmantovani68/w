@@ -1,0 +1,11 @@
+Sorgenti:
+
+Dec 12 15:28 sorg-12-12-00.tgz
+
+Feb  2 08:14 sorg-01-02-01.tgz
+ - versione precedente senza gestione priorita' e operatori
+
+Feb  2 10:48 sorg-02-02-01.tgz
+ - versione attuale
+
+

@@ -1,0 +1,3 @@
+rsh isola1 'spegni'
+rsh isola2 'spegni'
+rsh bilancia 'spegni'

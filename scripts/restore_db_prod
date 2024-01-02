@@ -1,0 +1,11 @@
+echo articoli   ; echo 'drop table articoli  ;'|psql sap; cat   articoli.dump     | psql sap
+echo col_prod   ; echo 'drop table col_prod  ;'|psql sap; cat   col_prod.dump | psql sap
+echo eventi     ; echo 'drop table eventi    ;'|psql sap; cat   eventi.dump | psql sap
+echo imballi    ; echo 'drop table imballi   ;'|psql sap; cat   imballi.dump | psql sap
+echo operatori  ; echo 'drop table operatori ;'|psql sap; cat   operatori.dump | psql sap
+echo opeset     ; echo 'drop table opeset    ;'|psql sap; cat   opeset.dump | psql sap
+echo ord_prod   ; echo 'drop table ord_prod  ;'|psql sap; cat   ord_prod.dump | psql sap
+echo ric_art    ; echo 'drop table ric_art   ;'|psql sap; cat   ric_art.dump | psql sap
+echo ric_ord    ; echo 'drop table ric_ord   ;'|psql sap; cat   ric_ord.dump | psql sap
+echo rig_prod   ; echo 'drop table rig_prod  ;'|psql sap; cat   rig_prod.dump | psql sap
+echo ubicazioni ; echo 'drop table ubicazioni;'|psql sap; cat   ubicazioni.dump | psql sap

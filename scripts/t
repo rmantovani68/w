@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#
+# Creazione tabelle / indici / sequenze / funzioni
+#
+
+#
+# default values
+#
+DATABASE_NAME=`cat ../doc/BASE_NAME`
+DATABASE_HOST=`cat ../doc/DATABASE_HOST`
+
+echo 'Creazione Tabelle'
+echo -n 'Nome Database ['$DATABASE_NAME'] ? : '
+read DB_NAME
+echo -n 'Nome Host ['$DATABASE_HOST'] ? : '
+read DB_HOST
+
+if [ a"$DB_NAME" != a''  ]
+then
+DATABASE_NAME=$DB_NAME
+fi
+
+if [ a"$DB_HOST" != a''  ]
+then
+DATABASE_HOST=$DB_HOST
+fi
+
+echo 'Database Host = '$DB_HOST
+
+echo "CREATE FUNCTION ora(timestamp) returns text as 'select lpad(date_part(''hour'',\$1)::text,2,''0'')||'':''||lpad(date_part(''minute'',\$1)::text,2,''0'')||'':''||lpad(date_part(''second'',date_trunc(''second'',\$1))::text,2,''0'')' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME
+echo "CREATE FUNCTION data(timestamp) returns text as 'select lpad(date_part(''day'',\$1)::text,2,''0'')||''-''||lpad(date_part(''month'',\$1)::text,2,''0'')||''-''||lpad(date_part(''year'',\$1)::text,4,''0'')' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME
+echo "CREATE FUNCTION data_ora(timestamp) returns text as 'select data(\$1)||'' ''||ora(\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME
+
+echo "CREATE FUNCTION value(integer) returns text as 'case when \$1 > 0 then \$1::text else '' '' end' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME
+
+
+

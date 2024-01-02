@@ -1,0 +1,24 @@
+--------------------------------------------
+EASY PICKING 3.0 - VERSIONE SQL (POSTGRESQL)
+--------------------------------------------
+
+Porting-rifacimento del sistema EasyPicking su Librerie GTK+ e
+DBMS POSTGRESQL.
+
+Fa parte dello stage aziendale di Stefano Tarroni.
+
+Sara' utilizzato come prima installazione pilota nell'impianto Wella.
+
+NOTE PER L'UTILIZZO DI POSTGRES
+
+- Fare partire il servizio postgres/postmaster utilizzando linuxconf da root;
+
+- Modificare il file pg_hba.conf (in /var/lib/pgsql) per accettare
+  connessioni da host remoti sulla porta 5432;
+
+- Creare gli utenti autorizzati ad utilizzare i database con il
+  comando 'createuser' lanciato dall'utente 'postgres';
+
+- creare i database con il comando 'createdb <database_name>';
+
+- utilizzare lo script di startup modificato CNI : '/etc/rc.d/init.d/postgres'

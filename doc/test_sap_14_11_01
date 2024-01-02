@@ -1,0 +1,47 @@
+- Test SAP -
+
+Wed Nov 14 15:23:12 CET 2001
+	Roberto Mantovani
+	Stefano Tarroni
+	
+	PROGRAMMAZIONE SCANNER DATALOGIC IN BILANCIA:
+
+		- E' necessario riprogrammare il DIGIT NUMBER del barcode-reader
+			- Premere ENT per almeno 2 sec per abilitare la programmazione
+			- KEYBORD MODE (premere ENT)
+				|
+				`-> CODE SELECTION  (premere ENT)
+						|
+						`-> INT 2/5 (premere ENT finche' non compare la voce)
+								|
+								`-> DIGIT NUMBER -> impostare il valore a 16 e confermare con ENT
+																		premere CLR fino al menu' SAVE MODE
+				|
+				`-> SAVE MODE -> selezionare: - SAVE RAM per il test (le impostazioni modificate 
+																				vengono perse allo spegnimento)
+																			- SAVE EEPROM per salvare i dati in modo permanente
+																			
+
+
+
+	MODIFICHE EFFETTUATE:
+
+	- modifiche all'applicazione colli:
+		I colli vengono evasi al momento in cui il relativo sottordine risulta in tolleranza;
+		
+		I colli evasi che transitano in bilancia si fermano sulla bilancia, un dialog_window avverte
+		l'operatore che il collo e' gia' stato pesato ed evaso.
+
+		Se il sottordine, diversamente, risuta fuori tolleranza, i relativi colli (stato 'W' - pesato)
+		possono ritransitare in bilancia ed essere ripesati;
+
+		l'operatore puo' inoltre confermare l'evasione del sottordine attraverso il pulsante "Ordine OK".
+	
+	- Aggiunto il parametro Cfg.nSAP in cni.cfg per configurare la modalita' operativa (AS400 - SAP)
+
+
+	PROBLEMATICHE RISCONTRATE:
+
+	- Files di Import con l'iniziale maiuscola;
+
+	- 

@@ -1,0 +1,52 @@
+# ---------------------------------------------
+# File di definizione stili per display
+# Progetto Easy Picking 3.0 
+# Data creazione 14-03-2006
+# Autori : Luca Guerrini - Roberto Mantovani
+# Copyright A&L srl 2002
+# ---------------------------------------------
+
+# ------------------------------------
+# dichiarazione della pixmap directory
+# ------------------------------------
+#pixmap_path "../pixmaps"
+
+
+# -----------------
+# definizione stili
+# -----------------
+style "clist_font" {
+	font = "9x15bold"
+}
+style "dlgbox_font" {
+	font = "9x15bold"
+}
+style "large_font" {
+	font = "9x15bold"
+}
+
+style "stato_linea" {
+	font = "-adobe-Courier-Bold-R-Normal--18-180-75-75-M-110-ISO8859-1"
+}
+
+style "sfondo_nero" {
+   bg[NORMAL] = { 0.0, 0.0, 0.0 }
+   bg[INSENSITIVE] = { 0.0, 0.0, 0.0 }
+   base[NORMAL] = { 0.0, 0.0, 0.0 }
+   fg[NORMAL] = { 1.0, 1.0, 1.0 }
+   text[NORMAL] = { 1.0, 1.0, 1.0 }
+}
+
+
+# ----------------------------
+# associazione stili -> widget
+# ----------------------------
+
+#class "GtkLabel" style "sfondo_nero"
+#class "main_window.*.GtkLabel" style "sfondo_nero"
+#widget "GtkWindow*" style "sfondo_nero"
+#widget "GtkWindow*GtkLabel" style "sfondo_nero"
+#class "GtkWindow*GtkLabel" style "sfondo_nero"
+#class "GtkWindow*GtkEventBox" style "sfondo_nero"
+class "GtkEventBox" style "sfondo_nero"
+class "GtkLabel" style "sfondo_nero"

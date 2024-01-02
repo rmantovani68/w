@@ -1,0 +1,5 @@
+##
+# tar dati (configurazioni)
+##
+rm -f data.tgz
+tar zcvf data.tgz data/[ABCDEFGHIJKLMNOPQRSTUVWXYZ]* 

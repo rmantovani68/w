@@ -1,0 +1,11 @@
+#!/bin/bash
+
+exec qplc -reset -period 10 -remote-debug \
+	-stand-alone -go-anyway \
+	-no-hatsh -no-prog480 \
+	-min-overrun 4 -path-user $1.oo \
+	-devconf ios.chk=0:ios.trig=0 -simul
+
+# Per eliminare i segnali di scambio stile CN, aggiungere "-shvmask 0"
+# Per lavorare senza moduli connessi usare -simul
+

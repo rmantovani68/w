@@ -1,0 +1,9 @@
+45 12 * * * /u/prj/wella/scripts/database_dumpall.sh -h localhost -w -v -scp -scpuser picking -scphost wella2 -d /home/picking sap &
+48 13 * * * /u/prj/wella/scripts/database_dumpall.sh -h localhost -w -v -scp -scpuser picking -scphost wella2 -d /home/picking sap &
+#una prova di cancellazione
+#12 16 * * * /usr/bin/find /home/picking/core.* -type f -mtime +30 -exec rm {} \;
+# camcellazione PDF piu vecchi
+37 12 * * * /usr/bin/find /u/prj/wella/export_sap/pdf/*.pdf -type f -mtime +7 -exec rm {} \;
+38 12 * * * /usr/bin/find /u/prj/wella/export_sap/pdfstr/*.pdf -type f -mtime +7 -exec rm {} \;
+# Faccio il report i rpimi 7 gg del mese perche' il rischio e' che il primo del mese il pc e' spento
+10 13 1-20 * * /usr/local/bin/report_colli_mensile.sh

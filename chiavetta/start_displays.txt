@@ -1,0 +1,3 @@
+mettere in avvio applicazioni
+
+sh -c "cd /u/prj/wella/scripts; ./start_displays.sh"

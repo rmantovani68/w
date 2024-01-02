@@ -1,0 +1,23 @@
+**********************************************************
+* WARNING:  It is unlawful to sell or give away this     *
+*           output to installations which do not have    *
+*           a registered copy of this product.  This     *
+*           output is to be used only by the registered  *
+*           end user, for use on one printer.  See the   *
+*           license agreement for more information.      *
+**********************************************************
+*
+*
+* Delete this line and above to use for printing.
+
+{AY;+00,1|}{D1642,0999,1610|}
+
+{C|}{XR;0000,0000,0999,1610,A|}
+{AX;-000,-000,+00|}{U2;0120|}
+{PV00;0803,0585,0123,0137,B,11,B|}
+{PV01;0535,0199,0123,0137,B,11,B|}
+{PV02;0228,0516,0123,0137,B,11,W|}
+{RV00;CONTIENE|}
+{RV01;DOCUMENTI|}
+{RV02;<IDCS>|}
+{XS;I,0001,0002C5000|}{U1;0120|}

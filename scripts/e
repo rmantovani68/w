@@ -1,0 +1,4 @@
+
+DATABASE_HOST=`cat ../doc/DATABASE_HOST`
+
+echo ric_stor      ;pg_dump sap -h $DATABASE_HOST -x -t ric_stor      | gzip -c > ric_stor.dump.gz

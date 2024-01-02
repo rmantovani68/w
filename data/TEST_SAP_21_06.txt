@@ -1,0 +1,36 @@
+Modifiche da apportare al sistema Easy-Picking 3.0 per SAP
+
+Creazione directory di configurazione separata -> data_sap
+
+Variazione ai campi nei file di configurazione delle tabelle:
+	- Codice Articolo        char(18)
+	- Descrizione Articolo   char(40)
+	- Locazione Decodificata nun(10)
+	- Numero ordine          num(10)
+	- Numero Elaborazione    num(10)
+	- Codice Imballo         num(18)
+
+Creazione nuovo database di test sap;
+
+Inserimento dei dati fondamentali nella tabella ubicazioni
+cat ub | psql sap
+
+Inserimento dati relativi agli operatori, regioni, provincie ...
+
+verifica della modalita' di inserimento dati in ricazione nelle tabelle
+ubicazioni e articoli
+
+cambio progressivo spedizione -> da 6 a 10 cifre
+
+- cambiare il file di configurazione delle tabelle di postgresql;
+- verificare il tipo del campo del database (char !!, int2 !!, int4);
+- verificare di conseguenza il campo ordkey (prog. ordine + sottordine + n. collo)
+	nel database, nelle tabelle di configurazione e nell'intero codice;
+- modificare il codice a barre cni del collo;
+- modificare in bilancia la lettura del codice a barre;
+
+grep -in CPBRCDE = */*.[ch]
+peso/pesofun.c: 808:	trace_out_vstr_date(1,"ColloInBilancia : LANCIATA select ordprog,ordkey,cpnmcol,cpnmcpe,cpnmrgh from col_prod where cpbrcde='%s';",szBarcodeColloBilancia); 
+peso/pesofun.c: 812:	PGResCollo=PGExecSQL(Cfg.nDebugVersion,"select ordprog,ordkey,cpnmcol,cpnmcpe,cpnmrgh from col_prod where cpbrcde='%s';",szBarcodeColloBilancia);
+peso/pesofun.c:1893:  PGRes=PGExecSQL(Cfg.nDebugVersion,"insert into col_prod (ordprog,ordkey,cpnelab,cpnmcol,cptpfor,cppspre,cppsrea,cpnmrgh,cpnmcpe,cpswlin,cpbrcde) values ('%s','%s','%s',%d,'%s',0,0,0,0,'0','%s');",PQgetvalue(PGResOrdine,0,1),szOrdKey,PQgetvalue(PGResOrdine,0,2),nCollo,StrTrimRight(szFormatoCollo),szBarcode);
+volum/volfun.c: 204:	sprintf(szSQLCmd,"insert into col_prod (ordprog, ordkey, cpnelab, cptpfor, cpswlin, cpnmcol, cpnmrgh, cpnmcpe, cppspre, cpbrcde, cppsrea, cpdteva, cptmeva, cpstato) values ( '%s','%s','%s','%s','%d',%d,%d,%d,%d,'%s',%d,'%s','%s','%c');",

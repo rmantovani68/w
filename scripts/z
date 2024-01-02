@@ -1,0 +1,13 @@
+
+echo articoli   ;echo 'drop table articoli;' | psql sap
+echo col_prod   ;echo 'drop table col_prod;' | psql sap
+echo eventi     ;echo 'drop table eventi;' | psql sap
+echo imballi    ;echo 'drop table imballi;' | psql sap
+echo operatori  ;echo 'drop table operatori;' | psql sap
+echo opeset     ;echo 'drop table opeset;' | psql sap
+echo ord_prod   ;echo 'drop table ord_prod;' | psql sap
+echo ric_art    ;echo 'drop table ric_art;' | psql sap
+echo ric_ord    ;echo 'drop table ric_ord;' | psql sap
+echo rig_prod   ;echo 'drop table rig_prod;' | psql sap
+echo ubicazioni ;echo 'drop table ubicazioni;' | psql sap
+echo plc_msg    ;echo 'drop table plc_msg;' | psql sap

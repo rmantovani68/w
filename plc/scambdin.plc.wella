@@ -1,0 +1,16 @@
+
+(*
+* Thu Nov  6 15:15:11 PST 1997
+*
+* Segnali di scambio dinamici.
+* Versione 1.1
+* rm 10-11-1999 : eliminati i segnali di scambio xnc
+*                 Occorre trovare un metodo migliore ...
+*)
+
+VAR_GLOBAL
+	CPB                  AT %MX*     : BOOL ;
+	CB                   AT %MX*     : BOOL ;
+	CS                   AT %MX*     : BOOL ;
+	FO                   AT %MX*     : BOOL ;
+END_VAR

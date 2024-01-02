@@ -1,0 +1,4 @@
+VAR_GLOBAL
+	INICDFD          AT %MX*   : BOOL ;
+	INICDN           AT %MD*     : UDINT ;
+END_VAR

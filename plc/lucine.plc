@@ -1,0 +1,31 @@
+VAR_GLOBAL
+	C : BOOL:= 0;  (* clock di PLC *)
+	_CREATED : UDINT:= 1258642240;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM  LUCINE
+
+  VAR
+	CONTATO : CTD;
+  END_VAR
+
+
+LD C
+	STN C			(* CLOCK DI PLC *)
+	
+	LD	C
+	ST	CONTATO.CD
+	LD	Z
+	ST	CONTATO.LD
+	LD	6
+	ST	CONTATO.PV
+	CAL	CONTATO	(* FUNCTION BLOCK CTD *)
+	LD	CONTATO.Q
+(*	LD  TRUE  *) (* Commentare se si vogliono gli impulsi anziche la continua *)
+	ST	Z		(* contatore a zero *)
+	
+(* non so come si comporta al primo loop; il conteggio andrebbe in negativo, ma mi  *)
+(* sembra che un contatore down resti a zero, col segnale di zero (Z) attivo; se e' cosi' funziona *)
+
+END_PROGRAM

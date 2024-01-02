@@ -1,0 +1,2 @@
+--select count(distinct(lpcdfor)),max(lpcdfor),lpcduds,lplabel,sum(lpqtlet) from rese_letture_prodotti where lpflsca='S' and lpstato!='S' and lpprlot=18 and group by lpcduds,lplabel order by lpcduds,lplabel;
+create table ru2 as select count(distinct(lpcdfor)),max(lpcdfor),lpcduds,lplabel,sum(lpqtlet) from rese_letture_prodotti where lpflsca='S' and lpstato!='S' and lpprlot=18 and lpcduds>'RF00356' and (lplabel~'^A' or lplabel~'^B') group by lpcduds,lplabel order by lpcduds,lplabel;

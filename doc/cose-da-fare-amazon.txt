@@ -1,0 +1,77 @@
+- etichetta amazon : fatto
+- ricezione ordini/colli/righe bertello : fatto
+- dett_colli.txt a&L -> SAP : fatto
+- wella-amazon.txt
+- stampa etichetta amazon per ordini amazon (anche colli bertello)
+- creare tabelle bertello
+- creare funzione sscc check digit
+
+file modificati: 
+mainutil.c       ricezione dati
+callbacks.c      ricezione dati
+mainfun.c        ricezione dati
+mainfun.h        ricezione dati
+mainvar.c        tabelle
+mainstruct.h     configurazione
+mainext.h        tabelle 
+printfun.c       stampa etichette
+printfun.h       stampa etichette
+cni.cfg          campi stampa etichette
+
+controlla : flag amazon in Ordini.txt (Leali)
+
+in uscita :
+
+dett_colli.txt
++---------+------+------+--------------------------+
+| CAMPO   | Tipo | Lun  | Descrizione              |
++---------+------+------+--------------------------+
+| ORDPROG | C    |   10 | Progressivo Ordine       | 
+| ORDKEY  | C    |   15 | Chiave Ordine            |
+| RPNMCOL | N    |    4 | Collo                    |
+| RPCDPRO | C    |   18 | Prodotto                 |
+| RPQTSPE | N    |    9 | Quantità                 |
+| RPCDUBI | C    |    7 | Ubicazione               |
+| RPQTPES | N    |    7 | Peso Riga                |
+| RPCDSSC | C    |   18 | Codice SSCC Collo        |
++---------+------+------+--------------------------+
+
+
+
+in ingresso:
+
+ordini_bertello.txt - ordini 
++---------+------+------+--------------------------------------------------+
+| CAMPO   | Tipo | Lun  | Descrizione                                      |
++---------+------+------+--------------------------------------------------+
+| ORDPROG |    C |   10 | Numero Ordine                                    | 
+| RONMCLL |    N |    6 | Numero Colli componenti l'ordine                 | 
+| RONMRGH |    N |    6 | Numero Righe  "   "        "                     | 
+| RONMCPE |    N |    6 | Numero Copie  "   "        "                     | 
+| ROPESGR |    N |    6 | Peso Ordine in grammi                            | 
++---------+------+------+--------------------------------------------------+
+
+colli_bertello.cfg - colli
++---------+------+------+--------------------------------------------------+
+| CAMPO   | Tipo | Lun  | Descrizione                                      |
++---------+------+------+--------------------------------------------------+
+| ORDPROG |    C |   10 | Numero Ordine                                    |
+| CPNMCLL |    N |    6 | Numero Collo                                     |
+| CPNMRGH |    N |    6 | Numero Righe componenti il collo                 |
+| CPNMCPE |    N |    6 | Numero Copie     "  "         "                  |
+| CPNMPES |    N |    6 | Peso Collo in grammi                             |
+| CPTPFOR |    C |   18 | Formato collo (opzionale)                        |
++---------+------+------+--------------------------------------------------+
+
+righe_bertello.cfg - righe 
++---------+------+------+--------------------------------------------------+
+| CAMPO   | Tipo | Lun  | Descrizione                                      |
++---------+------+------+--------------------------------------------------+
+| ORDPROG |    C |   10 | Numero Ordine                                    |
+| RPNMCLL |    N |    6 | Numero Collo                                     |
+| RPCDPRO |    C |   18 | Codice prodotto                                  |
+| RPCDEAN |    C |   13 | Codice EAN                                       |
+| RPNMCPE |    N |    6 | Numero copie                                     |
+| RPPESGR |    N |    6 | Peso in grammi                                   |
++---------+------+------+--------------------------------------------------+
+

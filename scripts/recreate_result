@@ -1,0 +1,5 @@
+-rw-rw-rw-    1 roberto  roberto  33196365 Sep 30 18:35 sap.dump.gz
+$DATE - DESTROYDB
+$DATE - RESTORE
+$DATE - VACUUM
+$DATE - FINE

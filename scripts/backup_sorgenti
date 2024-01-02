@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# tar completo sorgenti e documentazione
+# senza pixmaps
+
+PROJECT_NAME=`cat ../doc/PROJECT`
+PROJECT_VERSION=`cat ../doc/VERSION`
+
+DATE=`date +%d-%m-%y`
+
+echo 
+echo '------------------------------------------------'
+echo 'Backup del Progetto' $PROJECT_NAME
+echo '------------------------------------------------'
+echo -n 'Progetto ['$PROJECT_NAME'] ? : '
+read PRJ_NAME
+
+if [ a"$PRJ_NAME"a != a''a  ]
+then
+	PROJECT_NAME=$PRJ_NAME
+fi
+
+echo -n 'Versione ['$PROJECT_VERSION'] ? : '
+read PRJ_VERSION
+
+if [ a"$PRJ_VERSION"a != a''a  ]
+then
+	PROJECT_VERSION=$PRJ_VERSION
+	echo $PROJECT_VERSION > ../doc/BASE_VERSION
+fi
+
+echo '------------------------------------------------'
+
+
+# mi sposto sulla root del progetto
+cd ..
+
+cp exe/cni.cfg exe/cni.cfg.$DATE
+
+if [ ! -d backup ]
+then
+	echo "Creating [backup] directory"
+	mkdir backup
+fi
+
+tar zcf sorg.tgz \
+*/*.cfg.* \
+*/*.rc \
+*/*.sh \
+*/*.sql \
+*/*.txt \
+*/*.txt.* \
+*/*.applet \
+[Mm]akefile \
+*/*.glade* \
+*/*.php* \
+*/*.htm* \
+*/*.xml \
+*/*.[ch] \
+*/[Mm]akefile \
+[Mm]akefile \
+*/*.mak \
+pixmaps/* \
+scripts/* \
+doc/* \
+plc/* \
+data_sap/*.cfg \
+--exclude *.zip */core* *.gz 
+
+
+rm -f exe/cni.cfg.$DATE
+
+mv -f sorg.tgz backup/$PROJECT_NAME-$PROJECT_VERSION.tgz
+
+echo 'Creato File di backup sorgenti : ../backup/'$PROJECT_NAME'-'$PROJECT_VERSION'.tgz'
+

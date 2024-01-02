@@ -1,0 +1,8 @@
+##
+# backup_db_sap
+##
+
+DATABASE_HOST=`cat ../doc/DATABASE_HOST`
+
+rm -f ../backup/sap.dump.gz
+pg_dump -h $DATABASE_HOST sap | gzip > ../backup/sap.dump.gz

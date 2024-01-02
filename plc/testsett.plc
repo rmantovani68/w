@@ -1,0 +1,163 @@
+VAR_GLOBAL
+	COLONNA : ARRAY[0..16,0..24] OF BOOL:= [425(0)];
+	IC : UINT:= 0;  (* indice colonna *)
+	IM : UINT:= 0;  (* indice matrice *)
+	IR : UINT:= 0;  (* indice riga *)
+	MCOLON : ARRAY[0..16] OF UINT:= [17(0)];  (* memoria della colonna che e' stat accesa per ultima *)
+	MRIGA : ARRAY[0..16] OF UINT:= [17(0)];  (* memoria della riga che e' stata accesa per ultima *)
+	RESETL : BOOL:= 0;
+	RIGA : ARRAY[0..16,0..24] OF BOOL:= [425(0)];
+	RRESETL : BOOL:= 0;
+	TESTST : BOOL:= 0;
+	XTESTST : BOOL:= 0;
+	_CREATED : UDINT:= 1267980962;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM TESTSETT
+
+  VAR
+	TTESTST : TON;
+  END_VAR
+
+
+
+		(* Accende, volta per volta, tutte le righe di un settore *)
+			(*  e tutte le colonne di tutti gli altri settori.*)
+
+LD FALSE		
+ANDN TESFINE
+ST XTESTST
+	
+	LD	XTESTST
+	ST	TTESTST.IN
+	LD	T#10S
+	ST	TTESTST.PT
+	CAL	TTESTST	(* FUNCTION BLOCK TON *)
+	LD	TTESTST.ET
+	ST	TESTST
+
+LD TESTST
+ANDN TESFINE
+JMPCN ETESTS
+
+	LD 15
+	ST NODMAX
+	LD 8	
+	ST NODMIN
+
+	LD NODMAX
+	ST IMC
+	ST IMR
+
+
+
+TSETT5:		(*  ---------- loop di IMR ------------------  *)
+
+
+
+		(* reset di tutte le luci; *)
+
+	LD NODMAX
+	ST IM
+	
+E2:	LD 24
+	ST IC
+	ST IR	
+
+E1:
+	LD FALSE
+	ST RIGA[IM,IR]
+	ST COLONNA[IM,IC]
+	LD IC
+	SUB 1
+	ST IC
+	ST IR
+	EQ 0
+	JMPCN E1
+		LD IM
+		SUB 1
+		ST IM
+		EQ 0
+		JMPCN E2	
+
+(* -------------------------------------- *)
+
+
+
+
+	LD NODMAX
+	ST IMC
+	LD 24
+	ST IRC	
+TSETT1:	(* loop di IRC in IMR *)
+
+	LD TRUE
+	ST RIGA(IMR,IRC]	(* attiva tutte le righe di IMR *)
+	LD IRC
+	SUB 1
+	ST IRC
+	EQ 0
+	JMPCN TSETT1	
+						
+	
+TSETT4:		(* ---------------- loop di IMC -------------------- *)
+
+
+
+	LD IMC		(* IMC = IMR ? *)
+	EQ IMR
+	JMPCN TSETT6
+		LD IMC
+		SUB 1
+		ST IMC
+TSETT6:	
+		LD IMC
+		EQ NODMIN	(* IMC ha finito? e' sotto il minimo settore impostato? *)
+		JMPCN TSETT2
+			LD IMR
+			SUB 1
+			ST IMR
+			EQ NODMIN	(* IMR ha finito? e' sotto il minimo settore impostato? *)
+			JMPCN TSETT5
+				LD TRUE
+				S TESFINE
+				JMP ETESTS
+
+		
+		
+				
+	
+TSETT2:	
+	LD 24	
+	ST IRC
+TSETT3:		(* loop di IRC in IMC *)
+	LD TRUE
+	ST COLON(IMC,IRC]	(* attiva tutte le colonne di IMC *)
+	LD IRC
+	SUB 1
+	ST IRC
+	EQ 0
+	JMPCN TSETT3
+		LD IMC
+		SUB 1
+		ST IMC
+		JMP TSETT4
+						
+
+
+
+
+
+
+
+ETESTS:	
+(* -------------------------------------- *)
+
+
+END_PROGRAM
+
+
+
+
+

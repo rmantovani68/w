@@ -1,0 +1,127 @@
+Connection to database 'sap' OK.
+
+CREATE TABLE dett_colli: COMMAND FAILED
+ERRORE:  la relazione "dett_colli" esiste già
+
+CREATE TABLE dett_colli:Connection to database 'sap' OK.
+
+CREATE TABLE ordini_bertello:
+ DONE
+
+CREATE INDEXES ON ordini_bertello:
+ordini_bertello_KEY  UNIQUE
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE colli_bertello:
+ DONE
+
+CREATE INDEXES ON colli_bertello:
+colli_bertello_KEY  UNIQUE
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE righe_bertello:
+ DONE
+
+CREATE INDEXES ON righe_bertello:
+righe_bertello_KEY  UNIQUE
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE ric_ord: COMMAND FAILED
+ERRORE:  la relazione "ric_ord" esiste già
+
+CREATE TABLE ric_ord:Connection to database 'sap' OK.
+
+CREATE TABLE ric_art: COMMAND FAILED
+ERRORE:  la relazione "ric_art" esiste già
+
+CREATE TABLE ric_art:Connection to database 'sap' OK.
+
+CREATE TABLE ord_prod: COMMAND FAILED
+ERRORE:  la relazione "ord_prod" esiste già
+
+CREATE TABLE ord_prod:Connection to database 'sap' OK.
+
+CREATE TABLE col_prod: COMMAND FAILED
+ERRORE:  la relazione "col_prod" esiste già
+
+CREATE TABLE col_prod:Connection to database 'sap' OK.
+
+CREATE TABLE rig_prod: COMMAND FAILED
+ERRORE:  la relazione "rig_prod" esiste già
+
+CREATE TABLE rig_prod:Connection to database 'sap' OK.
+
+CREATE TABLE rig_tmp: COMMAND FAILED
+ERRORE:  la relazione "rig_tmp" esiste già
+
+CREATE TABLE rig_tmp:Connection to database 'sap' OK.
+
+CREATE TABLE ubicazioni: COMMAND FAILED
+ERRORE:  la relazione "ubicazioni" esiste già
+
+CREATE TABLE ubicazioni:Connection to database 'sap' OK.
+
+CREATE TABLE articoli: COMMAND FAILED
+ERRORE:  la relazione "articoli" esiste già
+
+CREATE TABLE articoli:Connection to database 'sap' OK.
+
+CREATE TABLE imballi: COMMAND FAILED
+ERRORE:  la relazione "imballi" esiste già
+
+CREATE TABLE imballi:Connection to database 'sap' OK.
+
+CREATE TABLE errori_prelievo: COMMAND FAILED
+ERRORE:  la relazione "errori_prelievo" esiste già
+
+CREATE TABLE errori_prelievo:Connection to database 'sap' OK.
+
+CREATE TABLE ric_stor: COMMAND FAILED
+ERRORE:  la relazione "ric_stor" esiste già
+
+CREATE TABLE ric_stor:Connection to database 'sap' OK.
+
+CREATE TABLE ord_stor: COMMAND FAILED
+ERRORE:  la relazione "ord_stor" esiste già
+
+CREATE TABLE ord_stor:Connection to database 'sap' OK.
+
+CREATE TABLE col_stor: COMMAND FAILED
+ERRORE:  la relazione "col_stor" esiste già
+
+CREATE TABLE col_stor:Connection to database 'sap' OK.
+
+CREATE TABLE rig_stor: COMMAND FAILED
+ERRORE:  la relazione "rig_stor" esiste già
+
+CREATE TABLE rig_stor:Connection to database 'sap' OK.
+
+CREATE TABLE plc_msg: COMMAND FAILED
+ERRORE:  la relazione "plc_msg" esiste già
+
+CREATE TABLE plc_msg:Connection to database 'sap' OK.
+
+CREATE TABLE plc_msg_history: COMMAND FAILED
+ERRORE:  la relazione "plc_msg_history" esiste già
+
+CREATE TABLE plc_msg_history:ERRORE:  la relazione "progcollo" esiste già
+ERRORE:  la relazione "progcollo_add" esiste già
+ERRORE:  la relazione "sequence_anno" esiste già
+ERRORE:  la funzione data(timestamp without time zone) non esiste
+RIGA 1: ...CTION data_ora(timestamp) returns text as 'select data($1)||...
+                                                             ^
+NOTA: Nessuna funzione trovata con nome e tipi di argomenti forniti. Potrebbe essere necessario convertire i tipi esplicitamente.
+psql: attenzione: parametro in eccesso "sap" nella riga di comando ignorato
+psql: FATALE:  il ruolo "-h" non esiste
+psql: attenzione: parametro in eccesso "sap" nella riga di comando ignorato
+psql: FATALE:  il ruolo "-h" non esiste
+ERRORE:  la funzione data(timestamp without time zone) non esiste
+RIGA 1: ...CTION data_ora(timestamp) returns text as 'select data($1)||...
+                                                             ^
+NOTA: Nessuna funzione trovata con nome e tipi di argomenti forniti. Potrebbe essere necessario convertire i tipi esplicitamente.

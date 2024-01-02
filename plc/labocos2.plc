@@ -1,0 +1,4550 @@
+VAR_GLOBAL
+	A : BOOL:= 0;
+	ACCEN : BOOL:= 0;
+	ACOLON : UINT:= 0;
+	ALLM : BOOL:= 0;
+	ALLM13 : BOOL:= 0;  (* allarme risposta PC *)
+	ALSEVC : BOOL:= 0;  (* allarme avanti EVC *)
+	ALSEVE : BOOL:= 0;  (* allarme pistone *)
+	ALSEVI : BOOL:= 0;
+	AMATRIX : UINT:= 0;
+	ANNUL : BOOL:= 0;
+	ARIGA : UINT:= 0;
+	B : BOOL:= 0;
+	BISTA1 : BOOL:= 0;
+	C : BOOL:= 0;  (* variabile per il controllo del loop *)
+	CB : BOOL:= 0;
+	CICCIA : BOOL:= 0;
+	CICCIA1 : BOOL:= 0;
+	COLONNA : ARRAY[0..16,0..24] OF BOOL:= [425(0)];
+	CONGELA : BOOL:= 0;
+	CONT : UDINT:= 0;
+	CONTA : UDINT:= 0;
+	CONTD : UDINT:= 0;
+	CORR : UDINT:= 0;
+	CPB : BOOL:= 0;
+	CPLC : BOOL:= 0;  (* clock di PLC *)
+	CS : BOOL:= 0;
+	D : BOOL:= 0;
+	E : BOOL:= 0;  (* negato di C *)
+	ENM21 : BOOL:= 0;
+	ENME : BOOL:= 0;
+	EV7 : BOOL:= 0;
+	EVF : BOOL:= 0;
+	FC11 : BOOL:= 0;
+	FCTQ : BOOL:= 0;
+	FILT : ARRAY[0..16] OF BOOL:= [17(0)];
+	FO : BOOL:= 0;
+	IAL : BOOL:= 0;  (* Impulso di Accensione delle Lucine *)
+	IC : UINT:= 0;  (* indice colonna *)
+	ICT : UINT:= 0;
+	IDFC17 : BOOL:= 0;
+	IDFC18 : BOOL:= 0;
+	IDFCB : BOOL:= 0;
+	IDFCC : BOOL:= 0;
+	IDFCG : BOOL:= 0;
+	IM : UINT:= 0;  (* indice matrice *)
+	IMC : UINT:= 0;
+	IMR : UINT:= 0;  (* indice matrice righe *)
+	IR : UINT:= 0;  (* indice riga *)
+	IRC : UINT:= 0;  (* indice per riga e colonna *)
+	IRT : UINT:= 0;
+	IUFCB : BOOL:= 0;
+	LCOLON : UINT:= 0;
+	LMATRIX : UINT:= 0;
+	LPROT : BOOL:= 0;
+	LRIGA : UINT:= 0;
+	M10 : BOOL:= 0;
+	MARCIA : BOOL:= 0;
+	MATC : BOOL:= 0;  (* matrice colonne *)
+	MATR : BOOL:= 0;  (* matrice righe *)
+	MAX : UDINT:= 0;
+	MCOLON : ARRAY[0..16] OF UINT:= [17(0)];  (* memoria della colonna che e' stat accesa per ultima *)
+	MIN : UDINT:= 0;
+	MPP : ARRAY[0..16] OF BOOL:= [17(0)];
+	MRIGA : ARRAY[0..16] OF UINT:= [17(0)];  (* memoria della riga che e' stata accesa per ultima *)
+	MSGCLAS : BOOL:= 0;
+	MSGCODE : BOOL:= 0;
+	MSGRX : BOOL:= 0;
+	MSGTX : BOOL:= 0;
+	NCOLON : UINT:= 0;
+	NMATRIX : UINT:= 0;
+	NODMAX : UINT:= 0;  (* primo settore *)
+	NODMIN : UINT:= 0;  (* ultimo settore *)
+	NRIGA : UINT:= 0;
+	OCM13 : BOOL:= 0;
+	OCME : BOOL:= 0;
+	OLDICT : UINT:= 0;
+	OLDIMC : UINT:= 0;
+	OLDIMR : UINT:= 0;
+	OLDIRT : UINT:= 0;
+	PPRIMP : ARRAY[0..16] OF BOOL:= [17(0)];
+	PRIMP : ARRAY[0..16] OF BOOL:= [17(0)];
+	RACCEN : BOOL:= 0;
+	RANNUL : BOOL:= 0;
+	RESETL : BOOL:= 0;
+	RIGA : ARRAY[0..16,0..24] OF BOOL:= [425(0)];
+	RLPROT : BOOL:= 0;
+	RRESETL : BOOL:= 0;
+	RSPEGNI : BOOL:= 0;
+	SCOLON : UINT:= 0;
+	SINC : BOOL:= 0;  (* singola colonna *)
+	SINR : BOOL:= 0;
+	SMATRIX : UINT:= 0;
+	SPEGNI : BOOL:= 0;
+	SRIGA : UINT:= 0;
+	T2FC12 : BOOL:= 0;
+	TESFINE : BOOL:= 0;  (* FLAG DI FINE O ASSORBIMENTO RILEVATO *)
+	TEST : BOOL:= 0;
+	TESTST : BOOL:= 0;
+	TEVH : BOOL:= 0;
+	TFC11 : BOOL:= 0;
+	TFC12 : BOOL:= 0;
+	TFC14 : BOOL:= 0;
+	TFC15 : BOOL:= 0;
+	TFC18 : BOOL:= 0;
+	TFCA : BOOL:= 0;
+	TFCB1 : BOOL:= 0;
+	TFCB2 : BOOL:= 0;
+	TFCB3 : BOOL:= 0;
+	TFCB4 : BOOL:= 0;
+	TFCB5 : BOOL:= 0;
+	TFCB6 : BOOL:= 0;
+	TFCG : BOOL:= 0;
+	TFCH : BOOL:= 0;
+	TFCI : BOOL:= 0;
+	TFCL : BOOL:= 0;
+	TFCM : BOOL:= 0;
+	TFCNMN : BOOL:= 0;
+	TFCP : BOOL:= 0;
+	TFCU : BOOL:= 0;
+	TFCV : BOOL:= 0;
+	TFILT : ARRAY[0..16] OF BOOL:= [17(0)];
+	TSIRENA : BOOL:= 0;
+	TVPP : BOOL:= 0;
+	TXFCNMN : BOOL:= 0;
+	XALEVC : BOOL:= 0;
+	XALEVE : BOOL:= 0;
+	XALEVI : BOOL:= 0;
+	XALLM13 : BOOL:= 0;
+	XEV7 : BOOL:= 0;
+	XEVA : BOOL:= 0;
+	XEVB : BOOL:= 0;
+	XEVF : BOOL:= 0;
+	XEVG : BOOL:= 0;
+	XEVH : BOOL:= 0;
+	XEVI : BOOL:= 0;
+	XEVL : BOOL:= 0;
+	XEVM : BOOL:= 0;
+	XEVN : BOOL:= 0;
+	XEVO : BOOL:= 0;
+	XEVP : BOOL:= 0;
+	XFCNMN : BOOL:= 0;
+	XIAL : BOOL:= 0;
+	XMC : BOOL:= 0;
+	XTEST : BOOL:= 0;
+	XTESTST : BOOL:= 0;
+	YEVE : BOOL:= 0;  (* prenotazione di attivazione elettrov. *)
+	Z : BOOL:= 0;  (* ZERO del contatore *)
+	ZALLM : BOOL:= 0;
+	ZASE : BOOL:= 0;
+	ZASEC : BOOL:= 0;
+	ZASEI : BOOL:= 0;
+	ZC : ARRAY[0..16] OF BOOL:= [17(0)];
+	ZCB : BOOL:= 0;
+	ZCS : BOOL:= 0;
+	ZINAL : BOOL:= 0;
+	ZPSFMB : BOOL:= 0;
+	ZTERM : BOOL:= 0;
+	_CREATED : UDINT:= 1269071532;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM  LABOCOS2
+
+  VAR
+	IIDFCB : F_TRIG;
+	IIDFCC : F_TRIG;
+	TTFC18 : TON;
+	TTSIREN : TON;
+	TTFCNMN : TON;
+	TTFCA : TON;
+	TTFL1 : TOF;
+	CCNTLP : CTU;
+	TTFL2 : TOF;
+	TTFL3 : TOF;
+	TTFL4 : TOF;
+	TTFL5 : TOF;
+	TTTEST : TON;
+	TTFL6 : TOF;
+	CONTATO : CTD;
+	TTFL7 : TOF;
+	TTFL8 : TOF;
+	TTFL9 : TOF;
+	TTFL10 : TOF;
+	TTFL11 : TOF;
+	TTFCB1 : TON;
+	TTFL12 : TOF;
+	TTFCB2 : TON;
+	TTFCL : TON;
+	TTFL13 : TOF;
+	TTFCM : TON;
+	TTFCB3 : TON;
+	TTFL14 : TOF;
+	TTFCB4 : TON;
+	TTFL15 : TOF;
+	TTFCB5 : TON;
+	TTFL16 : TOF;
+	TTFCB6 : TON;
+	CICCIAF : TOF;
+	TTESTST : TON;
+	TTVPP : TON;
+	TTFCU : TON;
+	CCNTLP2 : CTU;
+	TALEVC : TON;
+	TALEVE : TON;
+	CICCIAN : TON;
+	TALEVI : TON;
+	IIDFC17 : F_TRIG;
+	IIDFC18 : F_TRIG;
+	IIUFCB : R_TRIG;
+	TTEVH : TON;
+	IIDCFG : F_TRIG;
+	TT2FC12 : TON;
+	TB : TON;
+	TTFC11 : TON;
+	TTFC12 : TON;
+	TTFC14 : TON;
+	TALLM13 : TON;
+	TTFC15 : TON;
+  END_VAR
+
+
+
+	
+
+(* M A R C I A  E SEGNALAZIONI VARIE *)
+		
+	LD	SIRENA
+	ST	TTSIREN.IN
+	LD	T#2000MS
+	ST	TTSIREN.PT
+	CAL	TTSIREN	(* FUNCTION BLOCK TON *)
+	LD	TTSIREN.Q
+	ST	TSIRENA
+
+
+
+LD PMI
+ANDN MARCIA
+	ST SIRENA
+
+
+
+LD TSIRENA
+OR MARCIA
+
+(* AND TERM *)
+AND INAL
+AND PRESS
+
+	ST MARCIA
+	
+LD SIRENA
+OR MARCIA
+ST KA5
+
+
+
+LD ALSEVE
+OR ALSEVC
+AND BISTA1
+OR(
+LDN ALSEVE
+ANDN ALSEVC
+AND MARCIA
+)
+	ST LMI			(* lampada impianto in marcia; lampeggia con ALSEV-- *)
+	
+
+	
+LD TERM
+	ST LPM			(* lampada termico scattato *)
+
+	
+LDN PRESS
+	ST LPRESS
+
+LD FEM
+	ST LEM
+	
+
+
+
+(* ----------------------------------------------------------------------------- *)
+
+
+
+		(* ==================  M E S S A G G I   D I   A L L A R M E  =================================  *)
+		
+
+
+
+
+
+LDN INAL
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZINAL
+JMPCN EZINAL
+	LD 1
+	ST MSGCODE
+	LD 0
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZINAL
+EZINAL:
+
+LD INAL
+	R ZINAL		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	-------------------------------------------- *)
+
+
+
+
+
+LDN TERM
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZTERM
+JMPCN EZTERM
+	LD 2
+	ST MSGCODE
+	LD 0
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZTERM
+EZTERM:
+
+LD TERM
+	R ZTERM		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	-------------------------------------------- *)
+
+
+	
+
+	(* ================= M E S S A G G I   D I   A V V I S O  ============================= *)
+	
+
+
+
+
+
+LD ALSEVE
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZASE
+JMPCN EZALSEVE
+	LD 1
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZASE
+EZALSEVE:
+
+LDN ALSEVE
+	R ZASE		(* memoria di impulso antiripetitivo dell' allarme *)
+	
+	
+LD ALSEVC
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZASEC
+JMPCN EZALSEVC
+	LD 2
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZASEC
+EZALSEVC:
+
+LDN ALSEVC
+	R ZASEC		(* memoria di impulso antiripetitivo dell' allarme *)
+	
+LD ALSEVI
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZASEI
+JMPCN EZALSEVI
+	LD 3
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZASEI
+EZALSEVI:
+
+LDN ALSEVI
+	R ZASEI		(* memoria di impulso antiripetitivo dell' allarme *)
+	
+		
+
+	(*	-------------------------------------------- *)
+
+
+
+LD ALLM
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZALLM
+JMPCN EZALLM
+	LD 1
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZALLM
+EZALLM:
+
+LDN ALLM
+	R ZALLM		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	--------------------------------------------  *)
+	
+	
+	
+	
+	
+	
+	
+	(* ============== RESET DI 'MSGTX' =================*)
+	
+	
+LD MSGRX
+	R MSGTX		(* MSGTX viene settato una sola volta sotto JUMP; qui viene resettato da MSGRX=1 *)
+	
+
+
+
+
+(* ===================== F I N E   D E I   M E S S A G G I ========================== *)
+
+
+
+
+
+
+	(* passo-passo *)
+LD FC3
+ANDN FC4
+ANDN SALTO
+OR(
+LD SALTO
+AND MC
+)
+AND MARCIA
+	ST M33		(* 3 nastri in discesa *)
+	ST M32
+	ST M31
+
+
+LDN FC3	
+ANDN FC4
+	ST FCTQ
+	
+	LD	FCTQ
+	ST	TTVPP.IN
+	LD	T#60S
+	ST	TTVPP.PT
+	CAL	TTVPP	(* FUNCTION BLOCK TON *)
+	LD	TTVPP.Q
+	ST	TVPP
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MA=mot. frizionato; MB=mot.a valle; FC14=consenso da valle; EVA=elettr. paletta *)
+(* FC15=fot. paletta; NO=fot.accumulo pieno su MA *)
+
+LDN FC14
+
+AND MB
+OR XEVA
+AND TFC15
+	ST XEVA	(* 0=su 1=giu' *)
+	STN EVA
+	
+
+
+LDN XEVA
+OR MB
+AND MARCIA
+	ST MA
+	
+
+	LD	FC15
+	ST	TTFC15.IN
+	LD	T#500MS
+	ST	TTFC15.PT
+	CAL	TTFC15	(* FUNCTION BLOCK TON *)
+	LD	TTFC15.Q
+	ST	TFC15
+
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MB=mot. frizionato; MC=mot.a valle; MC=consenso da valle; EVB=elettr. paletta *)
+(* FCA=fot. paletta; FC14=fot.accumulo pieno su MB *)
+
+LD MC
+OR EVB
+AND TFCA
+ANDN SELALTO
+AND SELBASS
+	ST EVB	(* 0=su 1=giu' *)
+	
+
+
+LDN XEVB
+OR MC
+AND(
+LDN TFC14
+OR XEVB
+ORN TFCA
+)
+AND SBASSO
+AND MARCIA
+	ST MB
+	
+
+	LD	FCA
+	ST	TTFCA.IN
+	LD	T#500MS
+	ST	TTFCA.PT
+	CAL	TTFCA	(* FUNCTION BLOCK TON *)
+	LD	TTFCA.Q
+	ST	TFCA
+	
+	LD	FC14
+	ST	TTFC14.IN
+	LD	T#20S
+	ST	TTFC14.PT
+	CAL	TTFC14	(* FUNCTION BLOCK TON *)
+	LD	TTFC14.Q
+	ST	TFC14
+	
+	(* ----------------------------------------------- *)
+	
+	
+LD SELALTO
+ANDN MC
+AND MARCIA
+ANDN XEVB
+ANDN SALTO
+	ST C29	(* nastro alto *)
+	
+LD SELBASS
+ANDN MC
+ANDN SBASSO
+AND MARCIA
+	ST EVNASB	(* nastro basso *)
+	
+LD PBNE
+AND SBASSO
+OR(
+LD PANE
+AND SALTO
+)
+OR XMC
+AND PARNE
+AND MARCIA
+
+	ST XMC
+	
+LD XMC
+ANDN T2FC12
+	ST MC		(* nastro basculante con elevatore idraulico *)
+	ST M11
+	
+	LD	FC12
+	ST	TT2FC12.IN
+	LD	T#2000MS
+	ST	TT2FC12.PT
+	CAL	TT2FC12	(* FUNCTION BLOCK TON *)
+	LD	TT2FC12.Q
+	ST	T2FC12
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* M10=mot. frizionato; M9=mot.a valle; M9=consenso da valle; EV7=elettr. paletta *)
+(* FC11=fot. paletta; FC12=fot.accumulo pieno su M10 *)
+
+LD M9
+OR XEV7
+AND TFC11
+	ST XEV7	(* 0=su 1=giu' *)
+	STN EV7 
+
+
+LDN XEV7
+OR M9
+AND(
+LDN TFC12
+OR XEV7
+ORN TFC11
+)
+AND MARCIA
+	ST M10
+	
+
+	LD	FC11
+	ST	TTFC11.IN
+	LD	T#5000MS
+	ST	TTFC11.PT
+	CAL	TTFC11	(* FUNCTION BLOCK TON *)
+	LD	TTFC11.Q
+	ST	TFC11
+	
+	LD	FC12
+	ST	TTFC12.IN
+	LD	T#20S
+	ST	TTFC12.PT
+	CAL	TTFC12	(* FUNCTION BLOCK TON *)
+	LD	TTFC12.Q
+	ST	TFC12
+	
+	
+	(* -------------------------------------------- *)
+
+	
+LDN OCME		
+ANDN SBAP
+ORN FC17
+AND MARCIA
+	ST M9
+	
+	
+			
+				
+					
+	
+	(* ------------------------ PAREGGIATORE -----------------  *)
+
+	LD	FCB
+	ST	IIDFCB.CLK
+	CAL	IIDFCB	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFCB.Q
+	ST	IDFCB
+	
+	
+	LD	FCB
+	ST	IIUFCB.CLK
+	CAL	IIUFCB	(* FUNCTION BLOCK R_TRIG *)
+	LD	IIUFCB.Q
+	ST	IUFCB
+	
+	
+	LD	FC17
+	ST	IIDFC17.CLK
+	CAL	IIDFC17	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFC17.Q
+	ST	IDFC17
+
+LD ENME
+ORN FCB
+ANDN EVC
+AND MARCIA
+	ST ME
+	
+LD IUFCB
+OR EVC
+ANDN B7
+ANDN ALSEVC
+	ST EVC
+	
+LD EVC
+ANDN B7
+OR ALSEVC
+ANDN PMI
+	ST XALEVC
+	
+	LD	XALEVC
+	ST	TALEVC.IN
+	LD	T#4S
+	ST	TALEVC.PT
+	CAL	TALEVC	(* FUNCTION BLOCK TON *)
+	LD	TALEVC.Q
+	ST	ALSEVC
+	
+	
+LD IDFC17
+OR OCME
+ANDN IDFCB
+	ST OCME
+	
+LD M13
+ANDN CB
+ANDN CS
+ANDN CPB
+ANDN OCM13
+	ST ENME		(* consenso introduzione *)
+	
+	
+(* -------------------------------------------------------------------- *)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(* =============================================================================================== *)
+		(* B I L A N C I A ed espulsore con pistone *)
+(* =============================================================================================== *)
+
+
+
+(* motore bilancia= M13; motore espulsore=MG *) 
+(* pistone EVE=scarti peso;  fot. bilancia=FC18; *)
+(* consenso fuori = FCD  *)
+(* micro pistone avanti- indietro= SEA,SEI *)
+(* richiesta al PC= CPB; risposte del PC: CB=peso corretto, CS=peso errato *)
+(* segnale DA PC: ABM13=abilitazione al controllo peso *)
+(* allarmi: ALLM13=time-out risposta PC a CPB; ALSEVE,time-out spintore avanti *)
+
+LD FO	(* serve a definire FO perche' e' definito nel PC WELLA *)
+
+
+
+	(* ritardo off e impulso di FC18 *)
+	LD	FC18
+	ST	TTFC18.IN
+	LD	T#500MS
+	ST	TTFC18.PT
+	CAL	TTFC18	(* FUNCTION BLOCK TOF *)
+	LD	TTFC18.Q
+	ST	TFC18
+	
+	LD	FC18
+	ST	IIDFC18.CLK
+	CAL	IIDFC18	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFC18.Q
+	ST	IDFC18
+	
+	
+	LD	FCG
+	ST	IIDCFG.CLK
+	CAL	IIDCFG	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDCFG.Q
+	ST	IDFCG
+	
+	
+(* ______________ *)
+
+
+
+
+LD M13
+ANDN CB
+ANDN CS
+ANDN CPB
+ANDN OCM13
+	ST ENM21		(* consenso introduzione *)
+	
+LD IDFCB
+OR OCM13
+ANDN IDFC18
+	ST OCM13 (* occupato: cade con la fotocellula FC18, impulso down *)
+
+LD CB	
+OR CS
+AND CPB	
+OR ZPSFMB
+OR SEB	
+AND MG
+AND SEI
+ANDN ZCB			
+ANDN ZCS
+ANDN FCZ
+ORN FC18									
+AND MARCIA							
+	ST M13	(* motore bilancia *)							
+
+
+
+(* -------------------------------------- *)
+
+
+LDN IDFC18
+AND ZCB
+OR(
+LD IDFC18
+AND CB
+)
+ANDN IDFCG
+ANDN SEA
+	ST ZCB	(* memoria peso corretto sull' espulsore *)
+
+
+
+LDN IDFC18
+AND ZCS
+OR(
+LD CS
+OR ZPSFMB
+AND IDFC18
+)
+ANDN IDFCG
+ANDN SEA
+	ST ZCS	(* memoria peso errato sull' espulsore *)
+	
+	
+(* ---------------------------------- *)
+
+	(* memorie ed elettrovalvole dei pistoni, motore del trasportatore *)
+	
+	
+		
+	LD	FCC
+	ST	IIDFCC.CLK
+	CAL	IIDFCC	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFCC.Q
+	ST	IDFCC
+	
+LD ZCS
+AND IDFCC
+OR YEVE
+ANDN SEA
+ANDN IDFCG
+	ST YEVE
+	
+	
+LD YEVE
+ANDN FCD
+AND MARCIA
+ANDN ALSEVE
+	ST EVE	(* elettrovalvola spintore scarto *)
+	
+	
+	(* -------------- segnali di scambio con PC ------------------------ *)
+	
+LDN CB	(* risposta da PC: peso corretto *)
+ANDN CS	(* risposta da PC: peso errato *)
+OR CPB
+AND TFC18
+ANDN SEB
+	ST CPB	(* richiesta a PC da lettura bar-code *)
+	
+	
+	
+	
+	(* ------------- forzatura uscita scarto di un collo sulla bilancia ---------- *)
+	
+	
+LD PSFMB
+OR ZPSFMB
+AND ALLM13
+	ST ZPSFMB
+	
+	
+	(* ------------- allarme di time-out della risposta a CPB ------------------- *)
+	
+LD CPB
+ANDN CB
+ANDN CS
+	ST XALLM13
+	
+	LD	XALLM13
+	ST	TALLM13.IN
+	LD	T#10S
+	ST	TALLM13.PT
+	CAL	TALLM13	(* FUNCTION BLOCK TON *)
+	LD	TALLM13.Q
+	ST	ALLM13
+	
+	ST 	LALLM13
+	
+	
+	
+	
+
+	
+
+	(* ------------------ allarme del pistone ------------------------- *)
+						
+LD EVE
+ANDN SEA
+OR ALSEVE
+ANDN PMI
+	ST XALEVE
+	
+	LD	XALEVE
+	ST	TALEVE.IN
+	LD	T#4S
+	ST	TALEVE.PT
+	CAL	TALEVE	(* FUNCTION BLOCK TON *)
+	LD	TALEVE.Q
+	ST	ALSEVE
+	
+	
+	
+	
+	
+(* --------------------------- fine bilancia ed espulsore --------------------------- *)
+
+(* ---------------------------------------------------------------------------------- *)
+
+
+
+
+
+LD MARCIA
+	ST MG
+	
+	
+LDN FCE
+AND MARCIA
+	ST MF
+	
+
+LDN FCH
+ORN FC21
+AND MARCIA
+	ST MH
+	
+			(* FRIZIONATO CON PALETTA MODIFICATO *)
+	
+(* MI=mot. frizionato; ML=mot.a valle; ML=consenso da valle; EVG=elettr. paletta *)
+(* FCI=fot. paletta; FCH=fot.accumulo pieno su MI *)
+
+
+LD XEVG
+AND FCI
+OR PEDALE
+	ST XEVG	(* 0=su 1=giu' *)
+	STN EVG
+
+
+
+LD MARCIA
+	ST MI
+	
+
+
+LD PEDALE
+OR FCI
+AND MARCIA
+
+	ST ML
+	
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MM=mot. frizionato; MP=mot.a valle; FCN=consenso da valle; EVL=elettr. paletta *)
+(* FCM=fot. paletta; FCL=fot.accumulo pieno su MM *)
+
+LDN FCN
+ANDN FCQ
+AND MN
+ANDN XEVL
+	ST XFCNMN
+	
+	LD	XFCNMN
+	ST	TTFCNMN.IN
+	LD	T#3000MS
+	ST	TTFCNMN.PT
+	CAL	TTFCNMN	(* FUNCTION BLOCK TON *)
+	LD	TTFCNMN.Q
+	ST	TXFCNMN
+
+
+LD TXFCNMN
+OR XEVL
+AND TFCM
+	ST XEVL	(* 0=su 1=giu' *)
+	STN EVL
+
+
+LDN XEVL
+OR MP
+AND(
+LDN TFCL
+OR XEVL
+ORN TFCM
+)
+AND MARCIA
+	ST MM
+	
+
+	LD	FCM
+	ST	TTFCM.IN
+	LD	T#500MS
+	ST	TTFCM.PT
+	CAL	TTFCM	(* FUNCTION BLOCK TON *)
+	LD	TTFCM.Q
+	ST	TFCM
+	
+	LD	FCL
+	ST	TTFCL.IN
+	LD	T#20S
+	ST	TTFCL.PT
+	CAL	TTFCL	(* FUNCTION BLOCK TON *)
+	LD	TTFCL.Q
+	ST	TFCL
+	
+	(* ----------------------------------------------------------- *)
+	
+LD XEVL
+OR EVH
+ANDN TEVH
+AND MARCIA
+	ST EVH
+	ST MP
+	
+	
+	LD	EVH
+	ST	TTEVH.IN
+	LD	T#3000MS
+	ST	TTEVH.PT
+	CAL	TTEVH	(* FUNCTION BLOCK TON *)
+	LD	TTEVH.Q
+	ST	TEVH
+
+
+LD SII
+AND MARCIA
+	ST MN
+	
+LD FCP
+OR EVI
+ANDN SIA
+AND MARCIA
+	ST EVI
+	
+
+LD EVI
+ANDN SIA
+OR ALSEVI
+ANDN PMI
+	ST XALEVI
+	
+	LD	XALEVI
+	ST	TALEVI.IN
+	LD	T#4S
+	ST	TALEVI.PT
+	CAL	TALEVI	(* FUNCTION BLOCK TON *)
+	LD	TALEVI.Q
+	ST	ALSEVI
+	
+
+
+
+LD MARCIA
+	ST MO
+	
+
+
+(* ===============   COLLEGAMENTI MOTORIZZATI DELLE DUE ISOLE  ====================== *)
+
+LD MARCIA
+	ST MR
+	
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MQ=mot. frizionato; MS=mot.a valle; =consenso da valle; EVP=elettr. paletta *)
+(* FCU=fot. paletta; FCV=fot.accumulo pieno su MQ *)
+
+
+
+LD MS
+AND PSA
+OR XEVP
+AND TFCU
+	ST XEVP	(* 0=su 1=giu' *)
+	STN EVP
+
+
+LDN XEVP
+OR MS
+AND(
+LD XEVP
+ORN TFCU
+)
+AND MARCIA
+	ST MQ
+	
+	LD	FCU
+	ST	TTFCU.IN
+	LD	T#500MS
+	ST	TTFCU.PT
+	CAL	TTFCU	(* FUNCTION BLOCK TON *)
+	LD	TTFCU.Q
+	ST	TFCU
+	
+	
+	
+(* ------------------------------------ *)
+
+LD MARCIA
+	ST MS
+	
+
+LD MARCIA
+	ST MW
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MZ=mot. frizionato; MV=mot.a valle; FCB4=consenso da valle; EVM=elettr. paletta *)
+(* FCB5=fot. paletta; FCB6=fot.accumulo pieno su MZ *)
+
+LD FCB4
+
+AND MV
+OR XEVM
+
+AND TFCB5
+	ST XEVM	(* 0=su 1=giu' *)
+	STN EVM
+
+
+LDN XEVM
+OR MV
+AND(
+LDN TFCB6
+OR XEVM
+ORN TFCB5
+)
+AND MARCIA
+	ST MZ
+	
+
+	LD	FCB5
+	ST	TTFCB5.IN
+	LD	T#500MS
+	ST	TTFCB5.PT
+	CAL	TTFCB5	(* FUNCTION BLOCK TON *)
+	LD	TTFCB5.Q
+	ST	TFCB5
+	
+	LD	FCB6
+	ST	TTFCB6.IN
+	LD	T#20S
+	ST	TTFCB6.PT
+	CAL	TTFCB6	(* FUNCTION BLOCK TON *)
+	LD	TTFCB6.Q
+	ST	TFCB6
+	
+
+
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MV=mot. frizionato; MU=mot.a valle; FCB2=consenso da valle; EVN=elettr. paletta *)
+(* FCB3=fot. paletta; FCB4=fot.accumulo pieno su MV *)
+
+LD FCB2
+
+AND MU
+OR XEVN
+AND TFCB3
+	ST XEVN	(* 0=su 1=giu' *)
+	STN EVN
+
+
+LDN XEVN
+OR MU
+AND(
+LDN TFCB4
+OR XEVN
+ORN TFCB3
+)
+AND MARCIA
+	ST MV
+	
+
+	LD	FCB3
+	ST	TTFCB3.IN
+	LD	T#500MS
+	ST	TTFCB3.PT
+	CAL	TTFCB3	(* FUNCTION BLOCK TON *)
+	LD	TTFCB3.Q
+	ST	TFCB3
+	
+	LD	FCB4
+	ST	TTFCB4.IN
+	LD	T#20S
+	ST	TTFCB4.PT
+	CAL	TTFCB4	(* FUNCTION BLOCK TON *)
+	LD	TTFCB4.Q
+	ST	TFCB4
+	
+
+
+			(* FRIZIONATO CON PALETTA *)
+	
+(* MU=mot. frizionato; MT=mot.a valle; PSO=consenso da valle; EVO=elettr. paletta *)
+(* FCB1=fot. paletta; FCB2=fot.accumulo pieno su MU *)
+
+LD PSO
+
+AND MT
+OR XEVO
+AND TFCB1
+	ST XEVO	(* 0=su 1=giu' *)
+	STN EVO
+
+
+LDN XEVO
+OR MT
+AND(
+LDN TFCB2
+OR XEVO
+ORN TFCB1
+)
+AND MARCIA
+	ST MU
+	
+
+	LD	FCB1
+	ST	TTFCB1.IN
+	LD	T#500MS
+	ST	TTFCB1.PT
+	CAL	TTFCB1	(* FUNCTION BLOCK TON *)
+	LD	TTFCB1.Q
+	ST	TFCB1
+	
+	LD	FCB2
+	ST	TTFCB2.IN
+	LD	T#20S
+	ST	TTFCB2.PT
+	CAL	TTFCB2	(* FUNCTION BLOCK TON *)
+	LD	TTFCB2.Q
+	ST	TFCB2
+	
+
+LD MARCIA
+	ST MT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			(* ------------------------------------------ *)
+
+(* ========================E A S Y  -  P I C K I N G  gestione luci con matrici  ===========================*)   
+
+
+
+
+(* questo programma riguarda 16 matrici 24x24 + 1 input (ZC) di 'zero current' (basso),che sarebbe il pulsante premuto *)
+(* riceve da PC l'indirizzo da accendere: numero matrice in AMATRIX; riga in ARIGA; colonna in ACOLON; cmd/strobe in ACCEN; risposta in RACCEN *)
+(* trasmette a PC il tasto premuto: numero matrice in SMATRIX;  riga in SRIGA; colonna in SCOLON;  cmd/strobe in SPEGNI; risposta in RSPEGNI  *)
+(* riceve da PC il comando di spegnimento della luce: ANNULL lo strobe e RANNULL la risposta; NMATRIX, NRIGA, NCOLON *)
+(* RIGA(im,ir) e COLONNA(im,ic) sono le variabili vettoriali che eccitano le uscite della matrice 10x10; RIGA di tipo sink; COLONNA di tipo source *)
+(* RESETL da PC a PLC fa spegnere tutte le luci; la risposta e' RRESETL ; MRIGA(im) e MCOLON(im) memorizzano, per matrice, la luce che e'stata accesa per ultima *)
+
+(* copio gli ingressi dei pulsanti premuti sui vettori ZC(im);  ZC( settore (2 cifre), ingresso(2cifre) ), *)
+(* i settori 3 e 4 dell'isola 2 hanno 2 schede di colonne, quindi hanno anche 24 segnali di 'zero current' *) 
+
+LDN	ZC0101
+AND	COLONNA[01,01]
+OR(
+LDN	ZC0102
+AND	COLONNA[01,02]
+)
+OR(
+LDN	ZC0103
+AND	COLONNA[01,03]
+)
+OR(
+LDN	ZC0104
+AND	COLONNA[01,04]
+)
+OR(
+LDN	ZC0105
+AND	COLONNA[01,05]
+)
+OR(
+LDN	ZC0106
+AND	COLONNA[01,06]
+)
+OR(
+LDN	ZC0107
+AND	COLONNA[01,07]
+)
+OR(
+LDN	ZC0108
+AND	COLONNA[01,08]
+)
+OR(
+LDN	ZC0109
+AND	COLONNA[01,09]
+)
+OR(
+LDN	ZC0110
+AND	COLONNA[01,10]
+)
+OR(
+LDN	ZC0111
+AND	COLONNA[01,11]
+)
+OR(
+LDN	ZC0112
+AND	COLONNA[01,12]
+)
+AND IAL
+	ST 	ZC[1]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+LDN	ZC0201
+AND	COLONNA[02,01]
+OR(
+LDN	ZC0202
+AND	COLONNA[02,02]
+)
+OR(
+LDN	ZC0203
+AND	COLONNA[02,03]
+)
+OR(
+LDN	ZC0204
+AND	COLONNA[02,04]
+)
+OR(
+LDN	ZC0205
+AND	COLONNA[02,05]
+)
+OR(
+LDN	ZC0206
+AND	COLONNA[02,06]
+)
+OR(
+LDN	ZC0207
+AND	COLONNA[02,07]
+)
+OR(
+LDN	ZC0208
+AND	COLONNA[02,08]
+)
+OR(
+LDN	ZC0209
+AND	COLONNA[02,09]
+)
+OR(
+LDN	ZC0210
+AND	COLONNA[02,10]
+)
+OR(
+LDN	ZC0211
+AND	COLONNA[02,11]
+)
+OR(
+LDN	ZC0212
+AND	COLONNA[02,12]
+)
+AND IAL
+	ST 	ZC[2]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+LDN	ZC0301
+AND	COLONNA[03,01]
+OR(
+LDN	ZC0302
+AND	COLONNA[03,02]
+)
+OR(
+LDN	ZC0303
+AND	COLONNA[03,03]
+)
+OR(
+LDN	ZC0304
+AND	COLONNA[03,04]
+)
+OR(
+LDN	ZC0305
+AND	COLONNA[03,05]
+)
+OR(
+LDN	ZC0306
+AND	COLONNA[03,06]
+)
+OR(
+LDN	ZC0307
+AND	COLONNA[03,07]
+)
+OR(
+LDN	ZC0308
+AND	COLONNA[03,08]
+)
+OR(
+LDN	ZC0309
+AND	COLONNA[03,09]
+)
+OR(
+LDN	ZC0310
+AND	COLONNA[03,10]
+)
+OR(
+LDN	ZC0311
+AND	COLONNA[03,11]
+)
+OR(
+LDN	ZC0312
+AND	COLONNA[03,12]
+)
+AND IAL
+	ST 	ZC[3]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+LDN	ZC0401
+AND	COLONNA[04,01]
+OR(
+LDN	ZC0402
+AND	COLONNA[04,02]
+)
+OR(
+LDN	ZC0403
+AND	COLONNA[04,03]
+)
+OR(
+LDN	ZC0404
+AND	COLONNA[04,04]
+)
+OR(
+LDN	ZC0405
+AND	COLONNA[04,05]
+)
+OR(
+LDN	ZC0406
+AND	COLONNA[04,06]
+)
+OR(
+LDN	ZC0407
+AND	COLONNA[04,07]
+)
+OR(
+LDN	ZC0408
+AND	COLONNA[04,08]
+)
+OR(
+LDN	ZC0409
+AND	COLONNA[04,09]
+)
+OR(
+LDN	ZC0410
+AND	COLONNA[04,10]
+)
+OR(
+LDN	ZC0411
+AND	COLONNA[04,11]
+)
+OR(
+LDN	ZC0412
+AND	COLONNA[04,12]
+)
+AND IAL
+	ST 	ZC[4]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+LDN	ZC0501
+AND	COLONNA[05,01]
+OR(
+LDN	ZC0502
+AND	COLONNA[05,02]
+)
+OR(
+LDN	ZC0503
+AND	COLONNA[05,03]
+)
+OR(
+LDN	ZC0504
+AND	COLONNA[05,04]
+)
+OR(
+LDN	ZC0505
+AND	COLONNA[05,05]
+)
+OR(
+LDN	ZC0506
+AND	COLONNA[05,06]
+)
+OR(
+LDN	ZC0507
+AND	COLONNA[05,07]
+)
+OR(
+LDN	ZC0508
+AND	COLONNA[05,08]
+)
+OR(
+LDN	ZC0509
+AND	COLONNA[05,09]
+)
+OR(
+LDN	ZC0510
+AND	COLONNA[05,10]
+)
+OR(
+LDN	ZC0511
+AND	COLONNA[05,11]
+)
+OR(
+LDN	ZC0412
+AND	COLONNA[05,12]
+)
+AND IAL
+	ST 	ZC[5]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+LDN	ZC0601
+AND	COLONNA[06,01]
+OR(
+LDN	ZC0602
+AND	COLONNA[06,02]
+)
+OR(
+LDN	ZC0603
+AND	COLONNA[06,03]
+)
+OR(
+LDN	ZC0604
+AND	COLONNA[06,04]
+)
+OR(
+LDN	ZC0605
+AND	COLONNA[06,05]
+)
+OR(
+LDN	ZC0606
+AND	COLONNA[06,06]
+)
+OR(
+LDN	ZC0607
+AND	COLONNA[06,07]
+)
+OR(
+LDN	ZC0608
+AND	COLONNA[06,08]
+)
+OR(
+LDN	ZC0609
+AND	COLONNA[06,09]
+)
+OR(
+LDN	ZC0610
+AND	COLONNA[06,10]
+)
+OR(
+LDN	ZC0611
+AND	COLONNA[06,11]
+)
+OR(
+LDN	ZC0612
+AND	COLONNA[06,12]
+)
+AND IAL
+	ST 	ZC[6]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+LDN	ZC0701
+AND	COLONNA[07,01]
+OR(
+LDN	ZC0702
+AND	COLONNA[07,02]
+)
+OR(
+LDN	ZC0703
+AND	COLONNA[07,03]
+)
+OR(
+LDN	ZC0704
+AND	COLONNA[07,04]
+)
+OR(
+LDN	ZC0705
+AND	COLONNA[07,05]
+)
+OR(
+LDN	ZC0706
+AND	COLONNA[07,06]
+)
+OR(
+LDN	ZC0707
+AND	COLONNA[07,07]
+)
+OR(
+LDN	ZC0708
+AND	COLONNA[07,08]
+)
+OR(
+LDN	ZC0709
+AND	COLONNA[07,09]
+)
+OR(
+LDN	ZC0710
+AND	COLONNA[07,10]
+)
+OR(
+LDN	ZC0711
+AND	COLONNA[07,11]
+)
+OR(
+LDN	ZC0712
+AND	COLONNA[07,12]
+)
+AND IAL
+	ST 	ZC[7]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+
+LDN	ZC0801
+AND	COLONNA[08,01]
+OR(
+LDN	ZC0802
+AND	COLONNA[08,02]
+)
+OR(
+LDN	ZC0803
+AND	COLONNA[08,03]
+)
+OR(
+LDN	ZC0804
+AND	COLONNA[08,04]
+)
+OR(
+LDN	ZC0805
+AND	COLONNA[08,05]
+)
+OR(
+LDN	ZC0806
+AND	COLONNA[08,06]
+)
+OR(
+LDN	ZC0807
+AND	COLONNA[08,07]
+)
+OR(
+LDN	ZC0808
+AND	COLONNA[08,08]
+)
+OR(
+LDN	ZC0809
+AND	COLONNA[08,09]
+)
+OR(
+LDN	ZC0810
+AND	COLONNA[08,10]
+)
+OR(
+LDN	ZC0811
+AND	COLONNA[08,11]
+)
+OR(
+LDN	ZC0812
+AND	COLONNA[08,12]
+)
+AND IAL
+	ST 	ZC[8]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+LDN	ZC0901
+AND	COLONNA[09,01]
+OR(
+LDN	ZC0902
+AND	COLONNA[09,02]
+)
+OR(
+LDN	ZC0903
+AND	COLONNA[09,03]
+)
+OR(
+LDN	ZC0904
+AND	COLONNA[09,04]
+)
+OR(
+LDN	ZC0905
+AND	COLONNA[09,05]
+)
+OR(
+LDN	ZC0906
+AND	COLONNA[09,06]
+)
+OR(
+LDN	ZC0907
+AND	COLONNA[09,07]
+)
+OR(
+LDN	ZC0908
+AND	COLONNA[09,08]
+)
+OR(
+LDN	ZC0909
+AND	COLONNA[09,09]
+)
+OR(
+LDN	ZC0910
+AND	COLONNA[09,10]
+)
+OR(
+LDN	ZC0911
+AND	COLONNA[09,11]
+)
+OR(
+LDN	ZC0912
+AND	COLONNA[09,12]
+)
+AND IAL
+	ST 	ZC[9]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+LDN	ZC1001
+AND	COLONNA[10,01]
+OR(
+LDN	ZC1002
+AND	COLONNA[10,02]
+)
+OR(
+LDN	ZC1003
+AND	COLONNA[10,03]
+)
+OR(
+LDN	ZC1004
+AND	COLONNA[10,04]
+)
+OR(
+LDN	ZC1005
+AND	COLONNA[10,05]
+)
+OR(
+LDN	ZC1006
+AND	COLONNA[10,06]
+)
+OR(
+LDN	ZC1007
+AND	COLONNA[10,07]
+)
+OR(
+LDN	ZC1008
+AND	COLONNA[10,08]
+)
+OR(
+LDN	ZC1009
+AND	COLONNA[10,09]
+)
+OR(
+LDN	ZC1010
+AND	COLONNA[10,10]
+)
+OR(
+LDN	ZC1011
+AND	COLONNA[10,11]
+)
+OR(
+LDN	ZC1012
+AND	COLONNA[10,12]
+)
+OR(
+LDN	ZC1013
+AND	COLONNA[10,13]
+)
+OR(
+LDN	ZC1014
+AND	COLONNA[10,14]
+)
+OR(
+LDN	ZC1015
+AND	COLONNA[10,15]
+)
+OR(
+LDN	ZC1016
+AND	COLONNA[10,16]
+)
+OR(
+LDN	ZC1017
+AND	COLONNA[10,17]
+)
+OR(
+LDN	ZC1018
+AND	COLONNA[10,18]
+)
+OR(
+LDN	ZC1019
+AND	COLONNA[10,19]
+)
+OR(
+LDN	ZC1020
+AND	COLONNA[10,20]
+)
+OR(
+LDN	ZC1021
+AND	COLONNA[10,21]
+)
+OR(
+LDN	ZC1022
+AND	COLONNA[10,22]
+)
+OR(
+LDN	ZC1023
+AND	COLONNA[10,23]
+)
+OR(
+LDN	ZC1024
+AND	COLONNA[10,24]
+)
+AND IAL
+	ST 	ZC[10]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+LDN	ZC1101
+AND	COLONNA[11,01]
+OR(
+LDN	ZC1102
+AND	COLONNA[11,02]
+)
+OR(
+LDN	ZC1103
+AND	COLONNA[11,03]
+)
+OR(
+LDN	ZC1104
+AND	COLONNA[11,04]
+)
+OR(
+LDN	ZC1105
+AND	COLONNA[11,05]
+)
+OR(
+LDN	ZC1106
+AND	COLONNA[11,06]
+)
+OR(
+LDN	ZC1107
+AND	COLONNA[11,07]
+)
+OR(
+LDN	ZC1108
+AND	COLONNA[11,08]
+)
+OR(
+LDN	ZC1109
+AND	COLONNA[11,09]
+)
+OR(
+LDN	ZC1110
+AND	COLONNA[11,10]
+)
+OR(
+LDN	ZC1111
+AND	COLONNA[11,11]
+)
+OR(
+LDN	ZC1112
+AND	COLONNA[11,12]
+)
+OR(
+LDN	ZC1113
+AND	COLONNA[11,13]
+)
+OR(
+LDN	ZC1114
+AND	COLONNA[11,14]
+)
+OR(
+LDN	ZC1115
+AND	COLONNA[11,15]
+)
+OR(
+LDN	ZC1116
+AND	COLONNA[11,16]
+)
+OR(
+LDN	ZC1117
+AND	COLONNA[11,17]
+)
+OR(
+LDN	ZC1118
+AND	COLONNA[11,18]
+)
+OR(
+LDN	ZC1119
+AND	COLONNA[11,19]
+)
+OR(
+LDN	ZC1120
+AND	COLONNA[11,20]
+)
+OR(
+LDN	ZC1121
+AND	COLONNA[11,21]
+)
+OR(
+LDN	ZC1122
+AND	COLONNA[11,22]
+)
+OR(
+LDN	ZC1123
+AND	COLONNA[11,23]
+)
+OR(
+LDN	ZC1124
+AND	COLONNA[11,24]
+)
+AND IAL
+	ST 	ZC[11]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+LDN	ZC1201
+AND	COLONNA[12,01]
+OR(
+LDN	ZC1202
+AND	COLONNA[12,02]
+)
+OR(
+LDN	ZC1203
+AND	COLONNA[12,03]
+)
+OR(
+LDN	ZC1204
+AND	COLONNA[12,04]
+)
+OR(
+LDN	ZC1205
+AND	COLONNA[12,05]
+)
+OR(
+LDN	ZC1206
+AND	COLONNA[12,06]
+)
+OR(
+LDN	ZC1207
+AND	COLONNA[12,07]
+)
+OR(
+LDN	ZC1208
+AND	COLONNA[12,08]
+)
+OR(
+LDN	ZC1209
+AND	COLONNA[12,09]
+)
+OR(
+LDN	ZC1210
+AND	COLONNA[12,10]
+)
+OR(
+LDN	ZC1211
+AND	COLONNA[12,11]
+)
+OR(
+LDN	ZC1212
+AND	COLONNA[12,12]
+)
+AND IAL
+	ST 	ZC[12]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+		
+
+
+LDN	ZC1301
+AND	COLONNA[13,01]
+OR(
+LDN	ZC1302
+AND	COLONNA[13,02]
+)
+OR(
+LDN	ZC1303
+AND	COLONNA[13,03]
+)
+OR(
+LDN	ZC1304
+AND	COLONNA[13,04]
+)
+OR(
+LDN	ZC1305
+AND	COLONNA[13,05]
+)
+OR(
+LDN	ZC1306
+AND	COLONNA[13,06]
+)
+OR(
+LDN	ZC1307
+AND	COLONNA[13,07]
+)
+OR(
+LDN	ZC1308
+AND	COLONNA[13,08]
+)
+OR(
+LDN	ZC1309
+AND	COLONNA[13,09]
+)
+OR(
+LDN	ZC1310
+AND	COLONNA[13,10]
+)
+OR(
+LDN	ZC1311
+AND	COLONNA[13,11]
+)
+OR(
+LDN	ZC1312
+AND	COLONNA[13,12]
+)
+AND IAL
+	ST 	ZC[13]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+		
+
+
+LDN	ZC1401
+AND	COLONNA[14,01]
+OR(
+LDN	ZC1402
+AND	COLONNA[14,02]
+)
+OR(
+LDN	ZC1403
+AND	COLONNA[14,03]
+)
+OR(
+LDN	ZC1404
+AND	COLONNA[14,04]
+)
+OR(
+LDN	ZC1405
+AND	COLONNA[14,05]
+)
+OR(
+LDN	ZC1406
+AND	COLONNA[14,06]
+)
+OR(
+LDN	ZC1407
+AND	COLONNA[14,07]
+)
+OR(
+LDN	ZC1408
+AND	COLONNA[14,08]
+)
+OR(
+LDN	ZC1409
+AND	COLONNA[14,09]
+)
+OR(
+LDN	ZC1410
+AND	COLONNA[14,10]
+)
+OR(
+LDN	ZC1411
+AND	COLONNA[14,11]
+)
+OR(
+LDN	ZC1412
+AND	COLONNA[14,12]
+)
+AND IAL
+	ST 	ZC[14]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+		
+
+
+LDN	ZC1501
+AND	COLONNA[15,01]
+OR(
+LDN	ZC1502
+AND	COLONNA[15,02]
+)
+OR(
+LDN	ZC1503
+AND	COLONNA[15,03]
+)
+OR(
+LDN	ZC1504
+AND	COLONNA[15,04]
+)
+OR(
+LDN	ZC1505
+AND	COLONNA[15,05]
+)
+OR(
+LDN	ZC1506
+AND	COLONNA[15,06]
+)
+OR(
+LDN	ZC1507
+AND	COLONNA[15,07]
+)
+OR(
+LDN	ZC1508
+AND	COLONNA[15,08]
+)
+OR(
+LDN	ZC1509
+AND	COLONNA[15,09]
+)
+OR(
+LDN	ZC1510
+AND	COLONNA[15,10]
+)
+OR(
+LDN	ZC1511
+AND	COLONNA[15,11]
+)
+OR(
+LDN	ZC1512
+AND	COLONNA[15,12]
+)
+AND IAL
+	ST 	ZC[15]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+
+
+
+
+		(* reset di tutte le luci; memorizzazione della luce; spegnimento luce e segnalazione a PC di pulsante premuto *)
+			(* VARIABILE DA PC: 'RESETTA TUTTE LE LUCI *)
+
+LD RESETL		
+JMPCN ERESET
+	LD 16
+	ST IM
+	
+E2:	LD 24
+	ST IC
+	ST IR	
+	LD 0
+	ST MRIGA[IM]
+	ST MCOLON[IM]
+E1:
+	LD FALSE
+	ST RIGA[IM,IR]
+	ST COLONNA[IM,IC]
+	LD IC
+	SUB 1
+	ST IC
+	ST IR
+	NE 0
+	JMPC E1
+		LD IM
+		SUB 1
+		ST IM
+		NE 0
+		JMPC E2	
+ERESET:	
+
+LD RESETL
+	ST RRESETL
+	
+(* -------------------------------------- *)
+
+				(* MSG. da PC: 'ACCENDI LAMPADA' *)
+
+			
+LDN ACCEN
+	R RACCEN	(* va resettato prima per evitare che AMATRIX cambi per il reset di PRIMP sopra *)
+	
+LD ACCEN	(* al fronte up di ACCEN si eccitano riga e colonna richiesti *)
+ANDN RACCEN
+JMPCN EACCEN
+	S 	RIGA[AMATRIX,ARIGA]	
+	S 	COLONNA[AMATRIX,ACOLON]
+	
+	LD 	ARIGA		(* memorizzazione del numero riga e colonna accesi *)
+	ST 	MRIGA[AMATRIX]
+	LD 	ACOLON
+	ST 	MCOLON[AMATRIX]
+	
+	LD 	TRUE
+	ST	RACCEN		(* risposta a PC *)
+	R 	FILT[AMATRIX]
+	S	PRIMP[AMATRIX]	(* setto la memoria di primo loop di impulso di accensione dopo ACCEN; vedi sotto PPRIMP *)
+	R 	MPP[AMATRIX]	(* resetto la memoria di pulsante premuto che potrebbe essere rimasta attiva dalla precedente lampada rotta  *)
+	
+	LD 	IAL
+	S	PPRIMP[AMATRIX]	(* se PRIMP e' settato che IAL e' attivo, allora lo resetterebbe a fine ciclo senza poter testare la condizione di lampada rotta *)
+				(* allora PPRIMP lo riattiva *)
+			
+	
+	
+	
+	
+
+EACCEN:	
+
+
+	
+(* -------------------------------------- *)
+
+
+
+				(* MSG. da PC: 'ANNULLA (spegni) LA LUCE INDICATA'  *)
+				
+	
+	
+LD ANNUL	
+ANDN RANNUL
+JMPCN EANNUL
+	R RIGA[NMATRIX,NRIGA]	
+	R COLONNA[NMATRIX,NCOLON]
+		
+	LD TRUE
+	S RANNUL	(* risposta a PC *)
+EANNUL:	
+
+LDN ANNUL
+	R RANNUL
+	
+(* -------------------------------------- *)
+
+
+
+
+		(* CONGELAMENTO DI TUTTE LE FUNZIONI DI ACCENSIONE E SPEGNIMENTO *)
+		
+LD CONGELA
+JMPC FINELUCI
+
+	
+	
+				(* MSG. di 'PULSANTE PREMUTO' *)
+				
+LD RSPEGNI
+	R SPEGNI
+	
+LD 16
+ST IM
+
+	
+				
+EPP1:		
+
+	LD	ZC[IM]		(*  ingresso di 'zero current'; =1 se : 'tasto premuto' oppure 'lampada rotta' *)
+	ANDN 	PRIMP[IM]		(* NON deve essere il primo loop dopo l' accensione della luce *)
+	ANDN	TFILT[IM]	(* =1 dallo spegnimento a 1 sec. dopo la successiva riaccensione; toglie i rimbalzi *)
+		S MPP[IM]	(* memoria che consente lo spegnimento completo solo al rilascio del pulsante;  *)
+				(* cio' per evitare lo spegnimento immediato in caso di riaccensione dello stesso pulsante *)
+
+	LDN	ZC[IM]
+	AND 	IAL
+	AND 	MPP[IM]
+	ANDN 	SPEGNI
+	ANDN 	RSPEGNI
+	JMPCN 	EPP
+		LD IM
+			ST SMATRIX
+		LD MRIGA[IM]
+			ST SRIGA
+		LD MCOLON[IM]
+			ST SCOLON	
+		LD TRUE
+			R MPP[IM]		
+			S SPEGNI
+			S FILT[IM]
+EPP:
+	LD IM 
+	SUB 1
+	ST IM
+	NE 0
+	JMPC EPP1 
+
+
+
+	(*	--------------------------------------------  *)
+	
+				(* MSG. di 'LAMPADA ROTTA' *)
+
+LD RLPROT
+	R LPROT
+	
+LD 16
+ST IM
+		
+ELP1:
+	LD	ZC[IM]		(*  ingresso di 'zero current'; =1 se : 'tasto premuto' oppure 'lampada rotta' *)
+	AND 	PRIMP[IM]	(* deve essere il primo loop di IAL dopo l' accensione della luce *)
+	ANDN 	PPRIMP[IM]
+	ANDN 	LPROT
+	ANDN 	RLPROT
+	JMPCN 	ELP
+		LD IM
+			ST LMATRIX
+		LD MRIGA[IM]
+			ST LRIGA
+		LD MCOLON[IM]
+			ST LCOLON	
+		LD TRUE
+			R MPP[IM]		
+			S LPROT
+			S FILT[IM]
+
+ELP:
+	LD IM 
+	SUB 1
+	ST IM
+	NE 0
+	JMPC ELP1 
+
+	(* -------------------------------------------------------------------------------------- *)
+
+
+FINELUCI:	(* fin qui il pezzo congelato *)
+
+
+LD IAL		(* IAL dura un loop solo ogni 'tot'. PRIMP viene settato da ACCEN, dura fino al prossimo IAL, *)
+		(* e viene da questi resettato alla fine della sua vita. PRIMP serve a dare il msg.'lampada rotta' *)
+		(* PPRIMP riattiva PRIMP se esso viene settato da ACCEN nel loop in cui IAL e' gia' attivo *)
+		
+	R PRIMP[01]
+	R PRIMP[02]
+	R PRIMP[03]
+	R PRIMP[04]
+	R PRIMP[05]
+	R PRIMP[06]
+	R PRIMP[07]
+	R PRIMP[08]
+	R PRIMP[09]
+	R PRIMP[10]
+	R PRIMP[11]
+	R PRIMP[12]
+	R PRIMP[13]
+	R PRIMP[14]
+	R PRIMP[15]
+	R PRIMP[16]
+	
+LD PPRIMP[1]
+	S PRIMP[1]
+	R PPRIMP[1]
+LD PPRIMP[2]
+	S PRIMP[2]
+	R PPRIMP[2]
+LD PPRIMP[3]
+	S PRIMP[3]
+	R PPRIMP[3]	
+LD PPRIMP[4]
+	S PRIMP[4]
+	R PPRIMP[4]
+LD PPRIMP[5]
+	S PRIMP[5]
+	R PPRIMP[5]
+LD PPRIMP[6]
+	S PRIMP[6]
+	R PPRIMP[6]
+LD PPRIMP[7]
+	S PRIMP[7]
+	R PPRIMP[7]	
+LD PPRIMP[8]
+	S PRIMP[8]
+	R PPRIMP[8]
+LD PPRIMP[9]
+	S PRIMP[9]
+	R PPRIMP[9]
+LD PPRIMP[10]
+	S PRIMP[10]
+	R PPRIMP[10]
+LD PPRIMP[11]
+	S PRIMP[11]
+	R PPRIMP[11]	
+LD PPRIMP[11]
+	S PRIMP[11]
+	R PPRIMP[11]
+LD PPRIMP[12]
+	S PRIMP[12]
+	R PPRIMP[12]
+LD PPRIMP[13]
+	S PRIMP[13]
+	R PPRIMP[13]
+LD PPRIMP[14]
+	S PRIMP[14]
+	R PPRIMP[14]	
+LD PPRIMP[15]
+	S PRIMP[15]
+	R PPRIMP[15]
+LD PPRIMP[16]
+	S PRIMP[16]
+	R PPRIMP[16]
+
+
+	(* impulso di accensione delle lampade nel caso siano per tensione inferiore a 24Vcc *)
+	(* il preconteggio impostato determina per quanti doppi-loop PLC la lampada NON viene alimentata *)
+
+	LD CPLC
+	STN CPLC			(* CLOCK DI PLC *)
+	
+	LD	CPLC
+	ST	CONTATO.CD
+	LD	XIAL
+	ST	CONTATO.LD
+	LD	4
+	ST	CONTATO.PV
+	CAL	CONTATO	(* FUNCTION BLOCK CTD *)
+	LD	CONTATO.Q
+	ST	XIAL
+	
+	LD 	XIAL
+	OR 	TEST	(* se e' attivo il TEST che rileva righe e colonne in comune ai settori *)
+	OR 	TESTST
+	ST	IAL
+	
+
+
+
+
+(* ========================================================================================== *)
+
+
+
+
+(* Test di pilotaggio di una sola colonna/riga e contemporaneamente di tutte e solo le righe/colonne *)
+(* NON appartenenti al settore sotto test. In questo modo si scoprono le colonne/righe in comune o in corto fra piu' settori.*)
+
+LD FALSE					(* PILOTAGGIO DI UNA RIGA E UNA COLONNA PER VOLTA *)
+ANDN TESFINE
+	ST XTEST
+	
+	LD	XTEST
+	ST	TTTEST.IN
+	LD	T#10S
+	ST	TTTEST.PT
+	CAL	TTTEST	(* FUNCTION BLOCK TON *)
+	LD	TTTEST.Q
+	ST TEST		(* PER NON TENERE ACCESE LE LUCI AL 100& IN TEST; IAL E' RESO CONTINUO DA TEST *)
+	
+	
+
+LD FALSE				(* PILOTAGGIO DI TUTTE LE RIGHE DI UN SETTORE E TUTTE LE COLONNE DI TUTTI GLI ALTRI SETTORI *)
+ANDN TESFINE
+	ST XTESTST
+	
+	LD	XTESTST
+	ST	TTESTST.IN
+	LD	T#10S
+	ST	TTESTST.PT
+	CAL	TTESTST	(* FUNCTION BLOCK TON *)
+	LD	TTESTST.ET
+	ST	TESTST	
+	
+	
+	LD 12
+	ST NODMAX
+	LD 8	
+	ST NODMIN	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+LD ZC0101
+OR ZC0102
+OR ZC0103
+OR ZC0104
+OR ZC0105
+OR ZC0106
+OR ZC0107
+OR ZC0108
+OR ZC0109
+OR ZC0110
+OR ZC0111
+OR ZC0112
+OR ZC0201
+OR ZC0202
+OR ZC0203
+OR ZC0204
+OR ZC0205
+OR ZC0206
+OR ZC0207
+OR ZC0208
+OR ZC0209
+OR ZC0210
+OR ZC0211
+OR ZC0212
+OR ZC0301
+OR ZC0302
+OR ZC0303
+OR ZC0304
+OR ZC0305
+OR ZC0306
+OR ZC0307
+OR ZC0308
+OR ZC0309
+OR ZC0310
+OR ZC0311
+OR ZC0312
+OR ZC0401
+OR ZC0402
+OR ZC0403
+OR ZC0404
+OR ZC0405
+OR ZC0406
+OR ZC0407
+OR ZC0408
+OR ZC0409
+OR ZC0410
+OR ZC0411
+OR ZC0412
+OR ZC0501
+OR ZC0502
+OR ZC0503
+OR ZC0504
+OR ZC0505
+OR ZC0506
+OR ZC0507
+OR ZC0508
+OR ZC0509
+OR ZC0510
+OR ZC0511
+OR ZC0512
+OR ZC0601
+OR ZC0602
+OR ZC0603
+OR ZC0604
+OR ZC0605
+OR ZC0606
+OR ZC0607
+OR ZC0608
+OR ZC0609
+OR ZC0610
+OR ZC0611
+OR ZC0612
+OR ZC0701
+OR ZC0702
+OR ZC0703
+OR ZC0704
+OR ZC0705
+OR ZC0706
+OR ZC0707
+OR ZC0708
+OR ZC0709
+OR ZC0710
+OR ZC0711
+OR ZC0712
+OR ZC0801
+OR ZC0802
+OR ZC0803
+OR ZC0804
+OR ZC0805
+OR ZC0806
+OR ZC0807
+OR ZC0808
+OR ZC0809
+OR ZC0810
+OR ZC0811
+OR ZC0812
+OR ZC0901
+OR ZC0902
+OR ZC0903
+OR ZC0904
+OR ZC0905
+OR ZC0906
+OR ZC0907
+OR ZC0908
+OR ZC0909
+OR ZC0910
+OR ZC0911
+OR ZC0912
+OR ZC1001
+OR ZC1002
+OR ZC1003
+OR ZC1004
+OR ZC1005
+OR ZC1006
+OR ZC1007
+OR ZC1008
+OR ZC1009
+OR ZC1010
+OR ZC1011
+OR ZC1012
+OR ZC1013
+OR ZC1014
+OR ZC1015
+OR ZC1016
+OR ZC1017
+OR ZC1018
+OR ZC1019
+OR ZC1020
+OR ZC1021
+OR ZC1022
+OR ZC1023
+OR ZC1024
+OR ZC1101
+OR ZC1102
+OR ZC1103
+OR ZC1104
+OR ZC1105
+OR ZC1106
+OR ZC1107
+OR ZC1108
+OR ZC1109
+OR ZC1110
+OR ZC1111
+OR ZC1112
+OR ZC1113
+OR ZC1114
+OR ZC1115
+OR ZC1116
+OR ZC1117
+OR ZC1118
+OR ZC1119
+OR ZC1120
+OR ZC1121
+OR ZC1122
+OR ZC1123
+OR ZC1124
+OR ZC1201
+OR ZC1202
+OR ZC1203
+OR ZC1204
+OR ZC1205
+OR ZC1206
+OR ZC1207
+OR ZC1208
+OR ZC1209
+OR ZC1210
+OR ZC1211
+OR ZC1212
+OR ZC1301
+OR ZC1302
+OR ZC1303
+OR ZC1304
+OR ZC1305
+OR ZC1306
+OR ZC1307
+OR ZC1308
+OR ZC1309
+OR ZC1310
+OR ZC1311
+OR ZC1312
+OR ZC1401
+OR ZC1402
+OR ZC1403
+OR ZC1404
+OR ZC1405
+OR ZC1406
+OR ZC1407
+OR ZC1408
+OR ZC1409
+OR ZC1410
+OR ZC1411
+OR ZC1412
+OR ZC1501
+OR ZC1502
+OR ZC1503
+OR ZC1504
+OR ZC1505
+OR ZC1506
+OR ZC1507
+OR ZC1508
+OR ZC1509
+OR ZC1510
+OR ZC1511
+OR ZC1512
+
+	S TESFINE
+
+
+
+
+LD TEST
+ANDN TESFINE
+JMPCN ETEST
+
+
+	LD IMR
+	EQ 0
+	JMPCN ETEST1
+		LD NODMAX	(* inizializzazione *)
+	(*	matrice piu' alta	 *)
+		ST IMR
+		ST IMC
+		LD 24
+		ST ICT
+		LD 24
+		ST IRT
+	
+
+		
+ETEST1:
+
+
+	LD IMC
+	EQ IMR
+	JMPCN ETEST2	(* la matrice colonne salta di uno quando e' uguale a quella delle righe *)
+				(* altrimenti accenderebbe delle lampade *)
+		
+		JMP ETEST3
+					
+
+
+
+
+
+
+ETEST2:
+
+			LD TRUE
+			R RIGA[OLDIMR,OLDIRT]
+	 		R COLONNA[OLDIMC,OLDICT]
+	 		S RIGA[IMR,IRT]
+	 		S COLONNA[IMC,ICT]		(* qui si scrivono le uscite *)
+	 		
+	 		
+	 		LD ICT
+	 		ST OLDICT
+	 		LD IRT
+	 		ST OLDIRT
+	 		LD IMR
+	 		ST OLDIMR
+	 		LD IMC
+	 		ST OLDIMC
+	 		
+	 		
+	 		LD SINC
+	 		STN SINC
+	 		LD ICT
+	 		SUB 1			(* decremento la colonna ICT *)
+	 		ST ICT
+	 		EQ 0
+	 		JMPCN ETEST
+	 			LD 24 
+	 			ST ICT
+	 			
+ETEST3:	 			
+	 			
+	 			LD MATC
+	 			STN MATC
+	 			LD IMC
+	 			SUB 1		(* decremento la matrice delle colonne *)
+	 			ST IMC 			
+	 			EQ NODMIN
+	 			JMPCN ETEST
+	 				LD NODMAX 
+	 			(*	matrice piu' alta	 *)
+	 				ST IMC
+	 				LD SINR
+	 				STN SINR
+	 				LD IRT
+	 				SUB 1	(* decremento la riga IRT *)
+	 				ST IRT
+	 				EQ 0
+	 				JMPCN ETEST
+	 					LD 24 
+	 					ST IRT
+	 					LD MATR
+	 					STN MATR
+	 					LD IMR
+	 					SUB 1	(* decremento la matrice delle righe *)
+	 					ST IMR
+	 					EQ NODMIN
+	 					JMPCN ETEST
+							LD TRUE
+							S TESFINE
+
+
+
+ETEST:	
+
+
+(* ------------------------------------------------------------ *)
+
+
+
+
+
+
+
+		(* Accende, volta per volta, tutte le righe di un settore *)
+			(*  e tutte le colonne di tutti gli altri settori.*)
+
+
+LD TESTST
+ANDN TESFINE
+JMPCN ETESTS
+
+	
+
+	LD NODMAX
+	ST IMC
+	ST IMR
+
+
+
+TSETT5:		(*  ---------- loop di IMR ------------------  *)
+
+
+
+		(* reset di tutte le luci; *)
+
+	LD NODMAX
+	ST IM
+	
+E22:	LD 24
+	ST IC
+	ST IR	
+
+E21:
+	LD FALSE
+	ST RIGA[IM,IR]
+	ST COLONNA[IM,IC]
+	LD IC
+	SUB 1
+	ST IC
+	ST IR
+	EQ 0
+	JMPCN E21
+		LD IM
+		SUB 1
+		ST IM
+		EQ NODMIN
+		JMPCN E22	
+
+(* -------------------------------------- *)
+
+
+
+
+	LD NODMAX
+	ST IMC
+	LD 24
+	ST IRC	
+TSETT1:	(* loop di IRC in IMR *)
+
+	LD TRUE
+	ST RIGA[IMR,IRC]	(* attiva tutte le righe di IMR *)
+	LD IRC
+	SUB 1
+	ST IRC
+	EQ 0
+	JMPCN TSETT1	
+						
+	
+TSETT4:		(* ---------------- loop di IMC -------------------- *)
+
+
+
+	LD IMC		(* IMC = IMR ? *)
+	EQ IMR
+	JMPCN TSETT6
+		LD IMC
+		SUB 1
+		ST IMC
+TSETT6:	
+		LD IMC
+		EQ NODMIN	(* IMC ha finito? e' sotto il minimo settore impostato? *)
+		JMPCN TSETT2
+			LD IMR
+			SUB 1
+			ST IMR
+			EQ NODMIN	(* IMR ha finito? e' sotto il minimo settore impostato? *)
+			JMPCN TSETT5
+				LD TRUE
+				S TESFINE
+				JMP ETESTS
+
+		
+		
+				
+	
+TSETT2:	
+	LD 24	
+	ST IRC
+TSETT3:		(* loop di IRC in IMC *)
+	LD TRUE
+	ST COLONNA[IMC,IRC]	(* attiva tutte le colonne di IMC *)
+	LD IRC
+	SUB 1
+	ST IRC
+	EQ 0
+	JMPCN TSETT3
+		LD IMC
+		SUB 1
+		ST IMC
+		JMP TSETT4
+					
+
+
+ETESTS:	
+(* -------------------------------------- *)
+
+
+
+
+(* Carica al massimo lo scambio dati del bus. Attiva una luce per settore e, dimensionando opportunamente IAL, *)
+(* la accende e spegne ad ogni loop. *)
+
+LD FALSE
+JMPCN ECANTEST
+
+
+ST RIGA[1,19]
+ST COLONNA[1,1]
+ST RIGA[2,1]
+ST COLONNA[2,1]
+ST RIGA[3,1]
+ST COLONNA[3,1]
+ST RIGA[4,1]
+ST COLONNA[4,1]
+ST RIGA[5,4]
+ST COLONNA[5,4]
+ST RIGA[6,4]
+ST COLONNA[6,4]
+ST RIGA[7,18]
+ST COLONNA[7,3]
+ST RIGA[8,4]
+ST COLONNA[8,3]
+ST RIGA[9,2]
+ST COLONNA[9,7]
+ST RIGA[10,1]
+ST COLONNA[10,9]
+ST RIGA[11,1]
+ST COLONNA[11,13]
+ST RIGA[12,5]
+ST COLONNA[12,4]
+ST RIGA[13,5]
+ST COLONNA[13,4]
+ST RIGA[14,12]
+ST COLONNA[14,1]
+ST RIGA[15,4]
+ST COLONNA[15,3]
+
+
+ECANTEST:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		(* traslazione dei bits dei vettori su altrettanti ingressi e uscite *)
+		
+		
+LD RIGA[01,01]
+	ST R0101
+LD COLONNA[01,01]
+AND IAL
+	ST C0101
+LD RIGA[01,02]
+	ST R0102
+LD COLONNA[01,02]
+AND IAL
+	ST C0102
+LD RIGA[01,03]
+	ST R0103
+LD COLONNA[01,03]
+AND IAL
+	ST C0103
+LD RIGA[01,04]
+	ST R0104
+LD COLONNA[01,04]
+AND IAL
+	ST C0104
+LD RIGA[01,05]
+	ST R0105
+LD COLONNA[01,05]
+AND IAL
+	ST C0105
+LD RIGA[01,06]
+	ST R0106
+LD COLONNA[01,06]
+AND IAL
+	ST C0106
+LD RIGA[01,07]
+	ST R0107
+LD COLONNA[01,07]
+AND IAL
+	ST C0107
+LD RIGA[01,08]
+	ST R0108
+LD COLONNA[01,08]
+AND IAL
+	ST C0108
+LD RIGA[01,09]
+	ST R0109
+LD COLONNA[01,09]
+AND IAL
+	ST C0109
+LD RIGA[01,10]
+	ST R0110
+LD COLONNA[01,10]
+AND IAL
+	ST C0110
+LD RIGA[01,11]
+	ST R0111
+LD COLONNA[01,11]
+AND IAL
+	ST C0111
+LD RIGA[01,12]
+	ST R0112
+LD COLONNA[01,12]
+AND IAL
+	ST C0112
+LD RIGA[01,13]
+	ST R0113
+LD RIGA[01,14]
+	ST R0114
+LD RIGA[01,15]
+	ST R0115
+LD RIGA[01,16]
+	ST R0116
+LD RIGA[01,17]
+	ST R0117
+LD RIGA[01,18]
+	ST R0118
+LD RIGA[01,19]
+	ST R0119
+LD RIGA[01,20]
+	ST R0120
+LD RIGA[01,21]
+	ST R0121
+LD RIGA[01,22]
+	ST R0122
+LD RIGA[01,23]
+	ST R0123
+LD RIGA[01,24]
+	ST R0124
+
+
+		
+LD RIGA[02,01]
+	ST R0201
+LD COLONNA[02,01]
+AND IAL
+	ST C0201
+LD RIGA[02,02]
+	ST R0202
+LD COLONNA[02,02]
+AND IAL
+	ST C0202
+LD RIGA[02,03]
+	ST R0203
+LD COLONNA[02,03]
+AND IAL
+	ST C0203
+LD RIGA[02,04]
+	ST R0204
+LD COLONNA[02,04]
+AND IAL
+	ST C0204
+LD RIGA[02,05]
+	ST R0205
+LD COLONNA[02,05]
+AND IAL
+	ST C0205
+LD RIGA[02,06]
+	ST R0206
+LD COLONNA[02,06]
+AND IAL
+	ST C0206
+LD RIGA[02,07]
+	ST R0207
+LD COLONNA[02,07]
+AND IAL
+	ST C0207
+LD RIGA[02,08]
+	ST R0208
+LD COLONNA[02,08]
+AND IAL
+	ST C0208
+LD RIGA[02,09]
+	ST R0209
+LD COLONNA[02,09]
+AND IAL
+	ST C0209
+LD RIGA[02,10]
+	ST R0210
+LD COLONNA[02,10]
+AND IAL
+	ST C0210
+LD RIGA[02,11]
+	ST R0211
+LD COLONNA[02,11]
+AND IAL
+	ST C0211
+LD RIGA[02,12]
+	ST R0212
+LD COLONNA[02,12]
+AND IAL
+	ST C0212
+LD RIGA[02,13]
+	ST R0213
+LD RIGA[02,14]
+	ST R0214
+LD RIGA[02,15]
+	ST R0215
+LD RIGA[02,16]
+	ST R0216
+LD RIGA[02,17]
+	ST R0217
+LD RIGA[02,18]
+	ST R0218
+LD RIGA[02,19]
+	ST R0219
+LD RIGA[02,20]
+	ST R0220
+LD RIGA[02,21]
+	ST R0221
+LD RIGA[02,22]
+	ST R0222
+LD RIGA[02,23]
+	ST R0223
+LD RIGA[02,24]
+	ST R0224
+
+		
+LD RIGA[03,01]
+	ST R0301
+LD COLONNA[03,01]
+AND IAL
+	ST C0301
+LD RIGA[03,02]
+	ST R0302
+LD COLONNA[03,02]
+AND IAL
+	ST C0302
+LD RIGA[03,03]
+	ST R0303
+LD COLONNA[03,03]
+AND IAL
+	ST C0303
+LD RIGA[03,04]
+	ST R0304
+LD COLONNA[03,04]
+AND IAL
+	ST C0304
+LD RIGA[03,05]
+	ST R0305
+LD COLONNA[03,05]
+AND IAL
+	ST C0305
+LD RIGA[03,06]
+	ST R0306
+LD COLONNA[03,06]
+AND IAL
+	ST C0306
+LD RIGA[03,07]
+	ST R0307
+LD COLONNA[03,07]
+AND IAL
+	ST C0307
+LD RIGA[03,08]
+	ST R0308
+LD COLONNA[03,08]
+AND IAL
+	ST C0308
+LD RIGA[03,09]
+	ST R0309
+LD COLONNA[03,09]
+AND IAL
+	ST C0309
+LD RIGA[03,10]
+	ST R0310
+LD COLONNA[03,10]
+AND IAL
+	ST C0310
+LD RIGA[03,11]
+	ST R0311
+LD COLONNA[03,11]
+AND IAL
+	ST C0311
+LD RIGA[03,12]
+	ST R0312
+LD COLONNA[03,12]
+AND IAL
+	ST C0312
+LD RIGA[03,13]
+	ST R0313
+LD RIGA[03,14]
+	ST R0314
+LD RIGA[03,15]
+	ST R0315
+LD RIGA[03,16]
+	ST R0316
+LD RIGA[03,17]
+	ST R0317
+LD RIGA[03,18]
+	ST R0318
+LD RIGA[03,19]
+	ST R0319
+LD RIGA[03,20]
+	ST R0320
+LD RIGA[03,21]
+	ST R0321
+LD RIGA[03,22]
+	ST R0322
+LD RIGA[03,23]
+	ST R0323
+LD RIGA[03,24]
+	ST R0324
+
+
+		
+LD RIGA[04,01]
+	ST R0401
+LD COLONNA[04,01]
+AND IAL
+	ST C0401
+LD RIGA[04,02]
+	ST R0402
+LD COLONNA[04,02]
+AND IAL
+	ST C0402
+LD RIGA[04,03]
+	ST R0403
+LD COLONNA[04,03]
+AND IAL
+	ST C0403
+LD RIGA[04,04]
+	ST R0404
+LD COLONNA[04,04]
+AND IAL
+	ST C0404
+LD RIGA[04,05]
+	ST R0405
+LD COLONNA[04,05]
+AND IAL
+	ST C0405
+LD RIGA[04,06]
+	ST R0406
+LD COLONNA[04,06]
+AND IAL
+	ST C0406
+LD RIGA[04,07]
+	ST R0407
+LD COLONNA[04,07]
+AND IAL
+	ST C0407
+LD RIGA[04,08]
+	ST R0408
+LD COLONNA[04,08]
+AND IAL
+	ST C0408
+LD RIGA[04,09]
+	ST R0409
+LD COLONNA[04,09]
+AND IAL
+	ST C0409
+LD RIGA[04,10]
+	ST R0410
+LD COLONNA[04,10]
+AND IAL
+	ST C0410
+LD RIGA[04,11]
+	ST R0411
+LD COLONNA[04,11]
+AND IAL
+	ST C0411
+LD RIGA[04,12]
+	ST R0412
+LD COLONNA[04,12]
+AND IAL
+	ST C0412
+LD RIGA[04,13]
+	ST R0413
+LD RIGA[04,14]
+	ST R0414
+LD RIGA[04,15]
+	ST R0415
+LD RIGA[04,16]
+	ST R0416
+LD RIGA[04,17]
+	ST R0417
+LD RIGA[04,18]
+	ST R0418
+LD RIGA[04,19]
+	ST R0419
+LD RIGA[04,20]
+	ST R0420
+LD RIGA[04,21]
+	ST R0421
+LD RIGA[04,22]
+	ST R0422
+LD RIGA[04,23]
+	ST R0423
+LD RIGA[04,24]
+	ST R0424
+
+
+		
+LD RIGA[05,01]
+	ST R0501
+LD COLONNA[05,01]
+AND IAL
+	ST C0501
+LD RIGA[05,02]
+	ST R0502
+LD COLONNA[05,02]
+AND IAL
+	ST C0502
+LD RIGA[05,03]
+	ST R0503
+LD COLONNA[05,03]
+AND IAL
+	ST C0503
+LD RIGA[05,04]
+	ST R0504
+LD COLONNA[05,04]
+AND IAL
+	ST C0504
+LD RIGA[05,05]
+	ST R0505
+LD COLONNA[05,05]
+AND IAL
+	ST C0505
+LD RIGA[05,06]
+	ST R0506
+LD COLONNA[05,06]
+AND IAL
+	ST C0506
+LD RIGA[05,07]
+	ST R0507
+LD COLONNA[05,07]
+AND IAL
+	ST C0507
+LD RIGA[05,08]
+	ST R0508
+LD COLONNA[05,08]
+AND IAL
+	ST C0508
+LD RIGA[05,09]
+	ST R0509
+LD COLONNA[05,09]
+AND IAL
+	ST C0509
+LD RIGA[05,10]
+	ST R0510
+LD COLONNA[05,10]
+AND IAL
+	ST C0510
+LD RIGA[05,11]
+	ST R0511
+LD COLONNA[05,11]
+AND IAL
+	ST C0511
+LD RIGA[05,12]
+	ST R0512
+LD COLONNA[05,12]
+AND IAL
+	ST C0512
+
+
+		
+LD RIGA[06,01]
+	ST R0601
+LD COLONNA[06,01]
+AND IAL
+	ST C0601
+LD RIGA[06,02]
+	ST R0602
+LD COLONNA[06,02]
+AND IAL
+	ST C0602
+LD RIGA[06,03]
+	ST R0603
+LD COLONNA[06,03]
+AND IAL
+	ST C0603
+LD RIGA[06,04]
+	ST R0604
+LD COLONNA[06,04]
+AND IAL
+	ST C0604
+LD RIGA[06,05]
+	ST R0605
+LD COLONNA[06,05]
+AND IAL
+	ST C0605
+LD RIGA[06,06]
+	ST R0606
+LD COLONNA[06,06]
+AND IAL
+	ST C0606
+LD RIGA[06,07]
+	ST R0607
+LD COLONNA[06,07]
+AND IAL
+	ST C0607
+LD RIGA[06,08]
+	ST R0608
+LD COLONNA[06,08]
+AND IAL
+	ST C0608
+LD RIGA[06,09]
+	ST R0609
+LD COLONNA[06,09]
+AND IAL
+	ST C0609
+LD RIGA[06,10]
+	ST R0610
+LD COLONNA[06,10]
+AND IAL
+	ST C0610
+LD RIGA[06,11]
+	ST R0611
+LD COLONNA[06,11]
+AND IAL
+	ST C0611
+LD RIGA[06,12]
+	ST R0612
+LD COLONNA[06,12]
+AND IAL
+	ST C0612
+
+		
+LD RIGA[07,01]
+	ST R0701
+LD COLONNA[07,01]
+AND IAL
+	ST C0701
+LD RIGA[07,02]
+	ST R0702
+LD COLONNA[07,02]
+AND IAL
+	ST C0702
+LD RIGA[07,03]
+	ST R0703
+LD COLONNA[07,03]
+AND IAL
+	ST C0703
+LD RIGA[07,04]
+	ST R0704
+LD COLONNA[07,04]
+AND IAL
+	ST C0704
+LD RIGA[07,05]
+	ST R0705
+LD COLONNA[07,05]
+AND IAL
+	ST C0705
+LD RIGA[07,06]
+	ST R0706
+LD COLONNA[07,06]
+AND IAL
+	ST C0706
+LD RIGA[07,07]
+	ST R0707
+LD COLONNA[07,07]
+AND IAL
+	ST C0707
+LD RIGA[07,08]
+	ST R0708
+LD COLONNA[07,08]
+AND IAL
+	ST C0708
+LD RIGA[07,09]
+	ST R0709
+LD COLONNA[07,09]
+AND IAL
+	ST C0709
+LD RIGA[07,10]
+	ST R0710
+LD COLONNA[07,10]
+AND IAL
+	ST C0710
+LD RIGA[07,11]
+	ST R0711
+LD COLONNA[07,11]
+AND IAL
+	ST C0711
+LD RIGA[07,12]
+	ST R0712
+LD COLONNA[07,12]
+AND IAL
+	ST C0712
+LD RIGA[07,13]
+	ST R0713
+LD RIGA[07,14]
+	ST R0714
+LD RIGA[07,15]
+	ST R0715
+LD RIGA[07,16]
+	ST R0716
+LD RIGA[07,17]
+	ST R0717
+LD RIGA[07,18]
+	ST R0718
+LD RIGA[07,19]
+	ST R0719
+LD RIGA[07,20]
+	ST R0720
+LD RIGA[07,21]
+	ST R0721
+LD RIGA[07,22]
+	ST R0722
+LD RIGA[07,23]
+	ST R0723
+LD RIGA[07,24]
+	ST R0724
+
+
+
+
+		
+LD RIGA[08,01]
+	ST R0801
+LD COLONNA[08,01]
+AND IAL
+	ST C0801
+LD RIGA[08,02]
+	ST R0802
+LD COLONNA[08,02]
+AND IAL
+	ST C0802
+LD RIGA[08,03]
+	ST R0803
+LD COLONNA[08,03]
+AND IAL
+	ST C0803
+LD RIGA[08,04]
+	ST R0804
+LD COLONNA[08,04]
+AND IAL
+	ST C0804
+LD RIGA[08,05]
+	ST R0805
+LD COLONNA[08,05]
+AND IAL
+	ST C0805
+LD RIGA[08,06]
+	ST R0806
+LD COLONNA[08,06]
+AND IAL
+	ST C0806
+LD RIGA[08,07]
+	ST R0807
+LD COLONNA[08,07]
+AND IAL
+	ST C0807
+LD RIGA[08,08]
+	ST R0808
+LD COLONNA[08,08]
+AND IAL
+	ST C0808
+LD RIGA[08,09]
+	ST R0809
+LD COLONNA[08,09]
+AND IAL
+	ST C0809
+LD RIGA[08,10]
+	ST R0810
+LD COLONNA[08,10]
+AND IAL
+	ST C0810
+LD RIGA[08,11]
+	ST R0811
+LD COLONNA[08,11]
+AND IAL
+	ST C0811
+LD RIGA[08,12]
+	ST R0812
+LD COLONNA[08,12]
+AND IAL
+	ST C0812
+LD RIGA[08,13]
+	ST R0813
+LD RIGA[08,14]
+	ST R0814
+LD RIGA[08,15]
+	ST R0815
+LD RIGA[08,16]
+	ST R0816
+LD RIGA[08,17]
+	ST R0817
+LD RIGA[08,18]
+	ST R0818
+LD RIGA[08,19]
+	ST R0819
+LD RIGA[08,20]
+	ST R0820
+LD RIGA[08,21]
+	ST R0821
+LD RIGA[08,22]
+	ST R0822
+LD RIGA[08,23]
+	ST R0823
+LD RIGA[08,24]
+	ST R0824
+
+
+
+		
+LD RIGA[09,01]
+	ST R0901
+LD COLONNA[09,01]
+AND IAL
+	ST C0901
+LD RIGA[09,02]
+	ST R0902
+LD COLONNA[09,02]
+AND IAL
+	ST C0902
+LD RIGA[09,03]
+	ST R0903
+LD COLONNA[09,03]
+AND IAL
+	ST C0903
+LD RIGA[09,04]
+	ST R0904
+LD COLONNA[09,04]
+AND IAL
+	ST C0904
+LD RIGA[09,05]
+	ST R0905
+LD COLONNA[09,05]
+AND IAL
+	ST C0905
+LD RIGA[09,06]
+	ST R0906
+LD COLONNA[09,06]
+AND IAL
+	ST C0906
+LD RIGA[09,07]
+	ST R0907
+LD COLONNA[09,07]
+AND IAL
+	ST C0907
+LD RIGA[09,08]
+	ST R0908
+LD COLONNA[09,08]
+AND IAL
+	ST C0908
+LD RIGA[09,09]
+	ST R0909
+LD COLONNA[09,09]
+AND IAL
+	ST C0909
+LD RIGA[09,10]
+	ST R0910
+LD COLONNA[09,10]
+AND IAL
+	ST C0910
+LD RIGA[09,11]
+	ST R0911
+LD COLONNA[09,11]
+AND IAL
+	ST C0911
+LD RIGA[09,12]
+	ST R0912
+LD COLONNA[09,12]
+AND IAL
+	ST C0912
+
+
+		
+LD RIGA[10,01]
+	ST R1001
+LD COLONNA[10,01]
+AND IAL
+	ST C1001
+LD RIGA[10,02]
+	ST R1002
+LD COLONNA[10,02]
+AND IAL
+	ST C1002
+LD RIGA[10,03]
+	ST R1003
+LD COLONNA[10,03]
+AND IAL
+	ST C1003
+LD RIGA[10,04]
+	ST R1004
+LD COLONNA[10,04]
+AND IAL
+	ST C1004
+LD RIGA[10,05]
+	ST R1005
+LD COLONNA[10,05]
+AND IAL
+	ST C1005
+LD RIGA[10,06]
+	ST R1006
+LD COLONNA[10,06]
+AND IAL
+	ST C1006
+LD RIGA[10,07]
+	ST R1007
+LD COLONNA[10,07]
+AND IAL
+	ST C1007
+LD RIGA[10,08]
+	ST R1008
+LD COLONNA[10,08]
+AND IAL
+	ST C1008
+LD RIGA[10,09]
+	ST R1009
+LD COLONNA[10,09]
+AND IAL
+	ST C1009
+LD RIGA[10,10]
+	ST R1010
+LD COLONNA[10,10]
+AND IAL
+	ST C1010
+LD RIGA[10,11]
+	ST R1011
+LD COLONNA[10,11]
+AND IAL
+	ST C1011
+LD RIGA[10,12]
+	ST R1012
+LD COLONNA[10,12]
+AND IAL
+	ST C1012
+LD RIGA[10,13]
+	ST R1013
+LD COLONNA[10,13]
+AND IAL
+	ST C1013
+LD RIGA[10,14]
+	ST R1014
+LD COLONNA[10,14]
+AND IAL
+	ST C1014
+LD RIGA[10,15]
+	ST R1015
+LD COLONNA[10,15]
+AND IAL
+	ST C1015
+LD RIGA[10,16]
+	ST R1016
+LD COLONNA[10,16]
+AND IAL
+	ST C1016
+LD RIGA[10,17]
+	ST R1017
+LD COLONNA[10,17]
+AND IAL
+	ST C1017
+LD RIGA[10,18]
+	ST R1018
+LD COLONNA[10,18]
+AND IAL
+	ST C1018
+LD RIGA[10,19]
+	ST R1019
+LD COLONNA[10,19]
+AND IAL
+	ST C1019
+LD RIGA[10,20]
+	ST R1020
+LD COLONNA[10,20]
+AND IAL
+	ST C1020
+LD RIGA[10,21]
+	ST R1021
+LD COLONNA[10,21]
+AND IAL
+	ST C1021
+LD RIGA[10,22]
+	ST R1022
+LD COLONNA[10,22]
+AND IAL
+	ST C1022
+LD RIGA[10,23]
+	ST R1023
+LD COLONNA[10,23]
+AND IAL
+	ST C1023
+LD RIGA[10,24]
+	ST R1024
+LD COLONNA[10,24]
+AND IAL
+	ST C1024
+
+
+
+		
+LD RIGA[11,01]
+	ST R1101
+LD COLONNA[11,01]
+AND IAL
+	ST C1101
+LD RIGA[11,02]
+	ST R1102
+LD COLONNA[11,02]
+AND IAL
+	ST C1102
+LD RIGA[11,03]
+	ST R1103
+LD COLONNA[11,03]
+AND IAL
+	ST C1103
+LD RIGA[11,04]
+	ST R1104
+LD COLONNA[11,04]
+AND IAL
+	ST C1104
+LD RIGA[11,05]
+	ST R1105
+LD COLONNA[11,05]
+AND IAL
+	ST C1105
+LD RIGA[11,06]
+	ST R1106
+LD COLONNA[11,06]
+AND IAL
+	ST C1106
+LD RIGA[11,07]
+	ST R1107
+LD COLONNA[11,07]
+AND IAL
+	ST C1107
+LD RIGA[11,08]
+	ST R1108
+LD COLONNA[11,08]
+AND IAL
+	ST C1108
+LD RIGA[11,09]
+	ST R1109
+LD COLONNA[11,09]
+AND IAL
+	ST C1109
+LD RIGA[11,10]
+	ST R1110
+LD COLONNA[11,10]
+AND IAL
+	ST C1110
+LD RIGA[11,11]
+	ST R1111
+LD COLONNA[11,11]
+AND IAL
+	ST C1111
+LD RIGA[11,12]
+	ST R1112
+LD COLONNA[11,12]
+AND IAL
+	ST C1112
+LD RIGA[11,13]
+	ST R1113
+LD COLONNA[11,13]
+AND IAL
+	ST C1113
+LD RIGA[11,14]
+	ST R1114
+LD COLONNA[11,14]
+AND IAL
+	ST C1114
+LD RIGA[11,15]
+	ST R1115
+LD COLONNA[11,15]
+AND IAL
+	ST C1115
+LD RIGA[11,16]
+	ST R1116
+LD COLONNA[11,16]
+AND IAL
+	ST C1116
+LD RIGA[11,17]
+	ST R1117
+LD COLONNA[11,17]
+AND IAL
+	ST C1117
+LD RIGA[11,18]
+	ST R1118
+LD COLONNA[11,18]
+AND IAL
+	ST C1118
+LD RIGA[11,19]
+	ST R1119
+LD COLONNA[11,19]
+AND IAL
+	ST C1119
+LD RIGA[11,20]
+	ST R1120
+LD COLONNA[11,20]
+AND IAL
+	ST C1120
+LD RIGA[11,21]
+	ST R1121
+LD COLONNA[11,21]
+AND IAL
+	ST C1121
+LD RIGA[11,22]
+	ST R1122
+LD COLONNA[11,22]
+AND IAL
+	ST C1122
+LD RIGA[11,23]
+	ST R1123
+LD COLONNA[11,23]
+AND IAL
+	ST C1123
+LD RIGA[11,24]
+	ST R1124
+LD COLONNA[11,24]
+AND IAL
+	ST C1124
+
+
+
+		
+LD RIGA[12,01]
+	ST R1201
+LD COLONNA[12,01]
+AND IAL
+	ST C1201
+LD RIGA[12,02]
+	ST R1202
+LD COLONNA[12,02]
+AND IAL
+	ST C1202
+LD RIGA[12,03]
+	ST R1203
+LD COLONNA[12,03]
+AND IAL
+	ST C1203
+LD RIGA[12,04]
+	ST R1204
+LD COLONNA[12,04]
+AND IAL
+	ST C1204
+LD RIGA[12,05]
+	ST R1205
+LD COLONNA[12,05]
+AND IAL
+	ST C1205
+LD RIGA[12,06]
+	ST R1206
+LD COLONNA[12,06]
+AND IAL
+	ST C1206
+LD RIGA[12,07]
+	ST R1207
+LD COLONNA[12,07]
+AND IAL
+	ST C1207
+LD RIGA[12,08]
+	ST R1208
+LD COLONNA[12,08]
+AND IAL
+	ST C1208
+LD RIGA[12,09]
+	ST R1209
+LD COLONNA[12,09]
+AND IAL
+	ST C1209
+LD RIGA[12,10]
+	ST R1210
+LD COLONNA[12,10]
+AND IAL
+	ST C1210
+LD RIGA[12,11]
+	ST R1211
+LD COLONNA[12,11]
+AND IAL
+	ST C1211
+LD RIGA[12,12]
+	ST R1212
+LD COLONNA[12,12]
+AND IAL
+	ST C1212
+
+
+		
+LD RIGA[13,01]
+	ST R1301
+LD COLONNA[13,01]
+AND IAL
+	ST C1301
+LD RIGA[13,02]
+	ST R1302
+LD COLONNA[13,02]
+AND IAL
+	ST C1302
+LD RIGA[13,03]
+	ST R1303
+LD COLONNA[13,03]
+AND IAL
+	ST C1303
+LD RIGA[13,04]
+	ST R1304
+LD COLONNA[13,04]
+AND IAL
+	ST C1304
+LD RIGA[13,05]
+	ST R1305
+LD COLONNA[13,05]
+AND IAL
+	ST C1305
+LD RIGA[13,06]
+	ST R1306
+LD COLONNA[13,06]
+AND IAL
+	ST C1306
+LD RIGA[13,07]
+	ST R1307
+LD COLONNA[13,07]
+AND IAL
+	ST C1307
+LD RIGA[13,08]
+	ST R1308
+LD COLONNA[13,08]
+AND IAL
+	ST C1308
+LD RIGA[13,09]
+	ST R1309
+LD COLONNA[13,09]
+AND IAL
+	ST C1309
+LD RIGA[13,10]
+	ST R1310
+LD COLONNA[13,10]
+AND IAL
+	ST C1310
+LD RIGA[13,11]
+	ST R1311
+LD COLONNA[13,11]
+AND IAL
+	ST C1311
+LD RIGA[13,12]
+	ST R1312
+LD COLONNA[13,12]
+AND IAL
+	ST C1312
+
+
+		
+LD RIGA[14,01]
+	ST R1401
+LD COLONNA[14,01]
+AND IAL
+	ST C1401
+LD RIGA[14,02]
+	ST R1402
+LD COLONNA[14,02]
+AND IAL
+	ST C1402
+LD RIGA[14,03]
+	ST R1403
+LD COLONNA[14,03]
+AND IAL
+	ST C1403
+LD RIGA[14,04]
+	ST R1404
+LD COLONNA[14,04]
+AND IAL
+	ST C1404
+LD RIGA[14,05]
+	ST R1405
+LD COLONNA[14,05]
+AND IAL
+	ST C1405
+LD RIGA[14,06]
+	ST R1406
+LD COLONNA[14,06]
+AND IAL
+	ST C1406
+LD RIGA[14,07]
+	ST R1407
+LD COLONNA[14,07]
+AND IAL
+	ST C1407
+LD RIGA[14,08]
+	ST R1408
+LD COLONNA[14,08]
+AND IAL
+	ST C1408
+LD RIGA[14,09]
+	ST R1409
+LD COLONNA[14,09]
+AND IAL
+	ST C1409
+LD RIGA[14,10]
+	ST R1410
+LD COLONNA[14,10]
+AND IAL
+	ST C1410
+LD RIGA[14,11]
+	ST R1411
+LD COLONNA[14,11]
+AND IAL
+	ST C1411
+LD RIGA[14,12]
+	ST R1412
+LD COLONNA[14,12]
+AND IAL
+	ST C1412
+
+		
+LD RIGA[15,01]
+	ST R1501
+LD COLONNA[15,01]
+AND IAL
+	ST C1501
+LD RIGA[15,02]
+	ST R1502
+LD COLONNA[15,02]
+AND IAL
+	ST C1502
+LD RIGA[15,03]
+	ST R1503
+LD COLONNA[15,03]
+AND IAL
+	ST C1503
+LD RIGA[15,04]
+	ST R1504
+LD COLONNA[15,04]
+AND IAL
+	ST C1504
+LD RIGA[15,05]
+	ST R1505
+LD COLONNA[15,05]
+AND IAL
+	ST C1505
+LD RIGA[15,06]
+	ST R1506
+LD COLONNA[15,06]
+AND IAL
+	ST C1506
+LD RIGA[15,07]
+	ST R1507
+LD COLONNA[15,07]
+AND IAL
+	ST C1507
+LD RIGA[15,08]
+	ST R1508
+LD COLONNA[15,08]
+AND IAL
+	ST C1508
+LD RIGA[15,09]
+	ST R1509
+LD COLONNA[15,09]
+AND IAL
+	ST C1509
+LD RIGA[15,10]
+	ST R1510
+LD COLONNA[15,10]
+AND IAL
+	ST C1510
+LD RIGA[15,11]
+	ST R1511
+LD COLONNA[15,11]
+AND IAL
+	ST C1511
+LD RIGA[15,12]
+	ST R1512
+LD COLONNA[15,12]
+AND IAL
+	ST C1512
+
+
+(* timers dei filtri che bloccano la rilevazione del tasto premuto, dalla ultima pressione fino all' arrivo di una nuova accensione, ritardata. *)
+(* questo per ogni sottomatrice. FILT viene settato dalla pressione tasto e resettato da ACCEN alla diseccitazione temporizzata. *)
+
+	LD	FILT[1]
+	ST	TTFL1.IN
+	LD	T#500MS
+	ST	TTFL1.PT
+	CAL	TTFL1	(* FUNCTION BLOCK TOF *)
+	LD	TTFL1.Q
+	ST	TFILT[1]
+
+
+LD	FILT[2]
+	ST	TTFL2.IN
+	LD	T#500MS
+	ST	TTFL2.PT
+	CAL	TTFL2	(* FUNCTION BLOCK TOF *)
+	LD	TTFL2.Q
+	ST	TFILT[2]
+
+LD	FILT[3]
+	ST	TTFL3.IN
+	LD	T#500MS
+	ST	TTFL3.PT
+	CAL	TTFL3	(* FUNCTION BLOCK TOF *)
+	LD	TTFL3.Q
+	ST	TFILT[3]
+
+	LD	FILT[4]
+	ST	TTFL4.IN
+	LD	T#500MS
+	ST	TTFL4.PT
+	CAL	TTFL4	(* FUNCTION BLOCK TOF *)
+	LD	TTFL4.Q
+	ST	TFILT[4]
+
+LD	FILT[5]
+	ST	TTFL5.IN
+	LD	T#500MS
+	ST	TTFL5.PT
+	CAL	TTFL5	(* FUNCTION BLOCK TOF *)
+	LD	TTFL5.Q
+	ST	TFILT[5]
+
+
+LD	FILT[6]
+	ST	TTFL6.IN
+	LD	T#500MS
+	ST	TTFL6.PT
+	CAL	TTFL6	(* FUNCTION BLOCK TOF *)
+	LD	TTFL6.Q
+	ST	TFILT[6]
+
+LD	FILT[7]
+	ST	TTFL7.IN
+	LD	T#500MS
+	ST	TTFL7.PT
+	CAL	TTFL7	(* FUNCTION BLOCK TOF *)
+	LD	TTFL7.Q
+	ST	TFILT[7]
+
+LD	FILT[8]
+	ST	TTFL8.IN
+	LD	T#500MS
+	ST	TTFL8.PT
+	CAL	TTFL8	(* FUNCTION BLOCK TOF *)
+	LD	TTFL8.Q
+	ST	TFILT[8]
+
+
+LD	FILT[9]
+	ST	TTFL9.IN
+	LD	T#500MS
+	ST	TTFL9.PT
+	CAL	TTFL9	(* FUNCTION BLOCK TOF *)
+	LD	TTFL9.Q
+	ST	TFILT[9]
+
+
+	LD	FILT[10]
+	ST	TTFL10.IN
+	LD	T#500MS
+	ST	TTFL10.PT
+	CAL	TTFL10	(* FUNCTION BLOCK TOF *)
+	LD	TTFL10.Q
+	ST	TFILT[10]
+
+LD	FILT[11]
+	ST	TTFL11.IN
+	LD	T#500MS
+	ST	TTFL11.PT
+	CAL	TTFL11	(* FUNCTION BLOCK TOF *)
+	LD	TTFL11.Q
+	ST	TFILT[11]
+
+LD	FILT[12]
+	ST	TTFL12.IN
+	LD	T#500MS
+	ST	TTFL12.PT
+	CAL	TTFL12	(* FUNCTION BLOCK TOF *)
+	LD	TTFL12.Q
+	ST	TFILT[12]
+
+LD	FILT[13]
+	ST	TTFL13.IN
+	LD	T#500MS
+	ST	TTFL13.PT
+	CAL	TTFL13	(* FUNCTION BLOCK TOF *)
+	LD	TTFL13.Q
+	ST	TFILT[13]
+
+
+LD	FILT[14]
+	ST	TTFL14.IN
+	LD	T#500MS
+	ST	TTFL14.PT
+	CAL	TTFL14	(* FUNCTION BLOCK TOF *)
+	LD	TTFL14.Q
+	ST	TFILT[14]
+
+LD	FILT[15]
+	ST	TTFL15.IN
+	LD	T#500MS
+	ST	TTFL15.PT
+	CAL	TTFL15	(* FUNCTION BLOCK TOF *)
+	LD	TTFL15.Q
+	ST	TFILT[15]
+
+	LD	FILT[16]
+	ST	TTFL16.IN
+	LD	T#500MS
+	ST	TTFL16.PT
+	CAL	TTFL16	(* FUNCTION BLOCK TOF *)
+	LD	TTFL16.Q
+	ST	TFILT[16]
+
+(* _____________________________________ *)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(* PROVE  DI  MISURA  DELLA REGOLARITA'  DEL  LOOP   *)
+
+LD PMI
+JMPCN LAB4
+	LD 0
+	ST MAX
+	LD 9999
+	ST MIN
+	LD TRUE
+	STN C
+	STN D
+	ST B
+	JMP LAB5
+	
+LAB4:
+
+
+	(* incremento del contatore per tutto il tempo impostato *)
+
+	LD	C
+	ST	CCNTLP.CU
+	LD	B
+	ST	CCNTLP.R
+	CAL	CCNTLP	(* FUNCTION BLOCK CTU *)
+	LD	CCNTLP.CV
+	ST	CONT
+	
+	
+	LD	E
+	ST	CCNTLP2.CU
+	LD	B
+	ST	CCNTLP2.R
+	CAL	CCNTLP2	(* FUNCTION BLOCK CTU *)
+	LD	CCNTLP2.CV
+	ST	CONTD
+	
+	LD CONT
+	ADD CONTD
+		ST CONTA
+		
+	
+
+	LD	D
+	ST	TB.IN
+	LD	T#100MS
+	ST	TB.PT
+	CAL	TB	(* FUNCTION BLOCK TON *)
+	LD	TB.Q
+	ST	B
+
+
+
+
+	(* scrittura minimo e massimo conteggio *)
+	
+	LD B
+	JMPCN LAB1
+		LDN TRUE
+		(* ST C *)
+		LD CONTA
+		ST CORR
+		LT MIN
+		JMPCN LAB2
+			LD CONTA
+			ST MIN
+LAB2:
+	
+	LD CONTA
+	GT MAX
+	JMPCN LAB3
+		LD CONTA
+		ST MAX
+	LAB3:
+LAB1:
+
+
+	(* settaggio delle variabili *)
+	LDN B
+		ST D
+	
+	LDN C
+		ST C
+		STN E
+	
+LAB5:	
+
+
+	(* prova -- mantovani *)
+	LDN	CICCIA
+	ST	CICCIAN.IN
+	LD	T#500MS
+	ST	CICCIAN.PT
+	CAL	CICCIAN	(* FUNCTION BLOCK TON *)
+	LD	CICCIAN.Q
+	ST	CICCIA1
+	
+	
+	LD	CICCIA1
+	ST	CICCIAF.IN
+	LD	T#500MS
+	ST	CICCIAF.PT
+	CAL	CICCIAF	(* FUNCTION BLOCK TOF *)
+	LD	CICCIAF.Q
+	ST	CICCIA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END_PROGRAM
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+<?php
+	require_once 'DB.php';
+	require_once 'Spreadsheet/Excel/Writer.php';
+	printf("Ciao");
+
+	$db =& DB::connect('pgsql://roberto:3zin@database/sap');
+	if (PEAR::isError($db)) {
+    die($db->getMessage());
+	}
+
+	date_default_timezone_set('Europe/Rome');
+
+	printf("Ciao");
+
+//	$CB_DA_ANNO=$_GET['CB_DA_ANNO'];
+//	$CB_DA_MESE=$_GET['CB_DA_MESE'];
+//	$CB_DA_GIORNO=$_GET['CB_DA_GIORNO'];
+//	$CB_A_ANNO=$_GET['CB_A_ANNO'];
+//	$CB_A_MESE=$_GET['CB_A_MESE'];
+//	$CB_A_GIORNO=$_GET['CB_A_GIORNO'];
+	$CB_DA_ANNO="2014";
+	$CB_DA_MESE="10";
+	$CB_DA_GIORNO="04";
+	$CB_A_ANNO="2014";
+	$CB_A_MESE="10";
+	$CB_A_GIORNO="07";
+
+	if($CB_DA_ANNO=="" && $CD_DA_MESE=="" && $CD_DA_GIORNO=="" &&
+	   $CB_A_ANNO=="" && $CD_A_MESE=="" && $CD_A_GIORNO==""){
+		/*
+		* Ricavo la data odierna
+		*/
+		// $date = getdate();
+
+		$da_anno=date("Y");
+		$da_mese=date("m");
+		$da_giorno=date("d");
+		$a_anno=date("Y");
+		$a_mese=date("m");
+		$a_giorno=date("d");
+	} else {
+		$da_anno=$CB_DA_ANNO;
+		$da_mese=$CB_DA_MESE;
+		$da_giorno=$CB_DA_GIORNO;
+		$a_anno=$CB_A_ANNO;
+		$a_mese=$CB_A_MESE;
+		$a_giorno=$CB_A_GIORNO;
+	}
+
+
+
+	$szFromDate = sprintf("%04d%02d%02d",$da_anno,$da_mese,$da_giorno);
+	$szToDate   = sprintf("%04d%02d%02d",$a_anno,$a_mese,$a_giorno);
+
+		
+	$workbook = new Spreadsheet_Excel_Writer();
+
+	// sending HTTP headers
+//	$workbook->send('test.xls');
+
+	// Creating a worksheet
+	$worksheet =& $workbook->addWorksheet('My first worksheet');
+	$worksheet->write(0, 0, 'ciccio');
+	printf("<Font size=\"5\"><B>LISTA CODICI PRELEVATI DAL %02d-%02d-%04d AL %02d-%02d-%04d</B>",$da_giorno,$da_mese,$da_anno,$a_giorno,$a_mese,$a_anno);
+	if($CB_DA_ANNO>0){
+
+		//printf("<Font size=\"5\"><B>LISTA CODICI PRELEVATI DAL %02d-%02d-%04d AL %02d-%02d-%04d</B>",$da_giorno,$da_mese,$da_anno,$a_giorno,$a_mese,$a_anno);
+
+		/*
+		* rm 27-02-2001 : versione che prevede l'uso dei campi data e ora prelievo in righe di produzione
+		*/
+		//$szBuffer=sprintf("select r.rpcdpro,a.prdescr,sum(r.rpqtspe) from rig_stor r, articoli a 
+	//										where r.rpcdpro=a.prcdpro and r.rpdtpre>='%s' and r.rpdtpre<='%s' 
+	//										group by a.prcdpro,r.rpcdpro,a.prdescr order by sum(r.rpqtspe) desc;",$szFromDate,$szToDate);
+
+		/*
+		* rm 27-02-2001 : versione che NON prevede l'uso dei campi data e ora prelievo in righe di produzione
+		*                 (e' retroattiva)
+		*/
+		$szBuffer=sprintf("select isola(r.rpcdubi),settore(r.rpcdubi),r.rpcdpro,ubicazione(r.rpcdubi),a.prdescr,sum(r.rpqtspe) as qt 
+                      from rig_stor r,articoli a where r.rpcdpro=a.prcdpro and r.rpdtpre>='%s' and r.rpdtpre<='%s' 
+ 	 	 	 	 	   	 		 		 group by isola(r.rpcdubi),settore(r.rpcdubi),r.rpcdpro,r.rpcdubi,a.prdescr order by qt desc;",$szFromDate,$szToDate);
+
+		$res =& $db->query($szBuffer);
+		if (PEAR::isError($res)) {
+			die($res->getMessage());
+		}
+
+		/*
+		* controllo presenza codice elaborazione in archivio storico
+		*/
+		$nIndex=0;
+		if($res->fetchInto($row)){
+		}
+		$isola=$row[0];
+		$settore=$row[1];
+		$old_isola=-1;
+		$old_settore=0;
+		do{
+//				printf("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%d</td></tr>",$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
+			$worksheet->write($nIndex+1, 0, $row[0]);
+			$nIndex++;
+		} while($res->fetchInto($row));
+		}
+		$res->free();
+	}
+	$workbook->close();
+?>
+

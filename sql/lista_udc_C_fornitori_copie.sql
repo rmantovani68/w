@@ -1,0 +1,1 @@
+select lpcduds as udc, lplabel as posizione, lpcdfor as fornitore, sum(lpqtlet) as copie from rese_letture_prodotti where lpflsca='S' and lpstato!='S' and lpprlot=18 group by lpcduds,lplabel,lpcdfor order by lpcduds,lplabel,lpcdfor;

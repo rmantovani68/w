@@ -1,0 +1,168 @@
+      prcdpro       |                 prdescr                  | prqtkar 
+--------------------+------------------------------------------+---------
+ 81593254           | SEBASTIAN_cellophanes caramel 300ml      |      12
+ 81599076           | NIOX THERM ACTIV PROTECTOR 150ML DFINL   |       6
+ 81643783           | WP EIMI RUGGED TEXTURE 75 ML             |      12
+ 99240010306        | NioxTrlKit_Sys5_150+150+50_GBDFINLESPT   |      12
+ 81644361           | SEBASTIAN_volupt spray 150ml             |       6
+ 81644366           | SEBASTIAN_color ignite mono cond 500ml   |       6
+ 81643447           | SYSTEM_color save bi-phase cond 185ml    |       6
+ 99240012325        | WP ENRICH SHAMPOO 500ML                  |       6
+ 81643479           | SYSTEM_hydrate quenching mist 125ml      |       6
+ 99240009177        | WP FUSION MASK 500ML                     |       6
+ 81644367           | SEBASTIAN_color ignite multi cond 500ml  |       6
+ 81599215           | SYSTEM_repair infusion 20x5ml            |       6
+ 81644365           | SEBASTIAN_mousse forte 200ml             |       6
+ 99240010903        | SYSTEM_color save mask 400ml             |       6
+ 81644374           | SEBASTIAN_whipped creme 150ml            |      12
+ 81620362           | WP CREA+ STRAIGHT H/S BASE 200ML WE      |       6
+ 99240010405        | NXN OPT SYS4 RG OTC CN 300ml 18WE MULTI  |      12
+ 99240010411        | NXN OPT SYS2 RG OTC CN 300ml 18 WE MULTI |      12
+ 99240010417        | NIOX OPT SYS1 RG ATB MULT 1000ml 18IV    |      12
+ 81630920           | NXN_Diaboost_Treat 100ml DFINLESPT       |       6
+ 99240008450        | SEBASTIAN_volupt shampoo 1000ml          |      12
+ 99240003221        | SYSTEMMAN H&B CONDITIONER 1L ATB         |       6
+ 99240010960        | WP OIL REFLECTIONS MASK 500ML            |       6
+ 81588155           | SEBASTIAN_molding mud 75ml               |      12
+ 81630873           | NXN_Hair_Booster 100ml DFINLESPT         |      12
+ 99240010025        | SYSTEM_luxeoil keratin restoremask 400ml |       6
+ 99240010858        | SYSTEM BALANCE MASK 400ML                |       6
+ 81643445           | SP D EXT RG LIQHAIR 100ml GBFDINLGR      |       3
+ 99240010316        | NXN OPT SYS3 RG OTC K15015050 18GBDFINLS |      12
+ 99240010401        | NXN OPT SYS6 RG ATB CN 1000ml 18 MULTI   |      12
+ 81618896           | SEBASTIAN_twisted curl shampoo 1000ml    |       6
+ 81639230           | NIOXIN NGHT DENS RES 70ML DFINLEPPLTR    |      12
+ 81643653           | MAGMA_500ML CONDITIONER D F I NL E P     |       6
+ 99240010389        | NXN OPT SYS2 RG OTC K15015040 18GBDFINLS |      12
+ 99240010408        | NXN OPT SYS3 RG OTC CN 300ml 18WE MULTI  |      12
+ 99240010424        | NXN OPT SYS3 RG OTC K300300100 18WE MULT |       6
+ 81620358           | WP CREA+ STRAIGHT C/S BASE 200ML WE      |       6
+ 99240010303        | NXN OPT SYS6 RG OTC K15015040 18GBDFINLS |      12
+ 99240010404        | NXN OPT SYS5 RG ATB CN 1000ml 18MULTI    |      12
+ 99240011449        | SYSTEM_color save shampoo 500ml          |       6
+ 99240011464        | SYSTEM_repair shampoo 500ml              |       6
+ 81618061           | SYSTEM LUXE OIL ELIXIR 30ML FDINLGR      |       6
+ 81618070           | SYSTEM_luxeoil boost essence 100ml       |       6
+ 81619458           | SEBASTIAN_twisted curl foam 200ml        |      12
+ 81582089           | SEBASTIAN_microweb fiber 45ml            |      12
+ 81600126           | SEBASTIAN_texture maker 150ml            |       6
+ 81606175           | NIOX INSTANT_FULLNESS_180ML_DFINL        |       6
+ 81630620           | NIOX_SYS1_SH 300ML                       |      12
+ 81630640           | NIOX_SYS5_SH 1000ML MULTILANG            |      12
+ 81630662           | NIOX_SYS1_SCALPTRTMT 100ML               |      12
+ 81630670           | NIOX_SYS3_SCALPTRTMT 100ML               |      12
+ 81606180           | NIOX INSTANT_FULLNESS_65ML_DFINL         |      12
+ 99240010420        | NXN OPT SYS5 RG OTC K300300100 18WE MULT |       6
+ 99240009916        | WP ENRICH MASK 500ML                     |       6
+ 81630622           | NIOX_SYS3_SH 300ML                       |      12
+ 81630636           | NIOX_SYS1_SH 1000ML MULTILANG            |      12
+ 99240010418        | NXN OPT SYS6 RG OTC K300300100 18WE MULT |       6
+ 81630849           | NXN_Color_Lock 150ml DFINL               |       6
+ 81638692           | SYSTEM LUXE OIL ELIXIR 14X2ML MULTILANG  |       8
+ 99240010410        | NXN OPT SYS3 RG ATB CN 1000ml 18MULTI    |      12
+ 99240010422        | NXN OPT SYS4 RG OTC K300300100 18WE MULT |       6
+ 99240010860        | SSP BALANCE SHAMPOO 250ML MULTILANG      |       6
+ 81618895           | SEBASTIAN_twisted curl shampoo 250ml     |       6
+ 81630638           | NIOX_SYS3_SH 1000ML MULTILANG            |      12
+ 81630639           | NIOX_SYS4_SH 1000ML MULTILANG            |      12
+ 81630641           | NIOX_SYS6_SH 1000ML MULTILANG            |      12
+ 81630913           | NXN_Scalp_Renew 75ml DFINLESPT           |      12
+ 81630660           | NIOX_SYS5_CN 1000ML MULTILANG            |      12
+ 81630658           | NXN_SYS3_CN 1000ML MULTILANG             |      12
+ 81630681           | NIOX_SYS4_SCALPTRTMT 100ML               |      12
+ 81630686           | NIOX_SYS5_SCALPTRTMT 100ML               |      12
+ 81630694           | NIOX SYS6 SCALP TREAT 100ML MULTILANG    |      12
+ 81641232           | NIOSPRAY STRONG HOLD 400ML DFINLGR       |       6
+ 81619461           | SEBASTIAN_twisted curl spay 100ml        |       8
+ 81618084           | SYSTEM_luxeoil cream elixir 50ml         |       6
+ 81618898           | SEBASTIAN_twisted curl conditioner 250ml |       6
+ 99240010392        | NIOXIN TRIAL KIT SYS 1 150 150 50        |      12
+ 99240011524        | SYSTEM_permlock emulsion 50ml            |      12
+ 99240010399        | NXN OPT SYS6 RG OTC CN 300ml 18 WE MULTI |      12
+ 81599170           | System_ Balance mask 20x15ml             |      15
+ 81630911           | NXN_DeepProtectMasq 500ml WE_Multi       |      12
+ 99240010428        | NXN OPT SYS1 RG OTC K300300100 18WE MULT |       6
+ 99240010516        | SEBASTIAN_color ignite multi shamp 250ml |       6
+ 99240010402        | NXN OPT SYS5 RG OTC CN 300ml 18 WE MULTI |      12
+ 99240011447        | SSP BALANCE SHAMPOO 500ML MULTILANG      |       6
+ 99240011509        | SYSTEM_luxeoil emulsion 50ml             |      12
+ 81599071           | NIOSPRAY REGULAR HOLD 400ML DFINLGR      |       6
+ 99240010933        | SYSTEM_repair shampoo 250ml              |       6
+ 81645247           | SYSTEM_styling DD platinum fix 75ml      |      12
+ 81648849           | WP Volume Crystal mask 500 ml            |       6
+ 99240005366        | SP D RPR RG ATB INFUSI 20x5ml MULTL 18IV |       6
+ 99240002147        | SEBASTIAN_thickefy foam 190ml            |      12
+ 99240010311        | NioxTrlKit_Sys4_150+150+40_GBDFINLESPT   |      12
+ 99240012196        | SEBASTIAN_liquid steel 150ml             |      12
+ 99240012662        | SEBASTIAN_twisted curl cream 145ml       |      12
+ 99240013392        | SEB CELLO RG ATB CARAMEL BRWN 300ml 18EU |      12
+ 99240010929        | SYSTEM_repair mask 400ml                 |       6
+ 99240010945        | SYSTEM_smoothen mask 400ml               |       6
+ 81630655           | NIOX_SYS1_CN 1000ML MULTILANG            |      12
+ 99240008914        | SEBMAN_the fixer spray 200ml             |       6
+ 81630623           | NIOX_SYS4_SH 300ML                       |      12
+ 81630624           | NIOX_SYS5_SH 300ML                       |      12
+ 81630625           | NIOX_SYS6_SH 300ML                       |      12
+ 81630637           | NIOX_SYS2_SH 1000ML MULTILANG            |      12
+ 81630657           | NIOX_SYS2_CN 1000ML MULTILANG            |      12
+ 81630659           | NIOX_SYS4_CN 1000ML MULTILANG            |      12
+ 81630661           | NIOX_SYS6_CN 1000ML MULTILANG            |      12
+ 81630666           | NIOX_SYS2_SCALPTRTMT 100ML               |      12
+ 99240010971        | SYSTEM_volumize mask 400ml               |       6
+ 81630621           | NIOX_SYS2_SH 300ML                       |      12
+ 99240011818        | SP_styling perfect hold 50ml             |      12
+ 99240012064        | WP BRILLIANCE MASK COARSE 500ML          |       6
+ 99240012066        | WP BRILLIANCE MASK FINE 500ML            |       6
+ 99240012185        | SEBASTIAN_shine shaker 75ml              |      12
+ 99240012861        | SYSTEM_color save cond 1000ml            |       6
+ 99240012862        | SYSTEM_hydrate conditioner 1000ml        |       6
+ 99240012878        | SYSTEM LUXE KERA COND 1000ML MULTILANG   |       6
+ 99240014312        | NIOX OPT SYS3 RG OTC DENS MASK KIT 18 IT |       6
+ 99240013379        | SEBASTIAN_drynamic 212ml                 |      12
+ 99240013395        | SEBASTIAN_cellophanes clear 300ml        |      12
+ 99240013732        | NIOX PRO THIK RG GEL 140ml DFINLGR 18WE  |      12
+ 99240014025        | SEBASTIAN_shine define 200ml             |      12
+ 99240014032        | SEBASTIAN_potion 9 150ml                 |      12
+ 99240014037        | SEBASTIAN_potion 9 50ml                  |      12
+ 99240014044        | SEBASTIAN_craft clay 50ml                |      12
+ 99240014062        | SEBASTIAN_hydre conditioner 250ml        |      12
+ 99240014071        | SEBASTIAN_hydre treatment 150ml          |      12
+ 99240014074        | SEBASTIAN_penetraitt conditioner 250ml   |      12
+ 99240016215        | WP COLORMOTION POST COL TREAT 500ML      |       6
+ 81630900           | NXN_DeepProtectMasq 150ml DFINLESPT      |      12
+ 99240012863        | SYSTEM_repair conditioner 1000ml         |       6
+ 99240014090        | SEBASTIAN_trilliance conditioner 250ml   |      12
+ 99240014041        | SEBASTIAN_potion 9 lite 150ml            |      12
+ 81650143           | WP BRILLIANCE BOOSTER 100ML              |      12
+ 99240014018        | SEBASTIAN_gel forte 200ml                |      12
+ 99240014139        | SEBASTIAN_penetraitt shampoo 250ml       |      12
+ 81650158           | WP NUTRI BOOSTER 100ML                   |      12
+ 81650165           | WP VOLUME BOOSTER 100ML                  |      12
+ 81620360           | WP CREA+ STRAIGHT N/R BASE 200ML WE      |       6
+ 81643561           | BLONDOR BL SL CR 500ML DE.FR.IT.NL.ES.PT |       6
+ 99240008447        | SEBASTIAN_volupt shampoo 250ml           |      12
+ 81643207           | SEBASTIAN_eruptek 75ml                   |      12
+ 81599204           | SYSTEM_color save infusion 20x5ml        |       6
+ 99240010909        | SYSTEM_hydrate mask 400ml                |       6
+ 99240010911        | SYSTEM_hydrate shampoo 250ml             |       6
+ 99240011584        | SYSTEM_hydrate emulsion 50ml             |      12
+ 81654212           | SEBASTIAN_reset shampoo 1000ml           |       6
+ 99240012035        | WP EIMI OIL SPRITZ 95ml                  |      12
+ 99240012008        | WP EIMI COCKTAIL ME 95ml                 |      12
+ 99240012170        | WP ELEMENTS MASK 500ml.                  |       6
+ 99240014016        | SEBASTIAN_texturizer 150ml               |      12
+ 99240014067        | SEBASTIAN_hydre conditioner 1000ml       |      12
+ 99240014111        | SEBASTIAN_hydre shampoo 1000ml           |      12
+ 99240014145        | SEBASTIAN_penetraitt shampoo 1000ml      |      12
+ 99240014151        | SEBASTIAN_trilliance shampoo 250ml       |      12
+ 99240014414        | SEBMAN_the multitasker shampoo 1000ml    |       6
+ 99240014415        | SEBMAN_the smoother conditioner 1000ml   |       6
+ 99240015892        | WP COLORMOTION  MASK 500ML               |       6
+ 99240012864        | SYSTEM_smoothen conditioner 1000ml       |       6
+ 99240013406        | SEBASTIAN_trilliant 150ml                |      12
+ 99350034448        | SP D COL RG SAVESHAMP250ml MULTLANG 19TR |       6
+ 81630927           | NXN_Diaboost_Treat 200ml DFINLESPT       |       6
+ 99350048837        | System_shopper 20pz                      |       6
+ 81643179           | SSP BALANCE ENERGY SERUM 100ML GBFDINLGR |       3
+(164 righe)
+

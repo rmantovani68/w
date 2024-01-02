@@ -1,0 +1,39 @@
+Statistiche di prelievo per data
+
+Dalla Data : 01-08-11
+Alla Data  : 04-08-11
+Numero Elaborazioni Evase :    22
+Numero Ordini Evasi       :   602
+Peso Calcolato Ordini     : 8777,825
+Peso Rilevato Ordini      : 8769,960
+
+            Sottordini Colli   Linee   Prese
+----------- ---------- ------- ------- -------
+ Isola 1           461     821    8775   18586
+ Isola 2           147     223    1052    2508
+----------- ---------- ------- ------- -------
+                   608    1044    9827   21094
+
+Prese su Isola 1 divise per settore
+-----------------------------------
+Settore  1 :  3057
+Settore  2 :  2389
+Settore  3 :  3025
+Settore  4 :  3152
+Settore  5 :  2455
+Settore  6 :  1443
+Settore  7 :  1938
+Settore  8 :  1127
+-----------------------------------
+
+Prese su Isola 2 divise per settore
+-----------------------------------
+Settore  2 :   686
+Settore  3 :   622
+Settore  4 :   319
+Settore  5 :   396
+Settore  6 :   209
+Settore  7 :   155
+Settore  8 :   121
+-----------------------------------
+

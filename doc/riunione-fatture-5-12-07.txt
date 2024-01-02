@@ -1,0 +1,11 @@
+Analisi funzionalita di stampa fatture ordini - differite
+---------------------------------------------------------
+- Quando gli ordini vengono lanciati si verifica se esiste la fattura e 
+si valorizza l'apposito campo RODLGFT (Flag Fattura) a 0 o 1 se non presente 
+o presente, questo influenza la gestione dell'ordine da parte di settori.
+- Dare la possibilita' - da cfg - di flagare tutti gli ordini lanciati come 
+incompleti (fatt.  non presente) per lanciare gli ultimi colli - con 
+fattura - tutti insieme, su comando operatore.
+- mettere in cfg fattura su primo o ultimo collo ?
+
+

@@ -1,0 +1,109 @@
+#! /bin/sh
+# postgresql	This is the init script for starting up the PostgreSQL
+#		server
+
+# Version 6.5.3-2 Lamar Owen
+# Added code to determine if PGDATA exists, whether it is current version
+#     or not, and initdb if no PGDATA (initdb will not overwrite a database).
+
+# chkconfig: 345 85 15
+# description: Starts and stops the PostgreSQL backend daemon that handles \
+#	       all database requests.
+# processname: postmaster
+# pidfile: /var/run/postmaster.pid
+#
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Get config.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+# Pretty much need it for postmaster.
+[ ${NETWORKING} = "no" ] && exit 0
+
+[ -f /usr/bin/postmaster ] || exit 0
+
+# This script is slightly unusual in that the name of the daemon (postmaster)
+# is not the same as the name of the subsystem (postgresql)
+
+#
+# rm 24-11-2000 : modificata la base dir di postgres
+#
+export PGDATA_CNI=/u/prj/wella/pgdata
+
+# See how we were called.
+case "$1" in
+  start)
+	echo -n "Checking postgresql installation: "
+	# Check for the PGDATA structure
+	if [ -f $PGDATA_CNI/PG_VERSION ] && [ -d $PGDATA_CNI/base/template1 ]
+	then
+	# Check version of existing PGDATA
+
+		if [ `cat $PGDATA_CNI/PG_VERSION` != '6.5' ]
+		then
+			echo "old version. Need to Upgrade."
+			echo "See /usr/doc/postgresql-6.5.3/README.rpm for more information."
+			exit 1
+		else
+			echo "looks good!"
+		fi
+
+	# No existing PGDATA! Initdb it.
+
+	else
+		echo "no database files found."
+                if [ ! -d $PGDATA_CNI ]
+		then
+			mkdir -p $PGDATA_CNI
+			chown postgres.postgres $PGDATA_CNI
+		fi
+		su -l postgres -c '/usr/bin/initdb --pglib=/usr/lib/pgsql --pgdata='$PGDATA_CNI
+	fi
+
+	# Check for postmaster already running...
+	pid=`pidof postmaster`
+	if [ $pid ]
+	then
+		echo "Postmaster already running."
+	else
+		#all systems go -- remove any stale lock files
+		rm -f /tmp/.s.PGSQL.* > /dev/null
+		echo -n "Starting postgresql service: "
+		su -l postgres -c '/usr/bin/postmaster -i -S -D '$PGDATA_CNI
+		sleep 1
+		pid=`pidof postmaster`
+		if [ $pid ]
+		then
+			echo -n "postmaster [$pid]"
+			touch /var/lock/subsys/postgresql
+			echo $pid > /var/run/postmaster.pid
+			echo
+		else
+			echo "failed."
+		fi
+	fi
+	;;
+  stop)
+	echo -n "Stopping postgresql service: "
+	killproc postmaster
+	sleep 2
+	rm -f /var/run/postmaster.pid
+	rm -f /var/lock/subsys/postgresql
+	echo
+	;;
+  status)
+	status postmaster
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  *)
+	echo "Usage: postgresql {start|stop|status|restart}"
+	exit 1
+esac
+
+exit 0

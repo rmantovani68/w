@@ -1,0 +1,15 @@
+sistemare /etc/hosts : 
+
+unica riga
+192.168.0.10	wella
+
+
+
+copiare /u/prj/wella/display/id_rsa.pub.picking in /home/roberto/ e poi eseguire
+cat id_rsa.pub.picking >> .ssh/authorized_keys
+e poi eseguire
+sudo service ssh restart
+
+a questo punto su ogni macchina occorre (con mouse e tastiera) aggiungere la 
+applicazione ael-start.sh in applicazioni di avvio
+

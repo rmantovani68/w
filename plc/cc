@@ -1,0 +1,3387 @@
+qplc [qplc] version 1.8.1.176		[28/12/2009 09:39:47]	lib: ??? 
+qplc [ld480] version 2.2.0.1		[14/07/1997 17:22:21]
+Receiver started
+Receiver started
+qplc [PLC] version 1.0.0.0
+TX 0: ID=000 f=00 l=2 d= 80 01
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 1: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=601 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=601 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 1: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=601 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 1: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=601 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 1: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 1: Guard Time = 0
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 1: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 1: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 1: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 1: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 1: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccc93f of 2 bytes
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 18 01 81 01 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=581 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=581 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 18 01 81 01 00 40
+RX 0: ID=581 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 1: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 01 18 01 81 02 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 1: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccc980 of 6 bytes
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 02 18 01 81 03 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=581 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=581 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=581 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 02 18 01 81 03 00 40
+RX 0: ID=581 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 1: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 03 18 01 81 04 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 1: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09ccc95f of 6 bytes
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 14 01 01 02 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=581 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=581 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 00 14 01 01 02 00 40
+RX 0: ID=581 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 1: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 23 01 14 01 01 03 00 c0
+RX 0: ID=581 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 02
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 2: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=602 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=602 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 2: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=602 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 2: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=602 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 2: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 2: Guard Time = 0
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 2: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 2: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 2: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 2: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 2: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cccb83 of 2 bytes
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 18 01 82 01 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=582 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=582 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 18 01 82 01 00 40
+RX 0: ID=582 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 2: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 01 18 01 82 02 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 2: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cccbc4 of 6 bytes
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 02 18 01 82 03 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=582 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=582 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=582 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 02 18 01 82 03 00 40
+RX 0: ID=582 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 2: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 03 18 01 82 04 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 2: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09cccba3 of 6 bytes
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 14 01 02 02 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=582 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=582 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 00 14 01 02 02 00 40
+RX 0: ID=582 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 2: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 23 01 14 01 02 03 00 c0
+RX 0: ID=582 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 03
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 3: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=603 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=603 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 3: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=603 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 3: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=603 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 3: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 3: Guard Time = 0
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 3: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 3: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 3: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 3: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 3: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cccdc7 of 2 bytes
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 18 01 83 01 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=583 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=583 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 18 01 83 01 00 40
+RX 0: ID=583 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 3: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 01 18 01 83 02 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 3: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccce08 of 6 bytes
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 02 18 01 83 03 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=583 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=583 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=583 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 02 18 01 83 03 00 40
+RX 0: ID=583 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 3: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 03 18 01 83 04 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 3: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09cccde7 of 6 bytes
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 14 01 03 02 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=583 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=583 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 00 14 01 03 02 00 40
+RX 0: ID=583 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 3: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 23 01 14 01 03 03 00 c0
+RX 0: ID=583 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 04
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 4: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=604 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=604 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 4: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=604 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 4: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=604 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 4: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 4: Guard Time = 0
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 4: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 4: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 4: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 4: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 4: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccd00b of 2 bytes
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 18 01 84 01 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=584 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=584 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 18 01 84 01 00 40
+RX 0: ID=584 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 4: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 01 18 01 84 02 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 4: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccd04c of 6 bytes
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 02 18 01 84 03 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=584 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=584 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=584 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 02 18 01 84 03 00 40
+RX 0: ID=584 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 4: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 03 18 01 84 04 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 4: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09ccd02b of 6 bytes
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 14 01 04 02 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=584 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=584 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 00 14 01 04 02 00 40
+RX 0: ID=584 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 4: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 23 01 14 01 04 03 00 c0
+RX 0: ID=584 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 05
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 5: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=605 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=605 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 5: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=605 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 5: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=605 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 5: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 5: Guard Time = 0
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 5: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 5: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 5: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 5: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 5: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccd24f of 2 bytes
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 18 01 85 01 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=585 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=585 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 18 01 85 01 00 40
+RX 0: ID=585 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 5: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 01 18 01 85 02 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 5: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccd290 of 6 bytes
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 02 18 01 85 03 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=585 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=585 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=585 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 02 18 01 85 03 00 40
+RX 0: ID=585 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 5: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 03 18 01 85 04 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 5: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09ccd26f of 4 bytes
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 14 01 05 02 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=585 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=585 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=585 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=585 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=585 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 00 14 01 05 02 00 40
+RX 0: ID=585 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 5: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 23 01 14 01 05 03 00 c0
+RX 0: ID=585 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 06
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 6: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=606 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=606 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 6: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=606 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 6: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=606 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 6: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 6: Guard Time = 0
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 6: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 6: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 6: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 6: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 6: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccd493 of 2 bytes
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 18 01 86 01 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=586 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=586 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 18 01 86 01 00 40
+RX 0: ID=586 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 6: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 01 18 01 86 02 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 6: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccd4d4 of 6 bytes
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 02 18 01 86 03 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=586 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=586 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=586 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 02 18 01 86 03 00 40
+RX 0: ID=586 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 6: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 03 18 01 86 04 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 6: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09ccd4b3 of 4 bytes
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 14 01 06 02 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=586 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=586 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=586 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=586 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=586 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 00 14 01 06 02 00 40
+RX 0: ID=586 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 6: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 23 01 14 01 06 03 00 c0
+RX 0: ID=586 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 07
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 7: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=607 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=607 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 7: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=607 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 7: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=607 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 7: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 7: Guard Time = 0
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 7: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 7: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 7: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 7: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 7: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccd6d7 of 2 bytes
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 18 01 87 01 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=587 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=587 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 18 01 87 01 00 40
+RX 0: ID=587 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 7: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 01 18 01 87 02 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 7: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccd718 of 6 bytes
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 02 18 01 87 03 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=587 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=587 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=587 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 02 18 01 87 03 00 40
+RX 0: ID=587 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 7: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 03 18 01 87 04 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 7: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09ccd6f7 of 6 bytes
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 14 01 07 02 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=587 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=587 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 00 14 01 07 02 00 40
+RX 0: ID=587 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 7: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 23 01 14 01 07 03 00 c0
+RX 0: ID=587 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 08
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 8: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=608 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=608 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 8: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=608 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 8: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=608 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 8: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 8: Guard Time = 0
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 8: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 8: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 8: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 00 62 00 06 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 8: n_in=16, n_out=48, n_ain=3, n_aout=0
+Module 8: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccd91b of 2 bytes
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 18 01 88 01 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=588 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=588 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 18 01 88 01 00 40
+RX 0: ID=588 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 8: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 01 18 01 88 02 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 8: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccd95c of 6 bytes
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 02 18 01 88 03 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=588 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=588 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=588 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 02 18 01 88 03 00 40
+RX 0: ID=588 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 8: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 03 18 01 88 04 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 8: Mapping PDO RX 1 to 6200:1, 6 fields of 8 bits, buffer 0x09ccd93b of 6 bytes
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 14 01 08 02 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=588 f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 16 00 06 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=588 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 00 14 01 08 02 00 40
+RX 0: ID=588 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 8: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 23 01 14 01 08 03 00 c0
+RX 0: ID=588 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 09
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 9: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=609 f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=609 f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 9: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=609 f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 9: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=609 f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 9: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 9: Guard Time = 0
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 9: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 9: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 9: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 9: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 9: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09ccdb5f of 2 bytes
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 18 01 89 01 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=589 f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=589 f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 18 01 89 01 00 40
+RX 0: ID=589 f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 9: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 01 18 01 89 02 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 9: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccdba0 of 6 bytes
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 02 18 01 89 03 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=589 f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=589 f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=589 f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 02 18 01 89 03 00 40
+RX 0: ID=589 f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 9: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 03 18 01 89 04 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 9: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09ccdb7f of 4 bytes
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 14 01 09 02 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=589 f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=589 f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=589 f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=589 f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=589 f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 00 14 01 09 02 00 40
+RX 0: ID=589 f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 9: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 23 01 14 01 09 03 00 c0
+RX 0: ID=589 f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0a
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 10: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60a f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60a f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 10: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60a f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 10: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60a f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 10: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 10: Guard Time = 0
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 10: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 10: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 10: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 60 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 62 00 08 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 10: n_in=32, n_out=64, n_ain=3, n_aout=0
+Module 10: Mapping PDO TX 1 to 6000:1, 4 fields of 8 bits, buffer 0x09ccdda3 of 4 bytes
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 18 01 8a 01 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 1a 03 08 03 00 60
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 1a 04 08 04 00 60
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 1a 00 04 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 18 01 8a 01 00 40
+RX 0: ID=58a f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 10: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 01 18 01 8a 02 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 10: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09ccdde4 of 6 bytes
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 02 18 01 8a 03 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58a f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58a f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58a f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 02 18 01 8a 03 00 40
+RX 0: ID=58a f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 10: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 03 18 01 8a 04 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 10: Mapping PDO RX 1 to 6200:1, 8 fields of 8 bits, buffer 0x09ccddc3 of 8 bytes
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 14 01 0a 02 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 07 08 07 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 07 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 16 08 08 08 00 62
+RX 0: ID=58a f=00 l=8 d= 60 00 16 08 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 16 00 08 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58a f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 00 14 01 0a 02 00 40
+RX 0: ID=58a f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 10: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 23 01 14 01 0a 03 00 c0
+RX 0: ID=58a f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0b
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 11: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60b f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60b f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 11: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60b f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 11: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60b f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 11: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 11: Guard Time = 0
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 11: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 11: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 11: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 60 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 62 00 08 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 11: n_in=32, n_out=64, n_ain=3, n_aout=0
+Module 11: Mapping PDO TX 1 to 6000:1, 4 fields of 8 bits, buffer 0x09ccdfe7 of 4 bytes
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 18 01 8b 01 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 1a 03 08 03 00 60
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 1a 04 08 04 00 60
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 1a 00 04 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 18 01 8b 01 00 40
+RX 0: ID=58b f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 11: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 01 18 01 8b 02 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 11: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cce028 of 6 bytes
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 02 18 01 8b 03 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58b f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58b f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58b f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 02 18 01 8b 03 00 40
+RX 0: ID=58b f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 11: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 03 18 01 8b 04 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 11: Mapping PDO RX 1 to 6200:1, 8 fields of 8 bits, buffer 0x09cce007 of 8 bytes
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 14 01 0b 02 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 05 08 05 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 05 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 06 08 06 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 06 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 07 08 07 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 07 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 16 08 08 08 00 62
+RX 0: ID=58b f=00 l=8 d= 60 00 16 08 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 16 00 08 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58b f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 00 14 01 0b 02 00 40
+RX 0: ID=58b f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 11: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 23 01 14 01 0b 03 00 c0
+RX 0: ID=58b f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0c
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 12: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60c f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60c f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 12: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60c f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 12: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60c f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 12: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 12: Guard Time = 0
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 12: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 12: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 12: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 12: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 12: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cce22b of 2 bytes
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 18 01 8c 01 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58c f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58c f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 18 01 8c 01 00 40
+RX 0: ID=58c f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 12: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 01 18 01 8c 02 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 12: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cce26c of 6 bytes
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 02 18 01 8c 03 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58c f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58c f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58c f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 02 18 01 8c 03 00 40
+RX 0: ID=58c f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 12: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 03 18 01 8c 04 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 12: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09cce24b of 4 bytes
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 14 01 0c 02 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58c f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58c f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58c f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58c f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58c f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 00 14 01 0c 02 00 40
+RX 0: ID=58c f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 12: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 23 01 14 01 0c 03 00 c0
+RX 0: ID=58c f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0d
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 13: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60d f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60d f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 13: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60d f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 13: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60d f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 13: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 13: Guard Time = 0
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 13: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 13: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 13: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 13: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 13: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cce46f of 2 bytes
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 18 01 8d 01 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58d f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58d f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 18 01 8d 01 00 40
+RX 0: ID=58d f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 13: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 01 18 01 8d 02 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 13: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cce4b0 of 6 bytes
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 02 18 01 8d 03 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58d f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58d f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58d f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 02 18 01 8d 03 00 40
+RX 0: ID=58d f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 13: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 03 18 01 8d 04 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 13: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09cce48f of 4 bytes
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 14 01 0d 02 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58d f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58d f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58d f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58d f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58d f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 00 14 01 0d 02 00 40
+RX 0: ID=58d f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 13: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 23 01 14 01 0d 03 00 c0
+RX 0: ID=58d f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0e
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 14: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60e f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60e f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 14: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60e f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 14: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60e f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 14: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 14: Guard Time = 0
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 14: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 14: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 14: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 14: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 14: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cce6b3 of 2 bytes
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 18 01 8e 01 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58e f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58e f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 18 01 8e 01 00 40
+RX 0: ID=58e f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 14: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 01 18 01 8e 02 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 14: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cce6f4 of 6 bytes
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 02 18 01 8e 03 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58e f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58e f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58e f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 02 18 01 8e 03 00 40
+RX 0: ID=58e f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 14: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 03 18 01 8e 04 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 14: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09cce6d3 of 4 bytes
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 14 01 0e 02 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58e f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58e f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58e f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58e f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58e f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 00 14 01 0e 02 00 40
+RX 0: ID=58e f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 14: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 23 01 14 01 0e 03 00 c0
+RX 0: ID=58e f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 80 0f
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 00 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 43 00 10 00 91 01 07 00
+Receiver enabled
+Module 15: Device profile = 0x0191 (401) info = 0x0007 (7)
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 08 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 41 08 10 00 09 00 00 00
+TX 0: ID=60f f=00 l=8 d= 60 08 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 00 58 32 30 42 43 30 30
+TX 0: ID=60f f=00 l=8 d= 70 08 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 1b 34 33 00 00 00 00 00
+Receiver enabled
+Module 15: Device name = "X20BC0043"
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 09 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 41 09 10 00 05 00 00 00
+TX 0: ID=60f f=00 l=8 d= 60 09 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 05 30 31 2e 30 30 00 00
+Receiver enabled
+Module 15: Hardware version = "01.00"
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 0a 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 41 0a 10 00 05 00 00 00
+TX 0: ID=60f f=00 l=8 d= 60 0a 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 05 30 30 2e 33 44 00 00
+Receiver enabled
+Module 15: Software version = "00.3D"
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 0c 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4b 0c 10 00 00 00 00 00
+Receiver enabled
+Module 15: Guard Time = 0
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 0d 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 0d 10 00 00 00 00 00
+Receiver enabled
+Module 15: Lifetime Factor = 0
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 16 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 16 10 00 01 00 00 00
+Receiver enabled
+Module 15: Consumer Heatbeat Time:1 producers
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 17 10 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4b 17 10 00 00 00 00 00
+Receiver enabled
+Module 15: Producer Heartbeat Time = 0
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 00 60 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 00 60 00 02 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 00 62 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 00 62 00 04 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 01 64 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 01 64 00 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 11 64 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 11 64 00 00 00 00 00
+Receiver enabled
+Module 15: n_in=16, n_out=32, n_ain=3, n_aout=0
+Module 15: Mapping PDO TX 1 to 6000:1, 2 fields of 8 bits, buffer 0x09cce8f7 of 2 bytes
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 18 01 8f 01 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 1a 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 1a 01 08 01 00 60
+RX 0: ID=58f f=00 l=8 d= 60 00 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 1a 02 08 02 00 60
+RX 0: ID=58f f=00 l=8 d= 60 00 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 1a 00 02 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2b 00 18 03 64 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 18 02 fe 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 18 01 8f 01 00 40
+RX 0: ID=58f f=00 l=8 d= 60 00 18 01 00 00 00 00
+Receiver enabled
+Module 15: Disabling PDO TX 2
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 01 18 01 8f 02 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 01 18 01 00 00 00 00
+Receiver enabled
+Module 15: Mapping PDO TX 3 to 6401:1, 3 fields of 16 bits, buffer 0x09cce938 of 6 bytes
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 02 18 01 8f 03 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 02 1a 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 02 1a 01 10 01 01 64
+RX 0: ID=58f f=00 l=8 d= 60 02 1a 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 02 1a 02 10 02 01 64
+RX 0: ID=58f f=00 l=8 d= 60 02 1a 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 02 1a 03 10 03 01 64
+RX 0: ID=58f f=00 l=8 d= 60 02 1a 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 02 1a 00 03 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 02 1a 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2b 02 18 03 64 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 02 18 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 02 18 02 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 02 18 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 02 18 01 8f 03 00 40
+RX 0: ID=58f f=00 l=8 d= 60 02 18 01 00 00 00 00
+Receiver enabled
+Module 15: Disabling PDO TX 4
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 03 18 01 8f 04 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 03 18 01 00 00 00 00
+Receiver enabled
+Module 15: Mapping PDO RX 1 to 6200:1, 4 fields of 8 bits, buffer 0x09cce917 of 4 bytes
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 14 01 0f 02 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 16 00 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 16 01 08 01 00 62
+RX 0: ID=58f f=00 l=8 d= 60 00 16 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 16 02 08 02 00 62
+RX 0: ID=58f f=00 l=8 d= 60 00 16 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 16 03 08 03 00 62
+RX 0: ID=58f f=00 l=8 d= 60 00 16 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 16 04 08 04 00 62
+RX 0: ID=58f f=00 l=8 d= 60 00 16 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 16 00 04 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 16 00 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2b 00 14 03 64 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 14 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 2f 00 14 02 fe 00 00 00
+RX 0: ID=58f f=00 l=8 d= 60 00 14 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 00 14 01 0f 02 00 40
+RX 0: ID=58f f=00 l=8 d= 60 00 14 01 00 00 00 00
+Receiver enabled
+Module 15: Disabling PDO RX 2
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 23 01 14 01 0f 03 00 c0
+RX 0: ID=58f f=00 l=8 d= 60 01 14 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=601 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=581 f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 01
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=181 f=00 l=2 d= 00 00
+RX 0: ID=381 f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=582 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=602 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=582 f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 02
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=182 f=00 l=2 d= 00 00
+RX 0: ID=382 f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=583 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=603 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=583 f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 03
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=183 f=00 l=2 d= 00 00
+RX 0: ID=383 f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=584 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=604 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=584 f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 04
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=184 f=00 l=2 d= 00 00
+RX 0: ID=384 f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=585 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=605 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=585 f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 05
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=185 f=00 l=2 d= 00 00
+RX 0: ID=385 f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=586 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=606 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=586 f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 06
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=186 f=00 l=2 d= 00 00
+RX 0: ID=386 f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=587 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=607 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=587 f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 07
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=187 f=00 l=2 d= 00 00
+RX 0: ID=387 f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=588 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=608 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=588 f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 08
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=188 f=00 l=2 d= 00 00
+RX 0: ID=388 f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=589 f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=609 f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=589 f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 09
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=189 f=00 l=2 d= 00 00
+RX 0: ID=389 f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 60 03 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 60 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 00 60 04 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4f 00 60 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60a f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58a f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0a
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=18a f=00 l=4 d= 00 00 00 00
+RX 0: ID=38a f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 60 03 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 60 03 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 00 60 04 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4f 00 60 04 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60b f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58b f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0b
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=18b f=00 l=4 d= 00 00 00 00
+RX 0: ID=38b f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=58c f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60c f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58c f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0c
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=18c f=00 l=2 d= 00 00
+RX 0: ID=38c f=00 l=6 d= 00 00 03 00 35 00
+RX 0: ID=58d f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60d f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58d f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0d
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=18d f=00 l=2 d= 00 00
+RX 0: ID=38d f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=58e f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60e f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58e f=00 l=8 d= 4b 01 64 03 36 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0e
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 00 60 01 00 00 00 00
+RX 0: ID=18e f=00 l=2 d= 00 00
+RX 0: ID=38e f=00 l=6 d= 00 00 03 00 36 00
+RX 0: ID=58f f=00 l=8 d= 4f 00 60 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 00 60 02 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4f 00 60 02 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 01 64 01 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4b 01 64 01 00 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 01 64 02 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4b 01 64 02 03 00 00 00
+Receiver enabled
+Receiver disabled
+TX 0: ID=60f f=00 l=8 d= 40 01 64 03 00 00 00 00
+RX 0: ID=58f f=00 l=8 d= 4b 01 64 03 35 00 00 00
+Receiver enabled
+TX 0: ID=000 f=00 l=2 d= 01 0f
+RX 0: ID=18f f=00 l=2 d= 00 00
+RX 0: ID=38f f=00 l=6 d= 00 00 03 00 35 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 00 00 00 00 00 00
+TX 0: ID=202 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=208 f=00 l=6 d= 01 00 00 00 00 00
+TX 0: ID=000 f=00 l=2 d= 80 01
+TX 0: ID=000 f=00 l=2 d= 80 02
+TX 0: ID=000 f=00 l=2 d= 80 03
+TX 0: ID=000 f=00 l=2 d= 80 04
+TX 0: ID=000 f=00 l=2 d= 80 05
+TX 0: ID=000 f=00 l=2 d= 80 06
+TX 0: ID=000 f=00 l=2 d= 80 07
+TX 0: ID=000 f=00 l=2 d= 80 08
+TX 0: ID=000 f=00 l=2 d= 80 09
+TX 0: ID=000 f=00 l=2 d= 80 0a
+TX 0: ID=000 f=00 l=2 d= 80 0b
+TX 0: ID=000 f=00 l=2 d= 80 0c
+TX 0: ID=000 f=00 l=2 d= 80 0d
+TX 0: ID=000 f=00 l=2 d= 80 0e
+TX 0: ID=000 f=00 l=2 d= 80 0f

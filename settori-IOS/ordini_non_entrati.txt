@@ -1,0 +1,21 @@
+-[ RECORD 1 ]------------
+ordprog | 0071449908
+ordkey  | 0071449908.1.01
+opnelab | 2000024080
+opcdisl | 1
+opcdsto | 1
+opnmrgh | 4
+opnmprs | 4
+opnmcpe | 4
+opnmcla | 1
+opnmcll | 1
+oppspre | 1954
+oppsrea | 0
+opdteva |         
+optmeva |       
+opprgln | 88718
+opstato | L
+opflpdf |  
+opflftz |  
+opprgpr | 8364
+

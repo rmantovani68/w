@@ -1,0 +1,4 @@
+##
+# restore del database picking
+##
+gunzip -c sap.dump.gz | psql sap

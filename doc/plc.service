@@ -1,0 +1,12 @@
+# deve stare in /etc/systemd/system/multi-user.target.wants
+[Unit]
+Description=PLC service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/go-plc.sh /u/prj/larioseta/plc/plc-objs/user.oo
+
+[Install]
+WantedBy=multi-user.target
+

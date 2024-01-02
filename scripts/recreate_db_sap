@@ -1,0 +1,16 @@
+#!/bin/bash
+DATE=`date +%c`
+echo $DATE' - INIZIO' > recreate_result
+cd /u/prj/wella/scripts
+echo $DATE' - BACKUP' >> recreate_result
+./backup_db_sap 
+ls -l sap.dump.gz > recreate_result
+echo $DATE' - DESTROYDB' >> recreate_result
+destroydb sap
+echo $DATE' - CREATEDB' >> recreate_result
+createdb sap
+echo $DATE' - RESTORE' >> recreate_result
+./restore_db_sap
+echo $DATE' - VACUUM' >> recreate_result
+vacuumdb --analyze sap
+echo $DATE' - FINE' >> recreate_result

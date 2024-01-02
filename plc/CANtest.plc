@@ -1,0 +1,47 @@
+VAR_GLOBAL
+	_CREATED : UDINT:= 1267968156;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM CANtest
+
+(* Carica al massimo lo scambio dati del bus. Attiva una luce per settore e, dimensionando opportunamente IAL, *)
+(* la accende e spegne ad ogni loop. *)
+
+LD FALSE
+JMPCN ECANTEST
+
+ST RIGA(1,]
+ST COLON(1,]
+ST RIGA(2,]
+ST COLON(2,]
+ST RIGA(3,]
+ST COLON(3,]
+ST RIGA(4,]
+ST COLON(4,]
+ST RIGA(5,]
+ST COLON(5,]
+ST RIGA(6,]
+ST COLON(6,]
+ST RIGA(7,]
+ST COLON(7,]
+ST RIGA(8,]
+ST COLON(8,]
+ST RIGA(9,]
+ST COLON(9,]
+ST RIGA(10,]
+ST COLON(10,]
+ST RIGA(11,]
+ST COLON(11,]
+ST RIGA(12,]
+ST COLON(12,]
+ST RIGA(13,]
+ST COLON(13,]
+ST RIGA(14,]
+ST COLON(14,]
+ST RIGA(15,]
+ST COLON(15,]
+
+
+ECANTEST:
+END_PROGRAM

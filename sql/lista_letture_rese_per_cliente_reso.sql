@@ -1,0 +1,3 @@
+drop table lista_letture_rese;
+create table lista_letture_rese as select lpcdean as "Barcode",lpad(lpnmres,6,'0') as "Reso",lpcdcli as "Cliente",lpqtlet as "Quantita",lpcdfor as "Fornitore", lplabel as "Label",to_char(lptmlet,'YYYY-MM-DD HH24-MI-SS') as "Time_Lettura",to_char(lptmlet,'YYYY-MM-DD') as "Data_Lettura",to_char(lptmlet,'HH24') as "Ora_Lettura",to_char(lptmlet,'MI') as "Minuto_Lettura",lpnmstz from rese_letture_prodotti as "Num. Stazione"  where lpad(lpnmres,6,'0')='012501' and lpad(lpcdcli,6,'0')='500770' and lpstato!='S' and lptplet='S' order by lpprlet;
+select * from lista_letture_rese;

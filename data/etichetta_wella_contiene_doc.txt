@@ -1,0 +1,47 @@
+**********************************************************
+* WARNING:  It is unlawful to sell or give away this     *
+*           output to installations which do not have    *
+*           a registered copy of this product.  This     *
+*           output is to be used only by the registered  *
+*           end user, for use on one printer.  See the   *
+*           license agreement for more information.      *
+**********************************************************
+*
+*
+* Delete this line and above to use for printing.
+
+{AY;+00,0|}{D1031,1270,0999|}
+
+{C|}{XR;0000,0000,1270,0999,A|}
+{AX;-000,-000,+00|}{U2;0120|}
+{XR;0008,0029,1268,0030,A|}
+{XR;0008,0029,1268,0030,B|}
+{XR;0008,0031,0010,1012,A|}
+{XR;0008,0031,0010,1012,B|}
+{XR;0008,1013,1268,1014,A|}
+{XR;0008,1013,1268,1014,B|}
+{PV00;0020,0283,0021,0035,B,00,B|}
+{PV01;0119,0286,0057,0063,B,00,W|}
+{PV02;0548,0132,0021,0035,B,00,B|}
+{PV03;0667,0142,0057,0063,B,00,W|}
+{PV04;0020,0080,0021,0035,B,00,B|}
+{PV05;0307,0080,0050,0056,B,00,B|}
+{PV06;0548,0210,0021,0035,B,00,B|}
+{PV07;0666,0210,0025,0042,B,00,B|}
+{XR;0020,0385,1268,0387,A|}
+{XR;0020,0385,1268,0387,B|}
+{XR;0020,0388,0021,0710,A|}
+{XR;0020,0388,0021,0710,B|}
+{XR;0020,0710,1268,0712,A|}
+{XR;0020,0710,1268,0712,B|}
+{PV08;0131,0639,0095,0317,B,00,B|}
+{RV00;Elab|}
+{RV01;<IDCS>|}
+{RV02;Ordine|}
+{RV03;<IDORD>|}
+{RV04;Segnacollo|}
+{RV05;<IDSC>|}
+{RV06;collo nr.|}
+{RV07;<IDNC>|}
+{RV08;CONTIENE DOCUMENTI|}
+{XS;I,0001,0002C5100|}{U1;0120|}

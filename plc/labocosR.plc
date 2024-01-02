@@ -1,0 +1,519 @@
+VAR_GLOBAL
+	A : BOOL:= 0;
+	ALLM : BOOL:= 0;
+	ALLM13 : BOOL:= 0;  (* allarme risposta PC *)
+	ALSEV : BOOL:= 0;
+	ALSEVE : BOOL:= 0;  (* allarme pistone *)
+	B : BOOL:= 0;
+	BISTA : BOOL:= 0;  (* bistabile *)
+	BISTA1 : BOOL:= 0;
+	C : BOOL:= 0;  (* variabile per il controllo del loop *)
+	COKBIL : BOOL:= 0;
+	CPBIL : BOOL:= 0;
+	CSCBIL : BOOL:= 0;
+	ENM21 : BOOL:= 0;
+	EVF : BOOL:= 0;
+	EVG : BOOL:= 0;
+	FCI : BOOL:= 0;
+	FCP : BOOL:= 0;
+	IDFC13 : BOOL:= 0;
+	IDFC18 : BOOL:= 0;
+	IDFCC : BOOL:= 0;
+	IUFCC : BOOL:= 0;
+	MARCIA : BOOL:= 0;
+	MSGCLAS : BOOL:= 0;
+	MSGCODE : BOOL:= 0;
+	MSGRX : BOOL:= 0;
+	MSGTX : BOOL:= 0;
+	OCM13 : BOOL:= 0;
+	PMI : BOOL:= 0;  (* pulsante di MARCIA *)
+	PSTOP : BOOL:= 0;  (* pulsante di stop *)
+	SIRENA : BOOL:= 0;
+	TFC18 : BOOL:= 0;
+	TFCG : BOOL:= 0;
+	TFCH : BOOL:= 0;
+	TFCI : BOOL:= 0;
+	TFCP : BOOL:= 0;
+	TSIRENA : BOOL:= 0;
+	XALEVE : BOOL:= 0;
+	XALLM13 : BOOL:= 0;
+	YEVE : BOOL:= 0;  (* prenotazione di attivazione elettrov. *)
+	ZALLM : BOOL:= 0;
+	ZASE : BOOL:= 0;
+	ZCOKBIL : BOOL:= 0;  (* mem. peso corretto primo spintore *)
+	ZCSCBIL : BOOL:= 0;  (* mem. peso errato primo spintore *)
+	ZINAL : BOOL:= 0;
+	ZPSFMB : BOOL:= 0;
+	ZTERM : BOOL:= 0;
+	_CREATED : UDINT:= 1261403724;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM  LABOCOSR
+
+  VAR
+	BISTF : TOF;
+	BISTN : TON;
+	IIDFC18 : F_TRIG;
+	TTFCG : TON;
+	TTSIREN : TON;
+	TALEVE : TON;
+	TTFCP : TON;
+	TTFC18 : TON;
+	IIDFCC : F_TRIG;
+	TALLM13 : TON;
+	IIUFCC : R_TRIG;
+  END_VAR
+
+(* BISTABILE *)
+   
+	LD	BISTA
+	ST	BISTN.IN
+	LD	T#500MS
+	ST	BISTN.PT
+	CAL	BISTN	(* FUNCTION BLOCK TON *)
+	LD	BISTN.Q
+	ST	BISTA1
+	
+	LDN	BISTA1
+	ST	BISTF.IN
+	LD	T#500MS
+	ST	BISTF.PT
+	CAL	BISTF	(* FUNCTION BLOCK TOF *)
+	LD	BISTF.Q
+	ST	BISTA
+	
+	
+
+(* M A R C I A  E SEGNALAZIONI VARIE *)
+		
+	LD	SIRENA
+	ST	TTSIREN.IN
+	LD	T#2000MS
+	ST	TTSIREN.PT
+	CAL	TTSIREN	(* FUNCTION BLOCK TON *)
+	LD	TTSIREN.Q
+	ST	TSIRENA
+
+
+
+LD PMI
+AND PSTOP
+ANDN MARCIA
+	ST SIRENA
+
+LD TSIRENA
+AND PMI
+OR MARCIA
+AND PSTOP
+AND TERM
+AND INAL
+	ST MARCIA
+	
+
+LD ALSEV
+AND BISTA1
+OR(
+LDN ALSEV
+AND MARCIA
+)
+	ST LMI			(* lampada impianto in marcia; lampeggia con ALSEV-- *)
+	
+
+	
+LDN TERM
+	ST LPM			(* lampada termico scattato *)
+
+	
+
+
+
+
+
+
+(* ----------------------------------------------------------------------------- *)
+
+
+
+		(* ==================  M E S S A G G I   D I   A L L A R M E  =================================  *)
+		
+
+
+
+
+
+LDN INAL
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZINAL
+JMPCN EZINAL
+	LD 1
+	ST MSGCODE
+	LD 0
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZINAL
+EZINAL:
+
+LD INAL
+	R ZINAL		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	-------------------------------------------- *)
+
+
+
+
+
+LDN TERM
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZTERM
+JMPCN EZTERM
+	LD 2
+	ST MSGCODE
+	LD 0
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZTERM
+EZTERM:
+
+LD TERM
+	R ZTERM		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	-------------------------------------------- *)
+
+
+	
+
+	(* ================= M E S S A G G I   D I   A V V I S O  ============================= *)
+	
+
+
+
+
+
+LD ALSEV
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZASE
+JMPCN EZALSEV
+	LD 1
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZASE
+EZALSEV:
+
+LDN ALSEV
+	R ZASE		(* memoria di impulso antiripetitivo dell' allarme *)
+	
+	
+
+
+	(*	-------------------------------------------- *)
+
+
+
+LD ALLM
+ANDN MSGTX
+ANDN MSGRX
+ANDN ZALLM
+JMPCN EZALLM
+	LD 1
+	ST MSGCODE
+	LD 1
+	ST MSGCLAS
+	LD TRUE
+	ST MSGTX
+	ST ZALLM
+EZALLM:
+
+LDN ALLM
+	R ZALLM		(* memoria di impulso antiripetitivo dell' allarme *)
+
+
+
+
+	(*	--------------------------------------------  *)
+	
+	
+	
+	
+	
+	
+	
+	(* ============== RESET DI 'MSGTX' =================*)
+	
+	
+LD MSGRX
+	R MSGTX		(* MSGTX viene settato una sola volta sotto JUMP; qui viene resettato da MSGRX=1 *)
+	
+
+
+
+
+(* ===================== F I N E   D E I   M E S S A G G I ========================== *)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(* =============================================================================================== *)
+		(* B I L A N C I A ed espulsore con pistone *)
+(* =============================================================================================== *)
+
+
+
+(* motore bilancia= M13; motore espulsore=MG *) 
+(* pistone EVE=scarti peso;  fot. bilancia=FC18; *)
+(* consenso fuori = FCD  *)
+(* micro pistone avanti- indietro= SEA,SEI *)
+(* richiesta al PC= CPBIL; risposte del PC: COKBIL=peso corretto, CSCBIL=peso errato *)
+(* segnale DA PC: ABM13=abilitazione al controllo peso *)
+(* allarmi: ALLM13=time-out risposta PC a CPBIL; ALSEVE,time-out spintore avanti *)
+
+
+
+	(* ritardo off e impulso di FC18 *)
+	LD	FC18
+	ST	TTFC18.IN
+	LD	T#500MS
+	ST	TTFC18.PT
+	CAL	TTFC18	(* FUNCTION BLOCK TOF *)
+	LD	TTFC18.Q
+	ST	TFC18
+	
+	LD	FC18
+	ST	IIDFC18.CLK
+	CAL	IIDFC18	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFC18.Q
+	ST	IDFC18
+	
+	
+(* ______________ *)
+
+
+
+
+LD M13
+ANDN COKBIL
+ANDN CSCBIL
+ANDN CPBIL
+ANDN OCM13
+	ST ENM21		(* consenso introduzione *)
+	
+LD IDFC13
+OR OCM13
+ANDN IDFC18
+	ST OCM13 (* occupato: cade con la fotocellula FC18, impulso down *)
+
+LD COKBIL	
+OR CSCBIL
+AND CPBIL	
+OR ZPSFMB
+OR SEB	
+AND MG
+AND SEI
+ANDN ZCOKBIL			
+ANDN ZCSCBIL
+ORN FC18									
+AND MARCIA							
+	ST M13	(* motore bilancia *)							
+
+
+
+(* -------------------------------------- *)
+
+
+LDN IDFC18
+AND ZCOKBIL
+OR(
+LD IDFC18
+AND COKBIL
+)
+ANDN IDFCC
+ANDN SEA
+	ST ZCOKBIL	(* memoria peso corretto sull' espulsore *)
+
+
+
+LDN IDFC18
+AND ZCSCBIL
+OR(
+LD CSCBIL
+OR ZPSFMB
+AND IDFC18
+)
+ANDN IDFCC
+ANDN SEA
+	ST ZCSCBIL	(* memoria peso errato sull' espulsore *)
+	
+	
+(* ---------------------------------- *)
+
+	(* memorie ed elettrovalvole dei pistoni, motore del trasportatore *)
+	
+	
+	LD	FCC
+	ST	IIUFCC.CLK
+	CAL	IIUFCC	(* FUNCTION BLOCK R_TRIG *)
+	LD	IIUFCC.Q
+	ST	IUFCC
+	
+	LD	FCC
+	ST	IIDFCC.CLK
+	CAL	IIDFCC	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFCC.Q
+	ST	IDFCC
+	
+LD ZCSCBIL
+AND IUFCC
+OR YEVE
+ANDN SEA
+ANDN IDFCC
+	ST YEVE
+	
+	
+LD YEVE
+ANDN FCD
+AND MARCIA
+ANDN ALSEVE
+	ST EVE	(* elettrovalvola spintore scarto *)
+	
+	
+	
+
+LDN YEVE
+ANDN EVE
+ANDN FCG
+AND MH
+ORN FCC
+AND SEI	
+AND MARCIA
+	ST MG
+
+	
+	
+	
+	
+	(* -------------- segnali di scambio con PC ------------------------ *)
+	
+LDN COKBIL	(* risposta da PC: peso corretto *)
+ANDN CSCBIL	(* risposta da PC: peso errato *)
+OR CPBIL
+AND TFC18
+ANDN SEB
+	ST CPBIL	(* richiesta a PC da lettura bar-code *)
+	
+	
+	
+	
+	(* ------------- forzatura uscita scarto di un collo sulla bilancia ---------- *)
+	
+	
+LD PSFMB
+OR ZPSFMB
+AND ALLM13
+	ST ZPSFMB
+	
+	
+	(* ------------- allarme di time-out della risposta a CPBIL ------------------- *)
+	
+LD CPBIL
+ANDN COKBIL
+ANDN CSCBIL
+	ST XALLM13
+	
+	LD	XALLM13
+	ST	TALLM13.IN
+	LD	T#10S
+	ST	TALLM13.PT
+	CAL	TALLM13	(* FUNCTION BLOCK TON *)
+	LD	TALLM13.Q
+	ST	ALLM13
+	
+	ST 	LALLM13
+	
+	
+	
+	
+
+	
+
+	(* ------------------ allarme del pistone ------------------------- *)
+						
+LD EVE
+ANDN SEA
+OR ALSEVE
+ANDN PMI3
+	ST XALEVE
+	
+	LD	XALEVE
+	ST	TALEVE.IN
+	LD	T#4S
+	ST	TALEVE.PT
+	CAL	TALEVE	(* FUNCTION BLOCK TON *)
+	LD	TALEVE.Q
+	ST	ALSEVE
+	
+	
+	
+	
+	
+(* --------------------------- fine bilancia ed espulsore --------------------------- *)
+
+(* ---------------------------------------------------------------------------------- *)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END_PROGRAM

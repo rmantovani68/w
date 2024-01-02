@@ -1,0 +1,27 @@
+04-01-2000 : Start of project
+
+.......
+.......
+.......
+
+06-01-2001 : Tarroni Stefano
+	MAIN:
+	Corrette le statistiche fornite dalla finestra di monitoraggio e dallo storico;
+  su richiesta di Wella -> PRESE=COPIE+COLLI
+
+
+Wed Aug 29 16:44:54 CEST 2001 : Tarroni Stefano
+	MAIN:
+	- Inserito, dopo ogni ricezione (RicezioneCedola), l'aggiornamento delle tabelle
+	conteneti i dati ricevuti da AS per ovviare ai rallentamenti del DB
+	(ric_art, ric_ord, ubicazioni e articoli)
+
+	VOLUM:
+	- Da testare anche qui l'aggiornamento delle tabelle di produzione ogni qualvolta
+	viene effettuata l'analisi volumetrica degli ordini;
+	N.B. Predisposto ma non installato.
+
+	PHP:
+	- Corretto, con Beppe, il problema che falliva il lancio del processo httpd
+	- Creazione della procedura di cancellazione su base mensile dei dati di storico
+	rif. storicizzazione.php3

@@ -1,0 +1,42 @@
+Database    = sap
+ +------------------+----------------------------------+----------+
+ |  Owner           |             Relation             |   Type   |
+ +------------------+----------------------------------+----------+
+ | stefano          | articoli                         | table    |
+ | stefano          | col_prod                         | table    |
+ | stefano          | col_stor                         | table    |
+ | picking          | col_stor_2001                    | table    |
+ | picking          | col_stor_2002                    | table    |
+ | roberto          | col_test                         | table    |
+ | picking          | eventi                           | table    |
+ | stefano          | imballi                          | table    |
+ | picking          | operatori                        | table    |
+ | picking          | opeset                           | table    |
+ | stefano          | ord_prod                         | table    |
+ | stefano          | ord_stor                         | table    |
+ | picking          | ord_stor_2001                    | table    |
+ | picking          | ord_stor_2002                    | table    |
+ | roberto          | ord_test                         | table    |
+ | picking          | pga_forms                        | table    |
+ | picking          | pga_layout                       | table    |
+ | picking          | pga_queries                      | table    |
+ | picking          | pga_reports                      | table    |
+ | picking          | pga_schema                       | table    |
+ | picking          | pga_scripts                      | table    |
+ | stefano          | ric_art                          | table    |
+ | stefano          | ric_ord                          | table    |
+ | stefano          | ric_stor                         | table    |
+ | picking          | ric_stor_2001                    | table    |
+ | picking          | ric_stor_2002                    | table    |
+ | roberto          | ric_test                         | table    |
+ | stefano          | rig_prod                         | table    |
+ | stefano          | rig_stor                         | table    |
+ | picking          | rig_stor_2001                    | table    |
+ | roberto          | rig_test                         | table    |
+ | stefano          | rig_tmp                          | table    |
+ | stefano          | ubicazioni                       | table    |
+ | picking          | ubicazioni_copy                  | table    |
+ | picking          | ubicazioni_ok                    | table    |
+ +------------------+----------------------------------+----------+
+
+EOF

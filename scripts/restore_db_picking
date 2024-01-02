@@ -1,0 +1,4 @@
+##
+# restore del database picking
+##
+gunzip -c picking.dump.gz | psql picking

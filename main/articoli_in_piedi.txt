@@ -1,0 +1,723 @@
+      prcdpro       |                 prdescr                  | prlungh | prlargh | praltez | prpesgr | prflgpp 
+--------------------+------------------------------------------+---------+---------+---------+---------+---------
+ 81308207           | WPC SUN Protection spray norm-fini 150ml |     130 |      87 |     200 |    1131 |       1
+ 81250898           | ENRICH MASK COARSE 500 ML                |     110 |     110 |      90 |     570 |       1
+ 81537174           | NIOX SYS3 SCALP REVIT 300ML MULTILANG    |      60 |      60 |     220 |     340 |       1
+ 81537230           | NIOX SYS4 SCALP REVIT 1000ML MULTILANG   |      90 |      90 |     270 |    1093 |       1
+ 81530703           | SYSTEM PURIFY LOTION 125ML               |      51 |      51 |     170 |     175 |       1
+ 81537166           | NIOX SYS6 CLEANSER 300ML MULTILANG       |      60 |      60 |     220 |     340 |       1
+ 81537175           | NIOX SYS4 CLEANSER 300ML MULTILANG       |      60 |      60 |     220 |     353 |       1
+ 81537193           | NIOX KIT SYS6 150 150 40 DFINL           |      60 |     110 |     180 |     428 |       1
+ 81537200           | NIOX TRIALKIT SYS1 150 150 50            |     110 |      50 |     180 |     461 |       1
+ 81537227           | NIOX SYS2 SCALP REVIT 1000ML MULTILANG   |      90 |      90 |     270 |    1093 |       1
+ 81537194           | NIOXTRIALKIT SYS2 150 150 40 DE FR IT NL |      60 |     110 |     180 |     460 |       1
+ 81537199           | NIOXTRIALKIT SYS5 150 150 50 DE FR IT NL |      60 |     110 |     180 |     460 |       1
+ 81538091           | SEB VOLUPT COND 1000ML  MULTILANG        |      80 |      80 |     260 |    1062 |       1
+ 81537201           | NIOXTRIALKIT SYS3 150 150 50 DE FR IT NL |      60 |     110 |     180 |     461 |       1
+ 81588043           | SEB VOLUPT COND 1000ML  MULTILANG        |      81 |      81 |     260 |    1104 |       1
+ 81284217           | SP 250 ml Resolute Lift                  |     100 |     150 |     220 |    1702 |       1
+ 81385664           | NIOX TRIALKIT SYS2 150+150+40DE,FR,IT,NL |      60 |     110 |     180 |     460 |       1
+ 81385669           | NIOX TRIALKIT SYS4 150+150+40DE,FR,IT,NL |      60 |     110 |     180 |     460 |       1
+ 81537234           | NIOX SYS4 CLEANSER 1000ML MULTILANG      |      90 |      75 |     275 |    1129 |       1
+ 81556515           | SEB_DARK_OIL_95ML                        |     170 |      80 |     170 |    1002 |       1
+ 81539752           | SEB VOLUPT SHAMPOO 250ML DE FR IT NL     |      56 |      48 |     202 |     315 |       1
+ 81539927           | SEB 150ML PENETRAITT MASQUE DE.FR.NL.IT  |      65 |      40 |     215 |     173 |       1
+ 81537451           | NIOX SYS3 SCALP TREAT100ML MULTILANG     |      55 |      40 |     155 |     139 |       1
+ 81539751           | SEB VOLUPT SHAMPOO 1000ML MULTILANG      |      80 |      80 |     255 |    1110 |       1
+ 81546074           | SP SMOOTHEN SHP 250ML MULTILANG          |     140 |     120 |     175 |    1827 |       1
+ 81558018           | WPC ENRICH SHP GROS 1000ML               |      85 |      85 |     235 |    1110 |       1
+ 81557398           | WP OIL REFLECTIONS LIGHT 100ML           |     160 |      60 |     170 |     540 |       1
+ 81526534           | WP STRGHT-IT NEUTR 1000_DEP D-F-NL-I     |      95 |      95 |     280 |    1080 |       1
+ 81643304           | WP OIL REFLECTIONS 100ML                 |     162 |      60 |     162 |     549 |       1
+ 81580134           | WP EIMI SHAPE ME 150ML D-F-I-NL          |     150 |     100 |     170 |    1230 |       1
+ 81526535           | WP WAVE-IT NEUTR 1000_DEP D-F-NL-I       |      95 |      95 |     275 |    1110 |       1
+ 81527917           | SEB SHINE DEFINE 200ML DE FR IT NL       |      45 |      45 |      45 |     217 |       1
+ 81532607           | SYSTEM ELASTIC FORCE 125ML               |      51 |      51 |     170 |     154 |       1
+ 81530737           | SYSTEM SMOOTHEN CURL DEFINER 200ML       |      48 |      48 |     208 |     255 |       1
+ 81387554           | SP 75 ml Satin Polish                    |      90 |     130 |     160 |     717 |       1
+ 81533533           | SP BALANCE LOTION 125ML MULTILANG        |      51 |      51 |     170 |     171 |       1
+ 81533544           | SYSTEM COLOR SAVE FLUID 125ML            |      51 |      51 |     170 |     176 |       1
+ 81537231           | NIOX SYS5 CLEANSER 1000ML MULTILANG      |      86 |      73 |     272 |    1111 |       1
+ 81537450           | NIOX SYS4 SCALP TREAT100ML MULTILANG     |      50 |      40 |     170 |     155 |       1
+ 81530906           | SYSTEM REPAIR MASK 20X15ML               |     100 |      77 |     132 |     395 |       1
+ 81514370           | SEB_ERUPTEK_75ML_WE_MULTILANG            |      56 |      45 |     158 |     110 |       1
+ 81519660           | WP EIMI PERFECT ME 100 ML D-F-I-NL       |     123 |      94 |     155 |     920 |       1
+ 81469088           | SP MEN INVISIBLE CONTROL 50 ML           |     360 |     180 |     120 |    3000 |       1
+ 81472327           | BLONDOR FREELIGHTS ATTIVATORE 6          |      95 |      95 |     275 |    1087 |       1
+ 81471618           | NIOX HAIR BOOSTER 100ML DE FR IT NL NEW  |      40 |      60 |     160 |     136 |       1
+ 81472359           | BLONDOR FREELIGHTS ATTIVATORE 9          |      95 |      95 |     275 |    1120 |       1
+ 81598810           | WP EIMI PERFECT ME 100 ML                |     130 |     100 |     170 |     923 |       1
+ 81537225           | NIOX SYS1 SCALP REVIT 1000ML MULTILANG   |      90 |      90 |     270 |    1093 |       1
+ 81471548           | WPC ENRICH SPUMA RISTR.ONDULATI 150ML    |     150 |     100 |     185 |    1308 |       1
+ 81466061           | WP ELEMENTS SERUM 100ML                  |      40 |      40 |     170 |     140 |       1
+ 81472235           | BLONDOR FREELIGHTS ATTIVATORE 12%        |      95 |      95 |     275 |    1123 |       1
+ 81475826           | LIQUID HAIR 100ML                        |      60 |     160 |     160 |     854 |       1
+ 81643787           | WP EIMI SUGAR LIFT 150 ML                |     132 |      92 |     199 |    1200 |       1
+ 81530718           | SYSTEM REPAIR PERFECT ENDS 40ML          |      31 |      30 |     147 |     135 |       1
+ 81530709           | SP BI-PHASE COND 185ML GBFDINLRUPLARAB   |      48 |      48 |     198 |     248 |       1
+ 81530714           | SYSTEM HYDRATE QUENCHINGMIST 125ML       |      51 |      51 |     170 |     175 |       1
+ 81596346           | BL_FREELIGHTS_DVLPER_9% _30 VOL_1L       |      95 |      95 |     275 |    1120 |       1
+ 81642970           | COLOR FRESH_ACID_5/07_75ML               |      50 |      50 |     140 |     106 |       1
+ 81643592           | COLOR FRESH_ACID_7/3_75ML                |      50 |      50 |     140 |     105 |       1
+ 81557416           | WP OIL REFLECTIONS 30ML                  |     130 |     110 |     135 |     428 |       1
+ 81598321           | COLOR FRESH_ACID_5/56_75ML               |      50 |      50 |     140 |     107 |       1
+ 81566240           | SP RESOLUTE LIFT 250ML DFINLGR           |     100 |     150 |     220 |    1689 |       1
+ 81565430           | SEB 500ML POTION9 STY TREAT DE,FR,NL,IT  |      71 |      71 |     213 |     572 |       1
+ 81539768           | SEB HYDRE SHAMPOO 1000ML MULTILAN        |      80 |      80 |     260 |    1104 |       1
+ 81536927           | SYSTEM SHIMMERING SYSTEMRAY 40ML         |      30 |      30 |     145 |     122 |       1
+ 81566113           | SP SMOOTHEN CONDITIONER 1L MULTILANG     |      95 |      80 |     210 |    1080 |       1
+ 81620356           | WP WAVE/CURL NEUTRALIZER 1000ML WE       |     100 |     100 |     275 |    1118 |       1
+ 81537164           | NIOX SYS5 CLEANSER 300ML  MULTILANG      |      60 |      60 |     220 |     340 |       1
+ 81620364           | WP STRAIGHT NEUTRALIZER 1000ML WE        |      94 |      94 |     275 |    1124 |       1
+ 81538083           | SUN SPRAY PROTETTIVO CAPELLI NORMALI-FIN |     130 |      90 |     200 |    1136 |       1
+ 81539528           | WP ENRICH DAILY LI BALM 150ML D,F,I,NL   |      90 |     132 |     200 |    1142 |       1
+ 81446824           | SP BALANCE SCALP ENERGY SERUM 100ML      |      60 |     160 |     165 |     900 |       1
+ 81537449           | NIOX SYS2 SCALP TRTM 100ML. MULTILANG    |      50 |      40 |     170 |     158 |       1
+ 81537235           | NIOX SYS6 SCALP REVIT 1000ML MULTILANG   |      85 |      75 |     270 |    1088 |       1
+ 81538084           | SEB 1000ML HYDRE CONDITIONER MULTILANG   |      85 |      85 |     260 |    1090 |       1
+ 81446833           | SP MEN MAXIMUM TON 100 D,F,I,NL,GR       |      60 |     160 |     160 |     860 |       1
+ 81445714           | WPC BRILL.SH. MICROLIGHT NORM.FINI 500ML |      70 |      70 |     190 |     571 |       1
+ 81537171           | NIOX SYS2 CLEANSER 300ML MULTILANG       |      60 |      50 |     220 |     340 |       1
+ 81537173           | NIOX SYS3 CLEANSER 300ML MULTILANG       |      60 |      60 |     220 |     340 |       1
+ 81643585           | COLOR FRESH_ACID_10/36_75ML              |      50 |      50 |     140 |     110 |       1
+ 81330642           | SEB PENETRAITT SHAMPOO 1000ML            |      85 |      85 |     265 |    1105 |       1
+ 81330644           | SEB PENETRAITT SHAMPOO 250ML 2011        |      40 |      60 |     200 |     300 |       1
+ 81387891           | SEB Hydre Prof. Treatment 500ml          |      80 |      80 |     210 |     571 |       1
+ 81387931           | SEB TEXTURIZER 500ML MULTILAN            |      70 |      70 |     210 |     625 |       1
+ 81330589           | SEB HYDRE SHAMPOO 250ML 2011             |      40 |      60 |     210 |     303 |       1
+ 81386669           | SEB 150ML HYDRE TREATMENT DE.FR.NL.IT    |      40 |      60 |     212 |     170 |       1
+ 81391087           | SP AFTER SUN FLUID 125 ML                |     150 |      80 |     170 |     999 |       1
+ 81598906           | WP STRGHT-IT NEUTR 1000_DEP D-F-NL-I     |      95 |      95 |     280 |    1080 |       1
+ 81575293           | SEB 50G CRAFT CLAY REMOLD MULTILANG      |      60 |      80 |      80 |     118 |       1
+ 81387929           | SEB 150ML TEXTURIZ.BODYFYING DE FR NL IT |      58 |      58 |     170 |     199 |       1
+ 81386365           | SP 1L CLEAR SCALP SHAMPOO MULTILANG      |      80 |     100 |     210 |    1108 |       1
+ 81387904           | SEB 50ML POTION 9 STYL. TR DE,FR,IT      |      36 |      36 |     128 |      75 |       1
+ 81537223           | NIOX SYS1 CLEANSER 1000ML MULTILANG      |      90 |      90 |     270 |    1119 |       1
+ 81387897           | SEB 500ML POTION9 STY TREAT DE,FR,NL,IT  |      70 |      70 |     210 |     563 |       1
+ 81330567           | SEB HYDRE SHAMPOO 1000ML 2011            |      85 |      85 |     265 |    1111 |       1
+ 81643302           | WP ELEMENTS CONDITIONER 200ML            |     170 |     120 |     200 |    1452 |       1
+ 81643590           | COLOR FRESH_ACID_0/89_75ML               |      50 |      50 |     140 |     105 |       1
+ 81385600           | Niox Sys1 Cleanser 300ml D.F.I.NL.E.P ne |      60 |      60 |     220 |     363 |       1
+ 81537233           | NIOX SYS3 CLEANSER 1000ML MULTILANG      |      90 |      90 |     270 |    1123 |       1
+ 81557419           | WP OIL REFLECTIONS LIGHT 30ML            |      80 |     110 |     130 |     409 |       1
+ 81587944           | SP LUXE OIL BOOSTE ESSENCE 100ML IEP     |      90 |     130 |     180 |     950 |       1
+ 81471546           | SP 150ML PERFECT HAIR 150ml              |     150 |     110 |     190 |    1310 |       1
+ 81385614           | NIOX SYS3 CLEANSER 300ML D F I NL E P NE |      60 |      60 |     220 |     355 |       1
+ 81385625           | NIOX SYS4 SCALP REVIT 300ML D F I NL E P |      60 |      60 |     220 |     349 |       1
+ 81385597           | Niox Sys1 Cleanser 1000ml MULTILANG new  |      90 |      90 |     270 |    1115 |       1
+ 81385605           | Niox Sys2 Cleanser 1000ml MULTILANG new  |      90 |      90 |     270 |    1113 |       1
+ 81385602           | Niox Sys1 Scalp Revit 1000ml MULTILANG n |      90 |      90 |     170 |    1070 |       1
+ 81385603           | Niox Sys1 Scalp Revit 300ml D,F,I,NL,E,P |      60 |      60 |     220 |     343 |       1
+ 81385611           | Niox Sys2 Scalp Revit 300ml D,F,I,NL,E,P |      60 |      60 |     220 |     342 |       1
+ 81385613           | Niox Sys3 Cleanser 1000ml MULTILANG new  |      90 |      90 |     270 |    1123 |       1
+ 81385616           | Niox Sys3 Scalp Revit 1000ml MULTILANG n |      90 |      90 |     270 |    1074 |       1
+ 81385617           | Niox Sys3 Scalp Revit 300ml D,F,I,NL,E,P |      60 |      60 |     220 |     344 |       1
+ 81385620           | Niox Sys4 Cleanser 1000ml MULTILANG new  |      90 |      90 |     270 |    1125 |       1
+ 81385621           | Niox Sys4 Cleanser 300ml D,F,I,NL,E,P ne |      60 |      60 |     220 |     353 |       1
+ 81385623           | Niox Sys4 Scalp Revit 1000ml MULTILANG n |      90 |      90 |     270 |    1073 |       1
+ 81385629           | Niox Trialkit Sys1 150+150+50DE,FR,IT,NL |      60 |     110 |     180 |     460 |       1
+ 81385635           | NIOX TRIALKIT SYS3 150+150+50DE,FR,IT,NL |      60 |     110 |     180 |     460 |       1
+ 81387888           | SEB 150ML POTION9 LITE STY DE.FR.NL.IT   |      60 |      60 |     180 |     175 |       1
+ 81537226           | NIOX SYS2 CLEANSER 1000ML MULTILANG      |      90 |      70 |     270 |    1116 |       1
+ 81586583           | WELLOXON PERFECT 1000ML 6%               |      94 |      94 |     275 |    1102 |       1
+ 81387070           | CT PLUS 88/07 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81386766           | HYDRATE CONDITIONER 1000 ML              |      96 |      77 |     207 |    1050 |       1
+ 81387064           | CT PLUS 55/07 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81387066           | CT PLUS 66/07 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81387068           | CT PLUS 77/07 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81387073           | CT PLUS 55/04 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81387076           | CT PLUS 66/04 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81387843           | NIOXIN SYSTEM 3 SCALP TREATMENT          |      40 |      50 |     180 |     139 |       1
+ 81311781           | SEB SHINE CRAFTER WAX 50ML               |      60 |      60 |      60 |      94 |       1
+ 81311323           | SP MEN EVERY DAY HOLD 100 I GB SCAN E P  |     110 |     140 |     190 |     898 |       1
+ 81311768           | SEB TRILLIANCE SHAMPOO 1000ML            |      80 |      80 |     260 |    1068 |       1
+ 81538076           | SP MEN EVERY DAY HOLD 100 D F I NL       |     145 |     100 |     185 |     899 |       1
+ 81539934           | SEB COL IGNITE MON SHP 250ML DE FR IT NL |      50 |      50 |     195 |     297 |       1
+ 81311320           | SP MEN MAXIMUM HOLD 100 I,GB,SCAN,E,P    |     100 |     150 |     185 |     899 |       1
+ 81311787           | SEB SHINE DEFINE ROCK CRYSTAL 200ML      |      45 |      45 |     190 |     217 |       1
+ 81311764           | SEB TRILLIANCE SHAMPOO 250ML             |      60 |      40 |     210 |     312 |       1
+ 81311758           | SEB TRILLIANCE SHAMPOO 50ML              |      35 |      35 |     100 |      66 |       1
+ 81311327           | SP MEN REFRESH TON 125 I,GB,SCAN,E,P     |      80 |     150 |     170 |     885 |       1
+ 81311333           | SP MEN REMOVE TONIC 125 ML               |      80 |     150 |     170 |     922 |       1
+ 81539939           | SEB PENETRAITT SHAMPOO 250ML DE FR IT NL |      56 |      48 |     202 |     315 |       1
+ 81311783           | SEB TRILLIANT ROCK CRYSTAL 150ML         |     210 |      40 |      40 |     190 |       1
+ 81639219           | CT 1L EMULSION 1.9 %_6 VOL               |      94 |      94 |     275 |    1084 |       1
+ 81311808           | SEB TAMING ELIXIR 500ML                  |      70 |      70 |     210 |     605 |       1
+ 81642963           | COLOR FRESH_ACID_8/03_75ML               |      50 |      50 |     140 |     106 |       1
+ 81380288           | NIOX DEEP RE HAIR MASQ 150ML DE.FR.IT.NL |      40 |      60 |     220 |     159 |       1
+ 81379420           | SP LUXE OIL 100ml                        |      60 |     160 |     160 |     850 |       1
+ 81380521           | SEB TRILLIANCE CONDITIONER 250ML         |      40 |      60 |     210 |     312 |       1
+ 81372132           | Niox Scalp Renew 75ml DE,FR,IT,NL. New   |      50 |      50 |     140 |     108 |       1
+ 81380531           | SEB-250ML VOLUPT CONDITIONER             |      58 |      58 |     200 |     297 |       1
+ 81380293           | Niox Deep Re Hair Masq 500ml MULTILANG   |      70 |      70 |     270 |     568 |       1
+ 81380524           | SEB TRILLIANCE CONDITIONER 50ML          |      35 |      35 |     100 |      66 |       1
+ 81380502           | SEB PENETRAITT CONDITIONER 1L            |      85 |      85 |     265 |    1061 |       1
+ 81380510           | SEB-250ML PENETRAITT CONDITIONER         |      43 |      47 |     210 |     300 |       1
+ 81380492           | SEB MATTE PUTTY 75ML                     |      70 |      70 |      70 |     132 |       1
+ 81380295           | NIOX SYS6 SCALP REVIT 300ML D,F,I,NL,E,P |      60 |      60 |     220 |     341 |       1
+ 81566233           | SP DELICATE VOLUMES 200ML MULTILANG      |     150 |     105 |     215 |    1659 |       1
+ 81381488           | Seb Penetraitt Shampoo 50ml              |      40 |      40 |     100 |      65 |       1
+ 81380475           | SEB HYDRE CONDITIONER 1L                 |      85 |      85 |     265 |    1080 |       1
+ 81588054           | SEB HYDRE SHAMPOO 1000ML MULTILAN        |      80 |      80 |     260 |    1104 |       1
+ 81380477           | SEB PENETRAITT MASQUE 150ML              |      40 |      60 |     216 |     167 |       1
+ 81381563           | Seb Volupt Spray 50ml                    |     130 |     110 |      80 |     421 |       1
+ 81380481           | SEB-250ML HYDRE CONDITIONER              |      50 |      70 |     220 |     301 |       1
+ 81380519           | SEB TRILLIANCE CONDITIONER 1000ML        |      80 |      80 |     260 |    1068 |       1
+ 81380527           | SEB VOLUPT COND. 1000 ML                 |      85 |      85 |     265 |    1062 |       1
+ 81599996           | SEB COL IGNITE MUL SHP 1000ML MULTILAN   |      90 |      90 |     260 |    1128 |       1
+ 81384458           | WPC BRILLIANCE BALS. SZ.R. LUNGHI 150ml  |      90 |     130 |     200 |    1165 |       1
+ 81384452           | SP MEN DEF STRUCTURE 100 I,GB,SCAN,E,P   |     110 |     140 |     190 |     851 |       1
+ 81538077           | SP MEN MAXIMUM HOLD 100 D F I NL         |     145 |      95 |     185 |     890 |       1
+ 81537169           | NIOX SYS1 CLEANSER 300ML MULTILANG       |      60 |      60 |     220 |     340 |       1
+ 81243597           | Hair & Scalp Protect Lotion 125ml        |     149 |      77 |     166 |     958 |       1
+ 81237554           | WPC ENRICH ENDS-ELIXIR 40ml              |      70 |     110 |     160 |     789 |       1
+ 81250884           | BRILLIANCE MASK COARSE 500 ML            |     110 |     110 |      90 |     579 |       1
+ 81224242           | BLONDOR MULTIBLONDE POWDER 400G  - 3PCS  |     280 |     100 |     240 |    1626 |       1
+ 81250887           | BRILLIANCE MASK FINE 500 ML              |     110 |     110 |      90 |     576 |       1
+ 81537221           | NIOX SYS5 SCALP REVIT 1000ML MULTILANG   |      90 |      90 |     270 |    1074 |       1
+ 81537470           | NIOX SYS6 SCALP TREAT 100ML MULTILANG    |      50 |      40 |     180 |     151 |       1
+ 81229923           | SP VOLUMIZE SHAMPOO 30 ML                |     350 |     190 |     120 |    2071 |       1
+ 81237671           | WPC PRO TRATT PRE-ONDULAZ 18ml           |      70 |      90 |     110 |     300 |       1
+ 81237658           | WPC BALANCE LOZIONE ANTICADUTA 8x6ml     |     290 |     100 |     140 |     983 |       1
+ 81237667           | WPC ENRICH  REPAIR SERUM 8x10ml          |     140 |     110 |     300 |    1338 |       1
+ 81253644           | SP HYDRATE INFUSION 5ML BOM COMP DA 18PZ |     100 |     255 |     175 |     479 |       1
+ 81253646           | SP SMOOTHEN INFUSION 5ml BOM comp da 18p |     100 |     175 |     255 |     467 |       1
+ 81586555           | WP CURL-IT NEUTR 1000_DEP D-F-NL-I       |     100 |     100 |     275 |    1118 |       1
+ 81278510           | PERFECTON BY CF /44 250ML C              |      55 |      55 |     210 |     317 |       1
+ 81278512           | PERFECTON BY CF /5 250ML C               |      55 |      55 |     210 |     317 |       1
+ 81278514           | PERFECTON BY CF /6 250ML C               |      55 |      55 |     210 |     317 |       1
+ 81278515           | PERFECTON BY CF /7 250ML C               |      60 |      60 |     220 |     311 |       1
+ 81278516           | PERFECTON BY CF /8 250ML C               |      55 |      55 |     210 |     317 |       1
+ 81596345           | BL_FREELIGHTS_DVLPER_6 _20% VOL _1L      |      95 |      95 |     275 |    1120 |       1
+ 81253651           | SP COLOR SAVE INFUSION 5ml BOM comp da 1 |     100 |     175 |     255 |     467 |       1
+ 81274102           | Niox Density Restoration Treatment 45ml  |      60 |      60 |     200 |     170 |       1
+ 81259120           | SP SUN Concentrate 50ml                  |      80 |     110 |     130 |     422 |       1
+ 81274173           | Niox System 5 Cleanser 1000ml            |      90 |      90 |     270 |    1109 |       1
+ 81274174           | Niox System 5 Cleanser 300ml             |      60 |      60 |     220 |     350 |       1
+ 81274178           | Niox System 5 Scalp Therapy 1000ml       |      90 |      90 |     270 |    1072 |       1
+ 81274179           | Niox System 5 Scalp Therapy 300ml        |      60 |      60 |     220 |     337 |       1
+ 81274182           | NIOXIN SYSTEM 5 SCALP TREATMENT          |      40 |      60 |     160 |     138 |       1
+ 81537170           | NIOX SYS1 SCALP REVIT 300ML MULTILANG    |      60 |      60 |     220 |     340 |       1
+ 81537195           | NIOXTRIALKIT SYS4 150 150 40 DE FR IT NL |      60 |     110 |     180 |     466 |       1
+ 81278509           | PERFECTON BY CF /43 250ML C              |      55 |      55 |     210 |     317 |       1
+ 81274185           | Niox System 6 Cleanser 1000ml            |      90 |      90 |     270 |    1110 |       1
+ 81274186           | Niox System 6 Cleanser 300ml             |      60 |      60 |     220 |     355 |       1
+ 81274193           | NIOXIN SYSTEM 6 SCALP TREATMENT          |      40 |      50 |     180 |     149 |       1
+ 81274209           | Niox Trial Kit System 5                  |      60 |     110 |     180 |     463 |       1
+ 81589934           | WELLOXON PERFECT 1000ML 9%               |      94 |      94 |     275 |    1100 |       1
+ 81589946           | CT 1L EMULSION 1.9 %_6 VOL               |      94 |      94 |     275 |    1084 |       1
+ 81589947           | CT 1L EMULSION 4 %_13 VOL                |      94 |      94 |     275 |    1079 |       1
+ 81234974           | WPC ENRICH TR LEAVE-IN FINI 150ml        |      90 |     132 |     200 |    1155 |       1
+ 81381466           | Seb Volupt Shampoo 50ml                  |      40 |      40 |     100 |      65 |       1
+ 81311810           | SEB STYLIXIR 500ML                       |      70 |      70 |     210 |     700 |       1
+ 81153874           | SHINE LEAVE-IN CONDITIONER 125 ML        |     150 |      77 |     165 |    1004 |       1
+ 81232332           | SP 40 ml Sublime Reflection              |      70 |     110 |     160 |     788 |       1
+ 81232354           | SP 40 ml Exquisite Gloss                 |      70 |     110 |     160 |     812 |       1
+ 81253647           | SP VOLUMIZE INFUSION 5ml BOM comp da 18p |     100 |     175 |     255 |     470 |       1
+ 81163233           | BLONDOR MULTI BL GRAN 500G DE,FR,IT,UK   |      94 |      94 |     262 |     576 |       1
+ 81284214           | SP 200 ml Delicate Volume                |     150 |     103 |     220 |    1650 |       1
+ 81311330           | SP MEN SENSITIVE TON 125 I,GB,SCAN,E,P   |      90 |     150 |     170 |     960 |       1
+ 81380494           | SEB PENETRAITT PROF. MASQUE 500ML        |      70 |      70 |     210 |     560 |       1
+ 81639217           | CT PLUS 1L EMULSION 4%_13 VOL            |      94 |      94 |     275 |    1094 |       1
+ 81546059           | SP REPAIR SHP 250ML MULTILANG            |     140 |     120 |     175 |    1853 |       1
+ 81254147           | Seb Color Multi. Shampoo 50ml .......... |      30 |      30 |      95 |      68 |       1
+ 81311357           | SP MEN STRENGTH ELX 6 X 2 ML             |      30 |      90 |     250 |     121 |       1
+ 81381404           | Seb Hydre Shampoo 50ml                   |     100 |      40 |      40 |      65 |       1
+ 81381422           | Seb Hydre Conditioner 50ml               |      40 |      40 |     100 |      63 |       1
+ 81384423           | WPC ENRICH SPRAY DISTRICANTE 150ml       |      90 |     130 |     200 |    1140 |       1
+ 81539745           | SEB HYDRE SHAMPOO 250ML DE,FR,IT,NL      |      56 |      48 |     202 |     315 |       1
+ 81153916           | HYDRATE INFUSION 5 ML                    |      30 |      90 |     240 |     133 |       1
+ 81311354           | SP MEN HYDRATE ELX 6 X 2 ML              |      30 |      90 |     250 |     118 |       1
+ 81237663           | WPC BRILLANCE SERUM COL. SZ.RISC. 6x10ml |     120 |     180 |     240 |     769 |       1
+ 81391984           | REPAIR INFUSION 5 ML                     |      30 |      90 |     240 |     127 |       1
+ 81127083           | SEB CELLOPHANES SHINE CLEAR 300ML        |      47 |      75 |     240 |     342 |       1
+ 81127100           | SEB CELLOPHANES DEEP BRUNETTE 300ML      |      47 |      75 |     240 |     342 |       1
+ 81127106           | SEB CELLOPHANES PEARL BLONDE 300ML       |      47 |      75 |     240 |     342 |       1
+ 81127113           | SEB CELLOPHANES HONEY BLONDE 300ML       |      47 |      75 |     240 |     342 |       1
+ 81127263           | SEB SHINE DEFINE 200ML                   |      45 |      45 |      45 |     217 |       1
+ 81153826           | BALANCE SCALP ENERGY SERUM 100 ML        |     160 |      60 |     165 |     840 |       1
+ 81130373           | SEB HYDRE CONDITIONER 10ML               |      90 |      30 |       2 |      12 |       1
+ 81211840           | SEB-250ML VOLUPT CONDITIONER..... ...... |      58 |      58 |     200 |     297 |       1
+ 81274189           | Niox System 6 Scalp Therapy 1000ml       |      90 |      90 |     270 |    1075 |       1
+ 81274121           | Niox System 1 Cleanser 1000ml            |      90 |      90 |     270 |    1115 |       1
+ 81274135           | Niox System 2 Cleanser 300ml             |      60 |      60 |     220 |     350 |       1
+ 81274150           | Niox System 3 Cleanser 300ml             |      60 |      60 |     220 |     355 |       1
+ 81274148           | Niox System 3 Cleanser 1000ml            |      90 |      90 |     270 |    1123 |       1
+ 81274203           | Niox Trial Kit System 3                  |      60 |     110 |     180 |     460 |       1
+ 81311775           | SEB TRILLIANCE CONDITIONER 250ML         |      40 |      60 |     210 |     312 |       1
+ 81311779           | SEB TRILLIANCE CONDITIONER 1000ML        |      80 |      80 |     260 |    1068 |       1
+ 81311806           | SEB TEXTURIZER 500ML                     |      70 |      70 |     210 |     625 |       1
+ 81311317           | SP MEN MAXIMUM TONIC INTENSE 100 ML      |      60 |     160 |     160 |     860 |       1
+ 81292910           | COLOUR TOUCH PLUS 44/05_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81297081           | WP Straight-It Neutr  1000ml             |     100 |     100 |     290 |    1108 |       1
+ 81435145           | SP LUXE OIL 2ML SAMPLE 24PZ PROMO        |     190 |     150 |     110 |     354 |       1
+ 81339592           | WPS PEARL STYLER 2 pz comp.da:           |     100 |     152 |     186 |     930 |       1
+ 81438994           | NIOX DIABOOST TREAT 100ML DE, FR, IT, NL |     130 |     190 |     210 |     958 |       1
+ 81396964           | SEBASTIAN SHINE CARE GIFT BOX comp.by    |      70 |     140 |     220 |     702 |       1
+ 81397000           | SEBASTIAN SHINE STYLING GIFT BOX comp.by |      80 |     110 |     160 |     305 |       1
+ 81424828           | WPC OIL REFLECTIONS TESTER 1 PZ          |      50 |      50 |     160 |     261 |       1
+ 81116294           | COLOUR TOUCH L2C EMULSION 1000 ML 1.9%   |      90 |      90 |     270 |    1090 |       1
+ 81127149           | SEB TEXTURIZER 150 ML                    |      48 |      48 |     161 |     199 |       1
+ 81506056           | SP LUXEOIL 30ML SAMPLE                   |      70 |     110 |     130 |     423 |       1
+ 81211830           | SEB-250ML PENETRAITT CONDITIONER........ |      43 |      47 |     210 |     300 |       1
+ 81233514           | WPC BRILLANCE TR LEAVE-IN COLORAT 150ml  |      90 |     130 |     200 |    1165 |       1
+ 90104641           | EXCLUSIV NEW NO GAS FORTE 250 ML.        |     200 |     220 |     250 |    3200 |       1
+ 90104642           | EXCLUSIV NEW NO GAS EXTRA FORTE 250 ML.  |     200 |     220 |     250 |    3209 |       1
+ 81414375           | WPS PEARL STYLER 30ml                    |     320 |     170 |     120 |    2115 |       1
+ 81238128           | WPS STAY BRILLIANT 150ml                 |     130 |      90 |     200 |    1172 |       1
+ 81274206           | Niox Trial Kit System 4                  |      60 |     110 |     180 |     460 |       1
+ 81274110           | Niox Hair Booster 100ml                  |      40 |      60 |     160 |     136 |       1
+ 81274139           | Niox System 2 Scalp Therapy 1000ml       |      90 |      90 |     270 |    1076 |       1
+ 81311770           | SEB TRILLIANCE CONDITIONER 50ML          |      35 |      35 |     100 |      63 |       1
+ 81292905           | COLOUR TOUCH PLUS 77/03_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81116285           | COLOUR TOUCH L2C EMULSION 1000 ML 4%     |      90 |      90 |     269 |    1104 |       1
+ 81127098           | SEB CELLOPHANES HOT RED 300ML            |      47 |      75 |     240 |     342 |       1
+ 81130393           | SEB MATTE PUTTY 75ML                     |      70 |      70 |      70 |     132 |       1
+ 81153925           | REPAIR INFUSION 5 ML                     |      30 |      90 |     240 |     133 |       1
+ 81127181           | SEB POTION 9 500ML                       |      70 |      70 |     210 |     563 |       1
+ 81211826           | SEB-250ML LIGHT SHINE SHAMPOO... ....... |      50 |      70 |     220 |     301 |       1
+ 81127134           | SEB HYDRE TREATMENT 150ML                |      40 |      60 |     212 |     170 |       1
+ 81274131           | Niox System 1 Scalp Treatment 100ml      |      40 |      60 |     160 |     136 |       1
+ 81274170           | Niox System 4 Scalp Treatment 100ml      |      40 |      50 |     180 |     158 |       1
+ 81237596           | WPC ENRICH SCHIUMA SFRUTTATI 150ml       |     185 |     150 |     102 |    1306 |       1
+ 81274127           | Niox System 1 Scalp Therapy 300ml        |      60 |      60 |     220 |     343 |       1
+ 81234995           | WPC PRO COLOR REMOVER 150ml              |     100 |     132 |     200 |    1179 |       1
+ 81237924           | WPS TAKE SHAPE 18 ml                     |      70 |      80 |     100 |     312 |       1
+ 81237963           | WPS MIRROR POLISH 40 ml                  |      70 |     110 |     160 |     789 |       1
+ 81237976           | WPS SHIMMER DELIGHT 40ml                 |      70 |     110 |     160 |     778 |       1
+ 81274190           | Niox System 6 Scalp Therapy 300ml        |      60 |      60 |     220 |     341 |       1
+ 81292912           | COLOUR TOUCH PLUS 55/05_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81292894           | COLOUR TOUCH PLUS 55/07_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81292895           | Color Touch PLUS 66/07_60 ML_3D          |     115 |      30 |     150 |     247 |       1
+ 81292897           | COLOUR TOUCH PLUS 88/07_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81292898           | COLOUR TOUCH PLUS 55/04_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81292899           | COLOUR TOUCH PLUS 66/04_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81292903           | COLOUR TOUCH PLUS 66/03_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81274145           | Niox System 2 Scalp Treatment 100ml      |      40 |      50 |     180 |     152 |       1
+ 81297090           | WP Wave-It Neutr  1000ml                 |      94 |      94 |     275 |    1108 |       1
+ 81292893           | COLOUR TOUCH PLUS 44/07_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 90191244           | WELLOXON PERFECT TR.1000 ML.  6%-20 VOL. |      90 |      90 |     269 |    1098 |       1
+ 81098103           | COLOR TOUCH PLUS EMULSION 1000 ML        |      94 |      94 |     273 |    1100 |       1
+ 81495658           | NIOXIN CHALLENGE BOX SYS 1 comp da       |      80 |     175 |     220 |     698 |       1
+ 81495659           | NIOXIN CHALLENGE BOX SYS 2 comp da       |      80 |     175 |     220 |     699 |       1
+ 81495660           | NIOXIN CHALLENGE BOX SYS 3 comp da       |      80 |     175 |     220 |     692 |       1
+ 81495662           | NIOXIN CHALLENGE BOX SYS 4 comp da       |      80 |     175 |     220 |     694 |       1
+ 81495663           | NIOXIN CHALLENGE BOX SYS 5 comp da       |      80 |     175 |     220 |     690 |       1
+ 81495664           | NIOXIN CHALLENGE BOX SYS 6 comp da       |      80 |     175 |     220 |     696 |       1
+ 81126777           | SEB PENETRAITT CONDITIONER 1L            |      85 |      85 |     265 |    1078 |       1
+ 81130392           | SEB MOLDING MUD 75ML                     |     140 |     140 |     100 |     130 |       1
+ 81371805           | WPS FLEXIBLE FINISH 250 ml               |     100 |     160 |     230 |    1552 |       1
+ 81153934           | SHINE FINISH 8 ML                        |     125 |     160 |     220 |     915 |       1
+ 81274200           | Niox Trial Kit System 2                  |      60 |     110 |     180 |     460 |       1
+ 81153728           | PERFECT HAIR 150 ML                      |     150 |     110 |     190 |    1328 |       1
+ 81454404           | WP BODY CRAFTER 150ML                    |      90 |     130 |     200 |    1155 |       1
+ 81274158           | Niox System 3 Scalp Treatment 100ml      |      40 |      50 |     180 |     139 |       1
+ 81292906           | COLOUR TOUCH PLUS 88/03_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81274166           | Niox System 4 Scalp Therapy 1000ml       |      90 |      90 |     270 |    1073 |       1
+ 81238101           | WPS PERFECT SETTING. 150 ml              |     132 |      92 |     200 |    1127 |       1
+ 81238107           | WPS THERMAL IMAGE. 150 ml                |      90 |     135 |     210 |    1060 |       1
+ 81296855           | WP Curl-It Neutr  1000ml                 |      95 |      95 |     276 |    1108 |       1
+ 81127173           | SEB POTION 9 150 ML                      |      47 |      47 |     178 |     200 |       1
+ 81211834           | SEB-250ML PENETRAITT SHAMPOO .. ........ |      40 |      60 |     200 |     300 |       1
+ 81274197           | Niox Trial Kit System 1                  |      60 |     110 |     180 |     460 |       1
+ 81274090           | NIOX DEEP REPAIR HAIR MASQUE 150ML       |      40 |      60 |     220 |     159 |       1
+ 81274163           | Niox System 4 Cleanser 300ml             |      60 |      60 |     220 |     353 |       1
+ 81392966           | SP Expo Banco Anticaduta 2012            |      70 |     205 |     315 |     626 |       1
+ 81127112           | SEB CELLOPHANES GOLDEN BLONDE 300ML      |      47 |      75 |     240 |     342 |       1
+ 81127114           | SEB CELLOPHANES RED BRUNETTE 300ML       |      47 |      75 |     240 |     342 |       1
+ 81127096           | SEB CELLOPHANES RED RED 300ML            |      47 |      75 |     240 |     342 |       1
+ 81127104           | SEB CELLOPHANES GOLDEN BRUNETTE 300ML    |      47 |      75 |     240 |     342 |       1
+ 81211813           | SEB-250ML HYDRE CONDITIONER...... ...... |      50 |      70 |     220 |     301 |       1
+ 81126738           | SEB LIGHT SHINE SHAMPOO 1LB              |      85 |      85 |     265 |    1111 |       1
+ 81127128           | SEB PENETRAITT MASQUE 150ML              |      40 |      60 |     216 |     167 |       1
+ 81130405           | SEB POTION 9 50ML                        |      36 |      36 |     128 |      75 |       1
+ 81292896           | COLOUR TOUCH PLUS 77/07_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81126770           | SEB LIGHT SHINE CONDITIONER 1L           |      85 |      85 |     265 |    1078 |       1
+ 81234982           | WPC ENRICH SPRAY FINI 150ml              |      90 |     130 |     200 |    1140 |       1
+ 81127116           | SEB CELLOPHANES GOLDEN RED 300ML         |      47 |      75 |     240 |     342 |       1
+ 81292916           | COLOUR TOUCH PLUS 44/06_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 90191245           | WELLOXON PERFECT TR.1000 ML.  9%-30 VOL. |      90 |      90 |     269 |    1107 |       1
+ 81129646           | SEB TM THICKENERE 2 300 ML               |      80 |      80 |     250 |     340 |       1
+ 81129650           | SEB TM SILKENER 1  300 ML                |      50 |      90 |     250 |     320 |       1
+ 81184718           | SEB TRILLIANT 150 ML                     |      40 |      40 |     235 |     186 |       1
+ 81274167           | Niox System 4 Scalp Therapy 300ml        |      60 |      60 |     220 |     349 |       1
+ 81253645           | SP REPAIR INFUSION 5ml BOM comp da 18pz: |     100 |     175 |     255 |     477 |       1
+ 81102164           | MAXXIMUM TONIC INTENSIVE 100 ML          |      70 |     160 |     160 |     855 |       1
+ 90191246           | WELLOXON PERFECT TR.1000 ML. 12%-40 VOL. |      90 |      90 |     269 |    1120 |       1
+ 81292914           | COLOUR TOUCH PLUS 33/06_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81126984           | SEB HYDRE CONDITIONER 1L                 |      85 |      85 |     265 |    1080 |       1
+ 81127205           | SEB HALO MIST UV FILTER 100ML            |      45 |      45 |     160 |     136 |       1
+ 81274134           | Niox System 2 Cleanser 1000ml            |      90 |      90 |     270 |    1113 |       1
+ 81160060           | SEB VOLUPT COND. 1000 ML                 |      85 |      85 |     265 |    1062 |       1
+ 81292918           | COLOUR TOUCH PLUS 55/06_60 ML_3D         |     115 |      30 |     150 |     247 |       1
+ 81205314           | KAD VITAL BOOSTER SERUM 6X10 ML          |     110 |      80 |     160 |     558 |       1
+ 81274125           | Niox System 1 Scalp Therapy 1000ml       |      90 |      90 |     170 |    1070 |       1
+ 81379413           | WPC OIL REFLECTION 100ml                 |      60 |     160 |     160 |     864 |       1
+ 81407063           | SP OIL TESTER 1PC                        |      60 |      60 |     160 |     273 |       1
+ 81414321           | Color id 100ml D F I NL                  |     170 |      60 |     170 |     896 |       1
+ 81211822           | SEB-250ML LIGHT CONDITIONER......... ... |      60 |      40 |     200 |     302 |       1
+ 81472500           | WPC OIL REFLECTION 100 ML SAMPLE         |     150 |      50 |      50 |     260 |       1
+ 81274140           | Niox System 2 Scalp Therapy 300ml        |      60 |      60 |     220 |     342 |       1
+ 81274153           | Niox System 3 Scalp Therapy 1000ml       |      90 |      90 |     270 |    1074 |       1
+ 81190779           | AFTER SUN MOISTURIZING FLUID 125 ML      |     149 |      77 |     166 |     980 |       1
+ 81274101           | Niox Deep Repair Hair Masque 500ml       |      70 |      70 |     270 |     568 |       1
+ 81126747           | SEB PENETRAITT SHAMPOO 1L                |      85 |      85 |     265 |    1105 |       1
+ 81126762           | SEB HYDRE SHAMPOO 1L                     |      85 |      85 |     265 |    1111 |       1
+ 81274154           | Niox System 3 Scalp Therapy 300ml        |      60 |      60 |     220 |     344 |       1
+ 81274212           | Niox Trial Kit System 6                  |      60 |     110 |     180 |     460 |       1
+ 81412203           | WPC OIL REFLECTIONS 100ml                |      60 |     160 |     160 |     826 |       1
+ 81384421           | SP 75 ml Refined Texture                 |      90 |     130 |     160 |     705 |       1
+ 81127156           | SEB LIQUID STEEL STYLER 150ML            |      44 |      44 |     177 |     203 |       1
+ 81298234           | BLONDOR SOFT BLONDE CREAM 200 G          |      45 |     170 |     210 |     718 |       1
+ 81381503           | Seb Penetraitt Conditioner 50ml          |      40 |      40 |     100 |      65 |       1
+ 81449977           | SEB Drynamic Shampoo 212 ml              |     210 |      60 |      60 |     196 |       1
+ 81449981           | SEB Drynamic Shampoo 75 ml               |      50 |      50 |     130 |      88 |       1
+ 81232399           | SP 200 ml Polished Waves                 |     105 |     150 |     220 |    1592 |       1
+ 81409180           | CT 1L EMULSION 4% DE,FR,I,NL             |      95 |      95 |     275 |    1093 |       1
+ 81387894           | SEB 150ML POTION9 STY TREAT DE,FR,NL,IT  |      47 |      47 |     178 |     200 |       1
+ 81127162           | SEB THICKEFY FOAM 200ML                  |      47 |      47 |     218 |     262 |       1
+ 81127201           | SEB TAMING ELIXIR 140ML                  |      43 |      43 |     173 |     172 |       1
+ 81532592           | SYSTEM COLOR SAVE INFUSION 20X5ML        |     121 |     175 |      47 |     356 |       1
+ 81543655           | NIOX SYS3 SCALP TRTM 200ML MULTILANG     |      60 |      51 |     200 |     271 |       1
+ 81543667           | NIOX SYS6 SCALP TRTM 200ML MULTILANG     |      60 |      51 |     200 |     271 |       1
+ 81530939           | SYSTEM COLOR SAVE SHAMPOO 20X15ML        |     100 |      77 |     132 |     402 |       1
+ 81543672           | NIOX SYS5 SCALP TRTM 200ML MULTILANG     |      60 |      51 |     200 |     271 |       1
+ 81530940           | SYSTEM HYDRATE SHAMPOO 20X15ML           |     100 |      77 |     132 |     419 |       1
+ 81593263           | SP LIQUID HAIR 100ML                     |      60 |     160 |     160 |     854 |       1
+ 81532594           | SYSTEM HYDRATE INFUSION 20X5ML           |     121 |     175 |      47 |     364 |       1
+ 81530944           | SYSTEM VOLUMIZE SHAMPOO 20X15ML          |     100 |      77 |     132 |     406 |       1
+ 81532568           | SYSTEM REPAIR PERFECT HAIR 150ML         |      47 |      47 |     176 |     210 |       1
+ 81543677           | NIOX KIT SYS3 300 300 100 MULTILANG      |     130 |      70 |     230 |     866 |       1
+ 81642971           | COLOR FRESH_ACID_7/00_75ML               |      50 |      50 |     140 |     107 |       1
+ 81543676           | NIOX KIT SYS2 300 300 100 MULTILANG      |     128 |      63 |     230 |     883 |       1
+ 81543678           | NIOX KIT SYS4 300 300 100 MULTILANG      |     130 |      70 |     230 |     878 |       1
+ 81532595           | SYSTEM LIQUID HAIR 100ML                 |      50 |      50 |     150 |     290 |       1
+ 81543679           | NIOX KIT SYS5 300 300 100 MULTILANG      |     130 |      70 |     230 |     866 |       1
+ 81543654           | NIOX SYS1 SCALP TRTM 200ML MULTILANG     |      60 |      51 |     200 |     271 |       1
+ 81543680           | NIOX KIT SYS6 300 300 100 MULTILANG      |     128 |      63 |     225 |     880 |       1
+ 81543662           | NIOX SYS4 SCALP TRTM 200ML MULTILANG     |      60 |      51 |     200 |     271 |       1
+ 81643572           | BL FREELIGHTS DVLPER 6% 1L EMEA          |      95 |      95 |     275 |    1094 |       1
+ 81643586           | COLOR FRESH_ACID_10/39_75ML              |      50 |      50 |     140 |     106 |       1
+ 99240009177        | WP FUSION MASK 500ML                     |     108 |     108 |      84 |     567 |       1
+ 81544818           | SP SOLARIS HELIO GUARD 125ML MULTILANG   |     151 |     101 |     161 |     956 |       1
+ 81546461           | SYSTEM LUXE KERATIN BOOST 100ML          |      40 |      40 |     160 |     151 |       1
+ 81546052           | SP COLOR SAVE COND 200ML DFINLSCANRU     |     182 |     110 |     183 |    1427 |       1
+ 81643584           | COLOR FRESH_ACID_7/74_75ML               |      50 |      50 |     140 |     107 |       1
+ 81546489           | SYSTEM LUXEOIL 30ML                      |      43 |      43 |     130 |      67 |       1
+ 81550913           | NIOXIN NGHT DENS RES 70ML DFINLEPPLTR    |      41 |      41 |     154 |     139 |       1
+ 81551506           | WPC SERVICE COLOR REMOVER 150ML          |     135 |      90 |     200 |    1186 |       1
+ 81553208           | WPC BRILLIANCE BALS. SZ.R. LUNGHI 150ML  |      90 |     130 |     200 |    1151 |       1
+ 81620362           | WP CREA+ STRAIGHT H/S BASE 200ML WE      |      60 |      60 |     190 |     250 |       1
+ 81547269           | SP ALPHA ENERGY 100ML GBFDINLGR          |      48 |      58 |     159 |     175 |       1
+ 81550265           | SEB 400ML SHAPER FIERCE DE,FR,NL,IT      |      60 |      60 |     270 |     335 |       1
+ 81642964           | COLOR FRESH_ACID_9/3_75ML                |      50 |      50 |     140 |     103 |       1
+ 81552799           | SP 6ML BAL SCALP ENR SER  6PC  COM. DA   |      90 |      40 |     110 |     105 |       1
+ 81547249           | SP SOLARIS SUN OIL 100ML GBFDINLGR       |     162 |      60 |     160 |     553 |       1
+ 81547265           | SYSTEM SOLAR CREAM 125ML                 |     151 |     101 |     161 |    1052 |       1
+ 81643175           | SYSTEM_solar sun oil 30ml                |     108 |      72 |     134 |     429 |       1
+ 81643444           | WP ELEMENTS CONDITIONER SZ RISC 150ML    |     132 |      86 |     200 |    1120 |       1
+ 81549920           | NIOXIN HAIR BOOSTER 50ML                 |      50 |      40 |     150 |      82 |       1
+ 81553170           | WPC ENRICH SPUMA RISTR.ONDULATI 150ML    |     150 |     100 |     185 |    1309 |       1
+ 81553181           | SEB TEXTURE MAKER 150ML DFINL            |      50 |      50 |     160 |     196 |       1
+ 81553190           | SP LUXEOIL ELIXIR 100ML DFINLGR          |      60 |     160 |     160 |     829 |       1
+ 81553216           | SEB VOLUPT SPRAY 150ML DFINLGR           |      50 |      50 |     160 |     190 |       1
+ 81553219           | SP LUXEOIL ELIXIR 30ML DFINLESPTGR       |      40 |      40 |      85 |     422 |       1
+ 81466028           | WP ELEMENTS BALSAMO RIGENERANTE 200ML    |     170 |     120 |     200 |    1451 |       1
+ 81514374           | SEB_RESINTEK_75ML_DFINLPLGR              |      42 |      42 |     137 |     101 |       1
+ 81516047           | WP EIMI SUGAR LIFT 150 ML D-F-I-NL       |     132 |      92 |     199 |    1200 |       1
+ 81425350           | SP Shine Finish 8ml                      |     125 |     160 |     220 |     915 |       1
+ 81593195           | SEB 1000ML HYDRE CONDITIONER MULTILANG   |      85 |      85 |     260 |    1090 |       1
+ 81466051           | WP ELEMENTS MASCHERA RESTITUTIVA 500ML   |      90 |     110 |     110 |     576 |       1
+ 81544819           | SP BALANCE ENERGY SERUM 100ML GBFDINLGR  |      50 |      50 |     150 |     288 |       1
+ 81547237           | SYSTEM SOLAR SHAMPOO 20X15ML             |     100 |      77 |     132 |     410 |       1
+ 81547240           | SYSTEM SOLAR SUN OIL 30ML                |     108 |      72 |     134 |     429 |       1
+ 81557373           | WP OIL REFLECTIONS SHAMPOO 1000ML        |      85 |      85 |     254 |    1104 |       1
+ 81544822           | SYSTEM SOLAR COND 200ML                  |     180 |     110 |     191 |    1492 |       1
+ 81643516           | SP MEN TEXT STYLE WAX 75ML DFINLESPT     |     200 |     130 |      45 |     586 |       1
+ 81643587           | COLOR FRESH_ACID_8/0_75ML                |      50 |      50 |     140 |     107 |       1
+ 81643588           | COLOR FRESH_ACID_7/44_75ML               |      50 |      50 |     140 |     107 |       1
+ 81409214           | WELLOXON PERFECT 1000ML 6% -D-F-I        |      90 |      90 |     269 |    1100 |       1
+ 81557392           | WP OIL REFLECTIONS 100ML                 |     162 |      60 |     162 |     549 |       1
+ 81557954           | WPC CALM SH. CUTE SENSIBILE 1000ML       |      80 |      80 |     240 |    1100 |       1
+ 81557955           | WPC CALM SH. CUTE SENSIBILE 250ML        |     155 |     105 |     195 |    1801 |       1
+ 81557951           | WPC BRILL.SH. MICROLIGHT NORM.FINI 250ML |     110 |     160 |     200 |    1826 |       1
+ 81642961           | COLOR FRESH_ACID_6/45_75ML               |      50 |      50 |     140 |     111 |       1
+ 81643198           | SP_men refresh tonic 125ml               |      80 |     150 |     170 |     894 |       1
+ 81643589           | COLOR FRESH_ACID_0/8_75ML                |      50 |      50 |     140 |     105 |       1
+ 81599994           | SEB COL IGNITE MON SHP 1000ML MULTILAN   |      90 |      90 |     260 |    1123 |       1
+ 81557952           | WPC BRILL.SH. MICROLIGHT NORM.FINI 500ML |      70 |      70 |     190 |     573 |       1
+ 81644365           | SEB 200ML MOUSSE FORT/STRONG DE,FR,NL,IT |      55 |      55 |     240 |     237 |       1
+ 81537165           | NIOX SYS5 SCALP REVIT 300ML. MULTILANG   |      60 |      60 |     220 |     340 |       1
+ 81586559           | CT PLUS 1L EMULSION 4%_13 VOL            |      94 |      94 |     275 |    1094 |       1
+ 81575300           | SEB 150ML POTION9 STY TREAT DE,FR,NL,    |      54 |      54 |     193 |     243 |       1
+ 81537172           | NIOX SYS2 SCALP REVIT 300ML MULTILANG    |      60 |      60 |     220 |     340 |       1
+ 81537447           | NIOX SYS1 SCALP TRTM 100ML MULTILANG     |      55 |      40 |     155 |     139 |       1
+ 81537465           | NIOX SYS5 SCALP TREAT 100ML MULTILANG    |      40 |      60 |     160 |     138 |       1
+ 81642962           | COLOR FRESH_ACID_7/47_75ML               |      50 |      50 |     140 |     110 |       1
+ 99240006342        | SP SP LUX RG OTC ELIXIR DFINLGR100ml18IV |     110 |     170 |     200 |     966 |       1
+ 81558043           | WPC SERVICE TRATT POST-COLOR 1000ML      |      86 |      86 |     256 |    1058 |       1
+ 81587943           | SP LUXE OIL SPRAY 75ML IEP               |      40 |      40 |     160 |      78 |       1
+ 81589908           | WPC BRILL.SH. MICROLIGHT NORM.FINI 1L    |     260 |      95 |      95 |    1118 |       1
+ 81589933           | WELLOXON PERFECT 1000ML 12%              |      94 |      94 |     275 |    1100 |       1
+ 81642960           | COLOR FRESH_ACID_6/34_75ML               |      50 |      50 |     140 |     109 |       1
+ 81643571           | BL FREELIGHTS DVLPER 12% 1L EMEA         |      95 |      95 |     295 |    1125 |       1
+ 81566086           | SP SHINE DEFINE SHAMPOO 1L MULTILANG     |      80 |     100 |     210 |    1110 |       1
+ 81566114           | SP CLEAR SCALP SHAMPOO 1L MULTILANG      |      80 |     100 |     210 |    1108 |       1
+ 81399998           | SP NEW REPAIR INF. 5ML BOM COMP DA 18PZ: |     110 |     110 |     260 |     452 |       1
+ 81401894           | SEB Cellophanes Saffron Red 300ml        |      47 |      75 |     240 |     342 |       1
+ 81600226           | WPC SERVICE TRATT.PRE-ONDULAZ. 18ML      |      70 |      90 |     110 |     305 |       1
+ 81401887           | SEB Cellophanes Clear 300ml MUL          |      47 |      75 |     240 |     342 |       1
+ 81401893           | SEB Cellophanes Espresso Brown 300ml     |      47 |      75 |     240 |     342 |       1
+ 81401901           | SEB Cellophanes Honeycomb Blonde 300ml   |      47 |      75 |     240 |     342 |       1
+ 81537168           | NIOX SYS6 SCALP REVIT 300ML MULTILANG    |      60 |      60 |     220 |     340 |       1
+ 81589367           | KOLESTON PERFECT RICH NAT 7/1_60 ML_IT   |     150 |     115 |      30 |     240 |       1
+ 81414129           | WP WAVE-IT NEUTR 1000 D-F-NL-I           |      94 |      94 |     275 |    1108 |       1
+ 81414126           | WP Strght-It Neutr 1000 D-F-NL-I         |     100 |     100 |     290 |    1108 |       1
+ 81391510           | WPC SERVICE COLOR REMOVER 150ml          |     135 |      90 |     200 |    1179 |       1
+ 81401902           | SEB Cellophanes Caramel Brown 300ml      |      47 |      75 |     240 |     342 |       1
+ 81416699           | SP LUXE OIL BOOSTE ESSENCE 100ML IEP     |      90 |     130 |     180 |     942 |       1
+ 81416782           | CT PLUS 1L EMULSION 4% D,F,NL,I          |      94 |      94 |     273 |    1100 |       1
+ 81522702           | COLOR FRESH_ACID_2/0_75ML                |      50 |      50 |     140 |     109 |       1
+ 81522703           | COLOR FRESH_ACID_3/0_75ML                |      50 |      50 |     140 |     108 |       1
+ 81522704           | COLOR FRESH_ACID_4/0_75ML                |      50 |      45 |     140 |     106 |       1
+ 81522705           | COLOR FRESH_ACID_5/0_75ML                |      50 |      50 |     140 |     106 |       1
+ 81522707           | COLOR FRESH_ACID_6/7_75ML                |      50 |      45 |     140 |     107 |       1
+ 81522708           | COLOR FRESH_ACID_7/0_75ML                |      50 |      45 |     140 |     107 |       1
+ 81522711           | COLOR FRESH_ACID_10/39_75ML              |      50 |      45 |     140 |     106 |       1
+ 81522712           | COLOR FRESH_ACID_6/0_75ML                |      50 |      45 |     140 |     107 |       1
+ 81522713           | COLOR FRESH_ACID_8/0_75ML                |      50 |      40 |     140 |     107 |       1
+ 81522714           | COLOR FRESH_ACID_3/66_75ML               |      50 |      45 |     140 |     109 |       1
+ 81522715           | COLOR FRESH_ACID_5/55_75ML               |      45 |      50 |     140 |     107 |       1
+ 81522717           | COLOR FRESH_ACID_6/34_75ML               |      50 |      45 |     140 |     109 |       1
+ 81522719           | COLOR FRESH_ACID_7/3_75ML                |      50 |      50 |     140 |     105 |       1
+ 81522721           | COLOR FRESH_ACID_7/47_75ML               |      50 |      50 |     140 |     107 |       1
+ 81522722           | COLOR FRESH_ACID_8/03_75ML               |      50 |      40 |     135 |     106 |       1
+ 81522724           | COLOR FRESH_SILVER_0/8_75ML              |      50 |      50 |     140 |     105 |       1
+ 81522726           | COLOR FRESH_SILVER_8/81_75ML             |      50 |      40 |     140 |     106 |       1
+ 81522727           | COLOR FRESH_SILVER_10/81_75ML            |      50 |      50 |     140 |     104 |       1
+ 81385606           | Niox Sys2 Cleanser 300ml D,F,I,NL,E,P ne |      60 |      60 |     220 |     350 |       1
+ 81539536           | ENRICH REPAIRING MOUSSE 150 D,F,I,NL     |     160 |     110 |     200 |    1290 |       1
+ 99240010960        | WP OIL REFLECTIONS MASK 500ML            |     108 |     108 |      84 |     552 |       1
+ 81421480           | Seb Cellophanes Champagne Blond 300 ml   |      47 |      75 |     240 |     342 |       1
+ 81421482           | Seb Cellophanes Classic Red 300 ml       |      47 |      75 |     240 |     342 |       1
+ 81387077           | CT PLUS 55/03 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81387086           | CT PLUS 44/06 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81401905           | SEB Cellophanes Ice Blonde 300ml         |      47 |      75 |     240 |     342 |       1
+ 81401907           | SEB Cellophanes ChocolateBrown 300ml     |      47 |      75 |     240 |     342 |       1
+ 81387082           | CT PLUS 44/05 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81401903           | SEB Cellophanes Vanilla Blonde 300ml     |      47 |      75 |     240 |     342 |       1
+ 81414124           | WP STRGHT-IT BASE INT 200 D-F-NL-I       |      60 |      60 |     200 |     252 |       1
+ 81409182           | CT 1L EMULSION 1,9% DE,FR,I,NL           |      90 |      90 |     270 |    1090 |       1
+ 81387078           | CT PLUS 66/03 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81409215           | WELLOXON PERFECT 1000ML 9% -D-F-I        |      90 |      90 |     269 |    1107 |       1
+ 81409217           | WELLOXON PERFECT 1000ML 12% -D-F-I       |      90 |      90 |     269 |    1120 |       1
+ 81387079           | CT PLUS 77/03 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81539937           | SEB PENETRAITT SHAMPOO 1000ML MULTILAN   |      80 |      80 |     260 |    1105 |       1
+ 81387081           | CT PLUS 88/03 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81387083           | CT PLUS 55/05 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81387085           | CT PLUS 33/06 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81414125           | WP STRGHT-IT BASE MILD 200 D-F-NL-I      |      60 |      60 |     190 |     257 |       1
+ 81404553           | SEB Texture Maker 150ml                  |      48 |      48 |     160 |     193 |       1
+ 81387087           | CT PLUS 55/06 60ML_IT                    |      30 |     115 |     150 |     240 |       1
+ 81401904           | SEB Cellophanes Cinnamon Red 300ml       |      47 |      75 |     240 |     342 |       1
+ 81414120           | WP CURL-IT NEUTR 1000 D-F-NL-I           |      95 |      95 |     276 |    1118 |       1
+ 81401908           | SEB Cellophanes Cranberry Red 300ml      |      47 |      75 |     240 |     342 |       1
+ 81404557           | SEB Shine Shaker 75ml                    |      40 |      40 |     160 |      79 |       1
+ 81576768           | SEB TRILLIANT 150ML DE FR IT NL          |      40 |      40 |     210 |     188 |       1
+ 81600136           | WPC SUN FLUIDO IDRAT.CAPELLI&CORPO 150ML |     130 |      90 |     200 |    1170 |       1
+ 81643445           | SP D EXT RG LIQHAIR 100ml GBFDINLGR      |      50 |      50 |     150 |     290 |       1
+ 81387062           | CT PLUS 44/07 60ML_IT                    |      30 |     115 |     150 |     247 |       1
+ 81287479           | SEB VOLUPT SHAMPOO 1000ML 2011           |      85 |      85 |     265 |    1100 |       1
+ 81287494           | SEB VOLUPT SHAMPOO 250ML 2011            |      60 |      60 |     210 |     316 |       1
+ 81308184           | WPC SUN Hair&Skin Hydrator no risc.150ml |     130 |      90 |     200 |    1170 |       1
+ 81387798           | NIOXIN SYSTEM 1 SCALP TREATMENT          |      40 |      60 |     160 |     136 |       1
+ 81387806           | NIOXIN SYSTEM 2 SCALP TREATMENT          |      40 |      50 |     180 |     152 |       1
+ 81387830           | NIOXIN SYSTEM 4 SCALP TREATMENT          |      40 |      50 |     180 |     158 |       1
+ 81250900           | ENRICH MASK FINE 500 ML                  |      90 |     110 |     110 |     568 |       1
+ 81643583           | COLOR FRESH_ACID_5/4_75ML                |      50 |      50 |     140 |     106 |       1
+ 81127144           | SEB STYLIXIR 150ML                       |      55 |      55 |     170 |     198 |       1
+ 81130398           | SEB MICROWEB FIBER 45 ML                 |       4 |     150 |     300 |     107 |       1
+ 81153694           | SP HYDRATE FINISH 125ML                  |     148 |      78 |     165 |     985 |       1
+ 81190834           | SP SUN UV SPRAY 125ML                    |      80 |     150 |     170 |     880 |       1
+ 81153733           | PERFECT ENDS 40 ML                       |     107 |      70 |     155 |     850 |       1
+ 81127153           | SEB GEL FORTE 200ML                      |      75 |      75 |     178 |     235 |       1
+ 81616252           | WELLA PLEX NO3 100ML                     |      50 |      50 |     185 |     138 |       1
+ 81153946           | BALANCE SCALP ENERGY SERUM 6 ML          |     110 |     180 |     110 |     570 |       1
+ 81128660           | SEB LIQUID GLOSS 50ML                    |      33 |      33 |     123 |      71 |       1
+ 81130394           | SEB CRAFT CLAY 50ML                      |      60 |      67 |      67 |      95 |       1
+ 81153949           | COLOR SAVE INFUSION 5 ML                 |      30 |      90 |     240 |     133 |       1
+ 81223293           | Shine Shampoo 30ml                       |     330 |     170 |     120 |    2160 |       1
+ 81596344           | BL_FREELIGHTS_DVLPER_12% _40 VOL_1L      |      95 |      95 |     295 |    1125 |       1
+ 81153849           | COLOR SAVE FINISH 125 ML                 |     149 |      77 |     166 |     985 |       1
+ 81153768           | WEIGHTLESS FINISH 125 ML                 |     149 |      77 |     166 |     968 |       1
+ 81160067           | SEB VOLUPT SPRAY 150 ML                  |      45 |      45 |     160 |     187 |       1
+ 81153787           | CLEAR SCALP LEAVE-IN CONDITIONER 125 ML  |     149 |      77 |     166 |     925 |       1
+ 81153812           | SP Balance Scalp Lotion 125ml            |     149 |      77 |     166 |     903 |       1
+ 81599096           | WP EIMI DYNAMIC FIX 300 ML D-F-I-NL      |     160 |     110 |     260 |    1801 |       1
+ 99240011427        | WP EIMI MISTIFY LIGHT 500ML              |     190 |     120 |     320 |    2850 |       1
+ 81622361           | SYSTEM CHRISTMAS MINISIZE BOX 2016 (X2)  |     170 |     135 |     105 |     402 |       1
+ 81599180           | SP PERFECT HOLD 300ML DFINLGR            |     160 |     105 |     260 |    1629 |       1
+ 81642958           | COLOR FRESH_ACID_3/66_75ML               |      50 |      50 |     140 |     109 |       1
+ 99240009803        | WP Service Color Stain Rem 150ml         |      90 |     130 |     200 |    1185 |       1
+ 81599300           | WP SUN PROT SPRAY 150ML D F I NL TR      |     130 |      85 |     200 |    1096 |       1
+ 81599319           | WP EIMI BODY CRAFTER 150 ML              |     132 |      92 |     199 |    1156 |       1
+ 81618896           | SEBASTIAN CURL SHAMPOO 1000ML MULTILANG  |      85 |      85 |     255 |    1150 |       1
+ 81522709           | COLOR FRESH_ACID_7/43_75ML               |      50 |      45 |     140 |     107 |       1
+ 81520563           | SEB 75G MOLD.MUD SCU GB,SCAN,DE,FR,IT,NL |      69 |      69 |      67 |     128 |       1
+ 81526538           | WP CURL-IT NEUTR 1000_DEP D-F-NL-I       |     100 |     100 |     275 |    1118 |       1
+ 81527901           | WP COL COOL BLOND SHP 250ML D,F,NL,I     |     160 |     105 |     195 |    1793 |       1
+ 81528784           | ENRICH BALSAMO CAPELLI FINI 200ML        |     180 |     110 |     190 |    1420 |       1
+ 81558004           | WPC BRILL.SH.MICROLIGHT GROSSI 1L        |     260 |      95 |      95 |    1095 |       1
+ 81600157           | SEB COL IGNITE MUL COND 200ML DFINLGRPL  |      40 |      40 |     220 |     248 |       1
+ 81557970           | WPC REFRESH SH. RIVITALIZZANTE 250ML     |     160 |     100 |     200 |    1807 |       1
+ 81558003           | WPC BRILLIANCE BALS.COL.NORM-FINI 1000ML |      95 |      95 |     260 |    1058 |       1
+ 81565442           | SEB 50ML POTION 9 STYL. TR DE FR IT      |      35 |      35 |     130 |      77 |       1
+ 81604357           | SYSTEM INSTANT ENERGY 75ML               |      35 |      35 |     160 |      71 |       1
+ 81606180           | NIOX INSTANT_FULLNESS_65ML_DFINL         |      35 |      35 |     160 |      72 |       1
+ 81643582           | COLOR FRESH_ACID_2/0_75ML                |      50 |      50 |     140 |     109 |       1
+ 99240010013        | SYSTEM_luxeoil keratin conditioner 200ml |     180 |     110 |     200 |    1490 |       1
+ 99240011679        | WP SUN SPRAY 150ML                       |     100 |     150 |     210 |    1156 |       1
+ 81604026           | SYSTEM INSTANT ENERGY 200ML FDINLGR      |     144 |      97 |     230 |    1123 |       1
+ 81606525           | WP EIMI SHAPE ME 150ML                   |     150 |     100 |     170 |    1238 |       1
+ 81620358           | WP CREA+ STRAIGHT C/S BASE 200ML WE      |      60 |      60 |     190 |     250 |       1
+ 81650112           | WP BRILLIANCE BB SPRAY 150ML             |     100 |     140 |     210 |    1165 |       1
+ 81616259           | WELLA PLEX KIT PICCOLO STEP 1+2          |     160 |      50 |     190 |     435 |       1
+ 81598909           | WP WAVE-IT NEUTR 1000_DEP D-F-NL-I       |      95 |      95 |     275 |    1110 |       1
+ 81593198           | SEB 1000ML PENETRAITT CONDIT.MULTILANG   |      81 |      81 |     260 |    1104 |       1
+ 81599191           | WP EIMI PERFECT SETTING 150 ML D-F-I     |     132 |      92 |     199 |    1110 |       1
+ 81511732           | WP EIMI SHIMMER DELIGHT 40 ML D-F-I      |      70 |     110 |     160 |     787 |       1
+ 81511741           | WP EIMI BODY CRAFTER 150 ML D-F-I-NL     |     132 |      92 |     199 |    1156 |       1
+ 81643489           | SYSTEM_solar sun oil 100ml               |     162 |      60 |     160 |     553 |       1
+ 81546072           | SP HYDRATE MASK 200ML MULTILANG          |      55 |     160 |     280 |    1517 |       1
+ 81557241           | BLONDOR MULTI BL GRAN 500G DE,FR,IT,UK   |     100 |     100 |     270 |     576 |       1
+ 81557242           | BLONDOR SOFT BL CREAM 200G DE,FR,IT,NL   |      45 |     170 |     210 |     711 |       1
+ 81562912           | EOS COLOR.BASE NAT.CHILI VII 120G        |      70 |      70 |     130 |     186 |       1
+ 81562913           | EOS COLOR.BASE NAT.CANNELLA VIII 120G    |      70 |      70 |     130 |     186 |       1
+ 81568836           | BL_FREELIGHTS_DVLPER_6 _20 VOL _1L       |      94 |      94 |     275 |    1089 |       1
+ 81620166           | NIOX SYS3 SCALP REVIT 1000ML MULTILANG   |      75 |      87 |     275 |    1088 |       1
+ 81598547           | SP HYDRATE EMULSION 50ML F-D-I-NL        |     134 |      99 |     162 |     961 |       1
+ 81643607           | COLOR.ID 95ML D.F.I.NL                   |      80 |     190 |     190 |     882 |       1
+ 81536892           | SYSTEM VOLUMIZE BODIF. FOAM 200ML        |      47 |      47 |     208 |     270 |       1
+ 81630374           | WP ELE RENEW SHP 1000ML WE               |      90 |      90 |     240 |    1131 |       1
+ 81642883           | WP OIL REFLECTIONS 30ML                  |     130 |     110 |     135 |     428 |       1
+ 81599155           | SYSTEM REPAIR MASK 200ML                 |      72 |      72 |      82 |     252 |       1
+ 81599157           | WP EIMI NATURAL VOLUME 300 ML D-F-I-NL   |     167 |     107 |     270 |    2020 |       1
+ 81643581           | COLOR FRESH_ACID_10/81_75ML              |      50 |      45 |     140 |     104 |       1
+ 99240009916        | WP ENRICH MASK 500ML                     |     110 |     110 |      90 |     573 |       1
+ 81599126           | WP EIMI SUPER SET 300 ML D-F-I-NL        |     155 |     105 |     260 |    1775 |       1
+ 81642957           | COLOR FRESH_ACID_6/0_75ML                |      50 |      50 |     140 |     107 |       1
+ 81643562           | BLONDOR MULTI BL GRAN 500G DE,FR,IT,UK   |     100 |     100 |     270 |     577 |       1
+ 81616671           | WP FUSION SHAMPOO 250ML                  |     159 |     104 |     194 |    1821 |       1
+ 81572087           | SEB_SUBLIMATE_CREME_100ML_MULTI_GBL      |      45 |      45 |     180 |     134 |       1
+ 81569844           | COLOR FRESH_ACID_6/7_75ML                |      50 |      50 |     140 |     111 |       1
+ 81569843           | COLOR FRESH_ACID_5/4_75ML                |      50 |      50 |     140 |     106 |       1
+ 81573058           | NIOXIN NGHT RES 70ML TESTER              |      43 |      43 |     160 |     148 |       1
+ 81568842           | WELLOXON PERFECT 1000ML 12%              |      94 |      94 |     275 |    1129 |       1
+ 81568843           | WELLOXON PERFECT 1000ML 6%               |      94 |      94 |     275 |    1102 |       1
+ 81568869           | CT 1L EMULSION 4 %_13 VOL                |      94 |      94 |     275 |    1079 |       1
+ 81568870           | CT PLUS 1L EMULSION 4%_13 VOL            |     100 |     100 |     280 |    1098 |       1
+ 81478471           | WPC OIL REFLECTIONS 100ML                |     160 |      60 |     160 |     543 |       1
+ 81481416           | WP OIL REFLECTION 30ML D-F-I-NL-E-P-GR   |      33 |      33 |      78 |      60 |       1
+ 81485341           | SP COLOR SAVE BI-PHASE CONDITIONER 185ML |     100 |     150 |     210 |    1669 |       1
+ 81492283           | SP LUXEOIL 30ML                          |      40 |      40 |      85 |      66 |       1
+ 81639220           | CT 1L EMULSION 4 %_13 VOL                |      94 |      94 |     275 |    1079 |       1
+ 81642969           | COLOR FRESH_ACID_4/07_75ML               |      50 |      50 |     140 |     111 |       1
+ 81507909           | NIOX DIABOOST TREAT 100ML DE,FR,IT,NL    |      60 |      65 |     175 |     148 |       1
+ 81508301           | NIOSPRAY STRONG HOLD 400ML DFINLGR       |      60 |      60 |     260 |     385 |       1
+ 81508368           | NIOX BODIFYING FOAM 200ML DFINL          |      50 |      50 |     250 |     245 |       1
+ 81508308           | NIOSPRAY REGULAR HOLD 400ML DFINLGR      |      60 |      60 |     265 |     387 |       1
+ 81508326           | NIOX THERM ACTIV PROTECTOR 150ML DFINL   |      50 |      50 |     160 |     191 |       1
+ 81508359           | NIOX REJUVENATING ELIXIR 150ML DFINLGR   |      60 |      40 |     210 |     173 |       1
+ 81505217           | KADUS VELVET OIL 2ML WE_ARAB .           |     110 |     150 |     180 |     349 |       1
+ 81508319           | NIOX THICKENING SPRAY 150ML DFINLGR      |      50 |      50 |     160 |     192 |       1
+ 81508362           | NIOX THICKENING GEL 140ML DFINLGR        |      60 |      40 |     210 |     167 |       1
+ 81508364           | NIOX DEFINITION CR.ME 150ML DFINLGR      |      60 |      60 |     210 |     175 |       1
+ 81511632           | WP EIMI FLEXIBLE FINISH 250 ML D-F-I-NL  |     150 |     100 |     225 |    1567 |       1
+ 81550308           | SEB WHIPPED CREME 27ML DE,FR,IT,NL       |     150 |     140 |     130 |     751 |       1
+ 81511663           | WP EIMI PERFECT SETTING 150 ML D-F-I     |     132 |      92 |     199 |    1114 |       1
+ 81566052           | SP BAL SCALP ENR SER 100ML DFINLPLGR     |      60 |     160 |     165 |     853 |       1
+ 81566117           | SP HYDRATE CONDITIONER 1L MULTILANG      |     100 |      75 |     210 |    1082 |       1
+ 81566051           | SP PERFECT ENDS 40ML DFINLESPTGRPL       |     110 |      70 |     160 |     809 |       1
+ 81566082           | SP SHINE DEFINE 250ML SHP MULTILANG      |     140 |     120 |     170 |    1849 |       1
+ 81565492           | "SP MEN SILVER SHP 250 I,E,P"            |     130 |     135 |     180 |    1770 |       1
+ 81643308           | WP OIL REFLECTIONS LIGHT 100ML           |      60 |     160 |     160 |     541 |       1
+ 81511704           | WP EIMI PEARL STYLER 30ML                |     314 |     161 |     108 |    2105 |       1
+ 81511684           | WP EIMI OCEAN SPRITZ 150 ML D-F-I-NL     |     132 |      92 |     199 |    1189 |       1
+ 81643771           | WP EIMI TAKE SHAPE 18 ML                 |     100 |      86 |      62 |     309 |       1
+ 81557255           | BLONDOR BL LIGHTS KIT. RU-UK-I-F         |      80 |     155 |     165 |     473 |       1
+ 81557964           | WPC ENRICH SH. NORM.-FINI 250ML          |     160 |     110 |     200 |    1827 |       1
+ 81558019           | WPC ENRICH SH. NORM.-FINI 1000ML         |      85 |      85 |     235 |    1127 |       1
+ 81600480           | EXCLUSIV NEW NO GAS FORTE 50 ML.         |      35 |     110 |     115 |     191 |       1
+ 81630660           | NIOX_SYS5_CN 1000ML MULTILANG            |      74 |      86 |     272 |    1093 |       1
+ 81558040           | WPC SERVICE TRATT.PRE-ONDULAZ. 18ML      |      70 |      90 |     110 |     350 |       1
+ 81558010           | WPC ENRICH BALS GROS 1000ML              |      85 |      85 |     240 |    1092 |       1
+ 81558011           | WPC ENRICH BALS. NORM.-FINI 1000ML       |      85 |      85 |     235 |    1085 |       1
+ 81562909           | EOS COLOR.BASE NAT.ZENZERO III 120G      |      71 |      71 |     131 |     186 |       1
+ 81562911           | EOS COLOR.BASE NAT.ZAFFERANO VI 120G     |      71 |      71 |     131 |     186 |       1
+ 81643591           | COLOR FRESH_ACID_5/55_75ML               |      50 |      50 |     140 |     107 |       1
+ 90105005           | EXCLUSIV NEW NO GAS FORTE 50 ML.         |      35 |     110 |     115 |     191 |       1
+ 81643768           | WP EIMI FLEXIBLE FINISH 250 ML           |     150 |     100 |     225 |    1559 |       1
+ 81569862           | COLOR FRESH_ACID_9/3_75ML                |      50 |      50 |     140 |     103 |       1
+ 81569856           | COLOR FRESH_ACID_6/45_75ML               |      50 |      50 |     140 |     103 |       1
+ 81569847           | COLOR FRESH_ACID_7/74_75ML               |      50 |      50 |     140 |     107 |       1
+ 81569858           | COLOR FRESH_ACID_7/44_75ML               |      50 |      50 |     140 |     107 |       1
+ 81569849           | COLOR FRESH_ACID_10/39_75ML              |      50 |      50 |     140 |     106 |       1
+ 81566241           | SP SATIN POLISH 75ML DFINL               |      90 |     130 |     160 |     710 |       1
+ 81569895           | COLOR FRESH_ACID_5/55_75ML               |      50 |      50 |     140 |     107 |       1
+ 81569859           | COLOR FRESH_ACID_7/47_75ML               |      50 |      50 |     140 |     110 |       1
+ 81569852           | COLOR FRESH_ACID_3/66_75ML               |      50 |      50 |     140 |     109 |       1
+ 81569861           | COLOR FRESH_ACID_8/03_75ML               |      50 |      50 |     140 |     106 |       1
+ 81569896           | COLOR FRESH_ACID_7/3_75ML                |      50 |      50 |     140 |     105 |       1
+ 81569846           | COLOR FRESH_ACID_7/00_75ML               |      50 |      50 |     140 |     107 |       1
+ 81569854           | COLOR FRESH_ACID_5/56_75ML               |      50 |      50 |     140 |     107 |       1
+ 81569851           | COLOR FRESH_ACID_8/0_75ML                |      50 |      50 |     140 |     107 |       1
+ 81569850           | COLOR FRESH_ACID_6/0_75ML                |      50 |      50 |     140 |     107 |       1
+ 81569863           | COLOR FRESH_ACID_0/8_75ML                |      50 |      50 |     140 |     105 |       1
+ 81567415           | WP ELE SIERO RINFORZANTE 100ML 3 PZ      |     120 |      60 |     200 |     474 |       1
+ 81569865           | COLOR FRESH_ACID_8/81_75ML               |      50 |      50 |     140 |     106 |       1
+ 81569866           | COLOR FRESH_ACID_10/81_75ML              |      50 |      50 |     140 |     104 |       1
+ 81569855           | COLOR FRESH_ACID_6/34_75ML               |      50 |      50 |     140 |     109 |       1
+ 81569848           | COLOR FRESH_ACID_10/36_75ML              |      50 |      50 |     140 |     110 |       1
+ 81569864           | COLOR FRESH_ACID_0/89_75ML               |      50 |      50 |     140 |     105 |       1
+ 81566119           | SP ELEGANT SHAPE 50ML DFI                |     145 |     130 |     100 |     854 |       1
+ 81568835           | BL_FREELIGHTS_DVLPER_12%_40 VOL_1L       |      95 |      95 |     295 |    1125 |       1
+ 81568844           | WELLOXON PERFECT 1000ML 9%               |      94 |      94 |     275 |    1100 |       1
+ 81569841           | COLOR FRESH_ACID_4/07_75ML               |      50 |      50 |     140 |     111 |       1
+ 81569840           | COLOR FRESH_ACID_3/07_75ML               |      50 |      50 |     140 |     108 |       1
+ 81575324           | SEB DRYNAMIC SH_212ML_DFINLESPT          |      54 |      54 |     217 |     243 |       1
+ 81569365           | NIOX DIABOOST TREAT 200ML WE_MULTILANG   |      45 |      45 |     190 |     225 |       1
+ 81582078           | SEBASTIAN SHAPER ZERO 400ML DFINL        |      57 |      57 |     260 |     368 |       1
+ 81569839           | COLOR FRESH_ACID_2/0_75ML                |      50 |      50 |     140 |     109 |       1
+ 81618064           | SYSTEM LUXE OIL ELIXIR 100ML MULTILANG   |     160 |      60 |     160 |     829 |       1
+ 81588049           | SEB VOLUPT SHAMPOO 1000ML MULTILANG      |      80 |      80 |     260 |    1104 |       1
+ 99240069812        | WP EIMI NATURAL VOLUME 300ML             |     110 |     160 |     280 |    2022 |       1
+ 81643769           | WP EIMI PERFECT SETTING 150 ML           |     132 |      92 |     199 |    1110 |       1
+ 81643772           | WP EIMI OCEAN SPRITZ 150 ML              |      92 |     132 |     200 |    1188 |       1
+ 81642968           | COLOR FRESH_ACID_3/07_75ML               |      50 |      50 |     140 |     108 |       1
+ 81643580           | COLOR FRESH_ACID_8/81_75ML               |      50 |      50 |     140 |     106 |       1
+ 81643815           | PERFECTON BY CF /8 250ML DEFRITNLUK      |      55 |      55 |     210 |     314 |       1
+ 81643573           | BL_FREELIGHTS_DVLPER_9% _30 VOL_1L       |      95 |      95 |     275 |    1095 |       1
+ 81650119           | WP Volume Bod Foam 150ml                 |     150 |     100 |     180 |    1295 |       1
+ 81650143           | WP BRILLIANCE BOOSTER 100ML              |      44 |      44 |     161 |     118 |       1
+ 81650158           | WP NUTRI BOOSTER 100ML                   |      44 |      44 |     161 |     144 |       1
+ 81650165           | WP VOLUME BOOSTER 100ML                  |      44 |      44 |     161 |     134 |       1
+ 81620360           | WP CREA+ STRAIGHT N/R BASE 200ML WE      |      60 |      60 |     190 |     250 |       1
+ 81643579           | COLOR FRESH_ACID_6/7_75ML                |      50 |      50 |     140 |     111 |       1
+ 81650100           | WP ENRICH WONDER BALM 150ML              |     130 |      90 |     200 |    1221 |       1
+ 99240012035        | WP EIMI OIL SPRITZ 95ml                  |      40 |      40 |     165 |     128 |       1
+ 99240012064        | WP BRILLIANCE MASK COARSE 500ML          |     110 |     110 |      85 |     563 |       1
+ 99240012066        | WP BRILLIANCE MASK FINE 500ML            |     110 |     110 |      95 |     567 |       1
+ 81646921           | "WELLOXON Perf 6V 1,9% 1000ml  EMEA"     |      95 |      95 |     275 |    1075 |       1
+ 81646922           | "WELLOXON Perf 13V 4,0% 1000ml  EMEA"    |      95 |      95 |     275 |    1073 |       1
+ 81646923           | "WELLOXON Perf 20V 6,0% 1000ml  EMEA"    |      95 |      95 |     275 |    1083 |       1
+ 81646924           | "WELLOXON Perf 30V 9,0% 1000ml  EMEA"    |      95 |      95 |     275 |    1101 |       1
+ 81646925           | "WELLOXON Perf 40V 12,0% 1000ml  EMEA"   |      95 |      95 |     275 |    1095 |       1
+ 99240012008        | WP EIMI COCKTAIL ME 95ml                 |      40 |      40 |     170 |     136 |       1
+ 99240012170        | WP ELEMENTS MASK 500ml.                  |      80 |     110 |     110 |     572 |       1
+ 99240015892        | WP COLORMO RG ATB  MASK 500ML 19 WE      |     110 |     110 |      90 |     565 |       1
+ 99240016213        | WP COLORMO RG ATB SCALPRO150ML19DFINLGR  |     110 |     160 |     180 |    1148 |       1
+ 99240016215        | WP COLORMO RG ATB POSCOLTRT500ML19MULTI  |      70 |      70 |     220 |     567 |       1
+ 99240016216        | WP COLORMO RG ATB PRECTRT185ML19DFINLGR  |     110 |     150 |     210 |    1692 |       1
+ 81643809           | PERFECTON BY CF /3 250ML DEFRITNLUK      |      55 |      55 |     210 |     275 |       1
+(719 righe)
+

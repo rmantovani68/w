@@ -1,0 +1,32 @@
+delete from ric_ord  where ordprog='3019163869';
+delete from ric_art  where ordprog='3019163869';
+delete from ord_prod  where ordprog='3019163869';
+delete from col_prod  where ordprog='3019163869';
+delete from rig_prod  where ordprog='3019163869';
+insert into ric_ord select * from ric_stor where ordprog='3019163869';
+insert into ric_art (ordprog, racdpro, raqtord) select ordprog,rpcdpro,rpqtspe from rig_stor where ordprog='3019163869';
+insert into ord_prod select * from ord_stor where ordprog='3019163869';
+insert into col_prod select * from col_stor  where ordprog='3019163869';
+insert into rig_prod select * from rig_stor where ordprog='3019163869';
+
+-- Field_00=ORDPROG, C, 10, 0, 7, Numero Ordine,Progressivo Ordine
+-- Field_01=RACDPRO, C, 18, 0, 7, Codice Articolo,Codice Prodotto
+-- Field_02=RAQTORD, N,  5, 0, 7, Copie,Numero Copie
+-- F
+-- Field_00=ORDPROG,  C, 10, 0, 3, Progressivo Ordine,Progressivo Ordine
+-- Field_01=ORDKEY,   C, 15, 0, 3, Chiave Ordine,Chiave Ordine
+-- Field_02=RPNMCOL,  N,  4,	0, 3, Collo, Numero collo
+-- Field_03=RPCDPRO,  C, 18,	0, 3, Prodotto, Codice del prodotto
+-- Field_04=RPQTSPE,  N,  9,	0, 3, Q. Spedita, Quantita' spedita
+-- Field_05=RPCDUBI,  C,  7,	0, 3, Ubicazione,Ubicazione Prodotto
+-- Field_06=RPQTPES,  N,  7, 0, 3, Peso Riga,Peso della riga in grammi
+-- Field_07=RPPRRIG,  C,  6, 0, 3, Prog. Riga,Progressivo Riga
+-- Field_08=RPSWFFO,  N,  1, 0, 3, Switch Fuori Formato,Switch Fuori Formato
+-- Field_09=RPSWPCF,  N,  1, 0, 3, Switch Preconf.,Switch Preconf. 
+-- Field_10=RPCDOPR,  C,  2, 0, 3, Codice Operatore,Codice Operatore
+-- Field_11=RPDTPRE,  C,  8, 0, 3, Data Prelievo,Data Prelievo
+-- Field_12=RPTMPRE,  C,  6, 0, 3, Ora Prelievo,Ora Prelievo
+-- Field_13=RPSTATO,  C,  1, 0, 3, Stato,Stato Riga
+-- Field_14=RPTMPRL,  D,  8, 0, 3, Data / Ora Prelievo,Data / Ora Prelievo (timestamp)
+-- Field_15=RPFLBRI,  C,  1, 0, 3, Flag Barcode ID, Flag Barcode ID
+-- Field_16=RPQTBRI,  N,  6, 0, 3, Num Copie Barcode ID, Num Copie Barcode ID

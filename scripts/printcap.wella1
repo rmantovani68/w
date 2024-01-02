@@ -1,0 +1,141 @@
+# /etc/printcap
+#
+# Please don't edit this file directly unless you know what you are doing!
+# Be warned that the control-panel printtool requires a very strict format!
+# Look at the printcap(5) man page for more info.
+#
+# This file can be edited with the printtool in the control-panel.
+
+##PRINTTOOL3## LOCAL TEXT NAxNA letter {} TextPrinter Default {}
+lp:\
+	:sd=/var/spool/lpd/lp:\
+	:mx#0:\
+	:sh:\
+	:lp=/dev/lp0:\
+	:if=/var/spool/lpd/lp/filter:
+##PRINTTOOL3## REMOTE 
+lp_isola1:\
+	:sd=/var/spool/lpd/lp_isola1:\
+	:mx#0:\
+	:sh:\
+	:rm=isola1:\
+	:rp=lp:
+##PRINTTOOL3## REMOTE 
+lp_isola2:\
+	:sd=/var/spool/lpd/lp_isola2:\
+	:mx#0:\
+	:sh:\
+	:rm=isola2:\
+	:rp=lp:
+##PRINTTOOL3## REMOTE 
+lp_bilancia:\
+	:sd=/var/spool/lpd/lp_bilancia:\
+	:mx#0:\
+	:sh:\
+	:rm=bilancia:\
+	:rp=lp:
+##PRINTTOOL3## REMOTE 
+lps1_isola1:\
+	:sd=/var/spool/lpd/lps1_isola1:\
+	:mx#0:\
+	:sh:\
+	:rm=isola1:\
+	:rp=lps1:
+##PRINTTOOL3## REMOTE 
+lps1_isola2:\
+	:sd=/var/spool/lpd/lps1_isola2:\
+	:mx#0:\
+	:sh:\
+	:rm=isola2:\
+	:rp=lps1:
+##PRINTTOOL3## REMOTE 
+lps1_bilancia:\
+	:sd=/var/spool/lpd/lps1_bilancia:\
+	:mx#0:\
+	:sh:\
+	:rm=bilancia:\
+	:rp=lps1:
+##PRINTTOOL3## REMOTE 
+lps2_isola1:\
+	:sd=/var/spool/lpd/lps2_isola1:\
+	:mx#0:\
+	:sh:\
+	:rm=isola1:\
+	:rp=lps2:
+##PRINTTOOL3## REMOTE 
+lps2_isola2:\
+	:sd=/var/spool/lpd/lps2_isola2:\
+	:mx#0:\
+	:sh:\
+	:rm=isola2:\
+	:rp=lps2:
+##PRINTTOOL3## REMOTE 
+lps2_bilancia:\
+	:sd=/var/spool/lpd/lps2_bilancia:\
+	:mx#0:\
+	:sh:\
+	:rm=bilancia:\
+	:rp=lps2:
+##PRINTTOOL3## SMB ljet4 300x300 a4 {} LaserJet4 Default {}
+hplj:\
+	:sd=/var/spool/lpd/hplj:\
+	:mx#0:\
+	:sh:\
+	:if=/var/spool/lpd/hplj/filter:\
+	:af=/var/spool/lpd/hplj/acct:\
+	:lp=/dev/null:
+##PRINTTOOL3## LOCAL 
+file:\
+	:sd=/var/spool/lpd/file:\
+	:mx#0:\
+	:sh:\
+	:of=/var/spool/lpd/file/file.sh:
+##PRINTTOOL3## REMOTE 
+lps1_backup:\
+	:sd=/var/spool/lpd/lps1_backup:\
+	:mx#0:\
+	:sh:\
+	:rm=backup:\
+	:rp=lps1:
+##PRINTTOOL3## REMOTE 
+lps2_backup:\
+	:sd=/var/spool/lpd/lps2_backup:\
+	:mx#0:\
+	:sh:\
+	:rm=backup:\
+	:rp=lps2:
+##PRINTTOOL3## REMOTE 
+lp_backup:\
+	:sd=/var/spool/lpd/lp_backup:\
+	:mx#0:\
+	:sh:\
+	:rm=backup:\
+	:rp=lp:
+##PRINTTOOL3## REMOTE 
+fatture_isola1:\
+	:sd=/var/spool/lpd/fatture_isola1:\
+	:mx#0:\
+	:sh:\
+	:rm=database:\
+	:rp=fatture_isola1:
+##PRINTTOOL3## REMOTE 
+bolle_isola1:\
+	:sd=/var/spool/lpd/bolle_isola1:\
+	:mx#0:\
+	:sh:\
+	:rm=database:\
+	:rp=bolle_isola1:
+##PRINTTOOL3## REMOTE 
+fatture_isola2:\
+	:sd=/var/spool/lpd/fatture_isola2:\
+	:mx#0:\
+	:sh:\
+	:rm=database:\
+	:rp=fatture_isola2:
+##PRINTTOOL3## REMOTE 
+bolle_isola2:\
+	:sd=/var/spool/lpd/bolle_isola2:\
+	:mx#0:\
+	:sh:\
+	:rm=database:\
+	:rp=bolle_isola2:

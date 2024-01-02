@@ -1,0 +1,24 @@
+      prcdpro       |                 prdescr                  | praltez | prlargh | prlungh | prflgpp 
+--------------------+------------------------------------------+---------+---------+---------+---------
+ 81130373           | SEB HYDRE CONDITIONER 10ML               |       2 |      30 |      90 |       1
+ 81130394           | SEB CRAFT CLAY 50ML                      |      60 |      67 |      67 |       1
+ 81130398           | SEB MICROWEB FIBER 45 ML                 |       4 |     150 |     300 |       1
+ 81153916           | HYDRATE INFUSION 5 ML                    |      30 |      90 |     240 |       1
+ 81153925           | REPAIR INFUSION 5 ML                     |      30 |      90 |     240 |       1
+ 81153934           | SHINE FINISH 8 ML                        |     125 |     160 |     220 |       1
+ 81153946           | BALANCE SCALP ENERGY SERUM 6 ML          |     105 |     115 |     178 |       1
+ 81153949           | COLOR SAVE INFUSION 5 ML                 |      30 |      90 |     240 |       1
+ 81237663           | WPC BRILLANCE SERUM COL. SZ.RISC. 6x10ml |     120 |     180 |     240 |       1
+ 81237671           | WPC PRO TRATT PRE-ONDULAZ 18ml           |      70 |      90 |     110 |       1
+ 81237924           | WPS TAKE SHAPE 18 ml                     |      70 |      80 |     100 |       1
+ 81253644           | SP HYDRATE INFUSION 5ml BOM comp da 18pz |     100 |     175 |     255 |       1
+ 81253645           | SP REPAIR INFUSION 5ml BOM comp da 18pz: |     100 |     175 |     255 |       1
+ 81253646           | SP SMOOTHEN INFUSION 5ml BOM comp da 18p |     100 |     175 |     255 |       1
+ 81253647           | SP VOLUMIZE INFUSION 5ml BOM comp da 18p |     100 |     175 |     255 |       1
+ 81253651           | SP COLOR SAVE INFUSION 5ml BOM comp da 1 |     100 |     175 |     255 |       1
+ 81311354           | SP MEN HYDRATE ELX 6 X 2 ML              |      30 |      90 |     250 |       1
+ 81311357           | SP MEN STRENGTH ELX 6 X 2 ML             |      30 |      90 |     250 |       1
+ 81339592           | WPS PEARL STYLER 2 pz comp.da:           |     100 |     152 |     186 |       1
+ 81392966           | SP Expo Banco Anticaduta 2012            |      70 |     205 |     315 |       1
+(20 rows)
+

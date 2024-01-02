@@ -1,0 +1,14 @@
+Settaggio hostname : provare con hostname e /etc/sysconfig/network -> HOSTNAME=...
+autologin : /etc/gdm/custom.conf -> 
+[daemon]
+Automaticlogin=isola1
+AutomaticloginEnable=true
+
+Stampanti 
+lp_isola1 -> remote server wella1
+lps2_isola1 -> "     "       "
+
+Corretta funzione xncScktOpen -> inet_addr funziona solo con IP numerico
+(mah...)
+
+

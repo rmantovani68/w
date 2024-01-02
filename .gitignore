@@ -1,0 +1,35 @@
+#
+# gitignore
+#
+
+*~
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+**/resources.c
+**/*.tgz
+**/*.gz
+**/*.zip
+**/*.bak
+**/*.trc
+**/*.log
+**/cmp_time.*
+\#*\#
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.ao
+
+exe/*.cfg.*
+
+
+
+

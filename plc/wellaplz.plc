@@ -1,0 +1,242 @@
+VAR_GLOBAL
+	ALLPLZ2 : BOOL:= 0;  (* allarme di code piene *)
+	CICCIA1 : BOOL:= 0;
+	CODAFD : ARRAY[0..4] OF BOOL:= [5(0)];  (* vettore che riporta la coda dei segnali Fuori=0 o Dentro=1 di 50 colli *)
+	CODANUM : ARRAY[0..4] OF UDINT:= [5(0)];  (* vettore che riporta la coda dei numeri identificativi di 50 colli *)
+	CODEVUO : BOOL:= 0;  (* memoria di coda vuota in palettizzazione *)
+	CPLZ : BOOL:= 0;
+	IDFCPLZ : BOOL:= 0;
+	IPLZ : INT:= 0;  (* puntatore alle due code *)
+	IPLZMU : INT:= 0;  (* IPLZ -1 *)
+	NCPLZ : INT:= 0;  (* variabile da PC a PLC; numero del collo letto *)
+	RDCPLZ : BOOL:= 0;
+	RFCPLZ : BOOL:= 0;
+	TFCSC : BOOL:= 0;
+	TOUTSC : BOOL:= 0;  (* time-out sulla risposta da lettura *)
+	XALLSC : BOOL:= 0;
+	_CREATED : UDINT:= 1297190939;
+	_VERSION : STRING:= '1.0.0.0';
+END_VAR
+
+PROGRAM  WELLAPLC
+
+  VAR
+	TALLSC : TON;
+	IIDFCPL : F_TRIG;
+  END_VAR
+
+
+(* FCSC=fotocellula presenza collo su scanner ; FCPLZ= fotocellula presenza collo su PLZ *)
+(* PSCP=pulsante cancellazione CPLZ dopo mancata risposta; SLRESET= reset code; FDPLZ= cmd al PLZ (0=FUORI) *)
+(* con FCSC=1 si setta CPLZ; con FCSC=0 si ferma il nastro di risalita,si immettono i dati nelle code,si resetta CPLZ *)
+(* con FCPLZ=1 *)
+
+(* -------------- segnali di scambio con PC per lettura collo in PLZ ------------------------ *)
+
+	
+LD SLPLZ	
+AND FCSC		(* fotocellula abilitazione scanner e presenza collo *)
+ANDN RFCPLZ	(* risposta da PC: collo FUORI PLZ *)
+ANDN RDCPLZ	(* risposta da PC: collo DENTRO PLZ *)
+	S CPLZ	(* richiesta a PC di lettura bar-code *)
+	
+	
+
+LD PSCP	    (* col pulsante annullo CPLZ in caso di mancata risposta del PC, e si riparte *)
+ANDN FCSC   (* resetto anche l' allarme ALLPLZ2 *)
+	R ALLPLZ2
+AND TOUTSC
+	R CPLZ
+	
+	
+	(* ------------- allarme di time-out della risposta a CPLZ e lampade ----------- *)
+	
+LD CPLZ
+ANDN RDCPLZ
+ANDN RFCPLZ
+	ST XALLSC
+	
+	LD	XALLSC
+	ST	TALLSC.IN
+	LD	T#5S
+	ST	TALLSC.PT
+	CAL	TALLSC	(* FUNCTION BLOCK TON *)
+	LD	TALLSC.Q
+	ST	TOUTSC
+	
+	
+LD SLPLZ
+ANDN CPLZ
+OR(
+LD CPLZ
+AND CICCIA1
+)
+	ST LVPLZ	(* lampada verde; accesa fissa con SLPLZ; lampeggiante con CPLZ *)
+	
+LD CODEVUO	
+	ST LGPLZ	(* lampada gialla se le code sono vuote *)
+	
+LD TOUTSC
+AND CICCIA1
+OR ALLPLZ2
+	ST LRPLZ	(* lampada rossa; continua se si tenta di inserire in code piene  *)
+			(* lampeggiante per time-out da risposta PC su lettura scanner *)
+	
+	
+	
+	
+	
+(* -------------- svuotamento forzato delle due code ------------------------------ *)
+
+LD SLRESET
+AND SLNOPLZ
+JMPCN LPLZ9
+	LD 5		(* ATTENZIONE!!! deve essere il massimo dimensionamento delle code *)
+	ST IPLZ
+LPLZ10:
+	LD 0
+	ST CODANUM[IPLZ]
+	ST CODAFD[IPLZ]
+	LD IPLZ
+	SUB 1
+	ST IPLZ
+	EQ 0
+	JMPCN LPLZ10
+LPLZ9:
+
+
+
+
+
+
+
+(* -------------   Immissione dei dati da PC nelle due code   --------------------- *)
+
+
+
+LD RDCPLZ	(* risposta da PC: collo DENTRO PLZ *)
+AND CPLZ	
+ANDN FCSC
+JMPCN LPLZ1
+	LD NCPLZ	(* variabile numerica di scambio PC --> PLC *)
+	ST CODANUM[0]
+	LD TRUE
+	ST CODAFD[0]
+		R CPLZ
+		
+		(* controllo che le code non siano gia' piene *)
+			
+	LD 5		(* ATTENZIONE!!! deve essere il massimo dimensionamento delle code *)
+	ST IPLZ
+	LD CODANUM[IPLZ]
+	EQ 0
+	JMPC LPLZ2
+		LD TRUE
+		ST ALLPLZ2
+		JMP LPLZ1
+	
+LPLZ2:	
+	LD IPLZ
+	SUB 1
+	ST IPLZMU
+	LD CODANUM[IPLZMU]
+	ST CODANUM[IPLZ]
+	LD CODAFD[IPLZMU]
+	ST CODAFD[IPLZ]
+	
+	LD IPLZ
+	EQ 1
+	JMPC LPLZ1
+		LD IPLZ
+		SUB 1
+		ST IPLZ
+		JMP LPLZ2	
+LPLZ1:	
+
+
+	
+LD RFCPLZ	(* risposta da PC: collo FUORI PLZ *)
+AND CPLZ	
+ANDN FCSC
+JMPCN LPLZ4
+	LD NCPLZ	(* variabile numerica di scambio PC --> PLC *)
+	ST CODANUM[0]
+	LD FALSE
+	ST CODAFD[0]
+	LD TRUE
+		R CPLZ
+	
+		
+	LD 5		(* ATTENZIONE!!! deve essere il massimo dimensionamento delle code *)
+	ST IPLZ
+	LD CODANUM[IPLZ]
+	EQ 0
+	JMPC LPLZ3
+		LD TRUE
+		ST ALLPLZ2
+		JMP LPLZ4
+
+LPLZ3:	
+	LD IPLZ
+	SUB 1
+	ST IPLZMU
+	LD CODANUM[IPLZMU]
+	ST CODANUM[IPLZ]
+	LD CODAFD[IPLZMU]
+	ST CODAFD[IPLZ]
+	
+	LD IPLZ
+	EQ 1
+	JMPC LPLZ4
+		LD IPLZ
+		SUB 1
+		ST IPLZ
+		JMP LPLZ3	
+LPLZ4:	
+
+
+(* ----------------------------------------------------------------- *)
+
+
+(* ---------------- Estrazione dei dati dalle due code ----------------------- *)
+
+
+	LD	FCPLZ
+	ST	IIDFCPL.CLK
+	CAL	IIDFCPL	(* FUNCTION BLOCK F_TRIG *)
+	LD	IIDFCPL.Q
+	ST	IDFCPLZ
+	
+LD IDFCPLZ
+JMPCN LPLZ5
+	LD 5	(* ATTENZIONE!!! deve essere uguale al dimensionamento delle code *)
+	ST IPLZ
+	
+	LD FALSE
+	ST CODEVUO
+	ST FDPLZ
+LPLZ6:
+	LD CODANUM[IPLZ]
+	EQ 0			(* se in coda c'e' qualcosa, la estraggo *)
+	JMPCN LPLZ7
+		LD IPLZ		(* se in coda non c'e' nulla, cerco nella riga precedente *)
+		EQ 1		(* se in coda c'e' qualcosa, la estraggo *)
+		JMPCN LPLZ8
+			LD TRUE		
+			ST CODEVUO  (* segnalazione di code vuote durante la palettizzazione *)
+			JMP LPLZ5
+LPLZ8:		
+		LD IPLZ
+		SUB 1
+		ST IPLZ
+		JMP LPLZ6
+LPLZ7:
+	LD 0 
+	ST CODANUM[IPLZ]
+	LD CODAFD[IPLZ]
+	ST FDPLZ		(* comando al PLZ *)
+LPLZ5:
+
+
+
+END_PROGRAM

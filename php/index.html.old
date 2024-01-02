@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+  <title>A&L srl - Home Page</title>
+</head>
+<body bgcolor="#9999ff" text="#000000" link="#000099" vlink="#990099"
+ alink="#000099">
+<table border="1" width="90%" cols="3" nosave="" bgcolor="#cccccc"
+ align="center">
+    <tbody>
+    <tr>
+        <td nosave="" bgcolor="#cccccc"><img src="AEL-GLOSSY-small.png"
+ height="80" width="171" alt="" hspace="40"></td>
+				<td width="70%" align="center"><b><big><big><big><big><big>WELLA ITALIA</big></big></big></big></big></b><br>
+Castiglione delle Stiviere (MN)<br>
+Impianto Paperless<br>
+      </td>
+      <td align="center"><img src="logo_wella.gif" align="right"
+ alt="wella" width="64" height="50" hspace="40"></td>
+		</tr>
+  </tbody>
+</table>
+<div align="center"></div>
+<p align="center"></p>
+<center>
+<div align="center"></div>
+<table align="center">
+	
+</table>
+<table border="1" width="90%">
+	<tbody>
+    <tr>
+      <td bgcolor="#608080" align="center"><font color="white" size="5"><b>STATISTICHE
+IMPIANTO PICKING</b></font></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<center>
+<center></center>
+<table border="2" cols="2" width="90%" bgcolor="#cccccc">
+	 	<tbody>
+    <tr>
+      <th bgcolor="#709090" align="center"><font color="white" size="5"><b>Database
+Picking (fino al 01/12/2001)</b>	</font></th>
+      <th bgcolor="#709090" align="center"><font color="white" size="5"><b>Database
+SAP (dal 03/12/2001)</b>	</font></th>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="1">
+        <li><font color="white" size="5"><a href="prod_impianto.php3">Produttivit&agrave; mensile impianto</a></font></li>
+      </ol>
+      </td>
+      <td valign="top">
+      <ol>
+        <li><font color="white" size="5"><a href="prod_impianto_sap.php3">Produttivit&agrave; mensile impianto</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="2">
+        <li><font color="white" size="5"><a href="gruppo_elaborazioni.php3">Produttivit&agrave; impianto</a></font></li>
+      </ol>
+      </td>
+      <td valign="top">
+      <ol start="2">
+        <li><font color="white" size="5"><a href="gruppo_elaborazioni_sap.php3">Produttivit&agrave; impianto</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="3">
+        <li><font color="white" size="5"><a href="codici_prelevati_sap.php3">Lista codici prelevati</a></font></li> </ol>
+      </td>
+      <td valign="top">
+      <ol start="3">
+        <li><font color="white" size="5"><a href="codici_prelevati_sap.php3">Lista codici prelevati</a></font></li> </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="4">
+        <li><font color="white" size="5"><a href="prelievo_elaborazione.php3">Verifica giacenza prodotto</a></font></li>
+      </ol>
+      </td>
+      <td valign="top">
+      <ol start="4">
+        <li><font color="white" size="5"><a href="prelievo_elaborazione_sap.php3">Verifica giacenza prodotto</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="5">
+        <li><font color="white" size="5"><a href="ordine_storico.php3">Ricerca ordine in storico</a></font></li> </ol>
+      </td>
+      <td valign="top">
+      <ol start="5">
+        <li><font color="white" size="5"><a href="ordine_storico_sap.php3">Ricerca ordine in storico</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="6">
+        <li><font color="white" size="5"><a href="elaborazione_storico.php3">Ricerca elaborazione in storico</a></font></li>
+      </ol>
+      </td>
+      <td valign="top">
+      <ol start="6">
+        <li><font color="white" size="5"><a href="elaborazione_storico_sap.php3">Ricerca elaborazione in storico</a></font></li> </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+      <ol start="7">
+        <li><font color="white" size="5"><a href="storicizzazione.php3">Cancellazione mensile dei dati di storico</a></font></li>
+      </ol>
+      </td>
+      <td valign="top">
+      <ol start="7">
+        <li><font color="white" size="5"><a href="storicizzazione_sap.php3">Cancellazione mensile dei dati di storico</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><br>
+      </td>
+      <td valign="top">
+      <ol start="8">
+        <li><font color="white" size="5"><a href="codici_non_prelevati_sap.php3">Lista codici non prelevati</a></font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><br>
+      </td>
+      <td valign="top" align="left">
+      <ol start="9">
+        <li>    <font color="white" size="5"><a href="anagr_operatori.php3">Anagrafica operatori </a>    </font></li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <div align="left">	</div>
+      <center>
+      <div align="left">	</div>
+	</center>
+	<br>
+      </td>
+	<td>
+      <div align="left">	</div>
+      <center>
+      <div align="left">	</div>
+	</center>
+	<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<p><font color="white" size="5"><a href="anagr_operatori.php3"> </a></font></p>
+</center>
+<br>
+</body>
+</html>

@@ -1,0 +1,74 @@
+##
+# backup_db_sap
+##
+
+DATABASE_HOST=`cat ../doc/DATABASE_HOST`
+
+echo articoli          ;pg_dump sap -h $DATABASE_HOST -t articoli          > articoli.dump
+echo eventi            ;pg_dump sap -h $DATABASE_HOST -t eventi            > eventi.dump
+echo imballi           ;pg_dump sap -h $DATABASE_HOST -t imballi           > imballi.dump
+echo operatori         ;pg_dump sap -h $DATABASE_HOST -t operatori         > operatori.dump
+echo opeset            ;pg_dump sap -h $DATABASE_HOST -t opeset            > opeset.dump
+echo ric_art           ;pg_dump sap -h $DATABASE_HOST -t ric_art           > ric_art.dump
+echo ric_ord           ;pg_dump sap -h $DATABASE_HOST -t ric_ord           > ric_ord.dump
+echo ord_prod          ;pg_dump sap -h $DATABASE_HOST -t ord_prod          > ord_prod.dump
+echo col_prod          ;pg_dump sap -h $DATABASE_HOST -t col_prod          > col_prod.dump
+echo rig_prod          ;pg_dump sap -h $DATABASE_HOST -t rig_prod          > rig_prod.dump
+echo ubicazioni        ;pg_dump sap -h $DATABASE_HOST -t ubicazioni        > ubicazioni.dump
+echo plc_msg           ;pg_dump sap -h $DATABASE_HOST -t plc_msg           > plc_msg.dump
+echo badge_registry    ;pg_dump sap -h $DATABASE_HOST -t badge_registry    > badge_registry.dump
+echo letture_barcode_id_prodotto ;pg_dump sap -h $DATABASE_HOST -t letture_barcode_id_prodotto    > letture_barcode_id_prodotto.dump
+
+echo ordini_bertello ;pg_dump sap -h $DATABASE_HOST -t ordini_bertello    > ordini_bertello.dump
+echo colli_bertello ;pg_dump sap -h $DATABASE_HOST -t colli_bertello    > colli_bertello.dump
+echo righe_bertello ;pg_dump sap -h $DATABASE_HOST -t righe_bertello    > righe_bertello.dump
+
+
+# public | articoli                    | tabella | picking
+# public | badge_registry              | tabella | picking
+# public | col_prod                    | tabella | picking
+# public | colli_bertello              | tabella | roberto
+# public | errori_prelievo             | tabella | picking
+# public | eventi                      | tabella | picking
+# public | imballi                     | tabella | picking
+# public | letture_barcode_id_prodotto | tabella | picking
+# public | operatori                   | tabella | picking
+# public | opeset                      | tabella | picking
+# public | ord_prod                    | tabella | picking
+# public | ordini_bertello             | tabella | picking
+# public | plc_msg                     | tabella | picking
+# public | ric_art                     | tabella | picking
+# public | ric_ord                     | tabella | picking
+# public | rig_prod                    | tabella | picking
+# public | righe_bertello              | tabella | roberto
+# public | ubicazioni                  | tabella | picking
+
+
+echo seq.  progcollo      ;pg_dump sap -h $DATABASE_HOST -s -t progcollo      > progcollo.dump
+echo seq.  progcollo_add  ;pg_dump sap -h $DATABASE_HOST -s -t progcollo_add  > progcollo_add.dump
+echo seq.  sequence_anno  ;pg_dump sap -h $DATABASE_HOST -s -t sequence_anno  > sequence_anno.dump
+
+cat \
+articoli.dump \
+col_prod.dump \
+eventi.dump \
+imballi.dump \
+operatori.dump \
+opeset.dump \
+ord_prod.dump \
+ric_art.dump \
+ric_ord.dump \
+rig_prod.dump \
+ubicazioni.dump \
+plc_msg.dump \
+badge_registry.dump \
+ordini_bertello.dump \
+colli_bertello.dump \
+righe_bertello.dump \
+letture_barcode_id_prodotto.dump \
+progcollo.dump \
+progcollo_add.dump \
+sequence_anno.dump \
+> dati_prod_sap.dump
+
+gzip dati_prod_sap.dump

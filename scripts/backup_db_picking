@@ -1,0 +1,5 @@
+##
+# backup_db
+##
+rm -f picking.dump.gz
+pg_dump picking | gzip > picking.dump.gz

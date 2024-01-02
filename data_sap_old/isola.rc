@@ -1,0 +1,33 @@
+# ---------------------------------------------
+# File di definizione stili per main
+# Progetto Easy Picking 3.0 - Wella Rebuild
+# Data creazione 13-10-2000
+# Autori : Stefano Tarroni - Roberto Mantovani
+# Copyright CNI srl 2000
+# ---------------------------------------------
+
+# ------------------------------------
+# dichiarazione della pixmap directory
+# ------------------------------------
+pixmap_path "/usr/share/themes/BrushedMetalBlue/gtk"
+
+
+# -----------------
+# definizione stili
+# -----------------
+style "clist_font" {
+	font = "9x15bold"
+}
+style "dlgbox_font" {
+	font = "9x15bold"
+}
+
+style "stato_linea" {
+	font = "-adobe-Courier-Bold-R-Normal--18-180-75-75-M-110-ISO8859-1"
+}
+
+
+# ----------------------------
+# associazione stili -> widget
+# ----------------------------
+
