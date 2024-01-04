@@ -33,3 +33,9 @@ exe/*.cfg.*
 
 
 
+exe/display
+exe/main
+exe/printlabel
+exe/settori
+exe/sock
+exe/volum
