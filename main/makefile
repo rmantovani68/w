@@ -47,16 +47,18 @@ LFLAGS = $(LIBS)
 # Default compile rule
 .c.o:
 	@echo '------ Compiling $<'
-	@$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c $<
+	@$(CC) $(CFLAGS) $(CDEBUGFLAGS) $(INCLUDES) -c $<
 
 # main target
 all: $(EXE_DIR)/$(PRJ_NAME) 
 
 # dependencies
 cmp_time.h:  $(SRCS:.c=.o)
+	@echo '------ Creating compile time include file '$@
 	$(__CMP_TIME__H__)
 
-cmp_time.c: $(SRCS:.c=.o)
+cmp_time.c: cmp_time.h
+	@echo '------ Creating compile time source file '$@
 	$(__CMP_TIME__C__)
 
 cmp_time.o: cmp_time.c
@@ -80,10 +82,6 @@ support.o: support.c support.h
 
 # build rules
 $(EXE_DIR)/$(PRJ_NAME): $(SRCS:.c=.o) $(OBJS)
-	@echo '------ Creating compile time object file'
-	$(__CMP_TIME__)
-	@echo '------ Compiling cmp_time.c'
-	@$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c cmp_time.c -o cmp_time.o
 	@echo '------ Linking ...'
 	@$(CC) $(SRCS:.c=.o) $(OBJS) $(LFLAGS) -o $(EXE_DIR)/$(PRJ_NAME)
 	@echo '------ Terminated'

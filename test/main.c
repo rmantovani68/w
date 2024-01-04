@@ -66,9 +66,9 @@ int main (int argc, char *argv[])
 	/*
 	* GTK-Error handling functions
 	*/
-	g_set_error_handler((GErrorFunc)gtk_error_handler);
-	g_set_warning_handler((GWarningFunc)gtk_warning_handler);
-	g_set_message_handler((GPrintFunc)gtk_message_handler);
+	//g_set_error_handler((GErrorFunc)gtk_error_handler);
+	//g_set_warning_handler((GWarningFunc)gtk_warning_handler);
+	//g_set_message_handler((GPrintFunc)gtk_message_handler);
 
 	add_pixmap_directory (PACKAGE_BASE_DIR "/pixmaps");
 
