@@ -122,7 +122,7 @@ void ReadProcInfo(char *szFileConfig)
 /* 
 * main() 
 */
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	pszNomeModulo = argv[0];
 
@@ -340,6 +340,7 @@ void SafeIntFunc()
 	SendMessage(PROC_MAIN, PROC_SOCK,  PROGRAM_STOPPED, NULL);
 
 	exit(1);
+	return 0;
 } /* Fine SafeIntFunc */
 
 /*

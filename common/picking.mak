@@ -78,8 +78,23 @@ extern char __copyright__[];\n'> cmp_time.h
 
 CC=gcc
 DEFINES= $(CB_DEF) $(USR_DEF)
-#CFLAGS= $(DEFDEBUG) -Wall -Wno-switch -Wno-unused-but-set-variable $(DEFINES) $(INCLUDES) $(CNI_INCLUDES)
-CFLAGS= $(DEFDEBUG) -Wall -Wno-switch  $(DEFINES) $(INCLUDES) $(CNI_INCLUDES)
+
+WARNINGS=\
+	-Wall \
+	-Wno-switch \
+	-Wno-format-zero-length \
+	-Wno-format-overflow \
+	-Wno-unused-variable \
+	-Wno-unused-but-set-variable \
+	-Wno-deprecated-declarations \
+	-Wno-maybe-uninitialized \
+
+
+
+
+	
+
+CFLAGS= $(DEFDEBUG) $(WARNINGS)  $(DEFINES) $(INCLUDES) $(CNI_INCLUDES)
 
 #
 # objs comuni a tutte le applicazioni
