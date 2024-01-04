@@ -1,127 +1,107 @@
 Connection to database 'sap' OK.
 
 CREATE TABLE dett_colli: COMMAND FAILED
-ERRORE:  la relazione "dett_colli" esiste già
+ERROR:  relation "dett_colli" already exists
 
 CREATE TABLE dett_colli:Connection to database 'sap' OK.
 
-CREATE TABLE ordini_bertello:
- DONE
+CREATE TABLE ordini_bertello: COMMAND FAILED
+ERROR:  relation "ordini_bertello" already exists
 
-CREATE INDEXES ON ordini_bertello:
-ordini_bertello_KEY  UNIQUE
-DONE
+CREATE TABLE ordini_bertello:Connection to database 'sap' OK.
 
-Connection to database 'sap' OK.
+CREATE TABLE colli_bertello: COMMAND FAILED
+ERROR:  relation "colli_bertello" already exists
 
-CREATE TABLE colli_bertello:
- DONE
+CREATE TABLE colli_bertello:Connection to database 'sap' OK.
 
-CREATE INDEXES ON colli_bertello:
-colli_bertello_KEY  UNIQUE
-DONE
+CREATE TABLE righe_bertello: COMMAND FAILED
+ERROR:  relation "righe_bertello" already exists
 
-Connection to database 'sap' OK.
-
-CREATE TABLE righe_bertello:
- DONE
-
-CREATE INDEXES ON righe_bertello:
-righe_bertello_KEY  UNIQUE
-DONE
-
-Connection to database 'sap' OK.
+CREATE TABLE righe_bertello:Connection to database 'sap' OK.
 
 CREATE TABLE ric_ord: COMMAND FAILED
-ERRORE:  la relazione "ric_ord" esiste già
+ERROR:  relation "ric_ord" already exists
 
 CREATE TABLE ric_ord:Connection to database 'sap' OK.
 
 CREATE TABLE ric_art: COMMAND FAILED
-ERRORE:  la relazione "ric_art" esiste già
+ERROR:  relation "ric_art" already exists
 
 CREATE TABLE ric_art:Connection to database 'sap' OK.
 
 CREATE TABLE ord_prod: COMMAND FAILED
-ERRORE:  la relazione "ord_prod" esiste già
+ERROR:  relation "ord_prod" already exists
 
 CREATE TABLE ord_prod:Connection to database 'sap' OK.
 
 CREATE TABLE col_prod: COMMAND FAILED
-ERRORE:  la relazione "col_prod" esiste già
+ERROR:  relation "col_prod" already exists
 
 CREATE TABLE col_prod:Connection to database 'sap' OK.
 
 CREATE TABLE rig_prod: COMMAND FAILED
-ERRORE:  la relazione "rig_prod" esiste già
+ERROR:  relation "rig_prod" already exists
 
 CREATE TABLE rig_prod:Connection to database 'sap' OK.
 
 CREATE TABLE rig_tmp: COMMAND FAILED
-ERRORE:  la relazione "rig_tmp" esiste già
+ERROR:  relation "rig_tmp" already exists
 
 CREATE TABLE rig_tmp:Connection to database 'sap' OK.
 
 CREATE TABLE ubicazioni: COMMAND FAILED
-ERRORE:  la relazione "ubicazioni" esiste già
+ERROR:  relation "ubicazioni" already exists
 
 CREATE TABLE ubicazioni:Connection to database 'sap' OK.
 
 CREATE TABLE articoli: COMMAND FAILED
-ERRORE:  la relazione "articoli" esiste già
+ERROR:  relation "articoli" already exists
 
 CREATE TABLE articoli:Connection to database 'sap' OK.
 
 CREATE TABLE imballi: COMMAND FAILED
-ERRORE:  la relazione "imballi" esiste già
+ERROR:  relation "imballi" already exists
 
 CREATE TABLE imballi:Connection to database 'sap' OK.
 
 CREATE TABLE errori_prelievo: COMMAND FAILED
-ERRORE:  la relazione "errori_prelievo" esiste già
+ERROR:  relation "errori_prelievo" already exists
 
 CREATE TABLE errori_prelievo:Connection to database 'sap' OK.
 
 CREATE TABLE ric_stor: COMMAND FAILED
-ERRORE:  la relazione "ric_stor" esiste già
+ERROR:  relation "ric_stor" already exists
 
 CREATE TABLE ric_stor:Connection to database 'sap' OK.
 
 CREATE TABLE ord_stor: COMMAND FAILED
-ERRORE:  la relazione "ord_stor" esiste già
+ERROR:  relation "ord_stor" already exists
 
 CREATE TABLE ord_stor:Connection to database 'sap' OK.
 
 CREATE TABLE col_stor: COMMAND FAILED
-ERRORE:  la relazione "col_stor" esiste già
+ERROR:  relation "col_stor" already exists
 
 CREATE TABLE col_stor:Connection to database 'sap' OK.
 
 CREATE TABLE rig_stor: COMMAND FAILED
-ERRORE:  la relazione "rig_stor" esiste già
+ERROR:  relation "rig_stor" already exists
 
 CREATE TABLE rig_stor:Connection to database 'sap' OK.
 
 CREATE TABLE plc_msg: COMMAND FAILED
-ERRORE:  la relazione "plc_msg" esiste già
+ERROR:  relation "plc_msg" already exists
 
 CREATE TABLE plc_msg:Connection to database 'sap' OK.
 
 CREATE TABLE plc_msg_history: COMMAND FAILED
-ERRORE:  la relazione "plc_msg_history" esiste già
+ERROR:  relation "plc_msg_history" already exists
 
-CREATE TABLE plc_msg_history:ERRORE:  la relazione "progcollo" esiste già
-ERRORE:  la relazione "progcollo_add" esiste già
-ERRORE:  la relazione "sequence_anno" esiste già
-ERRORE:  la funzione data(timestamp without time zone) non esiste
-RIGA 1: ...CTION data_ora(timestamp) returns text as 'select data($1)||...
-                                                             ^
-NOTA: Nessuna funzione trovata con nome e tipi di argomenti forniti. Potrebbe essere necessario convertire i tipi esplicitamente.
-psql: attenzione: parametro in eccesso "sap" nella riga di comando ignorato
-psql: FATALE:  il ruolo "-h" non esiste
-psql: attenzione: parametro in eccesso "sap" nella riga di comando ignorato
-psql: FATALE:  il ruolo "-h" non esiste
-ERRORE:  la funzione data(timestamp without time zone) non esiste
-RIGA 1: ...CTION data_ora(timestamp) returns text as 'select data($1)||...
-                                                             ^
-NOTA: Nessuna funzione trovata con nome e tipi di argomenti forniti. Potrebbe essere necessario convertire i tipi esplicitamente.
+CREATE TABLE plc_msg_history:ERROR:  relation "progcollo" already exists
+ERROR:  relation "progcollo_add" already exists
+ERROR:  relation "sequence_anno" already exists
+ERROR:  relation "badge_registry" already exists
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION

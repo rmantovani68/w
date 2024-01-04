@@ -55,12 +55,20 @@ volfun.o: volfun.c volum.h volext.h volstruct.h volfun.h $(COMMON_DEPS)
 
 volutil.o: volutil.c volum.h volext.h volstruct.h volfun.h $(COMMON_DEPS)
 
-# Compile rules
-$(EXE_DIR)/$(PRJ_NAME): $(SRCS:.c=.o) $(OBJS)
-	@echo '------ Creating compile time object file'
-	$(__CMP_TIME__)
+cmp_time.h: $(SRCS:.c=.o)
+	@echo '------ Creating compile time include file'
+	$(__CMP_TIME__H__)
+
+cmp_time.c: cmp_time.h
+	@echo '------ Creating compile time source file'
+	$(__CMP_TIME__C__)
+
+cmp_time.o: cmp_time.c
 	@echo '------ Compiling cmp_time.c'
 	@$(CC) $(CFLAGS) $(CDEBUGFLAGS) -c cmp_time.c -o cmp_time.o
+
+# Compile rules
+$(EXE_DIR)/$(PRJ_NAME): $(SRCS:.c=.o) $(OBJS)
 	@echo '------ Linking ...'
 	@$(CC) $(SRCS:.c=.o) $(OBJS) $(LFLAGS) -o $(EXE_DIR)/$(PRJ_NAME)
 	@echo '------ Terminated'
