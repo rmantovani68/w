@@ -6,7 +6,7 @@
 * Autore : Roberto Mantovani
 */
 
-#include <gnome.h>
+#include <gtk/gtk.h>
 
 #include <time.h>
 #include <signal.h>

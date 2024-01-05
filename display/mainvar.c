@@ -7,7 +7,7 @@
 */
 
 
-#include <gnome.h>
+#include <gtk/gtk.h>
 
 #include <signal.h>
 

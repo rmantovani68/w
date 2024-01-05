@@ -5,7 +5,7 @@
 * Copyright CNI srl 1999-2000
 * Autore : Roberto Mantovani
 */
-#include <gnome.h>
+#include <gtk/gtk.h>
 #include <signal.h>
 #include <stdlib.h>
 #include <stdarg.h>

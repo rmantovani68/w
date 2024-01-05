@@ -38,10 +38,10 @@ OBJS = $(GEN_INC)/dbfun-gtk.o $(GEN_INC)/ep-common.o $(GEN_INC)/ep-db.o cmp_time
 SRCS = main.c mainproc.c mainfun.c mainvar.c callbacks.c interface.c 
 
 # libraries
-LIBS = $(GNOME_LIB) $(GTK_LIB) $(MSQ_LIB) $(PSQL_LIB)
+LIBS = $(GNOME_LIB) $(GTK_LIB) $(MSQ_LIB) $(PQ_LIBS)
 
 # includes 
-INCLUDES = -I. -I$(GEN_INC) $(GNOME_CFLAGS)  $(GTK_CFLAGS) $(MSQ_INC) $(PSQL_INC)
+INCLUDES = -I. -I$(GEN_INC) $(GNOME_CFLAGS)  $(GTK_CFLAGS) $(MSQ_INC) $(PQ_CFLAGS)
 
 # Linker flags 
 LFLAGS = $(LIBS)

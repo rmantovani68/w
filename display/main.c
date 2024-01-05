@@ -6,7 +6,8 @@
 * Autore : Roberto Mantovani
 */
 
-#include <gnome.h>
+//#include <gnome.h>
+#include <gtk/gtk.h>
 
 #include <signal.h>
 #include <stdlib.h>
@@ -73,9 +74,10 @@ int main (int argc, char *argv[])
 	};
 
 	GOptionContext *option_context;
-	GnomeProgram *my_app;
+	// GnomeProgram *my_app;
 
 	option_context = g_option_context_new ("display");
+	gtk_init(&argc, &argv);
 
 	/* if you are using any libraries that have command line options
 	* of their own and provide a GOptionGroup with them, you can
@@ -92,7 +94,7 @@ int main (int argc, char *argv[])
 	* number respectively. Also, assume that 'option_entries' is a global
 	* array of GOptionEntry structures.
 	*/
-	my_app = gnome_program_init(PACKAGE, VERSION, LIBGNOMEUI_MODULE, argc, argv, GNOME_PARAM_GOPTION_CONTEXT, option_context, GNOME_PARAM_NONE);
+	// my_app = gtk_program_init(PACKAGE, VERSION, LIBGNOMEUI_MODULE, argc, argv, GNOME_PARAM_GOPTION_CONTEXT, option_context, GNOME_PARAM_NONE);
 
 	nSettoreIndex=arg_settore_index;
 	nSettore=arg_settore;
@@ -105,7 +107,7 @@ int main (int argc, char *argv[])
 	Cfg.nSettoreIndex=nSettoreIndex;
 
 
-  gtk_rc_parse ("../data/display.rc");	
+	gtk_rc_parse ("../data/display.rc");	
 	// gnome_program_init("display", VERSION, LIBGNOMEUI_MODULE, argc, argv, GNOME_PARAM_NONE);
 
 	/* Predispongo l'utilizzo dell'uscita di sicurezza */

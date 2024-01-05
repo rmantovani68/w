@@ -12,8 +12,8 @@
 #include <string.h>
 #include <stdio.h>
 
-#include <bonobo.h>
-#include <gnome.h>
+#include <gdk/gdkkeysyms.h>
+#include <gtk/gtk.h>
 
 #include "callbacks.h"
 #include "interface.h"
@@ -66,7 +66,7 @@ create_dlg_about (void)
 
   dlg_about = gtk_dialog_new ();
   gtk_widget_set_name (dlg_about, "dlg_about");
-  gtk_window_set_title (GTK_WINDOW (dlg_about), _("About"));
+  gtk_window_set_title (GTK_WINDOW (dlg_about), "About");
   gtk_window_set_position (GTK_WINDOW (dlg_about), GTK_WIN_POS_CENTER);
   gtk_window_set_modal (GTK_WINDOW (dlg_about), TRUE);
   gtk_window_set_resizable (GTK_WINDOW (dlg_about), FALSE);
@@ -96,13 +96,13 @@ create_dlg_about (void)
   gtk_widget_show (hbox183);
   gtk_container_add (GTK_CONTAINER (frame6), hbox183);
 
-  image8 = create_pixmap (dlg_about, "display/AEL-GLOSSY-small.png");
+  image8 = create_pixmap (dlg_about, "AEL-GLOSSY-small.png");
   gtk_widget_set_name (image8, "image8");
   gtk_widget_show (image8);
   gtk_box_pack_start (GTK_BOX (hbox183), image8, TRUE, TRUE, 0);
   gtk_misc_set_padding (GTK_MISC (image8), 2, 0);
 
-  image11 = create_pixmap (dlg_about, "display/easy-picking.png");
+  image11 = create_pixmap (dlg_about, "easy-picking.png");
   gtk_widget_set_name (image11, "image11");
   gtk_widget_show (image11);
   gtk_box_pack_start (GTK_BOX (hbox183), image11, TRUE, TRUE, 0);
@@ -113,13 +113,13 @@ create_dlg_about (void)
   gtk_widget_show (hbox182);
   gtk_box_pack_start (GTK_BOX (vbox2), hbox182, TRUE, TRUE, 0);
 
-  image9 = create_pixmap (dlg_about, "display/gnome-64.png");
+  image9 = create_pixmap (dlg_about, "gnome-64.png");
   gtk_widget_set_name (image9, "image9");
   gtk_widget_show (image9);
   gtk_box_pack_start (GTK_BOX (hbox182), image9, TRUE, TRUE, 0);
   gtk_misc_set_padding (GTK_MISC (image9), 2, 0);
 
-  image10 = create_pixmap (dlg_about, "display/postgresql.png");
+  image10 = create_pixmap (dlg_about, "postgresql.png");
   gtk_widget_set_name (image10, "image10");
   gtk_widget_show (image10);
   gtk_box_pack_start (GTK_BOX (hbox182), image10, TRUE, TRUE, 0);
@@ -144,7 +144,7 @@ create_dlg_about (void)
   gtk_box_pack_start (GTK_BOX (vbox3), table25, FALSE, FALSE, 2);
   gtk_table_set_row_spacings (GTK_TABLE (table25), 2);
 
-  label646 = gtk_label_new (_("Version"));
+  label646 = gtk_label_new ("Version");
   gtk_widget_set_name (label646, "label646");
   gtk_widget_show (label646);
   gtk_table_attach (GTK_TABLE (table25), label646, 0, 1, 2, 3,
@@ -153,7 +153,7 @@ create_dlg_about (void)
   gtk_label_set_justify (GTK_LABEL (label646), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label646), 0, 0.5);
 
-  label647 = gtk_label_new (_("Customer Name"));
+  label647 = gtk_label_new ("Customer Name");
   gtk_widget_set_name (label647, "label647");
   gtk_widget_show (label647);
   gtk_table_attach (GTK_TABLE (table25), label647, 0, 1, 3, 4,
@@ -162,7 +162,7 @@ create_dlg_about (void)
   gtk_label_set_justify (GTK_LABEL (label647), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label647), 0, 0.5);
 
-  label648 = gtk_label_new (_("RCSID String"));
+  label648 = gtk_label_new ("RCSID String");
   gtk_widget_set_name (label648, "label648");
   gtk_widget_show (label648);
   gtk_table_attach (GTK_TABLE (table25), label648, 0, 1, 4, 5,
@@ -216,7 +216,7 @@ create_dlg_about (void)
   gtk_misc_set_alignment (GTK_MISC (lb_rcsid), 0, 0.5);
   gtk_misc_set_padding (GTK_MISC (lb_rcsid), 2, 0);
 
-  label1223 = gtk_label_new (_("Authors"));
+  label1223 = gtk_label_new ("Authors");
   gtk_widget_set_name (label1223, "label1223");
   gtk_widget_show (label1223);
   gtk_table_attach (GTK_TABLE (table25), label1223, 0, 1, 1, 2,
@@ -225,7 +225,7 @@ create_dlg_about (void)
   gtk_label_set_justify (GTK_LABEL (label1223), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label1223), 0, 0.5);
 
-  label1224 = gtk_label_new (_("Copyright"));
+  label1224 = gtk_label_new ("Copyright");
   gtk_widget_set_name (label1224, "label1224");
   gtk_widget_show (label1224);
   gtk_table_attach (GTK_TABLE (table25), label1224, 0, 1, 0, 1,
@@ -365,7 +365,7 @@ create_dlg_config (void)
 
   dlg_config = gtk_dialog_new ();
   gtk_widget_set_name (dlg_config, "dlg_config");
-  gtk_window_set_title (GTK_WINDOW (dlg_config), _("Configurazione"));
+  gtk_window_set_title (GTK_WINDOW (dlg_config), "Configurazione");
   gtk_window_set_position (GTK_WINDOW (dlg_config), GTK_WIN_POS_CENTER);
   gtk_window_set_modal (GTK_WINDOW (dlg_config), TRUE);
 
@@ -396,7 +396,7 @@ create_dlg_config (void)
   gtk_box_pack_start (GTK_BOX (vbox331), table26, TRUE, TRUE, 0);
   gtk_container_set_border_width (GTK_CONTAINER (table26), 5);
 
-  label642 = gtk_label_new_with_mnemonic (_("_Debug Version"));
+  label642 = gtk_label_new_with_mnemonic ("_Debug Version");
   gtk_widget_set_name (label642, "label642");
   gtk_widget_show (label642);
   gtk_table_attach (GTK_TABLE (table26), label642, 0, 1, 0, 1,
@@ -444,7 +444,7 @@ create_dlg_config (void)
                     (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-  label289 = gtk_label_new_with_mnemonic (_("Coda di _stampa"));
+  label289 = gtk_label_new_with_mnemonic ("Coda di _stampa");
   gtk_widget_set_name (label289, "label289");
   gtk_widget_show (label289);
   gtk_table_attach (GTK_TABLE (table26), label289, 0, 1, 1, 2,
@@ -453,7 +453,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label289), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label289), 0, 0.5);
 
-  label1230 = gtk_label_new_with_mnemonic (_("Ora _inizio statistica"));
+  label1230 = gtk_label_new_with_mnemonic ("Ora _inizio statistica");
   gtk_widget_set_name (label1230, "label1230");
   gtk_widget_show (label1230);
   gtk_table_attach (GTK_TABLE (table26), label1230, 0, 1, 2, 3,
@@ -462,7 +462,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label1230), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label1230), 0, 0.5);
 
-  label1231 = gtk_label_new_with_mnemonic (_("Ora _fine  statistica"));
+  label1231 = gtk_label_new_with_mnemonic ("Ora _fine  statistica");
   gtk_widget_set_name (label1231, "label1231");
   gtk_widget_show (label1231);
   gtk_table_attach (GTK_TABLE (table26), label1231, 0, 1, 3, 4,
@@ -471,7 +471,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label1231), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label1231), 0, 0.5);
 
-  label1232 = gtk_label_new_with_mnemonic (_("Numero Operatori"));
+  label1232 = gtk_label_new_with_mnemonic ("Numero Operatori");
   gtk_widget_set_name (label1232, "label1232");
   gtk_widget_show (label1232);
   gtk_table_attach (GTK_TABLE (table26), label1232, 0, 1, 4, 5,
@@ -480,7 +480,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label1232), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label1232), 0, 0.5);
 
-  label1225 = gtk_label_new (_("Generale"));
+  label1225 = gtk_label_new ("Generale");
   gtk_widget_set_name (label1225, "label1225");
   gtk_widget_show (label1225);
   gtk_frame_set_label_widget (GTK_FRAME (frame226), label1225);
@@ -513,7 +513,7 @@ create_dlg_config (void)
                     (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-  label543 = gtk_label_new_with_mnemonic (_("Dati di _configurazione"));
+  label543 = gtk_label_new_with_mnemonic ("Dati di _configurazione");
   gtk_widget_set_name (label543, "label543");
   gtk_widget_show (label543);
   gtk_table_attach (GTK_TABLE (table22), label543, 0, 1, 0, 1,
@@ -522,7 +522,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label543), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label543), 0, 0.5);
 
-  label827 = gtk_label_new_with_mnemonic (_("Sta_mpe"));
+  label827 = gtk_label_new_with_mnemonic ("Sta_mpe");
   gtk_widget_set_name (label827, "label827");
   gtk_widget_show (label827);
   gtk_table_attach (GTK_TABLE (table22), label827, 0, 1, 1, 2,
@@ -531,7 +531,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (label827), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (label827), 0, 0.5);
 
-  label1226 = gtk_label_new (_("Indirizzi"));
+  label1226 = gtk_label_new ("Indirizzi");
   gtk_widget_set_name (label1226, "label1226");
   gtk_widget_show (label1226);
   gtk_frame_set_label_widget (GTK_FRAME (frame164), label1226);
@@ -571,7 +571,7 @@ create_dlg_config (void)
                     (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
                     (GtkAttachOptions) (0), 0, 0);
 
-  lb_pghost = gtk_label_new_with_mnemonic (_("Nome _Host"));
+  lb_pghost = gtk_label_new_with_mnemonic ("Nome _Host");
   gtk_widget_set_name (lb_pghost, "lb_pghost");
   gtk_widget_show (lb_pghost);
   gtk_table_attach (GTK_TABLE (table11), lb_pghost, 0, 1, 0, 1,
@@ -580,7 +580,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (lb_pghost), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (lb_pghost), 0, 0.5);
 
-  lb_pgport = gtk_label_new_with_mnemonic (_("Porta _TCP/IP"));
+  lb_pgport = gtk_label_new_with_mnemonic ("Porta _TCP/IP");
   gtk_widget_set_name (lb_pgport, "lb_pgport");
   gtk_widget_show (lb_pgport);
   gtk_table_attach (GTK_TABLE (table11), lb_pgport, 0, 1, 1, 2,
@@ -589,7 +589,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (lb_pgport), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (lb_pgport), 0, 0.5);
 
-  lb_pgdatabase = gtk_label_new_with_mnemonic (_("_Nome Database"));
+  lb_pgdatabase = gtk_label_new_with_mnemonic ("_Nome Database");
   gtk_widget_set_name (lb_pgdatabase, "lb_pgdatabase");
   gtk_widget_show (lb_pgdatabase);
   gtk_table_attach (GTK_TABLE (table11), lb_pgdatabase, 0, 1, 2, 3,
@@ -598,7 +598,7 @@ create_dlg_config (void)
   gtk_label_set_justify (GTK_LABEL (lb_pgdatabase), GTK_JUSTIFY_CENTER);
   gtk_misc_set_alignment (GTK_MISC (lb_pgdatabase), 0, 0.5);
 
-  label1227 = gtk_label_new (_("Base di dati"));
+  label1227 = gtk_label_new ("Base di dati");
   gtk_widget_set_name (label1227, "label1227");
   gtk_widget_show (label1227);
   gtk_frame_set_label_widget (GTK_FRAME (frame156), label1227);
@@ -803,7 +803,7 @@ create_main_window (void)
   main_window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_set_name (main_window, "main_window");
   gtk_widget_set_size_request (main_window, 1366, 768);
-  gtk_window_set_title (GTK_WINDOW (main_window), _("display"));
+  gtk_window_set_title (GTK_WINDOW (main_window), "display");
   gtk_window_set_position (GTK_WINDOW (main_window), GTK_WIN_POS_CENTER_ALWAYS);
   gtk_window_set_decorated (GTK_WINDOW (main_window), FALSE);
 
@@ -918,7 +918,7 @@ create_main_window (void)
   gtk_widget_show (eventbox3);
   gtk_box_pack_start (GTK_BOX (hbox192), eventbox3, FALSE, TRUE, 0);
 
-  lb_titolo_settore = gtk_label_new (_("SETTORE"));
+  lb_titolo_settore = gtk_label_new ("SETTORE");
   gtk_widget_set_name (lb_titolo_settore, "lb_titolo_settore");
   gtk_widget_show (lb_titolo_settore);
   gtk_container_add (GTK_CONTAINER (eventbox3), lb_titolo_settore);
@@ -931,7 +931,7 @@ create_main_window (void)
   gtk_widget_show (eventbox2);
   gtk_box_pack_start (GTK_BOX (hbox192), eventbox2, TRUE, TRUE, 0);
 
-  lb_settore = gtk_label_new (_("01"));
+  lb_settore = gtk_label_new ("01");
   gtk_widget_set_name (lb_settore, "lb_settore");
   gtk_widget_show (lb_settore);
   gtk_container_add (GTK_CONTAINER (eventbox2), lb_settore);
@@ -944,7 +944,7 @@ create_main_window (void)
   gtk_widget_show (eb_stato_linea);
   gtk_box_pack_start (GTK_BOX (hbox192), eb_stato_linea, TRUE, TRUE, 0);
 
-  lb_stato_linea = gtk_label_new (_("START"));
+  lb_stato_linea = gtk_label_new ("START");
   gtk_widget_set_name (lb_stato_linea, "lb_stato_linea");
   gtk_widget_show (lb_stato_linea);
   gtk_container_add (GTK_CONTAINER (eb_stato_linea), lb_stato_linea);
@@ -972,7 +972,7 @@ create_main_window (void)
   gtk_widget_show (eventbox8);
   gtk_box_pack_start (GTK_BOX (hbox191), eventbox8, FALSE, TRUE, 0);
 
-  lb_titolo_operatore = gtk_label_new (_("OPERATORE"));
+  lb_titolo_operatore = gtk_label_new ("OPERATORE");
   gtk_widget_set_name (lb_titolo_operatore, "lb_titolo_operatore");
   gtk_widget_show (lb_titolo_operatore);
   gtk_container_add (GTK_CONTAINER (eventbox8), lb_titolo_operatore);
@@ -985,7 +985,7 @@ create_main_window (void)
   gtk_widget_show (eventbox7);
   gtk_box_pack_start (GTK_BOX (hbox191), eventbox7, TRUE, TRUE, 0);
 
-  lb_codice_operatore = gtk_label_new (_("01"));
+  lb_codice_operatore = gtk_label_new ("01");
   gtk_widget_set_name (lb_codice_operatore, "lb_codice_operatore");
   gtk_widget_show (lb_codice_operatore);
   gtk_container_add (GTK_CONTAINER (eventbox7), lb_codice_operatore);
@@ -998,7 +998,7 @@ create_main_window (void)
   gtk_widget_show (eventbox6);
   gtk_box_pack_start (GTK_BOX (hbox191), eventbox6, TRUE, TRUE, 0);
 
-  lb_dati_operatore = gtk_label_new (_("OPERATORE"));
+  lb_dati_operatore = gtk_label_new ("OPERATORE");
   gtk_widget_set_name (lb_dati_operatore, "lb_dati_operatore");
   gtk_widget_show (lb_dati_operatore);
   gtk_container_add (GTK_CONTAINER (eventbox6), lb_dati_operatore);
@@ -1054,7 +1054,7 @@ create_main_window (void)
   gtk_widget_show (eb_operazione);
   gtk_box_pack_start (GTK_BOX (hbox193), eb_operazione, TRUE, TRUE, 0);
 
-  lb_operazione = gtk_label_new (_("OPERAZIONE"));
+  lb_operazione = gtk_label_new ("OPERAZIONE");
   gtk_widget_set_name (lb_operazione, "lb_operazione");
   gtk_widget_show (lb_operazione);
   gtk_container_add (GTK_CONTAINER (eb_operazione), lb_operazione);
@@ -1067,7 +1067,7 @@ create_main_window (void)
   gtk_widget_show (eb_copie);
   gtk_box_pack_start (GTK_BOX (hbox193), eb_copie, TRUE, TRUE, 0);
 
-  lb_copie = gtk_label_new (_("COPIE"));
+  lb_copie = gtk_label_new ("COPIE");
   gtk_widget_set_name (lb_copie, "lb_copie");
   gtk_widget_show (lb_copie);
   gtk_container_add (GTK_CONTAINER (eb_copie), lb_copie);
@@ -1235,7 +1235,7 @@ create_main_window (void)
   gtk_widget_show (eb_qt_barcodeid);
   gtk_box_pack_start (GTK_BOX (vbox386), eb_qt_barcodeid, TRUE, TRUE, 0);
 
-  lb_qt_barcodeid = gtk_label_new (_("COPIE"));
+  lb_qt_barcodeid = gtk_label_new ("COPIE");
   gtk_widget_set_name (lb_qt_barcodeid, "lb_qt_barcodeid");
   gtk_widget_show (lb_qt_barcodeid);
   gtk_container_add (GTK_CONTAINER (eb_qt_barcodeid), lb_qt_barcodeid);
@@ -1248,7 +1248,7 @@ create_main_window (void)
   gtk_widget_show (eb_stato_barcodeid);
   gtk_box_pack_start (GTK_BOX (vbox386), eb_stato_barcodeid, TRUE, TRUE, 0);
 
-  lb_stato_barcodeid = gtk_label_new (_("OPERAZIONE"));
+  lb_stato_barcodeid = gtk_label_new ("OPERAZIONE");
   gtk_widget_set_name (lb_stato_barcodeid, "lb_stato_barcodeid");
   gtk_widget_show (lb_stato_barcodeid);
   gtk_container_add (GTK_CONTAINER (eb_stato_barcodeid), lb_stato_barcodeid);
@@ -1660,7 +1660,7 @@ create_window1 (void)
 
   window1 = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_widget_set_name (window1, "window1");
-  gtk_window_set_title (GTK_WINDOW (window1), _("window1"));
+  gtk_window_set_title (GTK_WINDOW (window1), "window1");
 
   vp_lista_colli = gtk_viewport_new (NULL, NULL);
   gtk_widget_set_name (vp_lista_colli, "vp_lista_colli");

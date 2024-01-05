@@ -6,7 +6,7 @@
 #  include <config.h>
 #endif
 
-#include <gnome.h>
+#include <gtk/gtk.h>
 
 #undef Q_
 #ifdef ENABLE_NLS

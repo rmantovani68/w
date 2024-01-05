@@ -15,7 +15,7 @@ DEFDEBUG = -g
 # defines
 DEFINES = $(DEFDEBUG) -D_TERMCAP -DSYSV 
 
-INCLUDES = -I /usr/include/pgsql
+INCLUDES = -I /usr/include/postgresql
 
 LIBS = -lpq 
 
@@ -57,7 +57,7 @@ dblist: dblist.o
 	gcc dblist.o $(LFLAGS) -o dblist
 
 install:
-	cp dblist txt2sql dbf2sql $(HOME)/bin
+	cp dblist txt2sql dbf2sql /usr/local/bin
 
 clean:
 	rm -f *.o

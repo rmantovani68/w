@@ -5,6 +5,8 @@
   <name>Display</name>
   <program_name>display</program_name>
   <source_directory>.</source_directory>
+  <gnome_support>FALSE</gnome_support>
+  <gettext_support>FALSE</gettext_support>
   <use_widget_names>TRUE</use_widget_names>
   <output_main_file>FALSE</output_main_file>
   <output_support_files>FALSE</output_support_files>

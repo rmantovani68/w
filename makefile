@@ -4,6 +4,7 @@
 # Copyright CNI srl 1995
 
 all:
+	(cd common; make all)
 	(cd main; make all)
 #	(cd barcode; make all)
 #	(cd bilancia; make all)
@@ -19,6 +20,7 @@ all:
 	(cd display; make all)
 
 clean:
+	(cd common; make clean)
 	(cd main; make clean)
 #	(cd barcode; make clean)
 #	(cd bilancia; make clean)

@@ -6,17 +6,17 @@
 # ---------------------------------------------------------
 # Copyright CNI srl 1995-2000
 
-#GTK_LIB = `gtk-config --libs`
-#GTK_CFLAGS = `gtk-config --cflags`
+GTK_LIB = `gtk-config --libs`
+GTK_CFLAGS = `gtk-config --cflags`
 
 GNOME_LIB    = `pkg-config libgnome-2.0 --libs` `pkg-config libgnomeui-2.0 --libs` 
 GNOME_CFLAGS = `pkg-config libgnome-2.0 --cflags` `pkg-config libgnomeui-2.0 --cflags` 
 
-GTK_LIB    = `pkg-config gtk+-2.0 --libs` 
-GTK_CFLAGS = `pkg-config gtk+-2.0 --cflags` 
+#GTK_LIB    = `pkg-config gtk+-2.0 --libs` 
+#GTK_CFLAGS = `pkg-config gtk+-2.0 --cflags` 
 
-GLIB_LIB    = `pkg-config glib-2.0 --libs` 
-GLIB_CFLAGS = `pkg-config glib-2.0 --cflags` 
+#GLIB_LIB    = `pkg-config glib-2.0 --libs` 
+#GLIB_CFLAGS = `pkg-config glib-2.0 --cflags` 
 
 # libreria di gestione Code Messaggi, Comunicazioni Seriali ...
 MSQ_LIB = -L/u/lib/pmx -lPmxMsq

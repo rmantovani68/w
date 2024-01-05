@@ -21,7 +21,6 @@
 #include <stdio.h>
 #include <time.h>
 
-#include <gnome.h>
 #include <gtk/gtk.h>
 #include <glib.h>
 
@@ -142,7 +141,7 @@ int CreateListFromSelect(GtkWidget *super_parent, GtkWidget *parent, GtkWidget *
 
 #ifdef PROVA
 			if(ab_main) {
-				gnome_appbar_set_progress_percentage ((GnomeAppBar *)ab_main, (float)nIndex/(float)nTuples);
+				//gnome_appbar_set_progress_percentage ((GnomeAppBar *)ab_main, (float)nIndex/(float)nTuples);
 				gtk_update();
 			}
 #endif /* PROVA */
@@ -196,7 +195,7 @@ int CreateListFromSelect(GtkWidget *super_parent, GtkWidget *parent, GtkWidget *
 	DBFreeQueryResult(DBRes);
 
 	if(ab_main) {
-		gnome_appbar_set_progress_percentage ((GnomeAppBar *)ab_main, (float)0);
+		//gnome_appbar_set_progress_percentage ((GnomeAppBar *)ab_main, (float)0);
 		gtk_update();
 	}
 
@@ -690,10 +689,10 @@ void selection_changed(GtkTreeSelection *selection, gpointer data)
 	model=gtk_tree_view_get_model(tree_view);
 
 	if(ab_main){
-		gnome_appbar_pop((GnomeAppBar *)ab_main);
+		//gnome_appbar_pop((GnomeAppBar *)ab_main);
 		if(g_list_length(lista)){
 			sprintf(szBuffer,"Selezionate %d righe",g_list_length(lista));
-			gnome_appbar_push((GnomeAppBar *)ab_main, szBuffer);
+			//gnome_appbar_push((GnomeAppBar *)ab_main, szBuffer);
 		}
 	}
 #ifdef TREE_VIEW_TEST

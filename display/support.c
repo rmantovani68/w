@@ -6,13 +6,13 @@
 #  include <config.h>
 #endif
 
+#include <gtk/gtk.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
 
-#include <gnome.h>
 
 #include "support.h"
 
@@ -64,37 +64,6 @@ create_pixmap                          (GtkWidget       *widget,
   pixmap = gtk_image_new_from_file (pathname);
   g_free (pathname);
   return pixmap;
-}
-
-/* This is an internally used function to create pixmaps. */
-GdkPixbuf*
-create_pixbuf                          (const gchar     *filename)
-{
-  gchar *pathname = NULL;
-  GdkPixbuf *pixbuf;
-  GError *error = NULL;
-
-  if (!filename || !filename[0])
-      return NULL;
-
-  pathname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-                                        filename, TRUE, NULL);
-
-  if (!pathname)
-    {
-      g_warning (_("Couldn't find pixmap file: %s"), filename);
-      return NULL;
-    }
-
-  pixbuf = gdk_pixbuf_new_from_file (pathname, &error);
-  if (!pixbuf)
-    {
-      fprintf (stderr, "Failed to load pixbuf file: %s: %s\n",
-               pathname, error->message);
-      g_error_free (error);
-    }
-  g_free (pathname);
-  return pixbuf;
 }
 
 /* This is used to set ATK action descriptions. */

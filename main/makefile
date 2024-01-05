@@ -53,7 +53,7 @@ LFLAGS = $(LIBS)
 all: $(EXE_DIR)/$(PRJ_NAME) 
 
 # dependencies
-cmp_time.h:  $(SRCS:.c=.o)
+cmp_time.h:  $(SRCS)
 	@echo '------ Creating compile time include file '$@
 	$(__CMP_TIME__H__)
 
@@ -73,7 +73,7 @@ mainutil.o: mainutil.c $(COMMON_DEPS) picking.h mainfun.h mainext.h mainstruct.h
 
 mainvar.o: mainvar.c $(COMMON_DEPS) picking.h mainfun.h mainext.h mainstruct.h
 
-callbacks.o: callbacks.c callbacks.h mainstruct.h
+callbacks.o: callbacks.c callbacks.h mainstruct.h cmp_time.h
 
 interface.o: interface.c interface.h 
 

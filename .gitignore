@@ -30,12 +30,10 @@
 
 exe/*.cfg.*
 
-
-
-
 exe/display
 exe/main
 exe/printlabel
 exe/settori
 exe/sock
 exe/volum
+!backup/dati_prod_sap.dump.gz

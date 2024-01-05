@@ -9,8 +9,8 @@
 #GTK_LIB = `gtk-config --libs`
 #GTK_CFLAGS = `gtk-config --cflags`
 
-GNOME_LIB    = `pkg-config libgnome-2.0 --libs` `pkg-config libgnomeui-2.0 --libs` 
-GNOME_CFLAGS = `pkg-config libgnome-2.0 --cflags` `pkg-config libgnomeui-2.0 --cflags` 
+#GNOME_LIB    = `pkg-config libgnome-2.0 --libs` `pkg-config libgnomeui-2.0 --libs` 
+#GNOME_CFLAGS = `pkg-config libgnome-2.0 --cflags` `pkg-config libgnomeui-2.0 --cflags` 
 
 GTK_LIB    = `pkg-config gtk+-2.0 --libs` 
 GTK_CFLAGS = `pkg-config gtk+-2.0 --cflags` 
@@ -27,8 +27,8 @@ MSQ_LIB = -L ../common/pmx -lPmxMsq
 MSQ_INC = -I ../common/pmx/pmx_msq
 
 # libreria di gestione Database PostgreSql
-PSQL_LIB = -lpq
-PSQL_INC = -I /usr/include/pgsql
+PSQL_LIB = `pkg-config libpq --libs` 
+PSQL_INC = `pkg-config libpq --cflags` 
 
 PQ_LIBS   = `pkg-config libpq --libs` 
 PQ_CFLAGS = `pkg-config libpq --cflags` 

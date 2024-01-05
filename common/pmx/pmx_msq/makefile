@@ -31,6 +31,9 @@ PMX_MSQLIBOBJS =	$(PMX_MSQLIB)(xcodemsg.o)\
 # Regole di compilazione della libreria per code messaggi
 all:	$(PMX_MSQLIB)
 
+clean:
+	rm -f *.o ../libPmxMsq.a
+
 library:	$(PMX_MSQLIB)
 
 $(PMX_MSQLIB):	$(PMX_MSQLIBOBJS)

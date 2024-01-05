@@ -7,7 +7,8 @@
 */
 
 
-#include <gnome.h>
+#include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 #include <signal.h>
 #include <stdlib.h>
@@ -207,43 +208,43 @@ gboolean on_main_window_key_press_event (GtkWidget *widget, GdkEventKey *event, 
 
 	switch (event->keyval){
 		
-		case GDK_Num_Lock:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_Num_Lock");                           break;
-		case GDK_KP_Space:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Space");                           break;
-		case GDK_KP_Tab:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Tab");                             break;
-		case GDK_KP_Enter:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Enter");                           break;
-		case GDK_KP_F1:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F1");                              break;
-		case GDK_KP_F2:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F2");                              break;
-		case GDK_KP_F3:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F3");                              break;
-		case GDK_KP_F4:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F4");                              break;
-		case GDK_KP_Home:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Home");                            break;
-		case GDK_KP_Left:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Left");                            break;
-		case GDK_KP_Up:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Up");                              break;
-		case GDK_KP_Right:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Right");                           break;
-		case GDK_KP_Down:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Down");                            break;
-		case GDK_KP_Page_Up:           trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Page_Up");                         break;
-		case GDK_KP_Page_Down:         trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Page_Down");                       break;
-		case GDK_KP_End:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_End");                             break;
-		case GDK_KP_Begin:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Begin");                           break;
-		case GDK_KP_Insert:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Insert");                          break;
-		case GDK_KP_Delete:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Delete");                          break;
-		case GDK_KP_Equal:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Equal");                           break;
-		case GDK_KP_Multiply:          trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Multiply");                        break;
-		case GDK_KP_Add:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Add");                             break;
-		case GDK_KP_Separator:         trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Separator");                       break;
-		case GDK_KP_Subtract:          trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Subtract");                        break;
-		case GDK_KP_Decimal:           trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Decimal");                         break;
-		case GDK_KP_Divide:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Divide");                          break;
-		case GDK_KP_0:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_0");                               break;
-		case GDK_KP_1:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_1");                               break;
-		case GDK_KP_2:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_2");                               break;
-		case GDK_KP_3:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_3");                               break;
-		case GDK_KP_4:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_4");                               break;
-		case GDK_KP_5:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_5");                               break;
-		case GDK_KP_6:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_6");                               break;
-		case GDK_KP_7:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_7");                               break;
-		case GDK_KP_8:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_8");                               break;
-		case GDK_KP_9:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_9");                               break;
-		case GDK_percent:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_percent");                        break;
+		case GDK_KEY_Num_Lock:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_Num_Lock");     break;
+		case GDK_KEY_KP_Space:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Space");     break;
+		case GDK_KEY_KP_Tab:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Tab");       break;
+		case GDK_KEY_KP_Enter:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Enter");     break;
+		case GDK_KEY_KP_F1:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F1");        break;
+		case GDK_KEY_KP_F2:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F2");        break;
+		case GDK_KEY_KP_F3:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F3");        break;
+		case GDK_KEY_KP_F4:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_F4");        break;
+		case GDK_KEY_KP_Home:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Home");      break;
+		case GDK_KEY_KP_Left:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Left");      break;
+		case GDK_KEY_KP_Up:                trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Up");        break;
+		case GDK_KEY_KP_Right:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Right");     break;
+		case GDK_KEY_KP_Down:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Down");      break;
+		case GDK_KEY_KP_Page_Up:           trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Page_Up");   break;
+		case GDK_KEY_KP_Page_Down:         trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Page_Down"); break;
+		case GDK_KEY_KP_End:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_End");       break;
+		case GDK_KEY_KP_Begin:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Begin");     break;
+		case GDK_KEY_KP_Insert:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Insert");    break;
+		case GDK_KEY_KP_Delete:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Delete");    break;
+		case GDK_KEY_KP_Equal:             trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Equal");     break;
+		case GDK_KEY_KP_Multiply:          trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Multiply");  break;
+		case GDK_KEY_KP_Add:               trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Add");       break;
+		case GDK_KEY_KP_Separator:         trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Separator"); break;
+		case GDK_KEY_KP_Subtract:          trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Subtract");  break;
+		case GDK_KEY_KP_Decimal:           trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Decimal");   break;
+		case GDK_KEY_KP_Divide:            trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_Divide");    break;
+		case GDK_KEY_KP_0:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_0");         break;
+		case GDK_KEY_KP_1:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_1");         break;
+		case GDK_KEY_KP_2:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_2");         break;
+		case GDK_KEY_KP_3:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_3");         break;
+		case GDK_KEY_KP_4:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_4");         break;
+		case GDK_KEY_KP_5:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_5");         break;
+		case GDK_KEY_KP_6:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_6");         break;
+		case GDK_KEY_KP_7:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_7");         break;
+		case GDK_KEY_KP_8:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_8");         break;
+		case GDK_KEY_KP_9:                 trace_debug(NULL,FALSE,FALSE,NULL,"GDK_KP_9");         break;
+		case GDK_KEY_percent:              trace_debug(NULL,FALSE,FALSE,NULL,"GDK_percent");      break;
 	}
 
 

@@ -39,6 +39,7 @@ enum {
 	PROC_BARCODE,    /* Gestione Barcode Reader */
 	PROC_BARCODE_PZ, /* Gestione Barcode Reader Plz */
 	PROC_BILANCIA,   /* Gestione Bilancia */
+	PROC_BILSIM,     /* Simulatore Bilancia */
 	PROC_AUTOTASK,   /* AUTOTASK  */
 	PROC_SOCK,       /* Gestione Sockets */
 	PROC_ISOLA,      /* Interfaccia utente isola 1 e 2 */

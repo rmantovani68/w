@@ -29,7 +29,7 @@ USR_DEF =  -DHAVE_CONFIG_H -DTRACE
 #USR_DEF =  -DHAVE_CONFIG_H -DTRACE -DTRACE_DEBUG_PESO
 
 # include file contenente le definizioni generiche
-include ../common/picking.mak
+include ../common_peso/picking.mak
 
 
 # object files componenti il progetto
