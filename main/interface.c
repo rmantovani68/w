@@ -1778,9 +1778,9 @@ create_main_window (void)
 }
 
 GtkWidget*
-create_dlg_about (void)
+create_dlg_about_old (void)
 {
-  GtkWidget *dlg_about;
+  GtkWidget *dlg_about_old;
   GtkWidget *vbox2;
   GtkWidget *hbox1;
   GtkWidget *frame6;
@@ -1795,17 +1795,17 @@ create_dlg_about (void)
   GtkWidget *hbuttonbox2;
   GtkWidget *pb_ok;
 
-  dlg_about = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_widget_set_name (dlg_about, "dlg_about");
-  gtk_window_set_title (GTK_WINDOW (dlg_about), "About A&L Easy Picking 3.0");
-  gtk_window_set_position (GTK_WINDOW (dlg_about), GTK_WIN_POS_CENTER);
-  gtk_window_set_modal (GTK_WINDOW (dlg_about), TRUE);
-  gtk_window_set_resizable (GTK_WINDOW (dlg_about), FALSE);
+  dlg_about_old = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_widget_set_name (dlg_about_old, "dlg_about_old");
+  gtk_window_set_title (GTK_WINDOW (dlg_about_old), "About A&L Easy Picking 3.0");
+  gtk_window_set_position (GTK_WINDOW (dlg_about_old), GTK_WIN_POS_CENTER);
+  gtk_window_set_modal (GTK_WINDOW (dlg_about_old), TRUE);
+  gtk_window_set_resizable (GTK_WINDOW (dlg_about_old), FALSE);
 
   vbox2 = gtk_vbox_new (FALSE, 0);
   gtk_widget_set_name (vbox2, "vbox2");
   gtk_widget_show (vbox2);
-  gtk_container_add (GTK_CONTAINER (dlg_about), vbox2);
+  gtk_container_add (GTK_CONTAINER (dlg_about_old), vbox2);
 
   hbox1 = gtk_hbox_new (FALSE, 0);
   gtk_widget_set_name (hbox1, "hbox1");
@@ -1823,12 +1823,12 @@ create_dlg_about (void)
   gtk_widget_show (hbox87);
   gtk_container_add (GTK_CONTAINER (frame6), hbox87);
 
-  pixmap118 = create_pixmap (dlg_about, "AEL-GLOSSY-medium.xpm");
+  pixmap118 = create_pixmap (dlg_about_old, "AEL-GLOSSY-medium.xpm");
   gtk_widget_set_name (pixmap118, "pixmap118");
   gtk_widget_show (pixmap118);
   gtk_box_pack_start (GTK_BOX (hbox87), pixmap118, TRUE, TRUE, 0);
 
-  pixmap119 = create_pixmap (dlg_about, "logo_wella.xpm");
+  pixmap119 = create_pixmap (dlg_about_old, "logo_wella.xpm");
   gtk_widget_set_name (pixmap119, "pixmap119");
   gtk_widget_show (pixmap119);
   gtk_box_pack_start (GTK_BOX (hbox87), pixmap119, TRUE, TRUE, 0);
@@ -1876,27 +1876,23 @@ create_dlg_about (void)
   gtk_container_add (GTK_CONTAINER (hbuttonbox2), pb_ok);
   GTK_WIDGET_SET_FLAGS (pb_ok, GTK_CAN_DEFAULT);
 
-  g_signal_connect_swapped ((gpointer) pb_ok, "clicked",
-                            G_CALLBACK (on_dlg_about_pb_ok_clicked),
-                            GTK_OBJECT (dlg_about));
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
-  GLADE_HOOKUP_OBJECT_NO_REF (dlg_about, dlg_about, "dlg_about");
-  GLADE_HOOKUP_OBJECT (dlg_about, vbox2, "vbox2");
-  GLADE_HOOKUP_OBJECT (dlg_about, hbox1, "hbox1");
-  GLADE_HOOKUP_OBJECT (dlg_about, frame6, "frame6");
-  GLADE_HOOKUP_OBJECT (dlg_about, hbox87, "hbox87");
-  GLADE_HOOKUP_OBJECT (dlg_about, pixmap118, "pixmap118");
-  GLADE_HOOKUP_OBJECT (dlg_about, pixmap119, "pixmap119");
-  GLADE_HOOKUP_OBJECT (dlg_about, frame1, "frame1");
-  GLADE_HOOKUP_OBJECT (dlg_about, vbox3, "vbox3");
-  GLADE_HOOKUP_OBJECT (dlg_about, label7, "label7");
-  GLADE_HOOKUP_OBJECT (dlg_about, label565, "label565");
-  GLADE_HOOKUP_OBJECT (dlg_about, hseparator10, "hseparator10");
-  GLADE_HOOKUP_OBJECT (dlg_about, hbuttonbox2, "hbuttonbox2");
-  GLADE_HOOKUP_OBJECT (dlg_about, pb_ok, "pb_ok");
+  GLADE_HOOKUP_OBJECT_NO_REF (dlg_about_old, dlg_about_old, "dlg_about_old");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, vbox2, "vbox2");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, hbox1, "hbox1");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, frame6, "frame6");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, hbox87, "hbox87");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, pixmap118, "pixmap118");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, pixmap119, "pixmap119");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, frame1, "frame1");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, vbox3, "vbox3");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, label7, "label7");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, label565, "label565");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, hseparator10, "hseparator10");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, hbuttonbox2, "hbuttonbox2");
+  GLADE_HOOKUP_OBJECT (dlg_about_old, pb_ok, "pb_ok");
 
-  return dlg_about;
+  return dlg_about_old;
 }
 
 GtkWidget*
@@ -11499,5 +11495,245 @@ create_dlg_prodotti_pericolosi (void)
   GLADE_HOOKUP_OBJECT (dlg_prodotti_pericolosi, pb_cancel, "pb_cancel");
 
   return dlg_prodotti_pericolosi;
+}
+
+GtkWidget*
+create_dlg_about (void)
+{
+  GtkWidget *dlg_about;
+  GtkWidget *vbox278;
+  GtkWidget *hbox103;
+  GtkWidget *frame193;
+  GtkWidget *hbox104;
+  GtkWidget *image15;
+  GtkWidget *image16;
+  GtkWidget *frame194;
+  GtkWidget *table23;
+  GtkWidget *label666;
+  GtkWidget *label667;
+  GtkWidget *label668;
+  GtkWidget *label669;
+  GtkWidget *label670;
+  GtkWidget *label671;
+  GtkWidget *lb_module;
+  GtkWidget *lb_copyright;
+  GtkWidget *lb_authors;
+  GtkWidget *lb_version;
+  GtkWidget *lb_customer;
+  GtkWidget *lb_RCSID;
+  GtkWidget *lb_frame_title;
+  GtkWidget *hseparator107;
+  GtkWidget *hbuttonbox42;
+  GtkWidget *pb_close;
+
+  dlg_about = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_widget_set_name (dlg_about, "dlg_about");
+  gtk_window_set_title (GTK_WINDOW (dlg_about), "About A&L Easy Picking 3.0");
+  gtk_window_set_position (GTK_WINDOW (dlg_about), GTK_WIN_POS_CENTER);
+  gtk_window_set_modal (GTK_WINDOW (dlg_about), TRUE);
+  gtk_window_set_resizable (GTK_WINDOW (dlg_about), FALSE);
+
+  vbox278 = gtk_vbox_new (FALSE, 0);
+  gtk_widget_set_name (vbox278, "vbox278");
+  gtk_widget_show (vbox278);
+  gtk_container_add (GTK_CONTAINER (dlg_about), vbox278);
+
+  hbox103 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_set_name (hbox103, "hbox103");
+  gtk_widget_show (hbox103);
+  gtk_box_pack_start (GTK_BOX (vbox278), hbox103, TRUE, TRUE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (hbox103), 5);
+
+  frame193 = gtk_frame_new (NULL);
+  gtk_widget_set_name (frame193, "frame193");
+  gtk_widget_show (frame193);
+  gtk_box_pack_start (GTK_BOX (hbox103), frame193, TRUE, TRUE, 0);
+
+  hbox104 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_set_name (hbox104, "hbox104");
+  gtk_widget_show (hbox104);
+  gtk_container_add (GTK_CONTAINER (frame193), hbox104);
+
+  image15 = create_pixmap (dlg_about, "AEL-GLOSSY-medium.xpm");
+  gtk_widget_set_name (image15, "image15");
+  gtk_widget_show (image15);
+  gtk_box_pack_start (GTK_BOX (hbox104), image15, TRUE, TRUE, 0);
+
+  image16 = create_pixmap (dlg_about, "logo_wella.xpm");
+  gtk_widget_set_name (image16, "image16");
+  gtk_widget_show (image16);
+  gtk_box_pack_start (GTK_BOX (hbox104), image16, TRUE, TRUE, 0);
+
+  frame194 = gtk_frame_new (NULL);
+  gtk_widget_set_name (frame194, "frame194");
+  gtk_widget_show (frame194);
+  gtk_box_pack_start (GTK_BOX (vbox278), frame194, FALSE, FALSE, 2);
+  gtk_container_set_border_width (GTK_CONTAINER (frame194), 5);
+  gtk_frame_set_label_align (GTK_FRAME (frame194), 0.5, 0.5);
+
+  table23 = gtk_table_new (6, 2, FALSE);
+  gtk_widget_set_name (table23, "table23");
+  gtk_widget_show (table23);
+  gtk_container_add (GTK_CONTAINER (frame194), table23);
+  gtk_container_set_border_width (GTK_CONTAINER (table23), 5);
+
+  label666 = gtk_label_new ("Module");
+  gtk_widget_set_name (label666, "label666");
+  gtk_widget_show (label666);
+  gtk_table_attach (GTK_TABLE (table23), label666, 0, 1, 0, 1,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label666), 0, 0.5);
+
+  label667 = gtk_label_new ("Copyright");
+  gtk_widget_set_name (label667, "label667");
+  gtk_widget_show (label667);
+  gtk_table_attach (GTK_TABLE (table23), label667, 0, 1, 1, 2,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label667), 0, 0.5);
+
+  label668 = gtk_label_new ("Authors");
+  gtk_widget_set_name (label668, "label668");
+  gtk_widget_show (label668);
+  gtk_table_attach (GTK_TABLE (table23), label668, 0, 1, 2, 3,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label668), 0, 0.5);
+
+  label669 = gtk_label_new ("Version");
+  gtk_widget_set_name (label669, "label669");
+  gtk_widget_show (label669);
+  gtk_table_attach (GTK_TABLE (table23), label669, 0, 1, 3, 4,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label669), 0, 0.5);
+
+  label670 = gtk_label_new ("Customer");
+  gtk_widget_set_name (label670, "label670");
+  gtk_widget_show (label670);
+  gtk_table_attach (GTK_TABLE (table23), label670, 0, 1, 4, 5,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label670), 0, 0.5);
+
+  label671 = gtk_label_new ("RCSID");
+  gtk_widget_set_name (label671, "label671");
+  gtk_widget_show (label671);
+  gtk_table_attach (GTK_TABLE (table23), label671, 0, 1, 5, 6,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_misc_set_alignment (GTK_MISC (label671), 0, 0.5);
+
+  lb_module = gtk_label_new ("");
+  gtk_widget_set_name (lb_module, "lb_module");
+  gtk_widget_show (lb_module);
+  gtk_table_attach (GTK_TABLE (table23), lb_module, 1, 2, 0, 1,
+                    (GtkAttachOptions) (GTK_EXPAND | GTK_FILL),
+                    (GtkAttachOptions) (0), 5, 2);
+  gtk_label_set_use_markup (GTK_LABEL (lb_module), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_module), 0, 0.5);
+
+  lb_copyright = gtk_label_new ("");
+  gtk_widget_set_name (lb_copyright, "lb_copyright");
+  gtk_widget_show (lb_copyright);
+  gtk_table_attach (GTK_TABLE (table23), lb_copyright, 1, 2, 1, 2,
+                    (GtkAttachOptions) (GTK_FILL),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_label_set_use_markup (GTK_LABEL (lb_copyright), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_copyright), 0, 0.5);
+
+  lb_authors = gtk_label_new ("");
+  gtk_widget_set_name (lb_authors, "lb_authors");
+  gtk_widget_show (lb_authors);
+  gtk_table_attach (GTK_TABLE (table23), lb_authors, 1, 2, 2, 3,
+                    (GtkAttachOptions) (GTK_FILL),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_label_set_use_markup (GTK_LABEL (lb_authors), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_authors), 0, 0.5);
+
+  lb_version = gtk_label_new ("");
+  gtk_widget_set_name (lb_version, "lb_version");
+  gtk_widget_show (lb_version);
+  gtk_table_attach (GTK_TABLE (table23), lb_version, 1, 2, 3, 4,
+                    (GtkAttachOptions) (GTK_FILL),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_label_set_use_markup (GTK_LABEL (lb_version), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_version), 0, 0.5);
+
+  lb_customer = gtk_label_new ("");
+  gtk_widget_set_name (lb_customer, "lb_customer");
+  gtk_widget_show (lb_customer);
+  gtk_table_attach (GTK_TABLE (table23), lb_customer, 1, 2, 4, 5,
+                    (GtkAttachOptions) (GTK_FILL),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_label_set_use_markup (GTK_LABEL (lb_customer), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_customer), 0, 0.5);
+
+  lb_RCSID = gtk_label_new ("");
+  gtk_widget_set_name (lb_RCSID, "lb_RCSID");
+  gtk_widget_show (lb_RCSID);
+  gtk_table_attach (GTK_TABLE (table23), lb_RCSID, 1, 2, 5, 6,
+                    (GtkAttachOptions) (GTK_FILL),
+                    (GtkAttachOptions) (0), 0, 0);
+  gtk_label_set_use_markup (GTK_LABEL (lb_RCSID), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (lb_RCSID), 0, 0.5);
+
+  lb_frame_title = gtk_label_new ("About A&L Easy Picking 3.0");
+  gtk_widget_set_name (lb_frame_title, "lb_frame_title");
+  gtk_widget_show (lb_frame_title);
+  gtk_frame_set_label_widget (GTK_FRAME (frame194), lb_frame_title);
+
+  hseparator107 = gtk_hseparator_new ();
+  gtk_widget_set_name (hseparator107, "hseparator107");
+  gtk_widget_show (hseparator107);
+  gtk_box_pack_start (GTK_BOX (vbox278), hseparator107, TRUE, TRUE, 0);
+
+  hbuttonbox42 = gtk_hbutton_box_new ();
+  gtk_widget_set_name (hbuttonbox42, "hbuttonbox42");
+  gtk_widget_show (hbuttonbox42);
+  gtk_box_pack_start (GTK_BOX (vbox278), hbuttonbox42, TRUE, TRUE, 0);
+  gtk_container_set_border_width (GTK_CONTAINER (hbuttonbox42), 10);
+  gtk_button_box_set_layout (GTK_BUTTON_BOX (hbuttonbox42), GTK_BUTTONBOX_SPREAD);
+  gtk_box_set_spacing (GTK_BOX (hbuttonbox42), 30);
+
+  pb_close = gtk_button_new_from_stock ("gtk-close");
+  gtk_widget_set_name (pb_close, "pb_close");
+  gtk_widget_show (pb_close);
+  gtk_container_add (GTK_CONTAINER (hbuttonbox42), pb_close);
+  GTK_WIDGET_SET_FLAGS (pb_close, GTK_CAN_DEFAULT);
+
+  g_signal_connect_swapped ((gpointer) pb_close, "clicked",
+                            G_CALLBACK (on_dlg_about_pb_ok_clicked),
+                            GTK_OBJECT (dlg_about));
+
+  /* Store pointers to all widgets, for use by lookup_widget(). */
+  GLADE_HOOKUP_OBJECT_NO_REF (dlg_about, dlg_about, "dlg_about");
+  GLADE_HOOKUP_OBJECT (dlg_about, vbox278, "vbox278");
+  GLADE_HOOKUP_OBJECT (dlg_about, hbox103, "hbox103");
+  GLADE_HOOKUP_OBJECT (dlg_about, frame193, "frame193");
+  GLADE_HOOKUP_OBJECT (dlg_about, hbox104, "hbox104");
+  GLADE_HOOKUP_OBJECT (dlg_about, image15, "image15");
+  GLADE_HOOKUP_OBJECT (dlg_about, image16, "image16");
+  GLADE_HOOKUP_OBJECT (dlg_about, frame194, "frame194");
+  GLADE_HOOKUP_OBJECT (dlg_about, table23, "table23");
+  GLADE_HOOKUP_OBJECT (dlg_about, label666, "label666");
+  GLADE_HOOKUP_OBJECT (dlg_about, label667, "label667");
+  GLADE_HOOKUP_OBJECT (dlg_about, label668, "label668");
+  GLADE_HOOKUP_OBJECT (dlg_about, label669, "label669");
+  GLADE_HOOKUP_OBJECT (dlg_about, label670, "label670");
+  GLADE_HOOKUP_OBJECT (dlg_about, label671, "label671");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_module, "lb_module");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_copyright, "lb_copyright");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_authors, "lb_authors");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_version, "lb_version");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_customer, "lb_customer");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_RCSID, "lb_RCSID");
+  GLADE_HOOKUP_OBJECT (dlg_about, lb_frame_title, "lb_frame_title");
+  GLADE_HOOKUP_OBJECT (dlg_about, hseparator107, "hseparator107");
+  GLADE_HOOKUP_OBJECT (dlg_about, hbuttonbox42, "hbuttonbox42");
+  GLADE_HOOKUP_OBJECT (dlg_about, pb_close, "pb_close");
+
+  return dlg_about;
 }
 

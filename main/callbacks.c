@@ -37,6 +37,8 @@
 #include "mainstruct.h"
 #include "mainext.h"
 #include "mainfun.h"
+#include "cmp_time.h"
+
 
 char szSelectOrdiniCmd[256];
 char szLancioOrdiniCmd[256];
@@ -1116,13 +1118,26 @@ void on_pbm_exit_activate(GtkMenuItem * menuitem, gpointer user_data)
 	gtk_window_set_transient_for(GTK_WINDOW(dlg_exit),GTK_WINDOW(main_window));
 }
 
+void do_about(void)
+{
+	GtkWidget *dlg = create_dlg_about();
+
+	gtk_label_printf(get_widget(dlg,"lb_module"), "<b>%s - %s</b>", __module_name__, __module_version__);
+	gtk_label_printf(get_widget(dlg,"lb_version"), "<b>%s</b>", __version__);
+	gtk_label_printf(get_widget(dlg,"lb_customer"), "<b>%s</b>",__customer__);
+	gtk_label_printf(get_widget(dlg,"lb_RCSID"), "<b>%s</b>",rcsid);
+	gtk_label_printf(get_widget(dlg,"lb_authors"), "<b>%s</b>",__authors__);
+	gtk_label_printf(get_widget(dlg,"lb_copyright"), "<b>%s</b>",__copyright__);
+
+	gtk_window_set_focus (GTK_WINDOW (dlg), get_widget(dlg,"pb_close"));
+	gtk_window_set_transient_for(GTK_WINDOW(dlg),GTK_WINDOW(main_window));
+	gtk_widget_show(dlg);
+}
+
 
 void on_pbm_about_activate(GtkMenuItem * menuitem, gpointer user_data)
 {
-	GtkWidget *dlg_about = create_dlg_about();
-	gtk_window_set_focus (GTK_WINDOW (dlg_about), get_widget(dlg_about,"pb_ok"));
-	gtk_widget_show(dlg_about);
-	gtk_window_set_transient_for(GTK_WINDOW(dlg_about),GTK_WINDOW(main_window));
+	do_about();
 }
 
 
@@ -1270,7 +1285,7 @@ void on_dlg_config_pb_elimina_imb_clicked   (GtkButton       *button, gpointer  
 
 	lb_msg=get_widget(dlg_message,"lb_msg");
 	pb_ok=get_widget(dlg_message,"pb_ok");
-	sprintf(szImballo,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_config,"entry_codice_imb"))));
+	strcpy(szImballo,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_config,"entry_codice_imb"))));
 
 	if(strlen(szImballo)!=0){
 		gtk_label_printf(lb_msg,"CONFERMI L'ELIMINAZIONE\nDELL'IMBALLO %s",szImballo);
@@ -1544,10 +1559,7 @@ void on_main_pb_config_clicked(GtkButton * button, gpointer user_data)
 
 void on_main_pb_help_clicked(GtkButton * button, gpointer user_data)
 {
-	GtkWidget *dlg_about = create_dlg_about();
-	gtk_window_set_focus (GTK_WINDOW (dlg_about), get_widget(dlg_about,"pb_ok"));
-	gtk_widget_show(dlg_about);
-	gtk_window_set_transient_for(GTK_WINDOW(dlg_about),GTK_WINDOW(main_window));
+	do_about();
 }
 
 void on_main_pb_edit_clicked (GtkButton *button, gpointer user_data)
@@ -4420,7 +4432,7 @@ void on_dlg_ricerca_storico_pb_ok_clicked   (GtkButton *button, gpointer user_da
 	char szOrdProg[128];
 	PGresult *PGRes;
 
-	sprintf(szOrdProg,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_storico,"entry_ordkey"))));
+	strcpy(szOrdProg,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_storico,"entry_ordkey"))));
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"select ordprog from ord_stor where ordprog='%s';",szOrdProg);
 	if (PQntuples(PGRes)==0){
 		gtk_label_printf(get_widget(dlg_storico,"lb_msg"),"ORDINE NON PRESENTE\nNELL'ARCHIVIO STORICO");
@@ -4448,7 +4460,7 @@ void on_dlg_stampa_storico_pb_ok_clicked    (GtkButton *button, gpointer user_da
 	char szBuffer[128];
 	PGresult *PGRes;
 
-	sprintf(szOrdProg,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_storico,"entry_ordkey"))));
+	strcpy(szOrdProg,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_storico,"entry_ordkey"))));
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"select ordprog from ord_stor where ordprog='%s';",szOrdProg);
 	if (PQntuples(PGRes)==0){
 		gtk_label_printf(get_widget(dlg_storico,"lb_msg"),"ORDINE NON PRESENTE\nNELL'ARCHIVIO STORICO");
@@ -4779,7 +4791,7 @@ void on_dlg_operatori_pb_elimina_op_clicked (GtkButton *button, gpointer user_da
 
 	lb_msg=get_widget(dlg_message,"lb_msg");
 	pb_ok=get_widget(dlg_message,"pb_ok");
-	sprintf(szCodOpe,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_operatori,"entry_op_codice"))));
+	strcpy(szCodOpe,gtk_entry_get_text(GTK_ENTRY(get_widget(dlg_operatori,"entry_op_codice"))));
 	if (strlen(szCodOpe)!=0){
 		gtk_label_printf(lb_msg,"CONFERMI L'ELIMINAZIONE\nDELL'OPERATORE %s",szCodOpe);
 		gtk_window_set_title (GTK_WINDOW (dlg_message), "Elimina Operatore");

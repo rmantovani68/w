@@ -18,5 +18,10 @@
         "titleBar.inactiveBackground": "#c11cf199",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#c11cf1"
+    "peacock.color": "#c11cf1",
+    "files.associations": {
+        "callbacks.h": "c",
+        "gtk.h": "c",
+        "cmp_time.h": "c"
+    }
 }
