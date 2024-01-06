@@ -23,6 +23,9 @@ sudo apt install gnome-devel -y
 sudo apt install gh
 gh auth login
 ```
+## github
+git config --global user.email "rmantovani68@gmail.com"
+git config --global user.name "rmantovani68"
 
 ## vscode
 ```
