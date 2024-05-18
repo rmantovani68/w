@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="dlg_edit_ordine">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Edit Dati Ordine</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">1100</property>
+    <property name="default-height">700</property>
+    <child>
+      <object class="GtkVBox" id="vbox9">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="spacing">5</property>
+        <child>
+          <object class="GtkVBox" id="vbox66">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkFrame" id="frame13">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label-xalign">0</property>
+                <child>
+                  <object class="GtkTable" id="table3">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="border-width">5</property>
+                    <property name="n-rows">5</property>
+                    <property name="n-columns">4</property>
+                    <property name="column-spacing">5</property>
+                    <property name="row-spacing">2</property>
+                    <child>
+                      <object class="GtkLabel" id="label63">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Evasione : </property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">4</property>
+                        <property name="bottom-attach">5</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label61">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Stato Ordine</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">3</property>
+                        <property name="bottom-attach">4</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label48">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Ragione Sociale</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label20">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Codice Cliente</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label19">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Codice Spedizione</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label121">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Colli</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label47">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Righe</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label46">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Pezzi</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label71">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Peso D.</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">3</property>
+                        <property name="bottom-attach">4</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label68">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">Peso R.</property>
+                        <property name="xalign">0</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">4</property>
+                        <property name="bottom-attach">5</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame14">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_ORDPROG">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame15">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_CDCLI">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame16">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_DSCLI1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame17">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_STATO">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">3</property>
+                        <property name="bottom-attach">4</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame20">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_NMCLL">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">1</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame21">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_NMRGH">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">1</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame22">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_NMCPE">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">1</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame23">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_PSPRE">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">1</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">3</property>
+                        <property name="bottom-attach">4</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkFrame" id="frame24">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label-xalign">0</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_PSREA">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">5</property>
+                            <property name="ypad">0</property>
+                            <property name="xalign">1</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">4</property>
+                        <property name="bottom-attach">5</property>
+                        <property name="x-options">GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox11">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="spacing">5</property>
+                        <child>
+                          <object class="GtkLabel" id="label64">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">Data</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFrame" id="frame18">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="label-xalign">0</property>
+                            <child>
+                              <object class="GtkLabel" id="lb_DATAEVA">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="xpad">5</property>
+                                <property name="ypad">0</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label66">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">Ora</property>
+                            <property name="xalign">0</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFrame" id="frame19">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="label-xalign">0</property>
+                            <child>
+                              <object class="GtkLabel" id="lb_ORAEVA">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="xpad">5</property>
+                                <property name="ypad">0</property>
+                                <property name="xalign">0</property>
+                                <property name="yalign">0.5</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">3</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">4</property>
+                        <property name="bottom-attach">5</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFrame" id="frame11">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label-xalign">0</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="sw_edit_ordine">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHSeparator" id="hseparator6">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHButtonBox" id="hbuttonbox19">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">30</property>
+            <child>
+              <object class="GtkButton" id="pb_ok5">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vb_ok1">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap18">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-ok</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label73">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Ok</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pb_edit_collo">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vb_edit_collo">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap22">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-edit</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label77">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Edit Collo</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pb_prev">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vb_prev">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap21">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-go-back</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label76">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Prev</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pb_next">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vb_next">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap20">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-go-forward</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label75">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Next</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pb_cancel4">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vb_cancel1">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap28">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-stop</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label112">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Cancel</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

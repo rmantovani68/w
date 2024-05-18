@@ -115,6 +115,11 @@ void ReadConfiguration(BOOL bReadProcInfo)
 	xncGetFileString(szParagraph,"ImpOrdiniBertello", "ordini_bertello.txt",      Cfg.szImpOrdiniBertello,    80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpColliBertello",  "colli_bertello.txt",       Cfg.szImpColliBertello,     80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpRigheBertello",  "righe_bertello.txt",       Cfg.szImpRigheBertello,     80,Cfg.szCniCfg,NULL);
+
+	xncGetFileString(szParagraph,"ImpOrdiniBertelloN", "ordini_bertello_n.txt",   Cfg.szImpOrdiniBertelloN,   80,Cfg.szCniCfg,NULL);
+	xncGetFileString(szParagraph,"ImpColliBertelloN",  "colli_bertello_n.txt",    Cfg.szImpColliBertelloN,    80,Cfg.szCniCfg,NULL);
+	xncGetFileString(szParagraph,"ImpRigheBertelloN",  "righe_bertello_n.txt",    Cfg.szImpRigheBertelloN,    80,Cfg.szCniCfg,NULL);
+
 	xncGetFileString(szParagraph,"ImpOrdiniFile",     "Ordini.txt",               Cfg.szImpOrdiniFile,        80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpRigheFile",      "Ordini.txt",               Cfg.szImpRigheFile,         80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpArticoliFile",   "Articoli.txt",             Cfg.szImpArticoliFile,      80,Cfg.szCniCfg,NULL);
@@ -1415,7 +1420,7 @@ int CreateListFromSelect(GtkWidget *super_parent, GtkWidget *parent, GtkWidget *
 	* Per le colonne vuote imposto una larghezza minima che permette di visualizzare completamente il titolo;
 	*/
 	for(nColumnIndex=0;nColumnIndex<nFields;nColumnIndex++){
-		sprintf(szColumnName, "%s", gtk_clist_get_column_title(GTK_CLIST(*clist), nColumnIndex));
+		strcpy(szColumnName, gtk_clist_get_column_title(GTK_CLIST(*clist), nColumnIndex));
 		nColumnWidth=10*strlen(StrTrimAll(szColumnName));
 		gtk_clist_set_column_min_width(GTK_CLIST(*clist), nColumnIndex,	nColumnWidth);
 		gtk_clist_set_column_width(GTK_CLIST(*clist), nColumnIndex,	nColumnWidth);
@@ -1434,6 +1439,29 @@ int CreateListFromSelect(GtkWidget *super_parent, GtkWidget *parent, GtkWidget *
 
 	return nTuples;
 }
+
+
+typedef enum _tag_receive_data_t {
+	ORDINI_TESTATE,
+	ORDINI_RIGHE,
+	ARTICOLI,
+	MAPPA,
+	ORDINI_BERTELLO,
+	COLLI_BERTELLO,
+	RIGHE_BERTELLO,
+	ORDINI_BERTELLO_B,
+	ORDINI_BERTELLO_C,
+	ORDINI_BERTELLO_R,
+	COLLI_BERTELLO_B,
+	COLLI_BERTELLO_C,
+	COLLI_BERTELLO_R,
+	RIGHE_BERTELLO_B,
+	RIGHE_BERTELLO_C,
+	RIGHE_BERTELLO_R,
+
+	NUM_RECEIVE_DATA
+} tag_receive_data_t;
+
 
 /*
 * void RicezioneCedola()
@@ -1457,11 +1485,11 @@ void RicezioneCedola(void)
 	GtkWidget *lb_articoli;
 	GtkWidget *lb_ubicazioni;
 
-	GtkWidget *pr[7];
-	GtkWidget *rl[7];
-	GtkWidget *lb[7];
-	char *pszFiles[7];
-	DBSTRUCT db[7];
+	GtkWidget *pr[NUM_RECEIVE_DATA];
+	GtkWidget *rl[NUM_RECEIVE_DATA];
+	GtkWidget *lb[NUM_RECEIVE_DATA];
+	char *pszFiles[NUM_RECEIVE_DATA];
+	DBSTRUCT db[NUM_RECEIVE_DATA];
 	PGresult *PGRes;
 	PGresult *PGResNMCPE;
 	PGresult *PGResOrdini;
@@ -1480,9 +1508,14 @@ void RicezioneCedola(void)
 	char szRighe[128];
 	char szArticoli[128];
 	char szUbicazioni[128];
+
 	char szOrdiniBertello[128];
 	char szColliBertello[128];
 	char szRigheBertello[128];
+
+	char szOrdiniBertello_n[128];
+	char szColliBertello_n[128];
+	char szRigheBertello_n[128];
 
 	lb_1=get_widget(dlg_import,"lb_1");
 	lb_2=get_widget(dlg_import,"lb_2");
@@ -1506,50 +1539,105 @@ void RicezioneCedola(void)
 	sprintf(szColliBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertello));
 	sprintf(szRigheBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertello));
 
+	sprintf(szOrdiniBertello_n,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloN));
+	sprintf(szColliBertello_n,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertelloN));
+	sprintf(szRigheBertello_n,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloN));
+
 	sprintf(szOrdini,           "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniFile));
 	sprintf(szRighe,            "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheFile));
 	sprintf(szArticoli,         "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpArticoliFile));
 	sprintf(szUbicazioni,       "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpUbicazioniFile));
 
-	rl[0]=rl_testate;
-	rl[1]=rl_righe;
-	rl[2]=rl_articoli;
-	rl[3]=rl_ubicazioni;
-	rl[4]=NULL;
-	rl[5]=NULL;
-	rl[6]=NULL;
+	rl[ORDINI_TESTATE]    = rl_testate;
+	rl[ORDINI_RIGHE]      = rl_righe;
+	rl[ARTICOLI]          = rl_articoli;
+	rl[MAPPA]             = rl_ubicazioni;
+	rl[ORDINI_BERTELLO]   = NULL;
+	rl[COLLI_BERTELLO]    = NULL;
+	rl[RIGHE_BERTELLO]    = NULL;
+	rl[ORDINI_BERTELLO_B] = NULL;
+	rl[ORDINI_BERTELLO_C] = NULL;
+	rl[ORDINI_BERTELLO_R] = NULL;
+	rl[COLLI_BERTELLO_B]  = NULL;
+	rl[COLLI_BERTELLO_C]  = NULL;
+	rl[COLLI_BERTELLO_R]  = NULL;
+	rl[RIGHE_BERTELLO_B]  = NULL;
+	rl[RIGHE_BERTELLO_C]  = NULL;
+	rl[RIGHE_BERTELLO_R]  = NULL;
 
-	pr[0]=pr_testate;
-	pr[1]=pr_righe;
-	pr[2]=pr_articoli;
-	pr[3]=pr_ubicazioni;
-	pr[4]=NULL;
-	pr[5]=NULL;
-	pr[6]=NULL;
+	pr[ORDINI_TESTATE]    = pr_testate;
+	pr[ORDINI_RIGHE]      = pr_righe;
+	pr[ARTICOLI]          = pr_articoli;
+	pr[MAPPA]             = pr_ubicazioni;
+	pr[ORDINI_BERTELLO]   = NULL;
+	pr[COLLI_BERTELLO]    = NULL;
+	pr[RIGHE_BERTELLO]    = NULL;
+	pr[ORDINI_BERTELLO_B] = NULL;
+	pr[ORDINI_BERTELLO_C] = NULL;
+	pr[ORDINI_BERTELLO_R] = NULL;
+	pr[COLLI_BERTELLO_B]  = NULL;
+	pr[COLLI_BERTELLO_C]  = NULL;
+	pr[COLLI_BERTELLO_R]  = NULL;
+	pr[RIGHE_BERTELLO_B]  = NULL;
+	pr[RIGHE_BERTELLO_C]  = NULL;
+	pr[RIGHE_BERTELLO_R]  = NULL;
 
-	lb[0]=lb_testate;
-	lb[1]=lb_righe;
-	lb[2]=lb_articoli;
-	lb[3]=lb_ubicazioni;
-	lb[4]=NULL;
-	lb[5]=NULL;
-	lb[6]=NULL;
+	lb[ORDINI_TESTATE]    = lb_testate;
+	lb[ORDINI_RIGHE]      = lb_righe;
+	lb[ARTICOLI]          = lb_articoli;
+	lb[MAPPA]             = lb_ubicazioni;
 
-	pszFiles[0]=szOrdini;
-	pszFiles[1]=szRighe;
-	pszFiles[2]=szArticoli;
-	pszFiles[3]=szUbicazioni;
-	pszFiles[4]=szOrdiniBertello;
-	pszFiles[5]=szColliBertello;
-	pszFiles[6]=szRigheBertello;
+	lb[ORDINI_BERTELLO]   = NULL;
+	lb[COLLI_BERTELLO]    = NULL;
+	lb[RIGHE_BERTELLO]    = NULL;
 
-	db[0]=tRicOrd;
-	db[1]=tRicArt;
-	db[2]=tArticoli;
-	db[3]=tUbicazioni;
-	db[4]=tOrdiniBertello;
-	db[5]=tColliBertello;
-	db[6]=tRigheBertello;
+	lb[ORDINI_BERTELLO_B] = NULL;
+	lb[ORDINI_BERTELLO_C] = NULL;
+	lb[ORDINI_BERTELLO_R] = NULL;
+	lb[COLLI_BERTELLO_B]  = NULL;
+	lb[COLLI_BERTELLO_C]  = NULL;
+	lb[COLLI_BERTELLO_R]  = NULL;
+	lb[RIGHE_BERTELLO_B]  = NULL;
+	lb[RIGHE_BERTELLO_C]  = NULL;
+	lb[RIGHE_BERTELLO_R]  = NULL;
+
+	pszFiles[ORDINI_TESTATE]     = szOrdini;
+	pszFiles[ORDINI_RIGHE]       = szRighe;
+	pszFiles[ARTICOLI]           = szArticoli;
+	pszFiles[MAPPA]              = szUbicazioni;
+
+	pszFiles[ORDINI_BERTELLO]    = szOrdiniBertello;
+	pszFiles[COLLI_BERTELLO]     = szOrdiniBertello;
+	pszFiles[RIGHE_BERTELLO]     = szOrdiniBertello;
+
+	pszFiles[ORDINI_BERTELLO_B]  = szOrdiniBertello_n;
+	pszFiles[ORDINI_BERTELLO_C]  = szOrdiniBertello_n;
+	pszFiles[ORDINI_BERTELLO_R]  = szOrdiniBertello_n;
+	pszFiles[COLLI_BERTELLO_B]   = szColliBertello_n;
+	pszFiles[COLLI_BERTELLO_C]   = szColliBertello_n;
+	pszFiles[COLLI_BERTELLO_R]   = szColliBertello_n;
+	pszFiles[RIGHE_BERTELLO_B]   = szRigheBertello_n;
+	pszFiles[RIGHE_BERTELLO_C]   = szRigheBertello_n;
+	pszFiles[RIGHE_BERTELLO_R]   = szRigheBertello_n;
+
+	db[ORDINI_TESTATE]           = tRicOrd;
+	db[ORDINI_RIGHE]             = tRicArt;
+	db[ARTICOLI]                 = tArticoli;
+	db[MAPPA]                    = tUbicazioni;
+
+	db[ORDINI_BERTELLO]          = tOrdiniBertello;
+	db[COLLI_BERTELLO]           = tColliBertello;
+	db[RIGHE_BERTELLO]           = tRigheBertello;
+
+	db[ORDINI_BERTELLO_B]        = tOrdiniBertello_B;
+	db[ORDINI_BERTELLO_C]        = tOrdiniBertello_C;
+	db[ORDINI_BERTELLO_R]        = tOrdiniBertello_R;
+	db[COLLI_BERTELLO_B]         = tColliBertello_B;
+	db[COLLI_BERTELLO_C]         = tColliBertello_C;
+	db[COLLI_BERTELLO_R]         = tColliBertello_R;
+	db[RIGHE_BERTELLO_B]         = tRigheBertello_B;
+	db[RIGHE_BERTELLO_C]         = tRigheBertello_C;
+	db[RIGHE_BERTELLO_R]         = tRigheBertello_R;
 	
 	gtk_label_printf(lb_1,"Ricezione Dati in corso");
 	gtk_label_printf(lb_2,"Attendere la fine della procedura");
@@ -1560,26 +1648,26 @@ void RicezioneCedola(void)
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"BEGIN WORK;");
 	PQclear(PGRes);
 
-	for(nIndex=0; nIndex<7; nIndex++){
+	for(nIndex=0; nIndex < NUM_RECEIVE_DATA; nIndex++){
 		if((fp=fopen(pszFiles[nIndex],"r"))!=NULL){
 			int nValue=0;
 			char szBuffer[1024];
 			BOOL bUpdate;
 
 			switch(nIndex){
-				case 0:
+				case ORDINI_TESTATE:
 					/* Ordini - Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
-				case 1:
+				case ORDINI_RIGHE:
 					/* Righe -  Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
-				case 2:
+				case ARTICOLI:
 					/* Articoli -  Inserimento CON update */
 					bUpdate=TRUE;
 				break;
-				case 3:
+				case MAPPA:
 					/* Ubicazioni -  Inserimento CON update */
 					bUpdate=TRUE;
 					/*
@@ -1601,16 +1689,25 @@ void RicezioneCedola(void)
 					}
 				break;
 
-				case 4:
-					/* Ordini Bertello - Inserimento SENZA Update */
+				case ORDINI_BERTELLO:
+				case ORDINI_BERTELLO_B:
+				case ORDINI_BERTELLO_C:
+				case ORDINI_BERTELLO_R:
+					/* Ordini Bertello B C R - Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
-				case 5:
-					/* Colli Bertello - Inserimento SENZA Update */
+				case COLLI_BERTELLO:
+				case COLLI_BERTELLO_B:
+				case COLLI_BERTELLO_C:
+				case COLLI_BERTELLO_R:
+					/* Colli Bertello B C R - Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
-				case 6:
-					/* Righe Bertello - Inserimento SENZA Update */
+				case RIGHE_BERTELLO:
+				case RIGHE_BERTELLO_B:
+				case RIGHE_BERTELLO_C:
+				case RIGHE_BERTELLO_R:
+					/* Righe Bertello B C R - Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
 			}
@@ -1657,6 +1754,19 @@ void RicezioneCedola(void)
 	/* righe bertello */
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello set rpstato='%c' where rpstato is null;", RIGA_ELABORATA);
 	PQclear(PGRes);
+
+	/* ordini bertello B R C */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_b set rostato='%c', rotmrcz=now() where rostato is null;", ORDINE_ELABORATO); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_r set rostato='%c', rotmrcz=now() where rostato is null;", ORDINE_ELABORATO); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_c set rostato='%c', rotmrcz=now() where rostato is null;", ORDINE_ELABORATO); PQclear(PGRes);
+	/* colli bertello B R C */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update colli_bertello_b set cpstato='%c' where cpprgcl is null;", COLLO_ELABORATO); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update colli_bertello_r set cpstato='%c' where cpprgcl is null;", COLLO_ELABORATO); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update colli_bertello_c set cpstato='%c' where cpprgcl is null;", COLLO_ELABORATO); PQclear(PGRes);
+	/* righe bertello B R C */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato='%c' where rpstato is null;", RIGA_ELABORATA); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_r set rpstato='%c' where rpstato is null;", RIGA_ELABORATA); PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_c set rpstato='%c' where rpstato is null;", RIGA_ELABORATA); PQclear(PGRes);
 
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"COMMIT WORK;");
 	PQclear(PGRes);
@@ -1754,6 +1864,7 @@ void RicezioneCedola(void)
 	/* rinomino il file di import mappa */
 	sprintf(szCommand,"mv -f %s %s.old",szUbicazioni,szUbicazioni);
 	system(szCommand);
+
 	/* rinomino il file di import ordini bertello */
 	sprintf(szCommand,"mv -f %s %s.old",szOrdiniBertello,szOrdiniBertello);
 	system(szCommand);
@@ -1763,6 +1874,17 @@ void RicezioneCedola(void)
 	/* rinomino il file di import righe bertello */
 	sprintf(szCommand,"mv -f %s %s.old",szRigheBertello,szRigheBertello);
 	system(szCommand);
+
+	/* rinomino il file di import ordini bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szOrdiniBertello_n,szOrdiniBertello_n);
+	system(szCommand);
+	/* rinomino il file di import colli bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szColliBertello_n,szColliBertello_n);
+	system(szCommand);
+	/* rinomino il file di import righe bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szRigheBertello_n,szRigheBertello_n);
+	system(szCommand);
+
 
 	/*
 	* st 18-12-2000
@@ -2140,9 +2262,9 @@ BOOL LanciaOrdine(char *pszOrdineKey,char *szStato)
 		int nRC;
 		char szBuffer[128];
 
-		sprintf(szBuffer,"Ordine Amazon [%s] Incompleto, lancio comunque ?", pszOrdineKey);
+		//sprintf(szBuffer,"Ordine Amazon [%s] Incompleto, lancio comunque ?", pszOrdineKey);
 
-		dlg_msg = gtk_message_dialog_new (GTK_WINDOW(main_window),0,GTK_MESSAGE_QUESTION,GTK_BUTTONS_YES_NO, "%s", szBuffer);
+		dlg_msg = gtk_message_dialog_new (GTK_WINDOW(main_window),0,GTK_MESSAGE_QUESTION,GTK_BUTTONS_YES_NO,"Ordine Amazon [%s] Incompleto, lancio comunque ?", pszOrdineKey);
 		gtk_window_set_title (GTK_WINDOW (dlg_msg), "Ordine Amazon incompleto");
 		nRC = gtk_dialog_run (GTK_DIALOG (dlg_msg));
 		switch(nRC){

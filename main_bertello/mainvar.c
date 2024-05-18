@@ -117,6 +117,17 @@ GdkColor cORANGE   = {0, 0x9b00, 0x7300, 0x0000};
 DBSTRUCT tOrdiniBertello;    /* Ordini Bertello */
 DBSTRUCT tColliBertello;     /* Colli Bertello */
 DBSTRUCT tRigheBertello;     /* Righe Bertello */
+
+DBSTRUCT tOrdiniBertello_B;  /* Ordini Bertello B */
+DBSTRUCT tOrdiniBertello_C;  /* Ordini Bertello C */ 
+DBSTRUCT tOrdiniBertello_R;  /* Ordini Bertello R */ 
+DBSTRUCT tColliBertello_B;   /* Colli Bertello B */
+DBSTRUCT tColliBertello_C;   /* Colli Bertello C */ 
+DBSTRUCT tColliBertello_R;   /* Colli Bertello R */ 
+DBSTRUCT tRigheBertello_B;   /* Righe Bertello B */
+DBSTRUCT tRigheBertello_C;   /* Righe Bertello C */ 
+DBSTRUCT tRigheBertello_R;   /* Righe Bertello R */ 
+
 DBSTRUCT tRicOrd;     /* Ordini Ricevuti */
 DBSTRUCT tRicArt;     /* Righe Ricevute */
 DBSTRUCT tArticoli;   /* Prodotti */
@@ -133,20 +144,29 @@ DBSTRUCT tDettColCni; /* struttura file asci dettaglio colli da trasmettere a ho
 * vettore degli archivi utilizzati
 */
 DB_ARRAY_STRUCT	Tables[]= {
-	{&tOrdiniBertello,  "ordini_bertello"},
-	{&tColliBertello,   "colli_bertello"},
-	{&tRigheBertello,   "righe_bertello"},
-	{&tRicOrd,          "ric_ord"},
-	{&tRicArt,          "ric_art"},
-	{&tArticoli,        "articoli"},
-	{&tOrdProd,         "ord_prod"},
-	{&tColProd,         "col_prod"},
-	{&tRigProd,         "rig_prod"},
-	{&tImballi,         "imballi"},
-	{&tUbicazioni,      "ubicazioni"},
-	{&tOrdCni,          "ord_cni"},
-	{&tColCni,          "col_cni"},
-	{&tDettColCni,      "dett_colli"},
+	{&tOrdiniBertello, "ordini_bertello"},
+	{&tColliBertello,  "colli_bertello"},
+	{&tRigheBertello,  "righe_bertello"},
+	{&tOrdiniBertello_B, "ordini_bertello_b"},
+	{&tOrdiniBertello_C, "ordini_bertello_c"},
+	{&tOrdiniBertello_R, "ordini_bertello_r"},
+	{&tColliBertello_B,  "colli_bertello_b"},
+	{&tColliBertello_C,  "colli_bertello_c"},
+	{&tColliBertello_R,  "colli_bertello_r"},
+	{&tRigheBertello_B,  "righe_bertello_b"},
+	{&tRigheBertello_C,  "righe_bertello_c"},
+	{&tRigheBertello_R,  "righe_bertello_r"},
+	{&tRicOrd,         "ric_ord"},
+	{&tRicArt,         "ric_art"},
+	{&tArticoli,       "articoli"},
+	{&tOrdProd,        "ord_prod"},
+	{&tColProd,        "col_prod"},
+	{&tRigProd,        "rig_prod"},
+	{&tImballi,        "imballi"},
+	{&tUbicazioni,     "ubicazioni"},
+	{&tOrdCni,         "ord_cni"},
+	{&tColCni,         "col_cni"},
+	{&tDettColCni,     "dett_colli"},
 
 	{NULL,NULL}
 };

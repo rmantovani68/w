@@ -68,9 +68,9 @@ int main (int argc, char *argv[])
 	/*
 	* GTK-Error handling functions
 	*/
-	g_set_error_handler((GErrorFunc)gtk_error_handler);
-	g_set_warning_handler((GWarningFunc)gtk_warning_handler);
-	g_set_message_handler((GPrintFunc)gtk_message_handler);
+	// g_set_error_handler((GErrorFunc)gtk_error_handler);
+	// g_set_warning_handler((GWarningFunc)gtk_warning_handler);
+	// g_set_message_handler((GPrintFunc)gtk_message_handler);
 
 	add_pixmap_directory (PACKAGE_BASE_DIR "/pixmaps");
 
@@ -177,9 +177,9 @@ int main (int argc, char *argv[])
 	}
 	if(Cfg.nSAP){
 #ifdef TRACE
-		trace_out_vstr_date(1,"Modalità SAP");
+		trace_out_vstr_date(1,"Modalitï¿½ SAP");
 #endif
-		gtk_text_printf(NULL,txt_msgs,"Modalità SAP\n");
+		gtk_text_printf(NULL,txt_msgs,"Modalitï¿½ SAP\n");
 	}
 
   gtk_main ();

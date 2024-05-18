@@ -1293,7 +1293,7 @@ BOOL UpdateAsciiRecord(char *szBuffer, PDBSTRUCT pDB, BOOL bUpdate)
 				fprintf (stderr, "%s", PQerrorMessage(DBConn));
 			}
 			/*
-			* Update fallito a causa di record non resente (lo inserisco)
+			* Update fallito a causa di record non presente (lo inserisco)
 			*/
 			if (atoi(PQcmdTuples(PGRes))==0){
 				PGRes = PQexec(DBConn, szInsertSQLCmd);
@@ -1307,8 +1307,8 @@ BOOL UpdateAsciiRecord(char *szBuffer, PDBSTRUCT pDB, BOOL bUpdate)
 			* non sono nella condizione di update
 			* -> inserisco direttamente
 			*/
-			fprintf (stderr, "%s", szInsertSQLCmd);
-			fprintf (stderr, "\n");
+			// fprintf (stderr, "%s", szInsertSQLCmd);
+			// fprintf (stderr, "\n");
 
 			PGRes = PQexec(DBConn, szInsertSQLCmd);
 			if (!PGRes || PQresultStatus(PGRes) != PGRES_COMMAND_OK) {

@@ -131,7 +131,7 @@ int main (int argc, char *argv[])
 
 		sleep(1);
 
-		szTitle=g_strdup_printf("Easy Picking %s-%s - Gestione Impianto %s", __version__, __customer__, rcsid);
+		szTitle=g_strdup_printf("Easy Picking %s-%s - Gestione Impianto %s - BERTELLO", __version__, __customer__, rcsid);
 		gtk_window_set_title (GTK_WINDOW (main_window), szTitle);
 		g_free(szTitle);
 

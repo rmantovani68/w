@@ -1,13 +1,9 @@
 Connection to database 'sap' OK.
 
-CREATE TABLE dett_colli:
- DONE
+CREATE TABLE dett_colli: COMMAND FAILED
+ERROR:  relation "dett_colli" already exists
 
-CREATE INDEXES ON dett_colli:
-dett_colli_KEY  UNIQUE
-DONE
-
-Connection to database 'sap' OK.
+CREATE TABLE dett_colli:Connection to database 'sap' OK.
 
 CREATE TABLE ordini_bertello: COMMAND FAILED
 ERROR:  relation "ordini_bertello" already exists
@@ -23,6 +19,96 @@ CREATE TABLE righe_bertello: COMMAND FAILED
 ERROR:  relation "righe_bertello" already exists
 
 CREATE TABLE righe_bertello:Connection to database 'sap' OK.
+
+CREATE TABLE ordini_bertello_b:
+ DONE
+
+CREATE INDEXES ON ordini_bertello_b:
+ordini_bertello_b_KEY  UNIQUE
+CREATE UNIQUE INDEX ordini_bertello_b_KEY ON ordini_bertello_b ( ROTRORD,ORDPROG );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE colli_bertello_b:
+ DONE
+
+CREATE INDEXES ON colli_bertello_b:
+colli_bertello_b_KEY  UNIQUE
+CREATE UNIQUE INDEX colli_bertello_b_KEY ON colli_bertello_b ( ROTRORD,ORDPROG,CPNMCOL );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE righe_bertello_b:
+ DONE
+
+CREATE INDEXES ON righe_bertello_b:
+righe_bertello_b_KEY  UNIQUE
+CREATE UNIQUE INDEX righe_bertello_b_KEY ON righe_bertello_b ( ORDPROG,RPNMCOL,RPCDPRO );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE ordini_bertello_r:
+ DONE
+
+CREATE INDEXES ON ordini_bertello_r:
+ordini_bertello_r_KEY  UNIQUE
+CREATE UNIQUE INDEX ordini_bertello_r_KEY ON ordini_bertello_r ( ROTRORD,ORDPROG );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE colli_bertello_r:
+ DONE
+
+CREATE INDEXES ON colli_bertello_r:
+colli_bertello_r_KEY  UNIQUE
+CREATE UNIQUE INDEX colli_bertello_r_KEY ON colli_bertello_r ( ROTRORD,ORDPROG,CPNMCOL );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE righe_bertello_r:
+ DONE
+
+CREATE INDEXES ON righe_bertello_r:
+righe_bertello_r_KEY  UNIQUE
+CREATE UNIQUE INDEX righe_bertello_r_KEY ON righe_bertello_r ( ORDPROG,RPNMCOL,RPCDPRO );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE ordini_bertello_c:
+ DONE
+
+CREATE INDEXES ON ordini_bertello_c:
+ordini_bertello_c_KEY  UNIQUE
+CREATE UNIQUE INDEX ordini_bertello_c_KEY ON ordini_bertello_c ( ROTRORD,ORDPROG );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE colli_bertello_c:
+ DONE
+
+CREATE INDEXES ON colli_bertello_c:
+colli_bertello_c_KEY  UNIQUE
+CREATE UNIQUE INDEX colli_bertello_c_KEY ON colli_bertello_c ( ROTRORD,ORDPROG,CPNMCOL );
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE righe_bertello_c:
+ DONE
+
+CREATE INDEXES ON righe_bertello_c:
+righe_bertello_c_KEY  UNIQUE
+CREATE UNIQUE INDEX righe_bertello_c_KEY ON righe_bertello_c ( ORDPROG,RPNMCOL,RPCDPRO );
+DONE
+
+Connection to database 'sap' OK.
 
 CREATE TABLE ric_ord: COMMAND FAILED
 ERROR:  relation "ric_ord" already exists
@@ -49,15 +135,10 @@ ERROR:  relation "rig_prod" already exists
 
 CREATE TABLE rig_prod:Connection to database 'sap' OK.
 
-CREATE TABLE rig_tmp:
- DONE
+CREATE TABLE rig_tmp: COMMAND FAILED
+ERROR:  relation "rig_tmp" already exists
 
-CREATE INDEXES ON rig_tmp:
-rig_tmp_KEY  
-rig_tmp_ORDPROG  
-DONE
-
-Connection to database 'sap' OK.
+CREATE TABLE rig_tmp:Connection to database 'sap' OK.
 
 CREATE TABLE ubicazioni: COMMAND FAILED
 ERROR:  relation "ubicazioni" already exists
@@ -74,71 +155,46 @@ ERROR:  relation "imballi" already exists
 
 CREATE TABLE imballi:Connection to database 'sap' OK.
 
-CREATE TABLE errori_prelievo:
- DONE
+CREATE TABLE errori_prelievo: COMMAND FAILED
+ERROR:  relation "errori_prelievo" already exists
 
-CREATE INDEXES ON errori_prelievo:
-errori_prelievo_KEY  
-errori_prelievo_ORDPROG  
-DONE
+CREATE TABLE errori_prelievo:Connection to database 'sap' OK.
 
-Connection to database 'sap' OK.
+CREATE TABLE ric_stor: COMMAND FAILED
+ERROR:  relation "ric_stor" already exists
 
-CREATE TABLE ric_stor:
- DONE
+CREATE TABLE ric_stor:Connection to database 'sap' OK.
 
-CREATE INDEXES ON ric_stor:
-ric_stor_KEY  UNIQUE
-DONE
+CREATE TABLE ord_stor: COMMAND FAILED
+ERROR:  relation "ord_stor" already exists
 
-Connection to database 'sap' OK.
+CREATE TABLE ord_stor:Connection to database 'sap' OK.
 
-CREATE TABLE ord_stor:
- DONE
+CREATE TABLE col_stor: COMMAND FAILED
+ERROR:  relation "col_stor" already exists
 
-CREATE INDEXES ON ord_stor:
-ord_stor_ORDKEY  UNIQUE
-ord_stor_ORDPROG  
-DONE
+CREATE TABLE col_stor:Connection to database 'sap' OK.
 
-Connection to database 'sap' OK.
+CREATE TABLE rig_stor: COMMAND FAILED
+ERROR:  relation "rig_stor" already exists
 
-CREATE TABLE col_stor:
- DONE
-
-CREATE INDEXES ON col_stor:
-col_stor_KEY  
-col_stor_ORDPROG  
-col_stor_CPNMCOL  
-DONE
-
-Connection to database 'sap' OK.
-
-CREATE TABLE rig_stor:
- DONE
-
-CREATE INDEXES ON rig_stor:
-rig_stor_KEY  
-rig_stor_ORDPROG  
-DONE
-
-Connection to database 'sap' OK.
+CREATE TABLE rig_stor:Connection to database 'sap' OK.
 
 CREATE TABLE plc_msg: COMMAND FAILED
 ERROR:  relation "plc_msg" already exists
 
 CREATE TABLE plc_msg:Connection to database 'sap' OK.
 
-CREATE TABLE plc_msg_history:
- DONE
+CREATE TABLE plc_msg_history: COMMAND FAILED
+ERROR:  relation "plc_msg_history" already exists
 
-CREATE INDEXES ON plc_msg_history:
-DONE
+CREATE TABLE plc_msg_history:Connection to database 'sap' OK.
 
-ERROR:  relation "progcollo" already exists
+CREATE TABLE bertello_liste_movimentazione: COMMAND FAILED
+ERROR:  relation "bertello_liste_movimentazione" already exists
+
+CREATE TABLE bertello_liste_movimentazione:ERROR:  relation "progcollo" already exists
 ERROR:  relation "progcollo_add" already exists
 ERROR:  relation "sequence_anno" already exists
 ERROR:  relation "badge_registry" already exists
-CREATE FUNCTION
-CREATE FUNCTION
-CREATE FUNCTION
+ERROR:  function "data_ora" already exists with same argument types

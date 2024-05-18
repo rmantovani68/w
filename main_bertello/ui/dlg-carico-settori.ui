@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="dlg_carico_settori">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Visualizza Statistica</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <child>
+      <object class="GtkVBox" id="vbox144">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkHBox" id="hbox41">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkVBox" id="vbox166">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkScrolledWindow" id="sw_elaborazioni">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHSeparator" id="hseparator74">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="padding">5</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFrame" id="frame147">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="border-width">5</property>
+                    <property name="label-xalign">0</property>
+                    <child>
+                      <object class="GtkVBox" id="vbox167">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="border-width">5</property>
+                        <child>
+                          <object class="GtkRadioButton" id="rb_copie">
+                            <property name="label" translatable="yes">Pezzi</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">False</property>
+                            <property name="use-underline">True</property>
+                            <property name="active">True</property>
+                            <property name="draw-indicator">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkRadioButton" id="rb_prese">
+                            <property name="label" translatable="yes">Righe</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">False</property>
+                            <property name="use-underline">True</property>
+                            <property name="draw-indicator">True</property>
+                            <property name="group">rb_copie</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkVBox" id="vbox150">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="lb_isola_2">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="xpad">0</property>
+                    <property name="ypad">0</property>
+                    <property name="label" translatable="yes">Isola 1</property>
+                    <property name="justify">center</property>
+                    <property name="xalign">0.5</property>
+                    <property name="yalign">0.5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkTable" id="table6">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="n-rows">3</property>
+                    <property name="n-columns">9</property>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_2">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_3">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_4">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_5">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_6">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_7">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_8">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox151">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator38">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label201">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.1</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox152">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_2">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator39">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label203">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.2</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox153">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_3">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator40">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label205">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.3</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox154">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_4">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator41">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label207">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.4</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox155">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_5">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator42">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label209">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.5</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox156">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_6">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator43">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label211">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.6</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox157">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_7">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator44">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label213">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.7</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox158">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_1_8">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator45">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label215">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.8</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator46">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator47">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator48">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator49">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator50">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator51">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator52">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator53">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator54">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_1_1">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label233">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options"/>
+                        <property name="y-options"/>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkHSeparator" id="hseparator72">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="padding">10</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="lb_isola_3">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="xpad">0</property>
+                    <property name="ypad">0</property>
+                    <property name="label" translatable="yes">Isola 2</property>
+                    <property name="justify">center</property>
+                    <property name="xalign">0.5</property>
+                    <property name="yalign">0.5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">False</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkTable" id="table7">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="n-rows">3</property>
+                    <property name="n-columns">9</property>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_2">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_3">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_4">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_5">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_6">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_7">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox159">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_1">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator55">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label217">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.1</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox160">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_2">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator56">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label219">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.2</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox161">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_3">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator57">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label221">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.3</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox162">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_4">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator58">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label223">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.4</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox163">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_5">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator59">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label225">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.5</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox164">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_6">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator60">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label227">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.6</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox165">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_7">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator61">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label229">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.7</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator63">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator64">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator65">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">2</property>
+                        <property name="right-attach">3</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator66">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">3</property>
+                        <property name="right-attach">4</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator67">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">4</property>
+                        <property name="right-attach">5</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator68">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">5</property>
+                        <property name="right-attach">6</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator69">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">6</property>
+                        <property name="right-attach">7</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator70">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">7</property>
+                        <property name="right-attach">8</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_1">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">1</property>
+                        <property name="right-attach">2</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label232">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options"/>
+                        <property name="y-options"/>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator100">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="top-attach">1</property>
+                        <property name="bottom-attach">2</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVBox" id="vbox262">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <child>
+                          <object class="GtkLabel" id="lb_settore_2_8">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkHSeparator" id="hseparator101">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label516">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="xpad">0</property>
+                            <property name="ypad">0</property>
+                            <property name="label" translatable="yes">S.8</property>
+                            <property name="justify">center</property>
+                            <property name="xalign">0.5</property>
+                            <property name="yalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="top-attach">2</property>
+                        <property name="bottom-attach">3</property>
+                        <property name="x-options">GTK_FILL</property>
+                        <property name="y-options">GTK_FILL</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkProgressBar" id="pr_settore_2_8">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="pulse-step">0.10000000149</property>
+                      </object>
+                      <packing>
+                        <property name="left-attach">8</property>
+                        <property name="right-attach">9</property>
+                        <property name="x-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="y-options">GTK_EXPAND | GTK_SHRINK | GTK_FILL</property>
+                        <property name="x-padding">5</property>
+                        <property name="y-padding">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHSeparator" id="hseparator73">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="padding">5</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHButtonBox" id="hbuttonbox21">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">30</property>
+            <property name="layout-style">spread</property>
+            <child>
+              <object class="GtkButton" id="pb_apply1">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <child>
+                  <object class="GtkVBox" id="vbox148">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <child>
+                      <object class="GtkImage" id="pixmap72">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="stock">gtk-apply</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label198">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="xpad">0</property>
+                        <property name="ypad">0</property>
+                        <property name="label" translatable="yes">_Visualizza
+Carico</property>
+                        <property name="use-underline">True</property>
+                        <property name="justify">center</property>
+                        <property name="xalign">0.5</property>
+                        <property name="yalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pb_cancel16">
+                <property name="label">gtk-cancel</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">False</property>
+                <property name="use-stock">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
