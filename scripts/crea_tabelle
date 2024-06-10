@@ -78,5 +78,7 @@ echo 'CREATE SEQUENCE sequence_anno increment 1 minvalue 2000 maxvalue 4000 star
 # registro badge
 cat create_table_registro_badge.sql | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
 
-echo "CREATE FUNCTION data_ora(timestamp) returns text as 'select data(\$1)||'' ''||ora(\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .
+echo "CREATE FUNCTION data(timestamp without time zone) returns text as 'select date_part(''day'',\$1)||''-''||date_part(''month'',\$1)||''-''||date_part(''year'',\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .
+echo "CREATE FUNCTION ora(timestamp without time zone) returns text as 'select date_part(''hour'',\$1)||'':''||date_part(''minute'',\$1)||'':''||date_part(''second'',\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .
+echo "CREATE FUNCTION data_ora(timestamp without time zone) returns text as 'select data(\$1)||'' ''||ora(\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .
 

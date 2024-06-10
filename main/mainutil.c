@@ -775,7 +775,7 @@ BOOL ConnectDataBase(PGconn **pDBConn)
 	*/
 	if (PQstatus(*pDBConn) == CONNECTION_BAD) {
 #ifdef TRACE
-		trace_out_vstr_date(1, "Connection to database '%s' failed. (%s)", Cfg.szPGDataBase);
+		trace_out_vstr_date(1, "Connection to database '%s' failed.", Cfg.szPGDataBase);
 		trace_out_vstr_date(1, "%s", PQerrorMessage(*pDBConn));
 #endif
 		gtk_text_printf(NULL,txt_msgs,"Connection to database '%s' failed.\n", Cfg.szPGDataBase);

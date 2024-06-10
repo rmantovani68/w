@@ -1,5 +1,6 @@
-Sat May 18 10:19:27 AM CEST 2024
-ERROR:  function "isola" already exists with same argument types
-ERROR:  function "settore" already exists with same argument types
+Fri 07 Jun 2024 10:11:12 PM CEST
+CREATE FUNCTION
+CREATE FUNCTION
+NOTICE:  function ubicazione(bpchar) does not exist, skipping
 DROP FUNCTION
 CREATE FUNCTION
