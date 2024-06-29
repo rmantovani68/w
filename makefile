@@ -5,7 +5,7 @@
 
 all:
 	(cd common; make all)
-	(cd main_bertello; make all)
+	(cd main; make all)
 #	(cd main; make all)
 #	(cd barcode; make all)
 #	(cd bilancia; make all)
@@ -37,7 +37,7 @@ clean:
 	(cd display; make clean)
 
 main:
-	(cd main_bertello; make all)
+	(cd main; make all)
 
 printlabel:
 	(cd printlabel; make all)

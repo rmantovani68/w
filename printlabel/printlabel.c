@@ -66,18 +66,23 @@ int main(int argc,char** argv)
 	BOOL bAlone=FALSE;
 
 
-	while ((nOpt = getopt(argc, argv, "a:")) != -1) {
+	szOrdProg[0]='\0';
+	szLabelPrinterName[0]='\0';
+	while ((nOpt = getopt(argc, argv, "ao:p:h")) != -1) {
 		switch(nOpt){
 			case 'a':	/* alone */
 				bAlone=TRUE;
+			break;
+			case 'o':	/* ordine */
 				strcpy(szOrdProg,optarg);
 			break;
 			case 'p':	/* printer */
 				strcpy(szLabelPrinterName,optarg);
 			break;
-			case 'h':
+			case 'h':   /* help */
 				printf("%s : copyright 1999-2000 CNI srl\n",argv[0]);
-				printf("Uso: %s [-a <Progressivo ordine>]\n",argv[0]);
+				printf("Uso: %s [-a -o <Progressivo ordine> -p <printer name>] \n",argv[0]);
+				printf("\t-h: help\n");
 				exit(-1);
 			break;
 			default:
@@ -89,7 +94,7 @@ int main(int argc,char** argv)
 
 	if(nErr){
 		printf("%s : copyright 1999-2000 CNI srl\n",argv[0]);
-		printf("Uso: %s [-a <Progressivo ordine>] \n",argv[0]);
+		printf("Uso: %s [-a -o <Progressivo ordine> -p <printer name>] \n",argv[0]);
 		printf("\t-h: help\n");
 		exit(0);
 	}
@@ -131,11 +136,13 @@ int main(int argc,char** argv)
 #endif
 		}
 	} else {
-		char szSequence[128];
+		if(szOrdProg[0] && szLabelPrinterName[0]){
+			char szSequence[128];
 
-		strcpy(szSequence,"progcollo");
-		StampaOrdine(szOrdProg,szLabelPrinterName,FALSE,0,szSequence);
-		SafeIntFunc();
+			strcpy(szSequence,"progcollo");
+			StampaOrdine(szOrdProg,szLabelPrinterName,FALSE,0,szSequence);
+			SafeIntFunc();
+		}
 	}
 
 	/* Predispongo l'utilizzo dell'uscita di sicurezza */

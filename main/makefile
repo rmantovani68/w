@@ -88,5 +88,5 @@ $(EXE_DIR)/$(PRJ_NAME): $(SRCS:.c=.o) $(OBJS)
 
 clean:
 	@echo '------ Clean ...'
-	@rm -f $(SRCS:.c=.o) $(EXE_DIR)/$(PRJ_NAME)
+	@rm -f $(SRCS:.c=.o) cmp_time.* $(EXE_DIR)/$(PRJ_NAME)
 	@echo '------ Terminated'

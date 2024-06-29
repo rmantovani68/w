@@ -3663,7 +3663,7 @@ BOOL InviaDettaglioColliOrdine(char *pszOrdineKey,FILE *fp)
 		where c.ordprog='%s' and r.ordprog=c.ordprog and r.rpnmcol=c.cpnmcol\
 		order by 1,2,3;", pszOrdineKey,pszOrdineKey);
 
-	if ((nNumeroRighe=atoi(PQcmdTuples(PGResDettColli)))){
+	if ((nNumeroRighe=PQntuples(PGResDettColli))){
 		for (nIndex=0;nIndex<nNumeroRighe;nIndex++){
 			/*
 			* spedizione a Host dei colli relativi all'ordine
