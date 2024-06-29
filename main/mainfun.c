@@ -115,6 +115,12 @@ void ReadConfiguration(BOOL bReadProcInfo)
 	xncGetFileString(szParagraph,"ImpOrdiniBertello", "ordini_bertello.txt",      Cfg.szImpOrdiniBertello,    80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpColliBertello",  "colli_bertello.txt",       Cfg.szImpColliBertello,     80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpRigheBertello",  "righe_bertello.txt",       Cfg.szImpRigheBertello,     80,Cfg.szCniCfg,NULL);
+
+	xncGetFileString(szParagraph,"ImpOrdiniBertelloR", "ordini_bertello_n.txt",      Cfg.szImpOrdiniBertelloB,    80,Cfg.szCniCfg,NULL);
+	xncGetFileString(szParagraph,"ImpRigheBertelloR",  "righe_bertello_n.txt",       Cfg.szImpRigheBertelloB,     80,Cfg.szCniCfg,NULL);
+	xncGetFileString(szParagraph,"ImpOrdiniBertelloB", "ordini_bertello_n.txt",      Cfg.szImpOrdiniBertelloR,    80,Cfg.szCniCfg,NULL);
+	xncGetFileString(szParagraph,"ImpRigheBertelloB",  "righe_bertello_n.txt",       Cfg.szImpRigheBertelloR,     80,Cfg.szCniCfg,NULL);
+
 	xncGetFileString(szParagraph,"ImpOrdiniFile",     "Ordini.txt",               Cfg.szImpOrdiniFile,        80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpRigheFile",      "Ordini.txt",               Cfg.szImpRigheFile,         80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ImpArticoliFile",   "Articoli.txt",             Cfg.szImpArticoliFile,      80,Cfg.szCniCfg,NULL);
@@ -123,6 +129,8 @@ void ReadConfiguration(BOOL bReadProcInfo)
 	xncGetFileString(szParagraph,"ExpOrdiniFile",   "OrdCni.txt",                 Cfg.szExpOrdiniFile,    80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ExpColliFile",    "Colli.txt",                  Cfg.szExpColliFile,     80,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"ExpDettColliFile","dett_colli.txt",             Cfg.szExpDettColliFile, 80,Cfg.szCniCfg,NULL);
+
+	xncGetFileString(szParagraph,"ExpDatiBertello", "IL_DATA.txt",                 Cfg.szExpDatiBertello, 80,Cfg.szCniCfg,NULL);
 
 	Cfg.nOrdiniKeyField       = xncGetFileInt("Tabella Ordini", "OrdiniKeyField",        4, Cfg.szCniCfg, NULL);
 	Cfg.nOrdiniStatusField    = xncGetFileInt("Tabella Ordini", "OrdiniStatusField",     0, Cfg.szCniCfg, NULL);
@@ -1457,11 +1465,11 @@ void RicezioneCedola(void)
 	GtkWidget *lb_articoli;
 	GtkWidget *lb_ubicazioni;
 
-	GtkWidget *pr[7];
-	GtkWidget *rl[7];
-	GtkWidget *lb[7];
-	char *pszFiles[7];
-	DBSTRUCT db[7];
+	GtkWidget *pr[11];
+	GtkWidget *rl[11];
+	GtkWidget *lb[11];
+	char *pszFiles[11];
+	DBSTRUCT db[11];
 	PGresult *PGRes;
 	PGresult *PGResNMCPE;
 	PGresult *PGResOrdini;
@@ -1484,6 +1492,11 @@ void RicezioneCedola(void)
 	char szColliBertello[128];
 	char szRigheBertello[128];
 
+	char szOrdiniBertelloB[128];
+	char szRigheBertelloB[128];
+	char szOrdiniBertelloR[128];
+	char szRigheBertelloR[128];
+
 	lb_1=get_widget(dlg_import,"lb_1");
 	lb_2=get_widget(dlg_import,"lb_2");
 
@@ -1505,6 +1518,10 @@ void RicezioneCedola(void)
 	sprintf(szOrdiniBertello,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertello));
 	sprintf(szColliBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertello));
 	sprintf(szRigheBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertello));
+	sprintf(szOrdiniBertelloB,  "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloB));
+	sprintf(szRigheBertelloB,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloB));
+	sprintf(szOrdiniBertelloR,  "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloR));
+	sprintf(szRigheBertelloR,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloR));
 
 	sprintf(szOrdini,           "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniFile));
 	sprintf(szRighe,            "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheFile));
@@ -1518,6 +1535,10 @@ void RicezioneCedola(void)
 	rl[4]=NULL;
 	rl[5]=NULL;
 	rl[6]=NULL;
+	rl[7]=NULL;
+	rl[8]=NULL;
+	rl[9]=NULL;
+	rl[10]=NULL;
 
 	pr[0]=pr_testate;
 	pr[1]=pr_righe;
@@ -1526,6 +1547,10 @@ void RicezioneCedola(void)
 	pr[4]=NULL;
 	pr[5]=NULL;
 	pr[6]=NULL;
+	pr[7]=NULL;
+	pr[8]=NULL;
+	pr[9]=NULL;
+	pr[10]=NULL;
 
 	lb[0]=lb_testate;
 	lb[1]=lb_righe;
@@ -1534,6 +1559,10 @@ void RicezioneCedola(void)
 	lb[4]=NULL;
 	lb[5]=NULL;
 	lb[6]=NULL;
+	lb[7]=NULL;
+	lb[8]=NULL;
+	lb[9]=NULL;
+	lb[10]=NULL;
 
 	pszFiles[0]=szOrdini;
 	pszFiles[1]=szRighe;
@@ -1542,6 +1571,10 @@ void RicezioneCedola(void)
 	pszFiles[4]=szOrdiniBertello;
 	pszFiles[5]=szColliBertello;
 	pszFiles[6]=szRigheBertello;
+	pszFiles[7]=szOrdiniBertelloB;
+	pszFiles[8]=szRigheBertelloB;
+	pszFiles[9]=szOrdiniBertelloR;
+	pszFiles[10]=szRigheBertelloR;
 
 	db[0]=tRicOrd;
 	db[1]=tRicArt;
@@ -1550,6 +1583,10 @@ void RicezioneCedola(void)
 	db[4]=tOrdiniBertello;
 	db[5]=tColliBertello;
 	db[6]=tRigheBertello;
+	db[7]=tOrdiniBertelloB;
+	db[8]=tRigheBertelloB;
+	db[9]=tOrdiniBertelloR;
+	db[10]=tRigheBertelloR;
 	
 	gtk_label_printf(lb_1,"Ricezione Dati in corso");
 	gtk_label_printf(lb_2,"Attendere la fine della procedura");
@@ -1560,7 +1597,7 @@ void RicezioneCedola(void)
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"BEGIN WORK;");
 	PQclear(PGRes);
 
-	for(nIndex=0; nIndex<7; nIndex++){
+	for(nIndex=0; nIndex<11; nIndex++){
 		if((fp=fopen(pszFiles[nIndex],"r"))!=NULL){
 			int nValue=0;
 			char szBuffer[1024];
@@ -1613,6 +1650,14 @@ void RicezioneCedola(void)
 					/* Righe Bertello - Inserimento SENZA Update */
 					bUpdate=FALSE;
 				break;
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+					/* Ordini Bertello B/R - Inserimento SENZA Update */
+					/* Righe Bertello B/R - Inserimento SENZA Update */
+					bUpdate=FALSE;
+				break;
 			}
 
 #ifdef TRACE
@@ -1657,6 +1702,19 @@ void RicezioneCedola(void)
 	/* righe bertello */
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello set rpstato='%c' where rpstato is null;", RIGA_ELABORATA);
 	PQclear(PGRes);
+
+
+	/* ordini bertello B/R */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_b set rostato='%c', rotmrcz='now' where rostato is null;", ORDINE_RICEVUTO);
+	PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_r set rostato='%c', rotmrcz='now' where rostato is null;", ORDINE_RICEVUTO);
+	PQclear(PGRes);
+	/* righe bertello B/R */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato='%c', rptmrcz='now' where rpstato is null;", RIGA_RICEVUTA);
+	PQclear(PGRes);
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_r set rpstato='%c', rptmrcz='now' where rpstato is null;", RIGA_RICEVUTA);
+	PQclear(PGRes);
+
 
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"COMMIT WORK;");
 	PQclear(PGRes);
@@ -1763,6 +1821,20 @@ void RicezioneCedola(void)
 	/* rinomino il file di import righe bertello */
 	sprintf(szCommand,"mv -f %s %s.old",szRigheBertello,szRigheBertello);
 	system(szCommand);
+
+	/* rinomino il file di import ordini bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szOrdiniBertelloB,szOrdiniBertelloB);
+	system(szCommand);
+	/* rinomino il file di import righe bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szRigheBertelloB,szRigheBertelloB);
+	system(szCommand);
+	/* rinomino il file di import ordini bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szOrdiniBertelloR,szOrdiniBertelloR);
+	system(szCommand);
+	/* rinomino il file di import righe bertello nuovi */
+	sprintf(szCommand,"mv -f %s %s.old",szRigheBertelloR,szRigheBertelloR);
+	system(szCommand);
+
 
 	/*
 	* st 18-12-2000
@@ -2899,6 +2971,7 @@ void ApplyConfigurazione(void)
 	xncPutFileString("General Settings", "ExpOrdiniFile",     Cfg.szExpOrdiniFile,     Cfg.szCniCfg, NULL); 
 	xncPutFileString("General Settings", "ExpColliFile",      Cfg.szExpColliFile,      Cfg.szCniCfg, NULL); 
 	xncPutFileString("General Settings", "ExpDettColliFile",  Cfg.szExpDettColliFile,      Cfg.szCniCfg, NULL); 
+
 	xncPutFileString("General Settings", "PrinterConsole",       Cfg.szPrinterConsole,       Cfg.szCniCfg, NULL); 
 	xncPutFileString("General Settings", "LabelPrinterConsole",  Cfg.szLabelPrinterConsole,  Cfg.szCniCfg, NULL); 
 	xncPutFileString("General Settings", "PrinterIsola1",        Cfg.szPrinterIsola1,        Cfg.szCniCfg, NULL); 
@@ -3590,7 +3663,7 @@ BOOL InviaDettaglioColliOrdine(char *pszOrdineKey,FILE *fp)
 		where c.ordprog='%s' and r.ordprog=c.ordprog and r.rpnmcol=c.cpnmcol\
 		order by 1,2,3;", pszOrdineKey,pszOrdineKey);
 
-	if ((nNumeroRighe=PQntuples(PGResDettColli))){
+	if ((nNumeroRighe=atoi(PQcmdTuples(PGResDettColli)))){
 		for (nIndex=0;nIndex<nNumeroRighe;nIndex++){
 			/*
 			* spedizione a Host dei colli relativi all'ordine
@@ -3605,6 +3678,78 @@ BOOL InviaDettaglioColliOrdine(char *pszOrdineKey,FILE *fp)
 
 	return bOK;
 }
+
+/*
+* 2024-06-29 11:47:48 rm : gestione bertello
+*/
+int InviaDatiBertello(FILE *fp)
+{
+	PGresult *PGRes;
+	BOOL bOK=TRUE;
+	int nNumeroRighe,nIndex,nRigheSpedite=0;
+
+	/* seleziono sia le righe di rifornimento che le righe di prelievo */
+	PGRes=PGExecSQL(Cfg.nDebugVersion,"insert into bertello_liste_movimentazione  \
+		(BLINAME,BLIDESC,BLIPRIO,BLIAREA,BLITPMV,BLICDPR,BLICDLT,BLIQTRC,BLICDEC,BLIENDC) \
+			select \
+                o.ROTRORD,'PW:'||o.RONELAB||'/C:'||o.ORDPROG,0,'1','P',r.RPCDPRO,r.RPCDLOT,r.RPNMCPE,'DFA','|' \
+                from ordini_bertello_b o,righe_bertello_b r where r.rotrord=o.rotrord and r.rpstato='%c' \
+			union all \
+			select \
+                o.ROTRORD,'PW:'||o.RONELAB||'/C:'||o.ORDPROG,0,'1','P',r.RPCDPRO,r.RPCDLOT,r.RPNMCPE,'DFA','|' \
+                from ordini_bertello_r o,righe_bertello_r r where r.rotrord=o.rotrord and r.rpstato='%c';", RIGA_RICEVUTA, RIGA_RICEVUTA);
+
+	nNumeroRighe = atoi(PQcmdTuples(PGRes));
+	int nResultStatus = PQresultStatus(PGRes);
+	PQclear(PGRes);
+
+	if (!nNumeroRighe){
+		if (nResultStatus != PGRES_COMMAND_OK ) {
+			gtk_text_printf(NULL,txt_msgs,"Errore in scrittura dati per bertello\n");
+#ifdef TRACE
+			trace_out_vstr_date(1,"Errore in scrittura dati per bertello");
+#endif
+			bOK = FALSE;
+			nNumeroRighe = -1;
+		}
+		return nNumeroRighe;
+	} 
+
+	/* seleziono sia i colli di linea che i colli bertello */
+
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"select * from bertello_liste_movimentazione where BLSTATO is null");
+
+	if ((nNumeroRighe=PQntuples(PGRes))){
+		for (nIndex=0;nIndex<nNumeroRighe;nIndex++){
+			/*
+			* spedizione a Host dei colli relativi all'ordine
+			*/
+			WriteAsciiRecord(fp, &tBertelloListeMovimentazione,PGRes,nIndex);
+			nRigheSpedite++;
+		}
+	}
+
+	PQclear(PGRes);
+
+	/* set stato ordini / righe bertello prelievo / rifornimento */
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_b set rostato = '%c', rotminv='now'  where rostato = '%c'", ORDINE_INVIATO, ORDINE_RICEVUTO);
+	PQclear(PGRes);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato = '%c', rptminv='now'  where rpstato = '%c'", RIGA_INVIATA, RIGA_RICEVUTA);
+	PQclear(PGRes);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_b set rostato = '%c', rotminv='now'  where rostato = '%c'", ORDINE_INVIATO, ORDINE_RICEVUTO);
+	PQclear(PGRes);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato = '%c', rptminv='now'  where rpstato = '%c'", RIGA_INVIATA, RIGA_RICEVUTA);
+	PQclear(PGRes);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update bertello_righe_movimentazione set blstato = '%c', bltminv='now' where blstato is NULL", ORDINE_INVIATO);
+	PQclear(PGRes);
+
+	return nNumeroRighe;
+}
+
+
+
+
+
 
 /*
 * rm+gg 28-03-2008 : stampa documenti (etichette/packing list/pdf) ordine

@@ -88,6 +88,14 @@ extern GdkColor cORANGE;
 extern DBSTRUCT tOrdiniBertello;  /* Ordini Bertello */
 extern DBSTRUCT tColliBertello;   /* Colli Bertello */
 extern DBSTRUCT tRigheBertello;   /* Righe Bertello */
+
+extern DBSTRUCT tOrdiniBertelloB;    /* Ordini Bertello Prelievo Nuovi */
+extern DBSTRUCT tRigheBertelloB;     /* Righe Bertello Prelievo Nuovi */
+extern DBSTRUCT tOrdiniBertelloR;    /* Ordini Bertello Rifornimento Nuovi */
+extern DBSTRUCT tRigheBertelloR;     /* Righe Bertello Rifornimento Nuovi */
+
+extern DBSTRUCT tBertelloListeMovimentazione;    /* Dati di lavoro Bertello */
+
 extern DBSTRUCT tRicOrd;          /* Ordini Ricevuti */
 extern DBSTRUCT tRicArt;          /* Righe Ricevute */
 extern DBSTRUCT tArticoli;        /* Prodotti */

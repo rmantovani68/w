@@ -1450,13 +1450,8 @@ typedef enum _tag_receive_data_t {
 	COLLI_BERTELLO,
 	RIGHE_BERTELLO,
 	ORDINI_BERTELLO_B,
-	ORDINI_BERTELLO_C,
 	ORDINI_BERTELLO_R,
-	COLLI_BERTELLO_B,
-	COLLI_BERTELLO_C,
-	COLLI_BERTELLO_R,
 	RIGHE_BERTELLO_B,
-	RIGHE_BERTELLO_C,
 	RIGHE_BERTELLO_R,
 
 	NUM_RECEIVE_DATA
@@ -1514,7 +1509,6 @@ void RicezioneCedola(void)
 	char szRigheBertello[128];
 
 	char szOrdiniBertello_n[128];
-	char szColliBertello_n[128];
 	char szRigheBertello_n[128];
 
 	lb_1=get_widget(dlg_import,"lb_1");
@@ -1540,7 +1534,6 @@ void RicezioneCedola(void)
 	sprintf(szRigheBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertello));
 
 	sprintf(szOrdiniBertello_n,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloN));
-	sprintf(szColliBertello_n,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertelloN));
 	sprintf(szRigheBertello_n,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloN));
 
 	sprintf(szOrdini,           "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniFile));
@@ -1556,13 +1549,8 @@ void RicezioneCedola(void)
 	rl[COLLI_BERTELLO]    = NULL;
 	rl[RIGHE_BERTELLO]    = NULL;
 	rl[ORDINI_BERTELLO_B] = NULL;
-	rl[ORDINI_BERTELLO_C] = NULL;
 	rl[ORDINI_BERTELLO_R] = NULL;
-	rl[COLLI_BERTELLO_B]  = NULL;
-	rl[COLLI_BERTELLO_C]  = NULL;
-	rl[COLLI_BERTELLO_R]  = NULL;
 	rl[RIGHE_BERTELLO_B]  = NULL;
-	rl[RIGHE_BERTELLO_C]  = NULL;
 	rl[RIGHE_BERTELLO_R]  = NULL;
 
 	pr[ORDINI_TESTATE]    = pr_testate;
@@ -1573,13 +1561,8 @@ void RicezioneCedola(void)
 	pr[COLLI_BERTELLO]    = NULL;
 	pr[RIGHE_BERTELLO]    = NULL;
 	pr[ORDINI_BERTELLO_B] = NULL;
-	pr[ORDINI_BERTELLO_C] = NULL;
 	pr[ORDINI_BERTELLO_R] = NULL;
-	pr[COLLI_BERTELLO_B]  = NULL;
-	pr[COLLI_BERTELLO_C]  = NULL;
-	pr[COLLI_BERTELLO_R]  = NULL;
 	pr[RIGHE_BERTELLO_B]  = NULL;
-	pr[RIGHE_BERTELLO_C]  = NULL;
 	pr[RIGHE_BERTELLO_R]  = NULL;
 
 	lb[ORDINI_TESTATE]    = lb_testate;
@@ -1611,13 +1594,8 @@ void RicezioneCedola(void)
 	pszFiles[RIGHE_BERTELLO]     = szOrdiniBertello;
 
 	pszFiles[ORDINI_BERTELLO_B]  = szOrdiniBertello_n;
-	pszFiles[ORDINI_BERTELLO_C]  = szOrdiniBertello_n;
 	pszFiles[ORDINI_BERTELLO_R]  = szOrdiniBertello_n;
-	pszFiles[COLLI_BERTELLO_B]   = szColliBertello_n;
-	pszFiles[COLLI_BERTELLO_C]   = szColliBertello_n;
-	pszFiles[COLLI_BERTELLO_R]   = szColliBertello_n;
 	pszFiles[RIGHE_BERTELLO_B]   = szRigheBertello_n;
-	pszFiles[RIGHE_BERTELLO_C]   = szRigheBertello_n;
 	pszFiles[RIGHE_BERTELLO_R]   = szRigheBertello_n;
 
 	db[ORDINI_TESTATE]           = tRicOrd;
@@ -1630,13 +1608,8 @@ void RicezioneCedola(void)
 	db[RIGHE_BERTELLO]           = tRigheBertello;
 
 	db[ORDINI_BERTELLO_B]        = tOrdiniBertello_B;
-	db[ORDINI_BERTELLO_C]        = tOrdiniBertello_C;
 	db[ORDINI_BERTELLO_R]        = tOrdiniBertello_R;
-	db[COLLI_BERTELLO_B]         = tColliBertello_B;
-	db[COLLI_BERTELLO_C]         = tColliBertello_C;
-	db[COLLI_BERTELLO_R]         = tColliBertello_R;
 	db[RIGHE_BERTELLO_B]         = tRigheBertello_B;
-	db[RIGHE_BERTELLO_C]         = tRigheBertello_C;
 	db[RIGHE_BERTELLO_R]         = tRigheBertello_R;
 	
 	gtk_label_printf(lb_1,"Ricezione Dati in corso");
@@ -1877,9 +1850,6 @@ void RicezioneCedola(void)
 
 	/* rinomino il file di import ordini bertello nuovi */
 	sprintf(szCommand,"mv -f %s %s.old",szOrdiniBertello_n,szOrdiniBertello_n);
-	system(szCommand);
-	/* rinomino il file di import colli bertello nuovi */
-	sprintf(szCommand,"mv -f %s %s.old",szColliBertello_n,szColliBertello_n);
 	system(szCommand);
 	/* rinomino il file di import righe bertello nuovi */
 	sprintf(szCommand,"mv -f %s %s.old",szRigheBertello_n,szRigheBertello_n);

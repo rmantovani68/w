@@ -25,11 +25,6 @@ ERROR:  relation "ordini_bertello_b" already exists
 
 CREATE TABLE ordini_bertello_b:Connection to database 'sap' OK.
 
-CREATE TABLE colli_bertello_b: COMMAND FAILED
-ERROR:  relation "colli_bertello_b" already exists
-
-CREATE TABLE colli_bertello_b:Connection to database 'sap' OK.
-
 CREATE TABLE righe_bertello_b: COMMAND FAILED
 ERROR:  relation "righe_bertello_b" already exists
 
@@ -40,30 +35,10 @@ ERROR:  relation "ordini_bertello_r" already exists
 
 CREATE TABLE ordini_bertello_r:Connection to database 'sap' OK.
 
-CREATE TABLE colli_bertello_r: COMMAND FAILED
-ERROR:  relation "colli_bertello_r" already exists
-
-CREATE TABLE colli_bertello_r:Connection to database 'sap' OK.
-
 CREATE TABLE righe_bertello_r: COMMAND FAILED
 ERROR:  relation "righe_bertello_r" already exists
 
 CREATE TABLE righe_bertello_r:Connection to database 'sap' OK.
-
-CREATE TABLE ordini_bertello_c: COMMAND FAILED
-ERROR:  relation "ordini_bertello_c" already exists
-
-CREATE TABLE ordini_bertello_c:Connection to database 'sap' OK.
-
-CREATE TABLE colli_bertello_c: COMMAND FAILED
-ERROR:  relation "colli_bertello_c" already exists
-
-CREATE TABLE colli_bertello_c:Connection to database 'sap' OK.
-
-CREATE TABLE righe_bertello_c: COMMAND FAILED
-ERROR:  relation "righe_bertello_c" already exists
-
-CREATE TABLE righe_bertello_c:Connection to database 'sap' OK.
 
 CREATE TABLE ric_ord: COMMAND FAILED
 ERROR:  relation "ric_ord" already exists
@@ -100,14 +75,10 @@ ERROR:  relation "ubicazioni" already exists
 
 CREATE TABLE ubicazioni:Connection to database 'sap' OK.
 
-CREATE TABLE articoli:
- DONE
+CREATE TABLE articoli: COMMAND FAILED
+ERROR:  relation "articoli" already exists
 
-CREATE INDEXES ON articoli:
-articoli_PRCDPRO  UNIQUE
-DONE
-
-Connection to database 'sap' OK.
+CREATE TABLE articoli:Connection to database 'sap' OK.
 
 CREATE TABLE imballi: COMMAND FAILED
 ERROR:  relation "imballi" already exists
@@ -149,10 +120,13 @@ ERROR:  relation "plc_msg_history" already exists
 
 CREATE TABLE plc_msg_history:Connection to database 'sap' OK.
 
-CREATE TABLE bertello_liste_movimentazione: COMMAND FAILED
-ERROR:  relation "bertello_liste_movimentazione" already exists
+CREATE TABLE bertello_liste_movimentazione:
+ DONE
 
-CREATE TABLE bertello_liste_movimentazione:ERROR:  relation "progcollo" already exists
+CREATE INDEXES ON bertello_liste_movimentazione:
+DONE
+
+ERROR:  relation "progcollo" already exists
 ERROR:  relation "progcollo_add" already exists
 ERROR:  relation "sequence_anno" already exists
 ERROR:  relation "badge_registry" already exists

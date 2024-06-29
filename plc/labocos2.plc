@@ -78,6 +78,7 @@ VAR_GLOBAL
 	OLDIMC : UINT:= 0;
 	OLDIMR : UINT:= 0;
 	OLDIRT : UINT:= 0;
+	PIPPI : := [10(0)];
 	PPRIMP : ARRAY[0..16] OF BOOL:= [17(0)];
 	PRIMP : ARRAY[0..16] OF BOOL:= [17(0)];
 	RACCEN : BOOL:= 0;
@@ -88,6 +89,7 @@ VAR_GLOBAL
 	RRESETL : BOOL:= 0;
 	RSPEGNI : BOOL:= 0;
 	SCOLON : UINT:= 0;
+	SI : ARRAY[0..9] OF BOOL:= [10(0)];  (* PIPPI *)
 	SINC : BOOL:= 0;  (* singola colonna *)
 	SINR : BOOL:= 0;
 	SMATRIX : UINT:= 0;
@@ -156,7 +158,7 @@ VAR_GLOBAL
 	ZINAL : BOOL:= 0;
 	ZPSFMB : BOOL:= 0;
 	ZTERM : BOOL:= 0;
-	_CREATED : UDINT:= 1269071532;
+	_CREATED : UDINT:= 1718816229;
 	_VERSION : STRING:= '1.0.0.0';
 END_VAR
 
@@ -164,14 +166,14 @@ PROGRAM  LABOCOS2
 
   VAR
 	IIDFCB : F_TRIG;
-	IIDFCC : F_TRIG;
 	TTFC18 : TON;
+	IIDFCC : F_TRIG;
 	TTSIREN : TON;
-	TTFCNMN : TON;
 	TTFCA : TON;
+	TTFCNMN : TON;
 	TTFL1 : TOF;
-	CCNTLP : CTU;
 	TTFL2 : TOF;
+	CCNTLP : CTU;
 	TTFL3 : TOF;
 	TTFL4 : TOF;
 	TTFL5 : TOF;
@@ -214,8 +216,8 @@ PROGRAM  LABOCOS2
 	TB : TON;
 	TTFC11 : TON;
 	TTFC12 : TON;
-	TTFC14 : TON;
 	TALLM13 : TON;
+	TTFC14 : TON;
 	TTFC15 : TON;
   END_VAR
 
@@ -1377,6 +1379,10 @@ AND	COLONNA[01,12]
 )
 AND IAL
 	ST 	ZC[1]		(* rilevatore di 'zero curent'; =1 se la corrente è zero & colonna attiva & impulso *) 				(* di accensione presente *)
+
+
+LDN	ZC0201
+AND	PIPPI[2]
 
 
 LDN	ZC0201

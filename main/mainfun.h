@@ -106,6 +106,7 @@ void CheckStampaOrdineEvaso(char *pszOrdine);
 BOOL ScartaOrdine(char *pszOrdineKey,char *pszStato);
 BOOL InviaOrdine(char *pszOrdineKey,FILE *fp);
 BOOL InviaColliOrdine(char *pszOrdineKey,FILE *fp);
+int InviaDatiBertello(FILE *fp);
 BOOL InviaDettaglioColliOrdine(char *pszOrdineKey,FILE *fp);
 void StampaCompletaOrdine(int nIsola, char *szElaborazione,char *szOrdKey);
 BOOL SetErroreRiga(char *szOrdkey,int nCollo,char *szCodProd, char *szCDERR);

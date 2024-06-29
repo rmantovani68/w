@@ -27,6 +27,7 @@
         "gdkkeys.h": "c",
         "gdktypes.h": "c",
         "unistd.h": "c",
-        "gdkkeysyms.h": "c"
+        "gdkkeysyms.h": "c",
+        "ep-db.h": "c"
     }
 }

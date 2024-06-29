@@ -275,6 +275,7 @@ typedef struct tagDisplayStruct{
 * NB: Gli stati degli ordini sono consequenziali
 */
 #define ORDINE_RICEVUTO               ' '
+#define ORDINE_INVIATO                'I'
 #define ORDINE_SPEDITO                'S'
 #define ORDINE_SPEDITO_DA_EVADERE     'K'
 #define ORDINE_ELABORATO              'A'
@@ -329,6 +330,8 @@ typedef struct tagDisplayStruct{
 #define COLLO_PESATO                  'W'
 #define COLLO_SCARTATO                'X'
 
+#define RIGA_RICEVUTA                 ' '
+#define RIGA_INVIATA                  'I'
 #define RIGA_ELABORATA                'A'
 #define RIGA_PRELEVATA                'P'
 #define RIGA_EVASA                    'E'

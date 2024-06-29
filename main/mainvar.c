@@ -117,6 +117,14 @@ GdkColor cORANGE   = {0, 0x9b00, 0x7300, 0x0000};
 DBSTRUCT tOrdiniBertello;    /* Ordini Bertello */
 DBSTRUCT tColliBertello;     /* Colli Bertello */
 DBSTRUCT tRigheBertello;     /* Righe Bertello */
+
+DBSTRUCT tOrdiniBertelloB;    /* Ordini Bertello Prelievo Nuovi */
+DBSTRUCT tRigheBertelloB;     /* Righe Bertello Prelievo Nuovi */
+DBSTRUCT tOrdiniBertelloR;    /* Ordini Bertello Rifornimento Nuovi */
+DBSTRUCT tRigheBertelloR;     /* Righe Bertello Rifornimento Nuovi */
+
+DBSTRUCT tBertelloListeMovimentazione;    /* Dati di lavoro Bertello */
+
 DBSTRUCT tRicOrd;     /* Ordini Ricevuti */
 DBSTRUCT tRicArt;     /* Righe Ricevute */
 DBSTRUCT tArticoli;   /* Prodotti */
@@ -136,6 +144,11 @@ DB_ARRAY_STRUCT	Tables[]= {
 	{&tOrdiniBertello,  "ordini_bertello"},
 	{&tColliBertello,   "colli_bertello"},
 	{&tRigheBertello,   "righe_bertello"},
+	{&tOrdiniBertelloB,  "ordini_bertello_b"},
+	{&tRigheBertelloB,   "righe_bertello_b"},
+	{&tOrdiniBertelloR,  "ordini_bertello_r"},
+	{&tRigheBertelloR,   "righe_bertello_r"},
+	{&tBertelloListeMovimentazione,   "bertello_liste_movimentazione"},
 	{&tRicOrd,          "ric_ord"},
 	{&tRicArt,          "ric_art"},
 	{&tArticoli,        "articoli"},

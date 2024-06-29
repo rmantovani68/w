@@ -2991,6 +2991,11 @@ void on_pbm_ricezione_tutto_activate(GtkMenuItem * menuitem, gpointer user_data)
 	char szColliBertello[128];
 	char szRigheBertello[128];
 
+	char szOrdiniBertelloB[128];
+	char szRigheBertelloB[128];
+	char szOrdiniBertelloR[128];
+	char szRigheBertelloR[128];
+
 	int nIndex;
 
 	sprintf(szOrdiniTitolo,"Ordini");
@@ -3006,6 +3011,11 @@ void on_pbm_ricezione_tutto_activate(GtkMenuItem * menuitem, gpointer user_data)
 	sprintf(szOrdiniBertello,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertello));
 	sprintf(szColliBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertello));
 	sprintf(szRigheBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertello));
+
+	sprintf(szOrdiniBertelloB,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloB));
+	sprintf(szRigheBertelloB,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloB));
+	sprintf(szOrdiniBertelloR,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloR));
+	sprintf(szRigheBertelloR,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloR));
 
 	pszTitoli[0]=szOrdiniTitolo;
 	pszTitoli[1]=szRigheTitolo;
@@ -3023,7 +3033,10 @@ void on_pbm_ricezione_tutto_activate(GtkMenuItem * menuitem, gpointer user_data)
 	db[3]=tUbicazioni;
 
 	if(FileExists(szOrdini) || FileExists(szRighe) || FileExists(szArticoli) || FileExists(szUbicazioni) ||
-     FileExists(szOrdiniBertello) || FileExists(szColliBertello) || FileExists(szRigheBertello)){
+     FileExists(szOrdiniBertello) || FileExists(szColliBertello) || FileExists(szRigheBertello) ||
+	 FileExists(szOrdiniBertelloB) || FileExists(szRigheBertelloB) ||
+	 FileExists(szOrdiniBertelloR) || FileExists(szRigheBertelloR)
+	 ){
 		dlg_import=create_dlg_import();
 
 		lb_1=get_widget(dlg_import,"lb_1");
@@ -3569,6 +3582,70 @@ void do_lancio_elaborazione_senza_documento (GtkButton *button, gpointer user_da
 	SendMessage(PROC_VOLUM, PROC_MAIN, START_ANALISI, NULL);
 	gtk_widget_destroy(GTK_WIDGET(dlg_lancio_distribuzioni));
 	gtk_widget_destroy(GTK_WIDGET(dlg_distribuzione));
+}
+
+
+/*
+* 17/06/2019 rm : modifiche per amazon - dettaglio colli
+*/
+void do_invio_dati_bertello (void)
+{
+	char szTmpDataFile[128];
+	char szDataFile[128];
+	char szDataFileBackup[128];
+	BOOL bRetVal=TRUE;
+	FILE *fpDataFile=0;
+	int rc=0;
+
+	sprintf(szDataFile,"%s/%s",Cfg.szPathExport, Cfg.szExpDatiBertello);
+	sprintf(szTmpDataFile,"%s/%s",Cfg.szPathExport,"tmp_bertello.txt");
+	if(FileExists(szTmpDataFile)){
+		unlink(szTmpDataFile);
+	}
+
+	/* verifico presenza dati in attesa di ricezione da host */
+	if(FileExists(szDataFile)){
+		/* mi fermo e do errore */
+#ifdef TRACE
+		trace_out_vstr_date(1,"file dati bertello [%s] Presente",szDataFile);
+#endif
+		gtk_text_printf("CYAN",txt_msgs,"dati bertello presenti [%s]\n",szDataFile);
+		return ;
+	}
+
+	if((fpDataFile=fopen(szTmpDataFile,"w"))==NULL){
+#ifdef TRACE
+		trace_out_vstr_date(1,"Errore in apertura file tmp bertello [%s] [%s]",szTmpDataFile,strerror(errno));
+#endif
+		gtk_text_printf("CYAN",txt_msgs,"Errore in apertura file tmp bertello [%s]\n",szTmpDataFile);
+		bRetVal = FALSE;
+	} else {
+
+		if ((rc = InviaDatiBertello(fpDataFile)) >= 0){
+			if (rc>0) gtk_text_printf(NULL,txt_msgs,"Inviati a bertello %d righe\n",rc);
+#ifdef TRACE
+			trace_out_vstr_date(1,"Inviati a bertello %d righe\n",rc);
+#endif
+		} else {
+			gtk_text_printf(NULL,txt_msgs,"Errore in invio dati bertello\n",rc);
+#ifdef TRACE
+			trace_out_vstr_date(1,"Errore in invio dati bertello\n",rc);
+#endif
+			bRetVal = FALSE;
+		}
+	}
+	if(bRetVal && rc > 0){
+		if(fpDataFile) {
+			fclose(fpDataFile);
+			/* rinomino il file ordine */
+			rename(szTmpDataFile,szDataFile);
+		}
+	} else {
+		if(fpDataFile) {
+			fclose(fpDataFile);
+			unlink(szTmpDataFile);
+		}
+	}
 }
 
 

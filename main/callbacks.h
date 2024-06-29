@@ -207,6 +207,9 @@ void do_lancio_elaborazione_senza_documento         (GtkButton *button, gpointer
 void do_lancio_evasione_elaborazione                (GtkButton *button, gpointer user_data);
 void do_lancio_consuntivo_elaborazione              (GtkButton *button, gpointer user_data);
 void do_consuntivo_elaborazione                     (GtkButton *button, gpointer user_data);
+
+void do_invio_dati_bertello                         (void);
+
 /* DLG_PRODOTTI */
 void on_dlg_prodotti_pb_modifica_pr_clicked         (gpointer user_data,GtkButton *button);
 void on_dlg_prodotti_pb_aggiungi_pr_clicked         (gpointer user_data,GtkButton *button);

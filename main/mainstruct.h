@@ -32,6 +32,13 @@ typedef struct tagCfgStruct{
 	char szImpOrdiniBertello[80];		/* File di import dati */
 	char szImpColliBertello[80];		/* File di import dati */
 	char szImpRigheBertello[80];		/* File di import dati */
+
+	char szImpOrdiniBertelloB[80];		/* File di import dati */
+	char szImpRigheBertelloB[80];		/* File di import dati */
+
+	char szImpOrdiniBertelloR[80];		/* File di import dati */
+	char szImpRigheBertelloR[80];		/* File di import dati */
+
 	char szImpOrdiniFile[80];		/* File di import dati */
 	char szImpRigheFile[80];		
 	char szImpArticoliFile[80];
@@ -39,6 +46,9 @@ typedef struct tagCfgStruct{
 	char szExpOrdiniFile[80];	 	/* File di export dati */
 	char szExpColliFile[80];		
 	char szExpDettColliFile[80];		
+
+	char szExpDatiBertello[80];		/* File di export dati */
+
 	char szPrinterConsole[80];
 	char szPrinterIsola1[80];
 	char szPrinterIsola2[80];

@@ -1,0 +1,20 @@
+CONFIGURATION WELLA_CONTROL
+
+ VAR_GLOBAL
+	IN_CPB AT %IXIOS.0.0.22.0.7 : BOOL:= 0;
+	OUT_CB AT %QXIOS.0.0.23.0.15 : BOOL:= 0;
+	OUT_CS AT %QXIOS.0.0.23.0.13 : BOOL:= 0;
+	OUT_FO AT %QXIOS.0.0.23.0.14 : BOOL:= 0;
+ END_VAR
+
+ RESOURCE unica ON sola_cpu_presente
+
+  PROGRAM G : WELLA
+
+   (* Input *)
+    (
+
+  (* Output *)
+   );
+ END_RESOURCE
+END_CONFIGURATION

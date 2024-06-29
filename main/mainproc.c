@@ -147,6 +147,13 @@ gint ProcessMsgs( gpointer data )
 	if(lActualTime<time((time_t *)0)){
 		time(&lActualTime);
 		/*
+		*	Ogni 10 secondi
+		*/
+		if(lActualTime%10==0){
+			do_invio_dati_bertello();
+		}
+
+		/*
 		*	Ogni 5 secondi
 		*/
 		if(lActualTime%5==0){
