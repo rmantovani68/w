@@ -66,9 +66,11 @@ dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/plc_msg_history.cfg -
 dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/bertello_liste_movimentazione.cfg -t bertello_liste_movimentazione  >> crea_tabelle.out 2>&1 ; echo -n .
 
 
-echo 'CREATE SEQUENCE progcollo increment 1 minvalue 999999 maxvalue 2000000 start 1000000;' | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
+echo 'CREATE SEQUENCE progcollo increment 1 minvalue 999999 maxvalue 2000000 start 1000000;'       | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
 echo 'CREATE SEQUENCE progcollo_add increment -1 minvalue 1000000 maxvalue 2000000 start 1999999;' | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
-echo 'CREATE SEQUENCE sequence_anno increment 1 minvalue 2000 maxvalue 4000 start 2000;' | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
+echo 'CREATE SEQUENCE sequence_anno increment 1 minvalue 2000 maxvalue 4000 start 2000;'           | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
+echo 'CREATE SEQUENCE proc_lancio_p increment 1 minvalue 2000 maxvalue 4000 start 2000;'           | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
+echo 'CREATE SEQUENCE prog_lancio_precedenza increment 1 minvalue 0 maxvalue 1000000 start 0;'     | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
 
 # registro badge
 cat create_table_registro_badge.sql | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
