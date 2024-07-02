@@ -3692,7 +3692,7 @@ int InviaDatiBertello(FILE *fp)
 	PGRes=PGExecSQL(Cfg.nDebugVersion,"insert into bertello_liste_movimentazione  \
 		(BLINAME,BLIDESC,BLIPRIO,BLIAREA,BLITPMV,BLICDPR,BLICDLT,BLIQTRC,BLICDEC,BLIENDC) \
 			select \
-                o.ROTRORD,CASE WHEN o.RONELAB = '          ' THEN '' ELSE 'PW:'||o.RONELAB||'/C:'||o.ORDPROG,0,'1','P',r.RPCDPRO,r.RPCDLOT,r.RPNMCPE,'DFA','|' \
+                o.ROTRORD,CASE WHEN o.RONELAB = '          ' THEN '' ELSE 'PW:'||o.RONELAB||'/C:'||o.ORDPROG END,0,'1','P',r.RPCDPRO,r.RPCDLOT,r.RPNMCPE,'DFA','|' \
                 from ordini_bertello_b o,righe_bertello_b r where r.rotrord=o.rotrord and r.rpstato='%c' \
 			union all \
 			select \

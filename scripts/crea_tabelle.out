@@ -1,9 +1,13 @@
 Connection to database 'sap' OK.
 
-CREATE TABLE dett_colli: COMMAND FAILED
-ERROR:  relation "dett_colli" already exists
+CREATE TABLE dett_colli:
+ DONE
 
-CREATE TABLE dett_colli:Connection to database 'sap' OK.
+CREATE INDEXES ON dett_colli:
+dett_colli_KEY  UNIQUE
+DONE
+
+Connection to database 'sap' OK.
 
 CREATE TABLE ordini_bertello: COMMAND FAILED
 ERROR:  relation "ordini_bertello" already exists
@@ -20,25 +24,41 @@ ERROR:  relation "righe_bertello" already exists
 
 CREATE TABLE righe_bertello:Connection to database 'sap' OK.
 
-CREATE TABLE ordini_bertello_b: COMMAND FAILED
-ERROR:  relation "ordini_bertello_b" already exists
+CREATE TABLE ordini_bertello_b:
+ DONE
 
-CREATE TABLE ordini_bertello_b:Connection to database 'sap' OK.
+CREATE INDEXES ON ordini_bertello_b:
+ordini_bertello_b_KEY  UNIQUE
+DONE
 
-CREATE TABLE righe_bertello_b: COMMAND FAILED
-ERROR:  relation "righe_bertello_b" already exists
+Connection to database 'sap' OK.
 
-CREATE TABLE righe_bertello_b:Connection to database 'sap' OK.
+CREATE TABLE righe_bertello_b:
+ DONE
 
-CREATE TABLE ordini_bertello_r: COMMAND FAILED
-ERROR:  relation "ordini_bertello_r" already exists
+CREATE INDEXES ON righe_bertello_b:
+righe_bertello_b_KEY  
+DONE
 
-CREATE TABLE ordini_bertello_r:Connection to database 'sap' OK.
+Connection to database 'sap' OK.
 
-CREATE TABLE righe_bertello_r: COMMAND FAILED
-ERROR:  relation "righe_bertello_r" already exists
+CREATE TABLE ordini_bertello_r:
+ DONE
 
-CREATE TABLE righe_bertello_r:Connection to database 'sap' OK.
+CREATE INDEXES ON ordini_bertello_r:
+ordini_bertello_r_KEY  UNIQUE
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE righe_bertello_r:
+ DONE
+
+CREATE INDEXES ON righe_bertello_r:
+righe_bertello_r_KEY  
+DONE
+
+Connection to database 'sap' OK.
 
 CREATE TABLE ric_ord: COMMAND FAILED
 ERROR:  relation "ric_ord" already exists
@@ -85,40 +105,68 @@ ERROR:  relation "imballi" already exists
 
 CREATE TABLE imballi:Connection to database 'sap' OK.
 
-CREATE TABLE errori_prelievo: COMMAND FAILED
-ERROR:  relation "errori_prelievo" already exists
+CREATE TABLE errori_prelievo:
+ DONE
 
-CREATE TABLE errori_prelievo:Connection to database 'sap' OK.
+CREATE INDEXES ON errori_prelievo:
+errori_prelievo_KEY  
+errori_prelievo_ORDPROG  
+DONE
 
-CREATE TABLE ric_stor: COMMAND FAILED
-ERROR:  relation "ric_stor" already exists
+Connection to database 'sap' OK.
 
-CREATE TABLE ric_stor:Connection to database 'sap' OK.
+CREATE TABLE ric_stor:
+ DONE
 
-CREATE TABLE ord_stor: COMMAND FAILED
-ERROR:  relation "ord_stor" already exists
+CREATE INDEXES ON ric_stor:
+ric_stor_KEY  UNIQUE
+DONE
 
-CREATE TABLE ord_stor:Connection to database 'sap' OK.
+Connection to database 'sap' OK.
 
-CREATE TABLE col_stor: COMMAND FAILED
-ERROR:  relation "col_stor" already exists
+CREATE TABLE ord_stor:
+ DONE
 
-CREATE TABLE col_stor:Connection to database 'sap' OK.
+CREATE INDEXES ON ord_stor:
+ord_stor_ORDKEY  UNIQUE
+ord_stor_ORDPROG  
+DONE
 
-CREATE TABLE rig_stor: COMMAND FAILED
-ERROR:  relation "rig_stor" already exists
+Connection to database 'sap' OK.
 
-CREATE TABLE rig_stor:Connection to database 'sap' OK.
+CREATE TABLE col_stor:
+ DONE
+
+CREATE INDEXES ON col_stor:
+col_stor_KEY  
+col_stor_ORDPROG  
+col_stor_CPNMCOL  
+DONE
+
+Connection to database 'sap' OK.
+
+CREATE TABLE rig_stor:
+ DONE
+
+CREATE INDEXES ON rig_stor:
+rig_stor_KEY  
+rig_stor_ORDPROG  
+DONE
+
+Connection to database 'sap' OK.
 
 CREATE TABLE plc_msg: COMMAND FAILED
 ERROR:  relation "plc_msg" already exists
 
 CREATE TABLE plc_msg:Connection to database 'sap' OK.
 
-CREATE TABLE plc_msg_history: COMMAND FAILED
-ERROR:  relation "plc_msg_history" already exists
+CREATE TABLE plc_msg_history:
+ DONE
 
-CREATE TABLE plc_msg_history:Connection to database 'sap' OK.
+CREATE INDEXES ON plc_msg_history:
+DONE
+
+Connection to database 'sap' OK.
 
 CREATE TABLE bertello_liste_movimentazione:
  DONE
@@ -129,7 +177,9 @@ DONE
 ERROR:  relation "progcollo" already exists
 ERROR:  relation "progcollo_add" already exists
 ERROR:  relation "sequence_anno" already exists
+CREATE SEQUENCE
+CREATE SEQUENCE
 ERROR:  relation "badge_registry" already exists
-ERROR:  function "data" already exists with same argument types
-ERROR:  function "ora" already exists with same argument types
-ERROR:  function "data_ora" already exists with same argument types
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION

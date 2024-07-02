@@ -177,7 +177,7 @@ void on_lst_prodotti_row_selected(GtkCList *clist, gint row, gint column, GdkEve
 
 	gtk_clist_get_text(GTK_CLIST(get_widget(dlg_prodotti,"lst_prodotti")),row,7,&pszText);
 	strcpy(szText,pszText); StrTrimAll(szText); 
-  if (atoi(szText)==1){
+  	if (atoi(szText)==1){
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (get_widget(dlg_prodotti,"cb_prodotto_in_piedi")), TRUE);
 	} else {
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (get_widget(dlg_prodotti,"cb_prodotto_in_piedi")), FALSE);
@@ -542,6 +542,7 @@ void on_dlg_select_elaborazione_pb_ok_clicked (gpointer user_data,GtkButton *but
 
 	for(nRowIndex=0;nRowIndex<nRows;nRowIndex++){
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniElabField,&pszElaborazione);
+		StrTrimAll(pszElaborazione);
 		if(!strcmp(szElaborazione,pszElaborazione)){
 			gtk_clist_select_row(GTK_CLIST(lst_ordini), nRowIndex, -1);
 		}
@@ -595,7 +596,8 @@ void on_pbm_reset_stato_ordine_activate(GtkMenuItem * menuitem, gpointer user_da
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdProg);
 			strcpy(szOrdProg,pszOrdProg);
-			
+			StrTrimAll(szOrdProg);
+
 			/*
 			* Ricalcolo numero righe, numero copie e peso dell'ordine che sto resettando
 			*/
@@ -703,6 +705,7 @@ void on_pbm_lancio_ordini_activate(GtkMenuItem * menuitem, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 		strcpy(szOrdineKey,pszOrdineKey);
+		StrTrimAll(szOrdineKey);
 
 		//Update su ric_ord	
 		PGRes=PGExecSQL(Cfg.nDebugVersion,"update ric_ord set roprgpr=%d where ordprog='%s';",nProgressivoPrecedenza,pszOrdineKey);
@@ -710,8 +713,15 @@ void on_pbm_lancio_ordini_activate(GtkMenuItem * menuitem, gpointer user_data)
 	
 		
 		PGRes=PGExecSQL(Cfg.nDebugVersion>1,"select rostato from ric_ord where ordprog='%s';",szOrdineKey);
-		strcpy(szStatoOrdine,PQgetvalue(PGRes,0,0));
-		cStatoSpedito=szStatoOrdine[0];
+		if(PQntuples(PGRes)){
+			strcpy(szStatoOrdine,PQgetvalue(PGRes,0,0));
+			cStatoSpedito=szStatoOrdine[0];
+		} else {
+#ifdef TRACE
+			trace_out_vstr_date(1,"Errore in lancio ordine [%s]", szOrdineKey);
+#endif
+			cStatoSpedito='?';
+		}
 		PQclear(PGRes);
 
 /*******************************************************
@@ -797,6 +807,7 @@ void on_pbm_forza_ordine_senza_documento_activate (GtkMenuItem     *menuitem, gp
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 			strcpy(szOrdineKey,pszOrdineKey);
+			StrTrimAll(szOrdineKey);
 			
 			PGRes=PGExecSQL(Cfg.nDebugVersion>1,"select rostato, roflpdf from ric_ord where ordprog='%s';",szOrdineKey);
 			strcpy(szStatoOrdine,PQgetvalue(PGRes,0,0));
@@ -906,6 +917,7 @@ void on_pbm_stampa_documenti_activate       (GtkMenuItem     *menuitem, gpointer
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 			strcpy(szOrdineKey,pszOrdineKey);
+			StrTrimAll(szOrdineKey);
 			
 			PGRes=PGExecSQL(Cfg.nDebugVersion>1,"select rostato, roflpdf from ric_ord where ordprog='%s';",szOrdineKey);
 			strcpy(szStatoOrdine,PQgetvalue(PGRes,0,0));
@@ -1036,6 +1048,7 @@ void on_pbm_edit_ordine_activate(GtkMenuItem * menuitem, gpointer user_data)
 
 	gtk_clist_get_text(GTK_CLIST(lst_ordini),nLstOrdiniRowSelected,Cfg.nOrdiniKeyField,&pszOrdineKey);
 	strcpy(szOrdineInEdit,pszOrdineKey);
+	StrTrimAll(szOrdineInEdit);
 	gtk_window_set_focus (GTK_WINDOW (dlg_edit_ordine), get_widget(dlg_edit_ordine,"pb_ok"));
 	gtk_widget_show(dlg_edit_ordine);
 	gtk_window_set_transient_for(GTK_WINDOW(dlg_edit_ordine),GTK_WINDOW(main_window));
@@ -1099,14 +1112,14 @@ void on_pbm_salva_stato_activate(GtkMenuItem * menuitem, gpointer user_data)
 	pb_ok=get_widget(dlg_message,"pb_ok");
 
 	gtk_label_printf(lb_msg,"PREMERE OK PER CONFERMARE IL SALVATAGGIO DELLO STATO DELLA LINEA");
-  gtk_window_set_title (GTK_WINDOW (dlg_message), "Salvataggio stato linea");
+	gtk_window_set_title (GTK_WINDOW (dlg_message), "Salvataggio stato linea");
 	gtk_window_set_focus (GTK_WINDOW (dlg_message), get_widget(dlg_message,"pb_ok"));
 	gtk_widget_show(dlg_message);
 	gtk_window_set_transient_for(GTK_WINDOW(dlg_message),GTK_WINDOW(main_window));
 	/*
 	* callback per pressione pulsante
 	*/
-  gtk_signal_connect (GTK_OBJECT (pb_ok), "clicked", GTK_SIGNAL_FUNC (on_salva_stato_linea_pb_ok_clicked), dlg_message);
+	gtk_signal_connect (GTK_OBJECT (pb_ok), "clicked", GTK_SIGNAL_FUNC (on_salva_stato_linea_pb_ok_clicked), dlg_message);
 }
 
 
@@ -1570,6 +1583,7 @@ void on_main_pb_edit_clicked (GtkButton *button, gpointer user_data)
 
 	gtk_clist_get_text(GTK_CLIST(lst_ordini),nLstOrdiniRowSelected,Cfg.nOrdiniKeyField,&pszOrdineKey);
 	strcpy(szOrdineInEdit,pszOrdineKey);
+	StrTrimAll(szOrdineInEdit);
 	gtk_window_set_focus (GTK_WINDOW (dlg_edit_ordine), get_widget(dlg_edit_ordine,"pb_ok"));
 	gtk_widget_show(dlg_edit_ordine);
 	gtk_window_set_transient_for(GTK_WINDOW(dlg_edit_ordine),GTK_WINDOW(main_window));
@@ -1645,6 +1659,7 @@ void on_dlg_edit_ordine_pb_edit_collo_clicked(GtkButton * button, gpointer user_
 		}
 		gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit,0,&pszText);
 		strcpy(szOrdineKey,pszText);
+		StrTrimAll(szOrdineKey);
 		gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit,2,&pszText);
 		nCollo=atoi(pszText);
 		gtk_window_set_focus (GTK_WINDOW (dlg_edit_collo), get_widget(dlg_edit_collo,"pb_ok"));
@@ -1673,6 +1688,7 @@ void on_dlg_edit_ordine_pb_next_clicked(GtkButton * button, gpointer user_data)
 	if(nOrdineIndex<(GTK_CLIST(lst_ordini)->rows)-1){
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nOrdineIndex+1,Cfg.nOrdiniKeyField,&pszOrdine);
 		strcpy(szOrdineInEdit,pszOrdine);
+		StrTrimAll(szOrdineInEdit);
 		EditOrdine(szOrdineInEdit);
 		gtk_widget_set_sensitive(get_widget(dlg_edit_ordine,"pb_next"),TRUE);
 		gtk_widget_set_sensitive(get_widget(dlg_edit_ordine,"pb_prev"),TRUE);
@@ -1693,6 +1709,7 @@ void on_dlg_edit_ordine_pb_prev_clicked(GtkButton * button, gpointer user_data)
 	if(nOrdineIndex>0){
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nOrdineIndex-1,Cfg.nOrdiniKeyField,&pszOrdine);
 		strcpy(szOrdineInEdit,pszOrdine);
+		StrTrimAll(szOrdineInEdit);
 		EditOrdine(szOrdineInEdit);
 		gtk_widget_set_sensitive(get_widget(dlg_edit_ordine,"pb_prev"),TRUE);
 		gtk_widget_set_sensitive(get_widget(dlg_edit_ordine,"pb_next"),TRUE);
@@ -1746,6 +1763,7 @@ void on_dlg_edit_collo_pb_next_clicked(GtkButton * button, gpointer user_data)
 		gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit+1,0,&pszText);
 		if(pszText){
 			strcpy(szOrdineKey,pszText);
+			StrTrimAll(szOrdineKey);
 			gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit+1,2,&pszText);
 			nCollo=atoi(pszText);
 
@@ -1771,6 +1789,7 @@ void on_dlg_edit_collo_pb_prev_clicked(GtkButton * button, gpointer user_data)
 		gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit-1,0,&pszText);
 		if(pszText){
 			strcpy(szOrdineKey,pszText);
+			StrTrimAll(szOrdineKey);
 			gtk_clist_get_text(GTK_CLIST(lst_edit_ordine),nColloInEdit-1,2,&pszText);
 			nCollo=atoi(pszText);
 
@@ -1821,6 +1840,7 @@ void on_dlg_distribuzione_pb_elimina_elaborazione (GtkButton *button, gpointer u
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
 		strcpy(szNumeroElab,pszNumeroElab);
+		StrTrimAll(szNumeroElab);
 
 		/*
 		* Controllo che l'elaborazione abbia al massimo ordini analizzati
@@ -1874,6 +1894,7 @@ void on_dlg_message_elimina_elaborazione_clicked (GtkButton *button, gpointer us
 	nRowIndex=GPOINTER_TO_INT(lista->data);
 	gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
 	strcpy(szElab,pszNumeroElab);
+	StrTrimAll(szElab);
 	g_list_free(lista);
 	
 	gtk_widget_destroy(user_data);
@@ -1954,6 +1975,7 @@ void on_dlg_distribuzione_pb_lancia_clicked (GtkButton *button, gpointer user_da
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2023,6 +2045,7 @@ void on_dlg_distribuzione_pb_lancia_senza_documento_clicked (GtkButton       *bu
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2097,6 +2120,7 @@ void on_dlg_distribuzione_pb_anticipa_consuntivo (GtkButton       *button, gpoin
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2116,6 +2140,7 @@ void on_dlg_distribuzione_pb_anticipa_consuntivo (GtkButton       *button, gpoin
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2205,6 +2230,7 @@ void on_dlg_distribuzione_pb_pallet_clicked(gpointer user_data,GtkButton *button
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2224,6 +2250,7 @@ void on_dlg_distribuzione_pb_pallet_clicked(gpointer user_data,GtkButton *button
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2315,6 +2342,7 @@ void on_dlg_distribuzione_pb_fuori_pallet_clicked(gpointer user_data,GtkButton *
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -2334,6 +2362,7 @@ void on_dlg_distribuzione_pb_fuori_pallet_clicked(gpointer user_data,GtkButton *
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -3233,6 +3262,7 @@ void on_dlg_set_ordini_pb_ok_clicked (gpointer user_data,GtkButton *button)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 		strcpy(szOrdineKey,pszOrdineKey);
+		StrTrimAll(szOrdineKey);
 		
 		/*
 		* Setto lo stato degli ordini(ricevuti ed in produzione), delle righe e dei colli
@@ -3395,6 +3425,7 @@ void do_lancio_elaborazione (GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		 * Richiesta Fabio: non metto in stato L gli ordini in Z ma in aspettativa PDF
 		 */
@@ -3518,6 +3549,7 @@ void do_lancio_elaborazione_senza_documento (GtkButton *button, gpointer user_da
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		 * Richiesta Fabio: non metto in stato L gli ordini in Z ma in aspettativa PDF
 		 */
@@ -3691,6 +3723,7 @@ void do_consuntivo_elaborazione (GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		 * Richiesta Ferrari: diversamente da quanto chiesto inizialmente consuntivo
 		 * anche gli ordini fittizi
@@ -3864,6 +3897,7 @@ void do_lancio_consuntivo_elaborazione (GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		PGRes=PGExecSQL(FALSE,"select ordprog from ric_ord where ronelab='%s' and (rostato =' ' or rostato='S' or rostato is NULL) order by ordprog;",szNumElaborazione);
 		nElaborazioni=PQntuples(PGRes);
 		for (nIndex=0; nIndex<nElaborazioni; nIndex++){
@@ -3919,6 +3953,7 @@ void do_lancio_evasione_elaborazione (GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		PGRes=PGExecSQL(FALSE,"select ordprog from ric_ord where ronelab='%s' and (rostato =' ' or rostato='S' or rostato is NULL) order by ordprog;",szNumElaborazione);
 		nElaborazioni=PQntuples(PGRes);
 		for (nIndex=0; nIndex<nElaborazioni; nIndex++){
@@ -4160,6 +4195,7 @@ void on_dlg_carico_settori_pb_apply_clicked (GtkButton       *button, gpointer  
 			bFirst=FALSE;
 		}
 		gtk_clist_get_text(GTK_CLIST(lst),nRiga,0,&szElaborazione);
+		StrTrimAll(szElaborazione);
 		strcat(szSqlCmd," ro.ronelab='");
 		strcat(szSqlCmd,szElaborazione);
 		strcat(szSqlCmd,"'");
@@ -4677,6 +4713,7 @@ void on_dlg_set_prio_pb_ok_clicked          (gpointer user_data,GtkButton *butto
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 		strcpy(szOrdineKey,pszOrdineKey);
+		StrTrimAll(szOrdineKey);
 
 		if(!SetPriority(szOrdineKey,nPrio)){
 			gtk_text_printf(NULL,txt_msgs,"Errore in cambio priorita' ordine [%s]\n",szOrdineKey);
@@ -5080,6 +5117,7 @@ void on_dlg_lancio_consuntivo_pb_lancio_clicked ( gpointer         user_data,Gtk
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -5143,6 +5181,7 @@ void on_dlg_lancio_evasione_pb_lancio_clicked (gpointer         user_data, GtkBu
 		do {
 			nRowIndex=GPOINTER_TO_INT(lista->data);
 			gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumeroElab);
+			StrTrimAll(pszNumeroElab);
 			strcat(szSqlCmd,"'");
 			strcat(szSqlCmd,pszNumeroElab);
 			strcat(szSqlCmd,"', ");
@@ -5396,6 +5435,7 @@ void do_elimina_prodotto (GtkButton *button, gpointer user_data)
 		nIndex=0;
 		nRiga=-1;
 		while(gtk_clist_get_text(GTK_CLIST(lst_prodotti),nIndex,0,&pszText)){
+			StrTrimAll(pszText);
 			if(!strcmp(szCodProd,pszText)){
 				nRiga=nIndex;
 			}
@@ -5440,6 +5480,7 @@ void do_elimina_prodotto_pericoloso (GtkButton *button, gpointer user_data)
 		nIndex=0;
 		nRiga=-1;
 		while(gtk_clist_get_text(GTK_CLIST(lst),nIndex,0,&pszText)){
+			StrTrimAll(pszText);
 			if(!strcmp(szCodProd,StrTrimAll(pszText))){
 				nRiga=nIndex;
 			}
@@ -5472,6 +5513,7 @@ void on_dlg_prodotti_pb_cerca_pr_clicked    (gpointer user_data,GtkButton *butto
 	nIndex=0;
 	nRiga=-1;
 	while(gtk_clist_get_text(GTK_CLIST(lst_prodotti),nIndex,0,&pszText)){
+		StrTrimAll(pszText);
 		if(!strcmp(szCodProd,StrTrimAll(pszText))){
 			nRiga=nIndex;
 		}
@@ -5515,6 +5557,7 @@ void on_pbm_scarto_ordini_activate(GtkMenuItem *menuitem, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdineKey);
 		strcpy(szOrdineKey,pszOrdineKey);
+		StrTrimAll(szOrdineKey);
 
 		if(!ScartaOrdine(szOrdineKey,szStato)){
 			gtk_text_printf(NULL,txt_msgs,"Predisposto allo scarto in bilancia ordine [%s]\n",szOrdineKey);
@@ -5616,6 +5659,7 @@ void do_invio_dati_to_sap (GtkButton *button, gpointer user_data)
 				nRowIndex=GPOINTER_TO_INT(lista->data);
 				gtk_clist_get_text(GTK_CLIST(lst_ordini),nRowIndex,Cfg.nOrdiniKeyField,&pszOrdProg);
 				strcpy(szOrdProg,pszOrdProg);
+				StrTrimAll(szOrdProg);
 
 				nOrdiniSelezionati++;
 
@@ -6167,6 +6211,7 @@ void on_pb_qta_errata_clicked (gpointer user_data,GtkButton *button)
 	gtk_label_get(GTK_LABEL(get_widget(dlg_edit_collo,"lb_NMCOL")),&pszCollo);
 	nCollo=atoi(pszCollo);
 	gtk_clist_get_text(GTK_CLIST(lst_righe_collo),nLstRigheColloRowSelected,0,&pszCodProd);
+	StrTrimAll(pszCodProd);
 	SetErroreRiga(pszOrdkey,nCollo,pszCodProd,"QTA_ERRATA");
 }
 
@@ -6189,6 +6234,7 @@ void on_pb_mancante_clicked (gpointer user_data,GtkButton *button)
 	gtk_label_get(GTK_LABEL(get_widget(dlg_edit_collo,"lb_NMCOL")),&pszCollo);
 	nCollo=atoi(pszCollo);
 	gtk_clist_get_text(GTK_CLIST(lst_righe_collo),nLstRigheColloRowSelected,0,&pszCodProd);
+	StrTrimAll(pszCodProd);
 	SetErroreRiga(pszOrdkey,nCollo,pszCodProd,"MANCANTE");
 }
 
@@ -6211,6 +6257,7 @@ void on_pb_inversione_clicked (gpointer user_data,GtkButton *button)
 	gtk_label_get(GTK_LABEL(get_widget(dlg_edit_collo,"lb_NMCOL")),&pszCollo);
 	nCollo=atoi(pszCollo);
 	gtk_clist_get_text(GTK_CLIST(lst_righe_collo),nLstRigheColloRowSelected,0,&pszCodProd);
+	StrTrimAll(pszCodProd);
 	SetErroreRiga(pszOrdkey,nCollo,pszCodProd,"INVERSIONE");
 }
 
@@ -6233,6 +6280,7 @@ void on_pb_riga_non_richiesta_clicked (gpointer user_data,GtkButton *button)
 	gtk_label_get(GTK_LABEL(get_widget(dlg_edit_collo,"lb_NMCOL")),&pszCollo);
 	nCollo=atoi(pszCollo);
 	gtk_clist_get_text(GTK_CLIST(lst_righe_collo),nLstRigheColloRowSelected,0,&pszCodProd);
+	StrTrimAll(pszCodProd);
 	SetErroreRiga(pszOrdkey,nCollo,pszCodProd,"NON_RICHIESTA");
 }
 
@@ -6255,6 +6303,7 @@ void on_pb_annulla_errore_clicked (gpointer user_data,GtkButton *button)
 	gtk_label_get(GTK_LABEL(get_widget(dlg_edit_collo,"lb_NMCOL")),&pszCollo);
 	nCollo=atoi(pszCollo);
 	gtk_clist_get_text(GTK_CLIST(lst_righe_collo),nLstRigheColloRowSelected,0,&pszCodProd);
+	StrTrimAll(pszCodProd);
 	ResetErroreRiga(pszOrdkey,nCollo,pszCodProd);
 }
 
@@ -6328,6 +6377,7 @@ void do_marca_elaborazione_pallet(GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		* rm 16-11-2019 : se rotrnsp (transit point) in (35 o 31 o 32)
 		* non consentire di marcare l'ordine a PALLET
@@ -6382,6 +6432,7 @@ void do_marca_elaborazione_fuori_pallet(GtkButton *button, gpointer user_data)
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		*/
 		PGRes=PGExecSQL(FALSE,"select ordprog from ric_ord where ronelab='%s' order by ordprog;",szNumElaborazione);
@@ -6588,6 +6639,7 @@ void on_dlg_distribuzione_pb_amazon_clicked (GtkButton       *button, gpointer  
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		*/
 		PGRes=PGExecSQL(FALSE,"select ordprog from ric_ord where ronelab='%s' order by ordprog;",szNumElaborazione);
@@ -6631,6 +6683,7 @@ void on_dlg_distribuzione_pb_normale_clicked (GtkButton       *button, gpointer 
 		nRowIndex=GPOINTER_TO_INT(lista->data);
 		gtk_clist_get_text(GTK_CLIST(get_widget(dlg_distribuzione,"clist_distribuzione")),nRowIndex,0,&pszNumElaborazione);
 		strcpy(szNumElaborazione,pszNumElaborazione);
+		StrTrimAll(szNumElaborazione);
 		/*
 		*/
 		PGRes=PGExecSQL(FALSE,"select ordprog from ric_ord where ronelab='%s' order by ordprog;",szNumElaborazione);

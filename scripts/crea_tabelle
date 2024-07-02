@@ -30,40 +30,42 @@ echo 'Database Host = '$DB_HOST
 
 # implementazione amazon 14-06-2019
 
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/dett_colli.cfg         -t  dett_colli          > crea_tabelle.out 2>&1 ; echo -n .
+DBF2SQL=../dbf2sql/dbf2sql
 
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello.cfg    -t  ordini_bertello     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/colli_bertello.cfg     -t  colli_bertello      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello.cfg     -t  righe_bertello      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/dett_colli.cfg         -t  dett_colli          > crea_tabelle.out 2>&1 ; echo -n .
+
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello.cfg    -t  ordini_bertello     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/colli_bertello.cfg     -t  colli_bertello      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello.cfg     -t  righe_bertello      >> crea_tabelle.out 2>&1 ; echo -n .
 
 # nuova gestione bertello
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello_b.cfg    -t  ordini_bertello_b     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello_b.cfg     -t  righe_bertello_b      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello_r.cfg    -t  ordini_bertello_r     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello_r.cfg     -t  righe_bertello_r      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello_b.cfg    -t  ordini_bertello_b     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello_b.cfg     -t  righe_bertello_b      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ordini_bertello_r.cfg    -t  ordini_bertello_r     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/righe_bertello_r.cfg     -t  righe_bertello_r      >> crea_tabelle.out 2>&1 ; echo -n .
 
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_ord.cfg     -t ric_ord      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_art.cfg     -t ric_art      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ord_prod.cfg    -t ord_prod     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/col_prod.cfg    -t col_prod     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg    -t rig_prod     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg    -t rig_tmp      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ubicazioni.cfg  -t ubicazioni   >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/articoli.cfg    -t articoli     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/imballi.cfg     -t imballi      >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/errori_prelievo.cfg     -t errori_prelievo      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_ord.cfg     -t ric_ord      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_art.cfg     -t ric_art      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ord_prod.cfg    -t ord_prod     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/col_prod.cfg    -t col_prod     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg    -t rig_prod     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg    -t rig_tmp      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ubicazioni.cfg  -t ubicazioni   >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/articoli.cfg    -t articoli     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/imballi.cfg     -t imballi      >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/errori_prelievo.cfg     -t errori_prelievo      >> crea_tabelle.out 2>&1 ; echo -n .
 
 # tabelle di storico
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_ord.cfg    -t ric_stor    >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ord_prod.cfg   -t ord_stor    >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/col_prod.cfg   -t col_stor    >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg   -t rig_stor    >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ric_ord.cfg    -t ric_stor    >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/ord_prod.cfg   -t ord_stor    >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/col_prod.cfg   -t col_stor    >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/rig_prod.cfg   -t rig_stor    >> crea_tabelle.out 2>&1 ; echo -n .
 
 # rm 13-04-2010 : Tabelle per gestione msg plc
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/plc_msg.cfg -t plc_msg                     >> crea_tabelle.out 2>&1 ; echo -n .
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/plc_msg_history.cfg -t plc_msg_history     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/plc_msg.cfg -t plc_msg                     >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/plc_msg_history.cfg -t plc_msg_history     >> crea_tabelle.out 2>&1 ; echo -n .
 
-dbf2sql -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/bertello_liste_movimentazione.cfg -t bertello_liste_movimentazione  >> crea_tabelle.out 2>&1 ; echo -n .
+$DBF2SQL -h $DATABASE_HOST -d $DATABASE_NAME -c ../data_sap/bertello_liste_movimentazione.cfg -t bertello_liste_movimentazione  >> crea_tabelle.out 2>&1 ; echo -n .
 
 
 echo 'CREATE SEQUENCE progcollo increment 1 minvalue 999999 maxvalue 2000000 start 1000000;'       | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
@@ -74,6 +76,9 @@ echo 'CREATE SEQUENCE prog_lancio_precedenza increment 1 minvalue 0 maxvalue 100
 
 # registro badge
 cat create_table_registro_badge.sql | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
+
+# sscc amazon
+cat create_sscc_checkdigit_func.sql | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n
 
 echo "CREATE FUNCTION data(timestamp without time zone) returns text as 'select date_part(''day'',\$1)||''-''||date_part(''month'',\$1)||''-''||date_part(''year'',\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .
 echo "CREATE FUNCTION ora(timestamp without time zone) returns text as 'select date_part(''hour'',\$1)||'':''||date_part(''minute'',\$1)||'':''||date_part(''second'',\$1)' language 'sql';" | psql -h $DATABASE_HOST $DATABASE_NAME >> crea_tabelle.out 2>&1 ; echo -n .

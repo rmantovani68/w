@@ -37,3 +37,4 @@ exe/settori
 exe/sock
 exe/volum
 !backup/dati_prod_sap.dump.gz
+!backup/sap_backup.dump.gz

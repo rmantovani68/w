@@ -1,0 +1,4 @@
+-- select r.rpcdpro, r.rpqtspe, r.rpcdubi, r.rpswffo, r.rpswpcf,a.prlungh, a.prlargh, a.praltez, a.prswalt, a.prpesgr, a.prfcpcf,a.prperic,a.prflgpp, a.prqtkar 
+-- from rig_tmp as r, articoli as a, ubicazioni as u where r.ordprog='1031390888' and substr(r.rpcdubi,1,1)='2' and a.prcdpro=r.rpcdpro and u.codprod=r.rpcdpro order by u.isola,u.priorita;
+select r.rpcdpro, r.rpqtspe, r.rpcdubi, r.rpswffo, r.rpswpcf
+from rig_tmp as r where r.ordprog='1031390888'
