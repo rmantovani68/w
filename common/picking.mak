@@ -88,7 +88,7 @@ WARNINGS=\
 	-Wno-unused-but-set-variable \
 	-Wno-deprecated-declarations \
 	-Wno-maybe-uninitialized \
-
+	-Wno-format-security \
 
 
 

@@ -193,70 +193,66 @@ gint ProcessMsgs( gpointer data )
 #ifdef TRACE
 					//trace_out_vstr_date(Cfg.nDebugVersion>3,"File %s in Dir %s PDF ricevuti esistente ... \n",szFileName,szPathPdfReceive);
 #endif
-					if (strlen(szFileName)==15) {
-						// Ricavo il tipo di file e l'ordine associato (non guardo nemmeno se e' un .pdf!)
-						cOPFLPDF=szFileName[0];
-						strcpy(szBolla,SubStr(szFileName,1,10));
+					strcpy(szBolla,SubStr(szFileName,0,10));
 
-						PGResSelect=PGExecSQL(FALSE,"select ordprog from ric_ord where ordprog='%s';",szBolla);
-						if(PQntuples(PGResSelect)==1){
+					PGResSelect=PGExecSQL(FALSE,"select ordprog from ric_ord where ordprog='%s';",szBolla);
+					if(PQntuples(PGResSelect)==1){
 
-							// Faccio l'update di ric_ord
-							PGRes=PGExecSQL(Cfg.nDebugVersion>1,"update ric_ord set roflpdf='%c' where ordprog='%s';",cOPFLPDF,szBolla);
-							if(PQresultStatus(PGRes) == PGRES_COMMAND_OK && PQcmdTuples(PGRes)!=0){ 
+						// Faccio l'update di ric_ord
+						PGRes=PGExecSQL(Cfg.nDebugVersion>1,"update ric_ord set roflpdf='F' where ordprog='%s';",szBolla);
+						if(PQresultStatus(PGRes) == PGRES_COMMAND_OK && PQcmdTuples(PGRes)!=0){ 
 #ifdef TRACE
-								trace_out_vstr_date(1,"Ordine [%s]: Trovato documento pdf tipo [%c] \n",szBolla,cOPFLPDF);
+							trace_out_vstr_date(1,"Ordine [%s]: Trovato documento pdf tipo [F] \n",szBolla);
 #endif
-								/*
-								 * LG 2017-06-30
-								 * Sono cambiate un po' di cose. Con Coty le stampe PDF non sono piu' landscape ma portrait.
-								 * Purtroppo il file che mandano ha i margini piccolissimi e non c'e' verso di allargare i 
-								 * margini di stampa. Allora uso ghostscript, con questi parametri:
-								 * -q (non scrive l'output del comando sullo standard output)
-								 * -o (file di output)
-								 * -sDEVICE=pdfwrite (dice il tipo di device di output)
-								 * -dDEVICEWIDTHPOINTS=623 -dDEVICEHEIGHTPOINTS=842 (qui il discorso e' che un A4 ha misure 595pts × 842pts 210mm × 297mm
-								 *       quindi se voglio rendere piu' largo il doc di 10 mm => 595+28 dove 28 e' un cm in punti)
-								 * -sPAPERSIZE=a4 (o dell formato dell'output)
-								 * -dFIXEDMEDIA (costringe il doc al formato A4)
-								 * -dPDFFitPage (costringe il doc al formato A4)
-								 *
-								 * Quindi ora non faccio piu' una move ma creo un nuovo file in pdfstore poi cancello l'originale in pdf
-								 *
-								 *
-								 */
-								// Sposto il pdf nello store
-								//sprintf(szCommand,"mv %s/%s %s/%s\n",szPathPdfReceive,szFileName,szPathPdfStore,szFileName);
-								//system(szCommand);
+							/*
+								* LG 2017-06-30
+								* Sono cambiate un po' di cose. Con Coty le stampe PDF non sono piu' landscape ma portrait.
+								* Purtroppo il file che mandano ha i margini piccolissimi e non c'e' verso di allargare i 
+								* margini di stampa. Allora uso ghostscript, con questi parametri:
+								* -q (non scrive l'output del comando sullo standard output)
+								* -o (file di output)
+								* -sDEVICE=pdfwrite (dice il tipo di device di output)
+								* -dDEVICEWIDTHPOINTS=623 -dDEVICEHEIGHTPOINTS=842 (qui il discorso e' che un A4 ha misure 595pts × 842pts 210mm × 297mm
+								*       quindi se voglio rendere piu' largo il doc di 10 mm => 595+28 dove 28 e' un cm in punti)
+								* -sPAPERSIZE=a4 (o dell formato dell'output)
+								* -dFIXEDMEDIA (costringe il doc al formato A4)
+								* -dPDFFitPage (costringe il doc al formato A4)
+								*
+								* Quindi ora non faccio piu' una move ma creo un nuovo file in pdfstore poi cancello l'originale in pdf
+								*
+								*
+								*/
+							// Sposto il pdf nello store
+							//sprintf(szCommand,"mv %s/%s %s/%s\n",szPathPdfReceive,szFileName,szPathPdfStore,szFileName);
+							//system(szCommand);
 
-								sprintf(szCommand,"gs -q -o %s/%s -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dDEVICEWIDTHPOINTS=623 -dDEVICEHEIGHTPOINTS=842 -dFIXEDMEDIA -dPDFFitPage   %s/%s  && rm %s/%s ",szPathPdfStore,szFileName,szPathPdfReceive,szFileName,szPathPdfReceive,szFileName);
-								system(szCommand);
-								// Faccio l'update di ord_prod
-								PGResUpdate=PGExecSQL(Cfg.nDebugVersion>1,"update ord_prod set opflpdf='%c' where ordprog='%s' and opflpdf='%c';",cOPFLPDF,szBolla,ORDINE_IN_ATTESA_PDF);
-								if(PQresultStatus(PGResUpdate) == PGRES_COMMAND_OK && PQcmdTuples(PGResUpdate)!=0){ 
-								} else {
-#ifdef TRACE
-									trace_out_vstr_date(1,"Ordine [%s]: errore in updating OPFLPDF \n",szBolla);
-#endif
-								}
-								// Update a video
-								if(Cfg.nSAP){
-									UpdateOrdine(LeftStr(szBolla,10));
-								} else {
-									UpdateOrdine(LeftStr(szBolla,6));
-								}
-								PQclear(PGResUpdate);
-								// Non piu' usato ma lo lascio, nel caso servisse in futuro
-								nFilesIndex++;
+							sprintf(szCommand,"gs -q -o %s/%s -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dDEVICEWIDTHPOINTS=623 -dDEVICEHEIGHTPOINTS=842 -dFIXEDMEDIA -dPDFFitPage   %s/%s  && rm %s/%s ",szPathPdfStore,szFileName,szPathPdfReceive,szFileName,szPathPdfReceive,szFileName);
+							system(szCommand);
+							// Faccio l'update di ord_prod
+							PGResUpdate=PGExecSQL(Cfg.nDebugVersion>1,"update ord_prod set opflpdf='F' where ordprog='%s' and opflpdf='%c';",szBolla,ORDINE_IN_ATTESA_PDF);
+							if(PQresultStatus(PGResUpdate) == PGRES_COMMAND_OK && PQcmdTuples(PGResUpdate)!=0){ 
 							} else {
 #ifdef TRACE
-								trace_out_vstr_date(1,"Ordine [%s]: errore in updating ROFLPDF \n",szBolla);
+								trace_out_vstr_date(1,"Ordine [%s]: errore in updating OPFLPDF \n",szBolla);
 #endif
 							}
-							PQclear(PGRes);
+							// Update a video
+							if(Cfg.nSAP){
+								UpdateOrdine(LeftStr(szBolla,10));
+							} else {
+								UpdateOrdine(LeftStr(szBolla,6));
+							}
+							PQclear(PGResUpdate);
+							// Non piu' usato ma lo lascio, nel caso servisse in futuro
+							nFilesIndex++;
+						} else {
+#ifdef TRACE
+							trace_out_vstr_date(1,"Ordine [%s]: errore in updating ROFLPDF \n",szBolla);
+#endif
 						}
-						PQclear(PGResSelect);
+						PQclear(PGRes);
 					}
+					PQclear(PGResSelect);
 				}
 				(void) closedir (dir);
 #ifdef TRACE

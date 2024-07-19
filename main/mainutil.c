@@ -1285,6 +1285,8 @@ BOOL UpdateAsciiRecord(char *szBuffer, PDBSTRUCT pDB, BOOL bUpdate)
 			* - la riga era gia'presente ed e' stata aggiornata;
 			* - altrimenti significa che la riga non e' presente e va inserita
 			*/
+			fprintf (stderr, "%s", szUpdateSQLCmd);
+			fprintf (stderr, "\n");
 
 			PGRes =  PQexec(DBConn, szUpdateSQLCmd);
 			if (!PGRes || PQresultStatus(PGRes) != PGRES_COMMAND_OK ) {

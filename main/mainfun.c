@@ -1625,6 +1625,7 @@ void RicezioneCedola(void)
 					* lasciando soltanto gli imballi
 					*/
 					if(Cfg.nSAP){
+#if 0
 						PGresult *PGClearUbi;
 
 						PGClearUbi=PGExecSQL(Cfg.nDebugVersion,"update ubicazioni set codprod='' where codprod !~* 'H00';");
@@ -1635,6 +1636,7 @@ void RicezioneCedola(void)
 #endif
 						}
 						PQclear(PGClearUbi);
+#endif
 					}
 				break;
 
@@ -3657,7 +3659,7 @@ BOOL InviaDettaglioColliOrdine(char *pszOrdineKey,FILE *fp)
 		c.ORDPROG, c.ORDKEY, RPNMCOL, RPCDPRO, RPQTSPE, RPCDUBI, RPQTPES, \
 		'009905617600'||CPPRGCL||sscc_checkdigit('009905617600'||CPPRGCL) as rpcdssc from col_prod c,rig_prod r \
 		where c.ordprog='%s' and r.ordprog=c.ordprog and r.ordkey=c.ordkey and r.rpnmcol=c.cpnmcol \
-		union select \
+		union all select \
 		c.ORDPROG, ' ' as ORDKEY, RPNMCOL, RPCDPRO, RPNMCPE as RPQTSPE, ' ' as RPCDUBI, RPPESGR as RPQTPES, \
 		'009905617600'||CPPRGCL||sscc_checkdigit('009905617600'||CPPRGCL) as rpcdssc from colli_bertello c,righe_bertello r \
 		where c.ordprog='%s' and r.ordprog=c.ordprog and r.rpnmcol=c.cpnmcol\

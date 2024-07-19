@@ -183,9 +183,9 @@ int main (int argc, char *argv[])
 	}
 	if(Cfg.nSAP){
 #ifdef TRACE
-		trace_out_vstr_date(1,"Modalit‡ SAP");
+		trace_out_vstr_date(1,"Modalit√† SAP");
 #endif
-		gtk_text_printf(NULL,txt_msgs,"Modalit‡ SAP\n");
+		gtk_text_printf(NULL,txt_msgs,"Modalit√† SAP\n");
 	}
 
   gtk_main ();

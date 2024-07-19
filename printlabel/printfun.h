@@ -45,6 +45,7 @@ BOOL StampaPackingListSenzaColliPdf(char *szOrdKey, char *szPrinterName);
 BOOL StampaPackingListSoloColliPdf(char *szOrdKey, char *szPrinterName);
 BOOL StampaPackingListCollo(char *szOrdKey, int nCollo, char *szPrinterName);
 BOOL StampaPdfOrdine(char *szOrdine, char *szPrinterName);
+BOOL StampaPdfOrdineAdvanced(char *szOrdine, char *szPrinterName);
 int PrintListFromSelect(FILE *fp,char *szSqlCmd, char *szOrdProg, int nNumCollo,char *szPrinterName,int nSeparatorFieldIndex);
 int CustomPrintListFromSelect(FILE *fp,char *szSqlCmd, char *szOrdProg, int nNumCollo,char *szPrinterName,int nSeparatorFieldIndex,int nCodiceProdottoFieldIndex);
 char GetPdfFlagFromOrdProd(char *szOrdKey);

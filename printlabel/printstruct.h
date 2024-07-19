@@ -41,6 +41,7 @@ typedef struct tagCfgStruct{
 
 	//int nAnno;											/* Anno corrente */
 	int nSAP;
+	int nAdvancedInvoicing;			/* advanced invoicing (BlueYonder) */
 } CFGSTRUCT, *PCFGSTRUCT;
 
 typedef struct tagLabelFieldStruct{

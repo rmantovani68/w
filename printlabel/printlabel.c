@@ -486,10 +486,17 @@ int main(int argc,char** argv)
 					/* Ordine       */ if((pPtr=strtok(szText,szSeparator))!=NULL){ strcpy(szOrdine,pPtr); }
 					/* Printer */      if((pPtr=strtok(NULL  ,szSeparator))!=NULL){ strcpy(szPrinter,pPtr); }
 
+					if(Cfg.nAdvancedInvoicing){
 #ifdef TRACE
-					trace_out_vstr_date(1, "PRINT_PDF Ordine [%s] on Printer [%s]", szOrdine,szPrinter);
+						trace_out_vstr_date(1, "PRINT_PDF Ordine [%s] ADVANCED INVOICING on Printer [%s]", szOrdine,szPrinter);
 #endif
-					StampaPdfOrdine(szOrdine,szPrinter);
+						StampaPdfOrdineAdvanced(szOrdine,szPrinter);
+					} else {
+#ifdef TRACE
+						trace_out_vstr_date(1, "PRINT_PDF Ordine [%s] on Printer [%s]", szOrdine,szPrinter);
+#endif
+						StampaPdfOrdine(szOrdine,szPrinter);
+					}
 				}
 				break;
 				case PRINT_RAC_CONTIENE_DOC:

@@ -17,11 +17,13 @@
 #include <fcntl.h>
 #include <termio.h>
 #include <sys/stat.h>
+#include <dirent.h>
 
 #include <libpq-fe.h>
 #include <pmx_msq.h>
 #include <msq_lib.h>
 #include <shared.h>
+
 #ifdef TRACE
 	#include <trace.h>
 #endif
@@ -62,6 +64,9 @@ void ReadConfiguration(BOOL bReadProcInfo)
 
 	/* SAP */
 	Cfg.nSAP = xncGetFileInt(szParagraph, "SAP", 0, Cfg.szCniCfg, NULL);
+
+	/* Advanced Invoicing */
+	Cfg.nAdvancedInvoicing = xncGetFileInt(szParagraph, "AdvancedInvoicing", 0, Cfg.szCniCfg, NULL);
 
 	Cfg.nDebugVersion=xncGetFileInt(szParagraph,"DebugVersion",0,Cfg.szCniCfg,NULL);
 	xncGetFileString(szParagraph,"Language",    "ita",        Cfg.szLanguage,     80,Cfg.szCniCfg,NULL);
@@ -1764,6 +1769,92 @@ BOOL StampaPdfOrdine(char *szOrdine, char *szPrinterName)
 
 	return(bOK);
 }
+
+
+BOOL StampaPdfOrdineAdvanced(char *szOrdine, char *szPrinterName)
+{
+	char szFileName[128];
+	char szCommand[128];
+	char szDirectoryName[128];
+	PGresult *PGRes;
+	int nTuple;
+	char szFLPDF[128];
+	char cPdfStato;
+	BOOL bOK=TRUE;
+	BOOL bFound;
+	DIR *dir;
+	struct dirent *files_in_dir;
+
+#ifdef TRACE
+	trace_out_vstr_date(1, "StampaPdfOrdineAdvanced(%s,%s)",szOrdine,szPrinterName);
+#endif
+	/*
+	* Verifico l'esistenza dell'ordine nel db, il tipo di doc da stampare (F,D) e la presenza
+	* del file nell'apposito direttorio.
+	*/
+	PGRes=PGExecSQL(Cfg.nDebugVersion>1,"select ordprog,roflpdf from ric_ord where ordprog='%s';",szOrdine);
+
+	nTuple=PQntuples(PGRes);
+
+	if(nTuple){
+		//strcpy(szOrdprog,PQgetvalue(PGRes,0,0));
+		strcpy(szFLPDF,PQgetvalue(PGRes,0,1));
+		cPdfStato=szFLPDF[0];
+	}else{
+#ifdef TRACE
+		trace_out_vstr_date(1, "L'ordine [%s] non e' presente nella tabella ric_ord",szOrdine);
+#endif
+		bOK=FALSE;
+	}
+	PQclear(PGRes);
+
+	/* rm 2024-07-19 11:11:03 : se l'ordine non ha fattura non stampo niente ed esco */
+	if (cPdfStato != ORDINE_CON_FATTURA){
+#ifdef TRACE
+		trace_out_vstr_date(1, "L'ordine [%s:%c] non ha fattura",szOrdine, cPdfStato);
+#endif
+		bOK=FALSE;
+	}
+
+
+	if (!bOK) return bOK;
+	
+	bFound = FALSE;
+
+	/*
+	* Apertura del file per la stampa
+	*/
+	sprintf(szDirectoryName,"%s/pdfstr", Cfg.szPathExport);
+	dir = opendir (szDirectoryName);
+	if (dir != NULL) {
+		while ((files_in_dir = readdir (dir))){
+			strcpy(szFileName,files_in_dir->d_name);
+			/* si tratta di una stampa ordine se i primi 10 caratteri sono l'ordine e a seguire _XXXXX.pdf */
+#ifdef TRACE
+			trace_out_vstr_date(1, "Controllo file [%s] ",szFileName);
+#endif
+			if(!strncmp(szFileName, szOrdine, 10) && !strncasecmp(szFileName+(strlen(szFileName)-4), ".pdf", 4)){
+#ifdef TRACE
+				trace_out_vstr_date(1, "Stampa file [%s] ",szFileName);
+#endif
+				sprintf(szCommand,"lpr -P%s %s",szPrinterName,szFileName);
+				system(szCommand);
+				bFound = TRUE;
+			}
+		}
+	}
+
+
+	if (!bFound) {
+#ifdef TRACE
+		trace_out_vstr_date(1, "non sono presenti fatture per ordine presente",szOrdine);
+#endif
+		bOK=FALSE;
+	}
+
+	return(bOK);
+}
+
 
 /*
 * CustomPrintListFromSelect()
