@@ -3,7 +3,7 @@
  */
 
 GtkWidget* create_main_window (void);
-GtkWidget* create_dlg_about_old (void);
+GtkWidget* create_dlg_about (void);
 GtkWidget* create_dlg_exit (void);
 GtkWidget* create_dlg_message (void);
 GtkWidget* create_dlg_distribuzione (void);
@@ -36,4 +36,3 @@ GtkWidget* create_dlg_start_impianto (void);
 GtkWidget* create_dlg_stop_impianto (void);
 GtkWidget* create_dlg_select_elaborazione (void);
 GtkWidget* create_dlg_prodotti_pericolosi (void);
-GtkWidget* create_dlg_about (void);

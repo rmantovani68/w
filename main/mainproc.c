@@ -102,6 +102,8 @@ gint ProcessMsgs( gpointer data )
 	PGresult *PGResSelect=NULL;
 	PGresult *PGResUpdate=NULL;
 	char szCommand[256];
+	BOOL stato_rx;
+	static BOOL old_stato_rx;
 
 	if(bFirstTime){
 		gtk_text_printf(NULL,txt_msgs,"A&L - Easy Picking 3.0 - Application Ready\n");
@@ -143,6 +145,15 @@ gint ProcessMsgs( gpointer data )
 			gtk_image_set_from_stock(GTK_IMAGE(get_widget(main_window,"pixmap_stato_linea_2")), "gtk-no" ,GTK_ICON_SIZE_BUTTON);
 		}
 	}
+
+	stato_rx = DatiDaRicevere();
+
+	if(bFirstTime || old_stato_rx!=stato_rx){
+		gtk_image_set_from_stock(GTK_IMAGE(get_widget(main_window,"pixmap_data_rx")), stato_rx ? "gtk-yes" : "gtk-no" ,GTK_ICON_SIZE_BUTTON);
+	}
+
+	old_stato_rx = stato_rx;
+
 
 	if(lActualTime<time((time_t *)0)){
 		time(&lActualTime);

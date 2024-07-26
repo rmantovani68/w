@@ -148,6 +148,7 @@ void ReadConfiguration(BOOL bReadProcInfo)
 	Cfg.nStampaRAC            = xncGetFileInt(szParagraph,      "StampaRAC",             0, Cfg.szCniCfg,NULL);
 	Cfg.nDebugVersion         = xncGetFileInt(szParagraph,      "DebugVersion",          0, Cfg.szCniCfg,NULL);
 	Cfg.nMaxColliOrdine       = xncGetFileInt(szParagraph,      "MaxColliOrdine",        0, Cfg.szCniCfg,NULL);
+	Cfg.nAdvancedInvoicing    = xncGetFileInt(szParagraph,      "AdvancedInvoicing",     0, Cfg.szCniCfg,NULL);
 	/*
 	* TRUCCO INFAME PER GESTIONE MENU TOGGLE (DA SISTEMARE!!!)
 	*/
@@ -211,6 +212,7 @@ void ReadConfiguration(BOOL bReadProcInfo)
 	trace_out_vstr(1,"PathExport         : [%s]", Cfg.szPathExport);
 	trace_out_vstr(1,"PathExe            : [%s]", Cfg.szPathExe);
 	trace_out_vstr(1,"DebugVersion       : [%d]", Cfg.nDebugVersion);
+	trace_out_vstr(1,"AdvancedInvoicing  : [%d]", Cfg.nAdvancedInvoicing);
 	trace_out_vstr(1,"MaxColliOrdine     : [%d]", Cfg.nMaxColliOrdine);
 	trace_out_vstr(1,"-------------------------------------------");
 
@@ -1441,6 +1443,44 @@ int CreateListFromSelect(GtkWidget *super_parent, GtkWidget *parent, GtkWidget *
 	PQclear(PGRes);
 
 	return nTuples;
+}
+
+BOOL DatiDaRicevere(void)
+{
+	char szOrdini[128];
+	char szRighe[128];
+	char szArticoli[128];
+	char szUbicazioni[128];
+
+	char szOrdiniBertello[128];
+	char szColliBertello[128];
+	char szRigheBertello[128];
+
+	char szOrdiniBertelloB[128];
+	char szRigheBertelloB[128];
+	char szOrdiniBertelloR[128];
+	char szRigheBertelloR[128];
+
+	sprintf(szOrdini,"%s/%s",Cfg.szPathExport,StrTrimAll(Cfg.szImpOrdiniFile));
+	sprintf(szRighe,"%s/%s",Cfg.szPathExport,StrTrimAll(Cfg.szImpRigheFile));
+	sprintf(szArticoli,"%s/%s",Cfg.szPathExport,StrTrimAll(Cfg.szImpArticoliFile));
+	sprintf(szUbicazioni,"%s/%s",Cfg.szPathExport,StrTrimAll(Cfg.szImpUbicazioniFile));
+
+	sprintf(szOrdiniBertello,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertello));
+	sprintf(szColliBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpColliBertello));
+	sprintf(szRigheBertello,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertello));
+
+	sprintf(szOrdiniBertelloB,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloB));
+	sprintf(szRigheBertelloB,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloB));
+	sprintf(szOrdiniBertelloR,   "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpOrdiniBertelloR));
+	sprintf(szRigheBertelloR,    "%s/%s", Cfg.szPathExport, StrTrimAll(Cfg.szImpRigheBertelloR));
+
+	return (
+		FileExists(szOrdini) || FileExists(szRighe) || FileExists(szArticoli) || FileExists(szUbicazioni) ||
+     	FileExists(szOrdiniBertello) || FileExists(szColliBertello) || FileExists(szRigheBertello) ||
+	 	FileExists(szOrdiniBertelloB) || FileExists(szRigheBertelloB) ||
+	 	FileExists(szOrdiniBertelloR) || FileExists(szRigheBertelloR)
+	);
 }
 
 /*
@@ -2732,8 +2772,13 @@ void EditConfigurazione(void)
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(get_widget(dlg_config,"sb_max_colli")),Cfg.nMaxColliOrdine);
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(get_widget(dlg_config,"sb_main_gestione_badge")),Cfg.nGestioneBadge);
 
-  if (Cfg.nDebugVersion==1){
-		gtk_widget_activate(get_widget(dlg_config,"cb_debug"));
+	if (Cfg.nDebugVersion==1){
+		printf("Attivo cb_debug\n");
+		gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON(get_widget(dlg_config,"cb_debug")), TRUE);
+	}
+	if (Cfg.nAdvancedInvoicing==1){
+		printf("Attivo cb_advanced_invoicing\n");
+		gtk_toggle_button_set_active ( GTK_TOGGLE_BUTTON(get_widget(dlg_config,"cb_advanced_invoicing")), TRUE);
 	}
 
 	/*
@@ -2828,7 +2873,7 @@ void EditConfigurazione(void)
 	}
 	strcpy(szSelectCmd,"select CODICE, DESCRIZ, LUNGHEZZA, ALTEZZA, LARGHEZZA, TARA, PESOMAX, VOLPERC1, VOLPERC2, TPLAVOR from imballi order by codice;");
 	CreateListFromSelect(dlg_config,get_widget(dlg_config,"sw_lista_imballi"),&lst,"lst_imballi",GTK_SELECTION_SINGLE,szSelectCmd,NULL,0);
-  gtk_signal_connect (GTK_OBJECT (get_widget(dlg_config,"lst_imballi")), "select_row", GTK_SIGNAL_FUNC (on_lista_imballi_row_selected), 0);
+	gtk_signal_connect (GTK_OBJECT (get_widget(dlg_config,"lst_imballi")), "select_row", GTK_SIGNAL_FUNC (on_lista_imballi_row_selected), 0);
 
 	gtk_window_set_focus (GTK_WINDOW (dlg_config), get_widget(dlg_config,"pb_ok"));
 	gtk_widget_show(dlg_config);
@@ -2849,10 +2894,15 @@ void ApplyConfigurazione(void)
 	Cfg.nMaxColliOrdine = gtk_spin_button_get_value_as_int((GtkSpinButton *)get_widget(dlg_config,"sb_max_colli"));
 	Cfg.nGestioneBadge = gtk_spin_button_get_value_as_int((GtkSpinButton *)get_widget(dlg_config,"sb_main_gestione_badge"));
 
-  if (GTK_TOGGLE_BUTTON(get_widget(dlg_config,"cb_debug"))->active){
+	if (GTK_TOGGLE_BUTTON(get_widget(dlg_config,"cb_debug"))->active){
 		Cfg.nDebugVersion=1;
 	} else {
 		Cfg.nDebugVersion=0;
+	}
+	if (GTK_TOGGLE_BUTTON(get_widget(dlg_config,"cb_advanced_invoicing"))->active){
+		Cfg.nAdvancedInvoicing=1;
+	} else {
+		Cfg.nAdvancedInvoicing=0;
 	}
 	
 	/*
@@ -2953,6 +3003,7 @@ void ApplyConfigurazione(void)
 	xncPutFileInt(ProcList[PROC_MAIN].szProcName, "Delay", Cfg.nMainDelay,Cfg.szCniCfg,NULL);
 
 	xncPutFileInt("General Settings", "DebugVersion", Cfg.nDebugVersion,Cfg.szCniCfg,NULL);
+	xncPutFileInt("General Settings", "AdvancedInvoicing", Cfg.nAdvancedInvoicing,Cfg.szCniCfg,NULL);
 	xncPutFileInt("General Settings", "MaxColliOrdine", Cfg.nMaxColliOrdine,Cfg.szCniCfg,NULL);
 	xncPutFileInt("General Settings", "StampaPL", Cfg.nStampaPL,Cfg.szCniCfg,NULL);
 	xncPutFileInt("General Settings", "StampaRAC", Cfg.nStampaRAC,Cfg.szCniCfg,NULL);
@@ -3738,11 +3789,11 @@ int InviaDatiBertello(FILE *fp)
 	PQclear(PGRes);
 	PGRes = PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato = '%c', rptminv='now'  where rpstato = '%c'", RIGA_INVIATA, RIGA_RICEVUTA);
 	PQclear(PGRes);
-	PGRes = PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_b set rostato = '%c', rotminv='now'  where rostato = '%c'", ORDINE_INVIATO, ORDINE_RICEVUTO);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update ordini_bertello_r set rostato = '%c', rotminv='now'  where rostato = '%c'", ORDINE_INVIATO, ORDINE_RICEVUTO);
 	PQclear(PGRes);
-	PGRes = PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_b set rpstato = '%c', rptminv='now'  where rpstato = '%c'", RIGA_INVIATA, RIGA_RICEVUTA);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update righe_bertello_r set rpstato = '%c', rptminv='now'  where rpstato = '%c'", RIGA_INVIATA, RIGA_RICEVUTA);
 	PQclear(PGRes);
-	PGRes = PGExecSQL(Cfg.nDebugVersion,"update bertello_righe_movimentazione set blstato = '%c', bltminv='now' where blstato is NULL", ORDINE_INVIATO);
+	PGRes = PGExecSQL(Cfg.nDebugVersion,"update bertello_liste_movimentazione set blstato = '%c', bltminv='now' where blstato is NULL", ORDINE_INVIATO);
 	PQclear(PGRes);
 
 	return nNumeroRighe;

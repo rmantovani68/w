@@ -73,6 +73,7 @@ typedef struct tagCfgStruct{
 	int nMainDelay;
 	int nSaveStateDelay;
 	int nDebugVersion;
+	int nAdvancedInvoicing;
 	int nShmKey; 
 	char szPGHost[128]; 
 	char szPGPort[128]; 

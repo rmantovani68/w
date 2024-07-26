@@ -113,6 +113,7 @@ BOOL SetErroreRiga(char *szOrdkey,int nCollo,char *szCodProd, char *szCDERR);
 BOOL ResetErroreRiga(char *szOrdkey,int nCollo,char *szCodProd);
 BOOL OrdineBertelloConOrdiniDiLinea(char *szOrdProg);
 BOOL StampaOrdiniBertelloSenzaOrdinidiLinea(void);
+BOOL DatiDaRicevere(void);
 
 /*
 * mainproc.c
