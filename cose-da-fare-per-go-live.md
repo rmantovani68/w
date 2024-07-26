@@ -2,6 +2,7 @@
 - bertello ricezione ordini_bertello_n e righe_bertello_n e invio dati a bertello
     - creazione tabelle ordini_bertello_b/r e righe_bertello_b/r e bertello_liste_movimentazione (vedi crea_tabelle.sh)
     - verificare funzionamento procedura - OK
+    - cambio parametri in registry
 
 + union all in scrittura dett_colli.txt (mainfun.c)
 - prodotti verticali - vedi offerta
